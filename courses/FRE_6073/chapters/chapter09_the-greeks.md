@@ -107,27 +107,9 @@ $$\text{Shares to hedge} = -\Delta \times \text{Number of options}$$
 ```{note}
 **Delta Behavior:**
 
-**Call Delta vs. Stock Price:**
-```
-Delta
-1.0 |           ___________
-    |         /
-0.5 |       /
-    |     /
-0.0 |___/________________
-    Deep OTM  ATM  Deep ITM
-```
+**Call Delta:** Ranges from 0 (deep OTM) to 1 (deep ITM), with delta ≈ 0.5 at-the-money.
 
-**Put Delta vs. Stock Price:**
-```
-Delta
-0.0 |_________________
-    |                 \
--0.5|                  \
-    |                   \
--1.0|                    \______
-    Deep ITM  ATM  Deep OTM
-```
+**Put Delta:** Ranges from 0 (deep OTM) to -1 (deep ITM), with delta ≈ -0.5 at-the-money.
 
 **At-the-Money:** Steepest slope - delta changes rapidly with stock price.
 ```
@@ -587,15 +569,15 @@ $$-8,000 + 2.0w_1 + 1.2w_2 = 0$$
 
 From gamma equation:
 
-$$0.5w_1 + 0.8w_2 = 5,000$$ ... (1)
+$$0.5w_1 + 0.8w_2 = 5,000$$
 
 From vega equation:
 
-$$2.0w_1 + 1.2w_2 = 8,000$$ ... (2)
+$$2.0w_1 + 1.2w_2 = 8,000$$
 
 Multiply equation (1) by 4:
 
-$$2.0w_1 + 3.2w_2 = 20,000$$ ... (3)
+$$2.0w_1 + 3.2w_2 = 20,000$$
 
 Subtract equation (2) from equation (3):
 
@@ -632,9 +614,9 @@ To make delta = 0:
 3. Short **3,240 shares** of stock
 
 **Verification:**
-- Gamma: $-5,000 + 0.5(400) + 0.8(6,000) = -5,000 + 200 + 4,800 = 0$ ✓
-- Vega: $-8,000 + 2.0(400) + 1.2(6,000) = -8,000 + 800 + 7,200 = 0$ ✓
-- Delta: $0 + 0.6(400) + 0.5(6,000) - 1.0(3,240) = 3,240 - 3,240 = 0$ ✓
+- Gamma: $-5,000 + 0.5(400) + 0.8(6,000) = -5,000 + 200 + 4,800 = 0$
+- Vega: $-8,000 + 2.0(400) + 1.2(6,000) = -8,000 + 800 + 7,200 = 0$
+- Delta: $0 + 0.6(400) + 0.5(6,000) - 1.0(3,240) = 3,240 - 3,240 = 0$
 
 **Physical Meaning**: We've created a portfolio that is insensitive to stock price (delta), stock price curvature (gamma), and volatility (vega). It should have minimal P&L fluctuations from these sources.
 ```

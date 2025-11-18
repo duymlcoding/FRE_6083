@@ -497,7 +497,7 @@ Try $y = 0.070$ (7.0%):
 - Total = 96.66 (too low)
 
 Try $y = 0.0676$ (6.76%):
-- More refined calculation yields ≈ 98.39 ✓
+- More refined calculation yields ≈ 98.39
 
 **Final Answer:** The yield to maturity is approximately **6.76%** (continuously compounded).
 
@@ -724,7 +724,7 @@ At 2.0 years:
 
 $$PV_4 = 102.50 \times e^{-0.05 \times 2.0} = 102.50 \times 0.9048 = \$92.74$$
 
-**Total:** $2.438 + 2.378 + 2.319 + 92.74 = \$99.875 ≈ \$100$ ✓
+**Total:** $2.438 + 2.378 + 2.319 + 92.74 = \$99.875 ≈ \$100$
 
 **Step 2: Calculate Weighted Time**
 

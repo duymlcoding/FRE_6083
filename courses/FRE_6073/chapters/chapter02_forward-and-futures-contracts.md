@@ -345,29 +345,29 @@ A retail trader takes a long position in 2 December gold futures contracts on Ju
 **Day 1:**
 - Price change: $1,741.00 - $1,750.00 = -$9.00/oz.
 - Daily loss: -$9.00 × 200 oz. = -$1,800
-- New balance: $12,000 - $1,800 = $10,200 ✓ (above $9,000 maintenance)
+- New balance: $12,000 - $1,800 = $10,200 (above $9,000 maintenance)
 
 **Day 2:**
 - Price change: $1,738.30 - $1,741.00 = -$2.70/oz.
 - Daily loss: -$2.70 × 200 oz. = -$540
-- New balance: $10,200 - $540 = $9,660 ✓
+- New balance: $10,200 - $540 = $9,660
 
 **Day 3:**
 - Price change: $1,736.20 - $1,738.30 = -$2.10/oz.
 - Daily loss: -$2.10 × 200 oz. = -$420
-- New balance: $9,660 - $420 = $9,240 ✓
+- New balance: $9,660 - $420 = $9,240
 
 **Day 4:**
 - Price change: $1,729.90 - $1,736.20 = -$6.30/oz.
 - Daily loss: -$6.30 × 200 oz. = -$1,260
-- New balance: $9,240 - $1,260 = $7,980 ✗ (below $9,000!)
+- New balance: $9,240 - $1,260 = $7,980 (below $9,000!)
 - **MARGIN CALL**: Must deposit $12,000 - $7,980 = **$4,020**
 - After deposit: Balance = $12,180
 
 **Day 5:**
 - Price change: $1,730.80 - $1,729.90 = $0.90/oz.
 - Daily gain: $0.90 × 200 oz. = +$180
-- New balance: $12,180 + $180 = $12,360 ✓
+- New balance: $12,180 + $180 = $12,360
 
 **Final Answer:** The trader received a margin call on Day 4 requiring a deposit of $4,020 to restore the account to the initial margin level of $12,000.
 
@@ -629,8 +629,8 @@ Initial margin = 3 contracts × $5,000 = **$15,000**
 Maintenance margin = 3 × $3,500 = $10,500
 
 **Check each day:**
-- Day 1: $11,400 > $10,500 ✓ No margin call
-- Day 2: $7,500 < $10,500 ✗ **MARGIN CALL!**
+- Day 1: $11,400 > $10,500 No margin call
+- Day 2: $7,500 < $10,500 **MARGIN CALL!**
 - Required deposit: $15,000 - $7,500 = **$7,500**
 - After deposit: Balance = $15,000
 - Day 3: Starting with $15,000, gain $4,500 = $19,500

@@ -179,7 +179,7 @@ $$f = (K - F_0)e^{-rT}$$
 :class: tip
 
 **Problem Statement:**
-Three months ago, you entered a 9-month forward contract to buy a non-dividend-paying stock at $45. The stock now trades at $48, and the risk-free rate is 5% per annum (continuously compounded). What is the value of your position?
+Three months ago, you entered a 9-month forward contract to buy a non-dividend-paying stock at \$45. The stock now trades at \$48, and the risk-free rate is 5% per annum (continuously compounded). What is the value of your position?
 
 **Given:**
 - Original delivery price: $K = \$45$
@@ -465,7 +465,7 @@ Suppose the actual forward rate is 1.2200 (versus the theoretical 1.2121). How d
    - Receive: €1,000 × $e^{0.02}$ = €1,020.20
    - Deliver under forward: Receive 1,020.20 × 1.2200 = $1,244.64
    - Repay loan: $1,200 × $e^{0.03}$ = $1,236.48
-   - **Profit: $1,244.64 - $1,236.48 = $8.16**
+   - **Profit: \$1,244.64 - \$1,236.48 = \$8.16**
 
 Risk-free profit with no initial investment!
 ```
@@ -655,7 +655,7 @@ Chapter 4 examines **interest rates and repo markets**, essential for understand
 ```{admonition} Practice Problem 1: Forward Valuation
 :class: tip
 
-Six months ago, Company X entered a 1-year forward contract to buy gold at $1,750/oz. The current spot price is $1,820/oz. Gold storage costs 0.3% per annum. The risk-free rate is 4.5% per annum (continuously compounded).
+Six months ago, Company X entered a 1-year forward contract to buy gold at \$1,750/oz. The current spot price is \$1,820/oz. Gold storage costs 0.3% per annum. The risk-free rate is 4.5% per annum (continuously compounded).
 
 **Questions:**
 1. What is the current 6-month forward price for gold?
@@ -697,15 +697,15 @@ $$f = \$111.68$$
 
 To close the long position, Company X would:
 - Enter an offsetting short forward at current forward price
-- Net position: Long at $1,750, short at $1,864.23
-- This locks in profit of $(1,864.23 - 1,750)e^{-0.0225} = \$111.68$
+- Net position: Long at \$1,750, short at \$1,864.23
+- This locks in profit of \$(1,864.23 - 1,750)e^{-0.0225} = \$111.68$
 
 **Final Answer:**
 1. Current forward price: **$1,864.23/oz**
 2. Position value: **$111.68 per ounce**
-3. Closing: **Receive $111.68 per ounce** (or $111,680 for a 1,000 oz contract)
+3. Closing: **Receive \$111.68 per ounce** (or \$111,680 for a 1,000 oz contract)
 
-**Interpretation**: Company X benefits from the gold price increase. The contract to buy at $1,750 is valuable because current market would agree to buy at $1,864.23.
+**Interpretation**: Company X benefits from the gold price increase. The contract to buy at \$1,750 is valuable because current market would agree to buy at \$1,864.23.
 ```
 
 ---

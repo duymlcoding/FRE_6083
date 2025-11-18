@@ -124,7 +124,7 @@ Bank B is $50 million short of required reserves
 **Transaction:**
 - Bank A lends $50 million to Bank B overnight
 - Bank B pays interest at the fed funds rate (e.g., 5.25%)
-- Next day, Bank B repays: $50,000,000 × (1 + 0.0525/360) = $50,007,292
+- Next day, Bank B repays: \$50,000,000 × (1 + 0.0525/360) = \$50,007,292
 
 **Result:** Bank B meets reserve requirements, Bank A earns overnight interest
 ```
@@ -169,7 +169,7 @@ A **repo** is:
 :class: tip
 
 **Problem Statement:**
-A bank needs $10 million cash overnight. It sells Treasury bonds worth $10 million in a repo transaction at an overnight repo rate of 5.00% per annum.
+A bank needs \$10 million cash overnight. It sells Treasury bonds worth \$10 million in a repo transaction at an overnight repo rate of 5.00% per annum.
 
 **Questions:**
 1. How much cash does the bank receive today?
@@ -208,7 +208,7 @@ $$\text{Interest} = 10,000,000 \times \frac{0.05}{360} = \$1,389$$
 2. Repurchase price: \$10,001,389
 3. Repo interest: \$1,389
 
-**Physical Meaning**: The bank essentially borrowed $10 million overnight at 5% using Treasury bonds as collateral, paying $1,389 in interest.
+**Physical Meaning**: The bank essentially borrowed \$10 million overnight at 5% using Treasury bonds as collateral, paying \$1,389 in interest.
 ```
 
 ### Default Protection in Repo
@@ -223,7 +223,7 @@ If the securities seller (cash borrower) cannot repurchase:
 4. Shortfall may result in loss (though rare)
 
 **Risk Mitigation:**
-- **Haircuts**: Lend less than security value (e.g., lend $98 on $100 security)
+- **Haircuts**: Lend less than security value (e.g., lend \$98 on \$100 security)
 - **Mark-to-market**: Daily valuation adjustments
 - **Quality collateral**: Typically high-grade securities
 ```
@@ -518,11 +518,11 @@ Calculate the volume-weighted median from these repo transactions:
 
 | Rate | Volume ($M) | Cumulative Volume | Cumulative % |
 |------|-------------|-------------------|--------------|
-| 5.00% | $100 | $100 | 10% |
-| 5.05% | $200 | $300 | 30% |
-| 5.10% | $300 | $600 | 60% |
-| 5.15% | $250 | $850 | 85% |
-| 5.20% | $150 | $1,000 | 100% |
+| 5.00% | \$100 | \$100 | 10% |
+| 5.05% | \$200 | \$300 | 30% |
+| 5.10% | \$300 | \$600 | 60% |
+| 5.15% | \$250 | \$850 | 85% |
+| 5.20% | \$150 | \$1,000 | 100% |
 
 **Step 2: Find 50th Percentile**
 
@@ -531,7 +531,7 @@ Calculate the volume-weighted median from these repo transactions:
 This falls in the 5.10% rate category:
 - Cumulative volume reaches $600M at 5.10%
 - Previous cumulative was $300M
-- $500M is between $300M and $600M
+- \$500M is between \$300M and \$600M
 
 **Final Answer:** Volume-weighted median = **5.10%**
 
@@ -736,7 +736,7 @@ Total new rate: **3-month SOFR + 165 bps**
 
 **Verification:**
 - Old: 2.50% + 1.50% = 4.00%
-- New: 2.35% + 1.65% = 4.00% ✓
+- New: 2.35% + 1.65% = 4.00%
 
 **Part 3: Why SOFR < LIBOR**
 
