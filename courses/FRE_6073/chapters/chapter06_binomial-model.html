@@ -521,8 +521,9 @@ document.write(`
 <li><p>Short 1 option</p></li>
 </ul>
 <p><strong>Goal:</strong> Make the portfolio riskless (same value in both states)</p>
-<p><strong>Riskless condition:</strong>
-$<span class="math notranslate nohighlight">\(S_0u\Delta - f_u = S_0d\Delta - f_d\)</span>$</p>
+<p><strong>Riskless condition:</strong></p>
+<div class="math notranslate nohighlight">
+\[S_0u\Delta - f_u = S_0d\Delta - f_d\]</div>
 </div>
 <section id="solving-for-delta">
 <h3>Solving for Delta<a class="headerlink" href="#solving-for-delta" title="Link to this heading">#</a></h3>
@@ -549,10 +550,12 @@ $<span class="math notranslate nohighlight">\(S_0u\Delta - f_u = S_0d\Delta - f_
 <p><strong>Step 1:</strong> Portfolio value at maturity = <span class="math notranslate nohighlight">\(S_0u\Delta - f_u\)</span></p>
 <p><strong>Step 2:</strong> Portfolio value today = <span class="math notranslate nohighlight">\((S_0u\Delta - f_u)e^{-rT}\)</span></p>
 <p><strong>Step 3:</strong> Alternative expression for portfolio value today = <span class="math notranslate nohighlight">\(S_0\Delta - f\)</span></p>
-<p><strong>Step 4:</strong> Equate the two expressions:
-$<span class="math notranslate nohighlight">\(S_0\Delta - f = (S_0u\Delta - f_u)e^{-rT}\)</span>$</p>
-<p><strong>Step 5:</strong> Solve for <span class="math notranslate nohighlight">\(f\)</span>:
-$<span class="math notranslate nohighlight">\(f = S_0\Delta - (S_0u\Delta - f_u)e^{-rT}\)</span>$</p>
+<p><strong>Step 4:</strong> Equate the two expressions:</p>
+<div class="math notranslate nohighlight">
+\[S_0\Delta - f = (S_0u\Delta - f_u)e^{-rT}\]</div>
+<p><strong>Step 5:</strong> Solve for <span class="math notranslate nohighlight">\(f\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f = S_0\Delta - (S_0u\Delta - f_u)e^{-rT}\]</div>
 </div>
 <section id="risk-neutral-probability">
 <h3>Risk-Neutral Probability<a class="headerlink" href="#risk-neutral-probability" title="Link to this heading">#</a></h3>
@@ -574,11 +577,13 @@ $<span class="math notranslate nohighlight">\(f = S_0\Delta - (S_0u\Delta - f_u)
 <div class="tip admonition">
 <p class="admonition-title">Key Concept: Risk-Neutral Probability</p>
 <p>The quantity <span class="math notranslate nohighlight">\(p = \frac{e^{rT} - d}{u - d}\)</span> can be interpreted as a probability such that:</p>
-<p><strong>The stock price earns the risk-free rate:</strong>
-$<span class="math notranslate nohighlight">\(S_0e^{rT} = pS_0u + (1-p)S_0d\)</span>$</p>
-<p><strong>Proof:</strong>
-$<span class="math notranslate nohighlight">\(pS_0u + (1-p)S_0d = \frac{e^{rT} - d}{u - d} \cdot S_0u + \frac{u - e^{rT}}{u - d} \cdot S_0d\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(= \frac{S_0(ue^{rT} - ud + ud - de^{rT})}{u - d} = \frac{S_0e^{rT}(u - d)}{u - d} = S_0e^{rT}\)</span>$ ✓</p>
+<p><strong>The stock price earns the risk-free rate:</strong></p>
+<div class="math notranslate nohighlight">
+\[S_0e^{rT} = pS_0u + (1-p)S_0d\]</div>
+<p><strong>Proof:</strong></p>
+<div class="math notranslate nohighlight">
+\[pS_0u + (1-p)S_0d = \frac{e^{rT} - d}{u - d} \cdot S_0u + \frac{u - e^{rT}}{u - d} \cdot S_0d\]</div>
+<p>$<span class="math notranslate nohighlight">\(= \frac{S_0(ue^{rT} - ud + ud - de^{rT})}{u - d} = \frac{S_0e^{rT}(u - d)}{u - d} = S_0e^{rT}\)</span>$ ✓</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -625,10 +630,12 @@ A stock currently trades at $20. In 3 months, it will either:</p>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(T = 0.25\)</span> years</p></li>
 </ul>
 <p class="sd-card-text"><strong>Step 1: Calculate Payoffs</strong></p>
-<p class="sd-card-text">**If stock goes up to <span class="math notranslate nohighlight">\(22:**
-\)</span><span class="math notranslate nohighlight">\(f_u = \max(22 - 21, 0) = \$1\)</span>$</p>
-<p class="sd-card-text">**If stock goes down to <span class="math notranslate nohighlight">\(18:**
-\)</span><span class="math notranslate nohighlight">\(f_d = \max(18 - 21, 0) = \$0\)</span>$</p>
+<p class="sd-card-text"><strong>If stock goes up to $22:</strong></p>
+<div class="math notranslate nohighlight">
+\[f_u = \max(22 - 21, 0) = \$1\]</div>
+<p class="sd-card-text"><strong>If stock goes down to $18:</strong></p>
+<div class="math notranslate nohighlight">
+\[f_d = \max(18 - 21, 0) = \$0\]</div>
 <p class="sd-card-text"><strong>Step 2: Calculate Delta</strong></p>
 <div class="math notranslate nohighlight">
 \[\Delta = \frac{f_u - f_d}{S_0u - S_0d} = \frac{1 - 0}{22 - 18} = \frac{1}{4} = 0.25\]</div>
@@ -650,14 +657,17 @@ A stock currently trades at $20. In 3 months, it will either:</p>
 \[= \$0.545\]</div>
 <p class="sd-card-text"><strong>Step 5: Verify Replicating Portfolio</strong></p>
 <p class="sd-card-text"><strong>Portfolio:</strong> Long <span class="math notranslate nohighlight">\(\Delta = 0.25\)</span> shares, short 1 call</p>
-<p class="sd-card-text"><strong>Value today:</strong>
-$<span class="math notranslate nohighlight">\(0.25 \times 20 - 0.545 = 5.00 - 0.545 = \$4.455\)</span>$</p>
-<p class="sd-card-text"><strong>Value if stock goes up:</strong>
-$<span class="math notranslate nohighlight">\(0.25 \times 22 - 1 = 5.50 - 1.00 = \$4.50\)</span>$</p>
-<p class="sd-card-text"><strong>Value if stock goes down:</strong>
-$<span class="math notranslate nohighlight">\(0.25 \times 18 - 0 = 4.50 - 0 = \$4.50\)</span>$</p>
-<p class="sd-card-text">**Present value of <span class="math notranslate nohighlight">\(4.50:**
-\)</span><span class="math notranslate nohighlight">\(4.50 \times e^{-0.01} = 4.50 \times 0.9900 = \$4.455\)</span>$ ✓</p>
+<p class="sd-card-text"><strong>Value today:</strong></p>
+<div class="math notranslate nohighlight">
+\[0.25 \times 20 - 0.545 = 5.00 - 0.545 = \$4.455\]</div>
+<p class="sd-card-text"><strong>Value if stock goes up:</strong></p>
+<div class="math notranslate nohighlight">
+\[0.25 \times 22 - 1 = 5.50 - 1.00 = \$4.50\]</div>
+<p class="sd-card-text"><strong>Value if stock goes down:</strong></p>
+<div class="math notranslate nohighlight">
+\[0.25 \times 18 - 0 = 4.50 - 0 = \$4.50\]</div>
+<p class="sd-card-text"><strong>Present value of $4.50:</strong></p>
+<p class="sd-card-text">$<span class="math notranslate nohighlight">\(4.50 \times e^{-0.01} = 4.50 \times 0.9900 = \$4.455\)</span>$ ✓</p>
 <p class="sd-card-text"><strong>Final Answers:</strong></p>
 <ol class="arabic simple">
 <li><p class="sd-card-text">Option price: <strong>$0.545</strong></p></li>
@@ -676,9 +686,10 @@ $<span class="math notranslate nohighlight">\(0.25 \times 18 - 0 = 4.50 - 0 = \$
 <p><strong>Riskless portfolio value at maturity:</strong> $4.50</p>
 <p><strong>Present value:</strong> <span class="math notranslate nohighlight">\(4.50e^{-0.01} = \$4.455\)</span></p>
 <p><strong>Portfolio composition:</strong> <span class="math notranslate nohighlight">\(0.25 \times 20 - f = 4.455\)</span></p>
-<p><strong>Solve for option price:</strong>
-$<span class="math notranslate nohighlight">\(5.00 - f = 4.455\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(f = \$0.545\)</span>$ ✓</p>
+<p><strong>Solve for option price:</strong></p>
+<div class="math notranslate nohighlight">
+\[5.00 - f = 4.455\]</div>
+<p>$<span class="math notranslate nohighlight">\(f = \$0.545\)</span>$ ✓</p>
 <p><strong>Same answer!</strong></p>
 </div>
 </section>
@@ -762,8 +773,9 @@ t=0    t=Δt   t=2Δt
 <li><p><span class="math notranslate nohighlight">\(\sigma\)</span> = Annual volatility of stock</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Delta t\)</span> = Length of time step</p></li>
 </ul>
-<p><strong>Risk-neutral probability:</strong>
-$<span class="math notranslate nohighlight">\(p = \frac{e^{r\Delta t} - d}{u - d}\)</span>$</p>
+<p><strong>Risk-neutral probability:</strong></p>
+<div class="math notranslate nohighlight">
+\[p = \frac{e^{r\Delta t} - d}{u - d}\]</div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Example: CRR Parameters</p>
@@ -948,10 +960,12 @@ $<span class="math notranslate nohighlight">\(p = \frac{e^{r\Delta t} - d}{u - d
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(T = 0.5\)</span> years</p></li>
 </ul>
 <p class="sd-card-text"><strong>Part 1: Calculate Put Payoffs</strong></p>
-<p class="sd-card-text">**If stock goes up to <span class="math notranslate nohighlight">\(60:**
-\)</span><span class="math notranslate nohighlight">\(f_u = \max(48 - 60, 0) = \$0\)</span>$</p>
-<p class="sd-card-text">**If stock goes down to <span class="math notranslate nohighlight">\(40:**
-\)</span><span class="math notranslate nohighlight">\(f_d = \max(48 - 40, 0) = \$8\)</span>$</p>
+<p class="sd-card-text"><strong>If stock goes up to $60:</strong></p>
+<div class="math notranslate nohighlight">
+\[f_u = \max(48 - 60, 0) = \$0\]</div>
+<p class="sd-card-text"><strong>If stock goes down to $40:</strong></p>
+<div class="math notranslate nohighlight">
+\[f_d = \max(48 - 40, 0) = \$8\]</div>
 <p class="sd-card-text"><strong>Part 2: Calculate Delta</strong></p>
 <div class="math notranslate nohighlight">
 \[\Delta = \frac{f_u - f_d}{S_u - S_d} = \frac{0 - 8}{60 - 40} = \frac{-8}{20} = -0.40\]</div>
@@ -972,14 +986,18 @@ $<span class="math notranslate nohighlight">\(p = \frac{e^{r\Delta t} - d}{u - d
 \[= \$3.41\]</div>
 <p class="sd-card-text"><strong>Part 5: Replicating Portfolio</strong></p>
 <p class="sd-card-text"><strong>Portfolio:</strong> Long <span class="math notranslate nohighlight">\(\Delta = -0.40\)</span> shares (i.e., short 0.40 shares), short 1 put</p>
-<p class="sd-card-text"><strong>Value today:</strong>
-$<span class="math notranslate nohighlight">\(-0.40 \times 50 - 3.41 = -20.00 - 3.41 = -\$23.41\)</span>$</p>
-<p class="sd-card-text">Or: Short 0.40 shares, long 1 put:
-$<span class="math notranslate nohighlight">\(0.40 \times 50 - 3.41 = 20.00 - 3.41 = \$16.59\)</span>$</p>
-<p class="sd-card-text"><strong>Value if stock goes up:</strong>
-$<span class="math notranslate nohighlight">\(0.40 \times 60 - 0 = \$24.00\)</span>$</p>
-<p class="sd-card-text"><strong>Value if stock goes down:</strong>
-$<span class="math notranslate nohighlight">\(0.40 \times 40 - 8 = 16.00 - 8 = \$24.00\)</span>$</p>
+<p class="sd-card-text"><strong>Value today:</strong></p>
+<div class="math notranslate nohighlight">
+\[-0.40 \times 50 - 3.41 = -20.00 - 3.41 = -\$23.41\]</div>
+<p class="sd-card-text">Or: Short 0.40 shares, long 1 put:</p>
+<div class="math notranslate nohighlight">
+\[0.40 \times 50 - 3.41 = 20.00 - 3.41 = \$16.59\]</div>
+<p class="sd-card-text"><strong>Value if stock goes up:</strong></p>
+<div class="math notranslate nohighlight">
+\[0.40 \times 60 - 0 = \$24.00\]</div>
+<p class="sd-card-text"><strong>Value if stock goes down:</strong></p>
+<div class="math notranslate nohighlight">
+\[0.40 \times 40 - 8 = 16.00 - 8 = \$24.00\]</div>
 <p class="sd-card-text">Wait, let me recalculate. For a put, the replicating portfolio should be:</p>
 <p class="sd-card-text">Actually, let’s verify: Portfolio is long <span class="math notranslate nohighlight">\(\Delta\)</span> shares, short 1 put.
 With <span class="math notranslate nohighlight">\(\Delta = -0.40\)</span>, we’re short 0.40 shares, short 1 put.</p>
@@ -989,12 +1007,15 @@ Down state: <span class="math notranslate nohighlight">\(-0.40 \times 40 - 8 = -
 Today: <span class="math notranslate nohighlight">\(-0.40 \times 50 - p = -20 - p = -23.41\)</span>
 Therefore: <span class="math notranslate nohighlight">\(p = \$3.41\)</span> ✓</p>
 <p class="sd-card-text"><strong>Part 6: Verify Risk-Neutral Valuation</strong></p>
-<p class="sd-card-text">Expected stock price in risk-neutral world:
-$<span class="math notranslate nohighlight">\(E[S_T] = p \times 60 + (1-p) \times 40\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(= 0.5633 \times 60 + 0.4367 \times 40\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(= 33.80 + 17.47 = \$51.27\)</span>$</p>
-<p class="sd-card-text">Under risk-free growth:
-$<span class="math notranslate nohighlight">\(S_0 e^{rT} = 50 \times e^{0.025} = 50 \times 1.0253 = \$51.27\)</span>$ ✓</p>
+<p class="sd-card-text">Expected stock price in risk-neutral world:</p>
+<div class="math notranslate nohighlight">
+\[E[S_T] = p \times 60 + (1-p) \times 40\]</div>
+<div class="math notranslate nohighlight">
+\[= 0.5633 \times 60 + 0.4367 \times 40\]</div>
+<div class="math notranslate nohighlight">
+\[= 33.80 + 17.47 = \$51.27\]</div>
+<p class="sd-card-text">Under risk-free growth:</p>
+<p class="sd-card-text">$<span class="math notranslate nohighlight">\(S_0 e^{rT} = 50 \times e^{0.025} = 50 \times 1.0253 = \$51.27\)</span>$ ✓</p>
 <p class="sd-card-text"><strong>Final Answers:</strong></p>
 <ol class="arabic simple">
 <li><p class="sd-card-text">Delta: <strong>-0.40</strong> (negative for put)</p></li>

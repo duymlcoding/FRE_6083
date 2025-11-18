@@ -485,15 +485,17 @@ document.write(`
 <h2>Setting Up the Model<a class="headerlink" href="#setting-up-the-model" title="Link to this heading">#</a></h2>
 <div class="important admonition">
 <p class="admonition-title">Model Assumptions</p>
-<p><strong>Stock Price Process:</strong>
-$<span class="math notranslate nohighlight">\(dS = \mu S \, dt + \sigma S \, dz\)</span>$</p>
+<p><strong>Stock Price Process:</strong></p>
+<div class="math notranslate nohighlight">
+\[dS = \mu S \, dt + \sigma S \, dz\]</div>
 <p><strong>Option Value:</strong></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f = f(S, t)\)</span> depends on stock price <span class="math notranslate nohighlight">\(S\)</span> and time <span class="math notranslate nohighlight">\(t\)</span></p></li>
 <li><p>Follows some stochastic process (to be determined)</p></li>
 </ul>
-<p><strong>By Itô’s Lemma:</strong>
-$<span class="math notranslate nohighlight">\(df = \left(\frac{\partial f}{\partial S}\mu S + \frac{\partial f}{\partial t} + \frac{1}{2}\frac{\partial^2 f}{\partial S^2}\sigma^2 S^2\right)dt + \frac{\partial f}{\partial S}\sigma S \, dz\)</span>$</p>
+<p><strong>By Itô’s Lemma:</strong></p>
+<div class="math notranslate nohighlight">
+\[df = \left(\frac{\partial f}{\partial S}\mu S + \frac{\partial f}{\partial t} + \frac{1}{2}\frac{\partial^2 f}{\partial S^2}\sigma^2 S^2\right)dt + \frac{\partial f}{\partial S}\sigma S \, dz\]</div>
 </div>
 </section>
 <hr class="docutils" />
@@ -507,10 +509,12 @@ $<span class="math notranslate nohighlight">\(df = \left(\frac{\partial f}{\part
 <li><p><strong>Short</strong> 1 option</p></li>
 </ul>
 <p>Where <span class="math notranslate nohighlight">\(\Delta = \frac{\partial f}{\partial S}\)</span> (we’ll see why shortly)</p>
-<p><strong>Portfolio Value:</strong>
-$<span class="math notranslate nohighlight">\(\Pi = \Delta S - f\)</span>$</p>
-<p><strong>Change in Portfolio Value:</strong>
-$<span class="math notranslate nohighlight">\(d\Pi = \Delta \, dS - df\)</span>$</p>
+<p><strong>Portfolio Value:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Pi = \Delta S - f\]</div>
+<p><strong>Change in Portfolio Value:</strong></p>
+<div class="math notranslate nohighlight">
+\[d\Pi = \Delta \, dS - df\]</div>
 </div>
 <section id="eliminating-randomness">
 <h3>Eliminating Randomness<a class="headerlink" href="#eliminating-randomness" title="Link to this heading">#</a></h3>
@@ -519,8 +523,9 @@ $<span class="math notranslate nohighlight">\(d\Pi = \Delta \, dS - df\)</span>$
 <p><strong>Substituting the stochastic processes:</strong></p>
 <div class="math notranslate nohighlight">
 \[d\Pi = \Delta(\mu S \, dt + \sigma S \, dz) - \left[\left(\frac{\partial f}{\partial S}\mu S + \frac{\partial f}{\partial t} + \frac{1}{2}\frac{\partial^2 f}{\partial S^2}\sigma^2 S^2\right)dt + \frac{\partial f}{\partial S}\sigma S \, dz\right]\]</div>
-<p><strong>The <span class="math notranslate nohighlight">\(dz\)</span> terms:</strong>
-$<span class="math notranslate nohighlight">\(\Delta \sigma S \, dz - \frac{\partial f}{\partial S}\sigma S \, dz\)</span>$</p>
+<p><strong>The <span class="math notranslate nohighlight">\(dz\)</span> terms:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Delta \sigma S \, dz - \frac{\partial f}{\partial S}\sigma S \, dz\]</div>
 <p><strong>Choose <span class="math notranslate nohighlight">\(\Delta = \frac{\partial f}{\partial S}\)</span> to eliminate randomness!</strong></p>
 <p>The <span class="math notranslate nohighlight">\(dz\)</span> terms cancel, leaving only <span class="math notranslate nohighlight">\(dt\)</span> terms.</p>
 </div>
@@ -572,10 +577,12 @@ $<span class="math notranslate nohighlight">\(\Delta \sigma S \, dz - \frac{\par
 <p>Solving the BSM differential equation with appropriate boundary conditions yields:</p>
 <div class="tip admonition">
 <p class="admonition-title">The Black-Scholes-Merton Formulas</p>
-<p><strong>European Call:</strong>
-$<span class="math notranslate nohighlight">\(c = S_0 N(d_1) - Ke^{-rT}N(d_2)\)</span>$</p>
-<p><strong>European Put:</strong>
-$<span class="math notranslate nohighlight">\(p = Ke^{-rT}N(-d_2) - S_0 N(-d_1)\)</span>$</p>
+<p><strong>European Call:</strong></p>
+<div class="math notranslate nohighlight">
+\[c = S_0 N(d_1) - Ke^{-rT}N(d_2)\]</div>
+<p><strong>European Put:</strong></p>
+<div class="math notranslate nohighlight">
+\[p = Ke^{-rT}N(-d_2) - S_0 N(-d_1)\]</div>
 <p>Where:</p>
 <div class="math notranslate nohighlight">
 \[d_1 = \frac{\ln(S_0/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}}\]</div>

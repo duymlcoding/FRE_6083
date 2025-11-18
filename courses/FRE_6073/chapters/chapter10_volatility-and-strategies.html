@@ -730,22 +730,26 @@ Stock Price</p>
 <p>Traders use several methods to describe smiles:</p>
 <div class="tip admonition">
 <p class="admonition-title">Methods to Plot Volatility Smile</p>
-<p><strong>1. Strike vs. Spot (<span class="math notranslate nohighlight">\(K/S_0\)</span>)</strong>
-$<span class="math notranslate nohighlight">\(\text{Implied Vol vs. } K/S_0\)</span>$</p>
-<p><strong>2. Strike vs. Forward (<span class="math notranslate nohighlight">\(K/F_0\)</span>)</strong>
-$<span class="math notranslate nohighlight">\(\text{Implied Vol vs. } K/F_0\)</span>$</p>
+<p><strong>1. Strike vs. Spot (<span class="math notranslate nohighlight">\(K/S_0\)</span>)</strong></p>
+<div class="math notranslate nohighlight">
+\[\text{Implied Vol vs. } K/S_0\]</div>
+<p><strong>2. Strike vs. Forward (<span class="math notranslate nohighlight">\(K/F_0\)</span>)</strong></p>
+<div class="math notranslate nohighlight">
+\[\text{Implied Vol vs. } K/F_0\]</div>
 <ul class="simple">
 <li><p>More common in practice</p></li>
 <li><p>Accounts for carry costs</p></li>
 </ul>
-<p><strong>3. Delta</strong>
-$<span class="math notranslate nohighlight">\(\text{Implied Vol vs. Delta}\)</span>$</p>
+<p><strong>3. Delta</strong></p>
+<div class="math notranslate nohighlight">
+\[\text{Implied Vol vs. Delta}\]</div>
 <ul class="simple">
 <li><p>Very common among traders</p></li>
 <li><p>“25-delta call,” “10-delta put,” etc.</p></li>
 </ul>
-<p><strong>4. Moneyness (Log)</strong>
-$<span class="math notranslate nohighlight">\(\text{Implied Vol vs. } \ln(K/S_0)\)</span>$</p>
+<p><strong>4. Moneyness (Log)</strong></p>
+<div class="math notranslate nohighlight">
+\[\text{Implied Vol vs. } \ln(K/S_0)\]</div>
 <ul class="simple">
 <li><p>Symmetric around zero</p></li>
 </ul>
@@ -1455,8 +1459,9 @@ Max Loss</p>
 \[\text{Max Profit} = 10 - 4 = \$6\]</div>
 <p class="sd-card-text"><strong>Part 3: Maximum Loss</strong></p>
 <p class="sd-card-text">Occurs when <span class="math notranslate nohighlight">\(S_T \leq 100\)</span>:</p>
-<p class="sd-card-text">Both calls expire worthless:
-$<span class="math notranslate nohighlight">\(\text{Max Loss} = \$4\)</span>$ (net premium paid)</p>
+<p class="sd-card-text">Both calls expire worthless:</p>
+<div class="math notranslate nohighlight" id="equation-net-premium-paid">
+<span class="eqno">(3)<a class="headerlink" href="#equation-net-premium-paid" title="Link to this equation">#</a></span>\[\text{Max Loss} = \$4\]</div>
 <p class="sd-card-text"><strong>Part 4: Breakeven</strong></p>
 <p class="sd-card-text">At breakeven, profit = 0:</p>
 <div class="math notranslate nohighlight">

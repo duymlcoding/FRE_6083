@@ -526,8 +526,9 @@ document.write(`
 <ul class="simple">
 <li><p>Buy 0.4 shares to hedge (makes position delta-neutral)</p></li>
 </ul>
-<p><strong>General Rule:</strong>
-$<span class="math notranslate nohighlight">\(\text{Shares to hedge} = -\Delta \times \text{Number of options}\)</span>$</p>
+<p><strong>General Rule:</strong></p>
+<div class="math notranslate nohighlight">
+\[\text{Shares to hedge} = -\Delta \times \text{Number of options}\]</div>
 </div>
 </section>
 <section id="variation-of-delta-with-stock-price">
@@ -617,10 +618,13 @@ A bank sells 100,000 European call options on a stock.</p>
 <li><p class="sd-card-text">Net investment: <span class="math notranslate nohighlight">\(-\$2,317,800\)</span></p></li>
 </ul>
 <p class="sd-card-text"><strong>Part 3: Locked-In Profit</strong></p>
-<p class="sd-card-text">The theoretical value of the position is:
-$<span class="math notranslate nohighlight">\(\text{Value} = \text{Share value} - \text{Option value}\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(= 52,200 \times 49 - 100,000 \times 2.40\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(= \$2,557,800 - \$240,000 = \$2,317,800\)</span>$</p>
+<p class="sd-card-text">The theoretical value of the position is:</p>
+<div class="math notranslate nohighlight">
+\[\text{Value} = \text{Share value} - \text{Option value}\]</div>
+<div class="math notranslate nohighlight">
+\[= 52,200 \times 49 - 100,000 \times 2.40\]</div>
+<div class="math notranslate nohighlight">
+\[= \$2,557,800 - \$240,000 = \$2,317,800\]</div>
 <p class="sd-card-text">This exactly equals the net investment!</p>
 <p class="sd-card-text"><strong>With continuous rebalancing</strong>, the bank will earn the risk-free rate on this investment:</p>
 <div class="math notranslate nohighlight">
@@ -746,13 +750,16 @@ Long T Short T</p>
 <li><p>Gamma: <span class="math notranslate nohighlight">\(\Gamma = 0.05\)</span></p></li>
 <li><p>Stock price change: <span class="math notranslate nohighlight">\(\Delta S = \$2.00\)</span></p></li>
 </ul>
-<p><strong>Delta-only approximation:</strong>
-$<span class="math notranslate nohighlight">\(\Delta f \approx 0.60 \times 2.00 = \$1.20\)</span><span class="math notranslate nohighlight">\(
-**New price**: \)</span>$6.20$</p>
-<p><strong>Delta-gamma approximation:</strong>
-$<span class="math notranslate nohighlight">\(\Delta f \approx 0.60 \times 2.00 + \frac{1}{2} \times 0.05 \times (2.00)^2\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(= 1.20 + 0.10 = \$1.30\)</span><span class="math notranslate nohighlight">\(
-**New price**: \)</span>$6.30$</p>
+<p><strong>Delta-only approximation:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Delta f \approx 0.60 \times 2.00 = \$1.20\]</div>
+<p><strong>New price</strong>: <span class="math notranslate nohighlight">\(\$6.20\)</span></p>
+<p><strong>Delta-gamma approximation:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Delta f \approx 0.60 \times 2.00 + \frac{1}{2} \times 0.05 \times (2.00)^2\]</div>
+<div class="math notranslate nohighlight">
+\[= 1.20 + 0.10 = \$1.30\]</div>
+<p><strong>New price</strong>: <span class="math notranslate nohighlight">\(\$6.30\)</span></p>
 <p><strong>Gamma adjustment</strong>: <span class="math notranslate nohighlight">\(+\$0.10\)</span> (makes curvature matter)</p>
 </div>
 <p><strong>Physical Meaning</strong>: Delta assumes a straight line; Gamma accounts for the curve. For an option, prices don’t change linearly with the stock - they accelerate (for calls when rising, for puts when falling).</p>
@@ -765,13 +772,16 @@ $<span class="math notranslate nohighlight">\(\Delta f \approx 0.60 \times 2.00 
 <p><strong>Theta</strong> measures the rate of change of option price with respect to time:</p>
 <div class="math notranslate nohighlight">
 \[\Theta = \frac{\partial f}{\partial t}\]</div>
-<p><strong>Usually expressed as change per calendar day:</strong>
-$<span class="math notranslate nohighlight">\(\Theta_{\text{day}} = \frac{\Theta}{365}\)</span>$</p>
+<p><strong>Usually expressed as change per calendar day:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Theta_{\text{day}} = \frac{\Theta}{365}\]</div>
 <p><strong>For European Options (No Dividends):</strong></p>
-<p><strong>Call:</strong>
-$<span class="math notranslate nohighlight">\(\Theta_c = -\frac{S_0 N'(d_1) \sigma}{2\sqrt{T}} - rKe^{-rT}N(d_2)\)</span>$</p>
-<p><strong>Put:</strong>
-$<span class="math notranslate nohighlight">\(\Theta_p = -\frac{S_0 N'(d_1) \sigma}{2\sqrt{T}} + rKe^{-rT}N(-d_2)\)</span>$</p>
+<p><strong>Call:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Theta_c = -\frac{S_0 N'(d_1) \sigma}{2\sqrt{T}} - rKe^{-rT}N(d_2)\]</div>
+<p><strong>Put:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Theta_p = -\frac{S_0 N'(d_1) \sigma}{2\sqrt{T}} + rKe^{-rT}N(-d_2)\]</div>
 </div>
 <section id="properties-of-theta">
 <h3>Properties of Theta<a class="headerlink" href="#properties-of-theta" title="Link to this heading">#</a></h3>
@@ -790,9 +800,10 @@ $<span class="math notranslate nohighlight">\(\Theta_p = -\frac{S_0 N'(d_1) \sig
 <li><p>Accelerates as expiration approaches</p></li>
 <li><p>Deep ITM/OTM options have lower theta</p></li>
 </ul>
-<p><strong>Relation to Other Greeks:</strong>
-$<span class="math notranslate nohighlight">\(\Theta + rS\Delta + \frac{1}{2}\sigma^2 S^2 \Gamma = r f\)</span>$
-This is the Black-Scholes PDE rearranged!</p>
+<p><strong>Relation to Other Greeks:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Theta + rS\Delta + \frac{1}{2}\sigma^2 S^2 \Gamma = r f\]</div>
+<p>This is the Black-Scholes PDE rearranged!</p>
 </div>
 <p><strong>Physical Meaning</strong>: Theta measures how much value bleeds away each day due to time decay. It’s like ice melting - as expiration nears, the option loses extrinsic value at an accelerating rate.</p>
 </section>
@@ -876,10 +887,12 @@ Long T    Short T</p>
 <div class="math notranslate nohighlight">
 \[\rho = \frac{\partial f}{\partial r}\]</div>
 <p><strong>For European Options (No Dividends):</strong></p>
-<p><strong>Call:</strong>
-$<span class="math notranslate nohighlight">\(\rho_c = KT e^{-rT} N(d_2)\)</span>$</p>
-<p><strong>Put:</strong>
-$<span class="math notranslate nohighlight">\(\rho_p = -KT e^{-rT} N(-d_2)\)</span>$</p>
+<p><strong>Call:</strong></p>
+<div class="math notranslate nohighlight">
+\[\rho_c = KT e^{-rT} N(d_2)\]</div>
+<p><strong>Put:</strong></p>
+<div class="math notranslate nohighlight">
+\[\rho_p = -KT e^{-rT} N(-d_2)\]</div>
 <p><strong>Usually expressed as change per 1% (100 basis points) rate change.</strong></p>
 </div>
 <div class="admonition note">
@@ -1003,28 +1016,31 @@ $<span class="math notranslate nohighlight">\(\rho_p = -KT e^{-rT} N(-d_2)\)</sp
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(w_1\)</span> = Number of Option 1 to buy</p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(w_2\)</span> = Number of Option 2 to buy</p></li>
 </ul>
-<p class="sd-card-text"><strong>Gamma neutrality:</strong>
-$<span class="math notranslate nohighlight">\(-5,000 + 0.5w_1 + 0.8w_2 = 0\)</span>$</p>
-<p class="sd-card-text"><strong>Vega neutrality:</strong>
-$<span class="math notranslate nohighlight">\(-8,000 + 2.0w_1 + 1.2w_2 = 0\)</span>$</p>
+<p class="sd-card-text"><strong>Gamma neutrality:</strong></p>
+<div class="math notranslate nohighlight">
+\[-5,000 + 0.5w_1 + 0.8w_2 = 0\]</div>
+<p class="sd-card-text"><strong>Vega neutrality:</strong></p>
+<div class="math notranslate nohighlight">
+\[-8,000 + 2.0w_1 + 1.2w_2 = 0\]</div>
 <p class="sd-card-text"><strong>Step 2: Solve System of Equations</strong></p>
-<p class="sd-card-text">From gamma equation:
-$<span class="math notranslate nohighlight">\(0.5w_1 + 0.8w_2 = 5,000\)</span>$ … (1)</p>
-<p class="sd-card-text">From vega equation:
-$<span class="math notranslate nohighlight">\(2.0w_1 + 1.2w_2 = 8,000\)</span>$ … (2)</p>
-<p class="sd-card-text">Multiply equation (1) by 4:
-$<span class="math notranslate nohighlight">\(2.0w_1 + 3.2w_2 = 20,000\)</span>$ … (3)</p>
-<p class="sd-card-text">Subtract equation (2) from equation (3):
-$<span class="math notranslate nohighlight">\(2.0w_2 = 12,000\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(w_2 = 6,000\)</span>$</p>
-<p class="sd-card-text">Substitute back into equation (1):
-$<span class="math notranslate nohighlight">\(0.5w_1 + 0.8(6,000) = 5,000\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(0.5w_1 + 4,800 = 5,000\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(w_1 = 400\)</span>$</p>
+<p class="sd-card-text">From gamma equation:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}0.5w_1 + 0.8w_2 = 5,000$$ ... (1)\\From vega equation:\\$$2.0w_1 + 1.2w_2 = 8,000$$ ... (2)\\Multiply equation (1) by 4:\\$$2.0w_1 + 3.2w_2 = 20,000$$ ... (3)\\Subtract equation (2) from equation (3):\\$$2.0w_2 = 12,000\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[w_2 = 6,000\]</div>
+<p class="sd-card-text">Substitute back into equation (1):</p>
+<div class="math notranslate nohighlight">
+\[0.5w_1 + 0.8(6,000) = 5,000\]</div>
+<div class="math notranslate nohighlight">
+\[0.5w_1 + 4,800 = 5,000\]</div>
+<div class="math notranslate nohighlight">
+\[w_1 = 400\]</div>
 <p class="sd-card-text"><strong>Step 3: Check Delta Impact</strong></p>
-<p class="sd-card-text">Adding options changes delta:
-$<span class="math notranslate nohighlight">\(\Delta_{\text{new}} = 0 + 0.6(400) + 0.5(6,000)\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(= 240 + 3,000 = 3,240\)</span>$</p>
+<p class="sd-card-text">Adding options changes delta:</p>
+<div class="math notranslate nohighlight">
+\[\Delta_{\text{new}} = 0 + 0.6(400) + 0.5(6,000)\]</div>
+<div class="math notranslate nohighlight">
+\[= 240 + 3,000 = 3,240\]</div>
 <p class="sd-card-text"><strong>Step 4: Restore Delta Neutrality</strong></p>
 <p class="sd-card-text">To make delta = 0:</p>
 <ul class="simple">
@@ -1079,10 +1095,12 @@ $<span class="math notranslate nohighlight">\(\Delta_{\text{new}} = 0 + 0.6(400)
 <p><strong>The Black-Scholes PDE Can Be Written:</strong></p>
 <div class="math notranslate nohighlight">
 \[\Theta + rS\Delta + \frac{1}{2}\sigma^2 S^2 \Gamma = rf\]</div>
-<p><strong>Rearranging:</strong>
-$<span class="math notranslate nohighlight">\(\Theta + \frac{1}{2}\sigma^2 S^2 \Gamma = r(f - S\Delta)\)</span>$</p>
-<p><strong>For Delta-Neutral Portfolio (<span class="math notranslate nohighlight">\(\Delta = 0\)</span>):</strong>
-$<span class="math notranslate nohighlight">\(\Theta + \frac{1}{2}\sigma^2 S^2 \Gamma = rf\)</span>$</p>
+<p><strong>Rearranging:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Theta + \frac{1}{2}\sigma^2 S^2 \Gamma = r(f - S\Delta)\]</div>
+<p><strong>For Delta-Neutral Portfolio (<span class="math notranslate nohighlight">\(\Delta = 0\)</span>):</strong></p>
+<div class="math notranslate nohighlight">
+\[\Theta + \frac{1}{2}\sigma^2 S^2 \Gamma = rf\]</div>
 <p><strong>Interpretation:</strong></p>
 <p>Time decay (<span class="math notranslate nohighlight">\(\Theta\)</span>) plus convexity profit (<span class="math notranslate nohighlight">\(\Gamma\)</span>) equals risk-free return on option value.</p>
 <p><strong>Key Insight:</strong> Negative theta (time decay) is compensated by gamma (rebalancing profit) for a delta-neutral portfolio.</p>
@@ -1142,14 +1160,18 @@ $<span class="math notranslate nohighlight">\(\Theta + \frac{1}{2}\sigma^2 S^2 \
 <span class="sd-summary-text">Solution to Practice Problem 1</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><strong>Assume initial option price</strong>: <span class="math notranslate nohighlight">\(f = \$5.00\)</span> (ATM call)</p>
 <p class="sd-card-text"><strong>Part 1: Stock Rises to <span class="math notranslate nohighlight">\(102 (\)</span>\Delta S = 2$)</strong></p>
-<p class="sd-card-text"><strong>Delta-only:</strong>
-$<span class="math notranslate nohighlight">\(\Delta f = \Delta \cdot \Delta S = 0.55 \times 2 = \$1.10\)</span><span class="math notranslate nohighlight">\(
-**New price**: \)</span>5.00 + 1.10 = $6.10$</p>
-<p class="sd-card-text"><strong>Delta-gamma:</strong>
-$<span class="math notranslate nohighlight">\(\Delta f = \Delta \cdot \Delta S + \frac{1}{2}\Gamma \cdot (\Delta S)^2\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(= 0.55 \times 2 + \frac{1}{2} \times 0.03 \times 4\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(= 1.10 + 0.06 = \$1.16\)</span><span class="math notranslate nohighlight">\(
-**New price**: \)</span>5.00 + 1.16 = $6.16$</p>
+<p class="sd-card-text"><strong>Delta-only:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Delta f = \Delta \cdot \Delta S = 0.55 \times 2 = \$1.10\]</div>
+<p class="sd-card-text"><strong>New price</strong>: <span class="math notranslate nohighlight">\(5.00 + 1.10 = \$6.10\)</span></p>
+<p class="sd-card-text"><strong>Delta-gamma:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Delta f = \Delta \cdot \Delta S + \frac{1}{2}\Gamma \cdot (\Delta S)^2\]</div>
+<div class="math notranslate nohighlight">
+\[= 0.55 \times 2 + \frac{1}{2} \times 0.03 \times 4\]</div>
+<div class="math notranslate nohighlight">
+\[= 1.10 + 0.06 = \$1.16\]</div>
+<p class="sd-card-text"><strong>New price</strong>: <span class="math notranslate nohighlight">\(5.00 + 1.16 = \$6.16\)</span></p>
 <p class="sd-card-text"><strong>Gamma effect</strong>: +$0.06 (curvature increases value)</p>
 <p class="sd-card-text"><strong>Part 2: Volatility Increases 2% (<span class="math notranslate nohighlight">\(\Delta\sigma = 0.02\)</span>)</strong></p>
 <div class="math notranslate nohighlight">

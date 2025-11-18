@@ -79,9 +79,11 @@ Continuous compounding is the mathematical limit as compounding frequency approa
 **With continuous compounding:**
 
 **Future Value:**
+
 $$FV = PV \cdot e^{RT}$$
 
 **Present Value:**
+
 $$PV = FV \cdot e^{-RT}$$
 
 Where:
@@ -140,6 +142,7 @@ $$\text{Interest} = 6,168.55 - 5,000 = \$1,168.55$$
 **Final Answer:** After 3.5 years, you will have **$6,168.55**.
 
 **Comparison with Annual Compounding:**
+
 $$FV = 5,000(1.06)^{3.5} = 5,000 \times 1.2293 = \$6,146.42$$
 
 Continuous compounding yields $22.13 more (not a huge difference).
@@ -332,6 +335,7 @@ Calculate present value of known cash flows:
 - Total = $3.94
 
 Remaining present value:
+
 $$102.5 - 3.94 = 98.56 = 102e^{-1.5R(1.5)}$$
 
 $$e^{-1.5R(1.5)} = 0.9662$$
@@ -353,6 +357,7 @@ Known cash flows:
 - Total = $7.336
 
 Remaining:
+
 $$105.0 - 7.336 = 97.664 = 102.5e^{-2.0R(2.0)}$$
 
 $$e^{-2.0R(2.0)} = 0.9529$$
@@ -418,15 +423,19 @@ Using the zero curve from the previous example, calculate the theoretical price 
 **Step 2: Discount Each Cash Flow**
 
 At 0.5 years:
+
 $$PV_1 = 3 \times e^{-0.02010 \times 0.5} = 3 \times e^{-0.01005} = 3 \times 0.99 = \$2.970$$
 
 At 1.0 years:
+
 $$PV_2 = 3 \times e^{-0.02225 \times 1.0} = 3 \times 0.978 = \$2.934$$
 
 At 1.5 years:
+
 $$PV_3 = 3 \times e^{-0.02284 \times 1.5} = 3 \times e^{-0.03426} = 3 \times 0.9663 = \$2.899$$
 
 At 2.0 years:
+
 $$PV_4 = 103 \times e^{-0.02416 \times 2.0} = 103 \times e^{-0.04832} = 103 \times 0.9529 = \$98.15$$
 
 **Step 3: Sum Present Values**
@@ -527,6 +536,7 @@ Using our zero curve, calculate the 2-year par yield (paid semiannually).
 **Step 1: Set Up Par Bond Equation**
 
 For a bond trading at par:
+
 $$100 = \frac{c}{2}e^{-0.01005} + \frac{c}{2}e^{-0.02225} + \frac{c}{2}e^{-0.03426} + \left(\frac{c}{2} + 100\right)e^{-0.04832}$$
 
 Where $c$ is the annual coupon rate.
@@ -699,15 +709,19 @@ A 2-year bond with 5% annual coupon (paid semiannually) trades at $100. The yiel
 **Step 1: Calculate Present Value of Each Cash Flow**
 
 At 0.5 years:
+
 $$PV_1 = 2.50 \times e^{-0.05 \times 0.5} = 2.50 \times 0.9753 = \$2.438$$
 
 At 1.0 years:
+
 $$PV_2 = 2.50 \times e^{-0.05 \times 1.0} = 2.50 \times 0.9512 = \$2.378$$
 
 At 1.5 years:
+
 $$PV_3 = 2.50 \times e^{-0.05 \times 1.5} = 2.50 \times 0.9277 = \$2.319$$
 
 At 2.0 years:
+
 $$PV_4 = 102.50 \times e^{-0.05 \times 2.0} = 102.50 \times 0.9048 = \$92.74$$
 
 **Total:** $2.438 + 2.378 + 2.319 + 92.74 = \$99.875 ≈ \$100$ ✓
@@ -726,7 +740,9 @@ $$D = \frac{192.56}{100} = 1.926 \text{ years}$$
 
 **Verification:**
 If yield increases to 6%:
+
 $$\Delta B \approx -1.926 \times 100 \times 0.01 = -\$1.93$$
+
 New price ≈ $98.07
 
 Exact calculation: Bond price at 6% yield ≈ $98.11 (very close!)
@@ -777,12 +793,17 @@ Using the previous bond (Duration = 1.926 years), suppose convexity = 5.0.
 **Scenario:** Yield increases from 5% to 6% (Δy = 0.01)
 
 **Using Duration Only:**
+
 $$\frac{\Delta B}{B} = -1.926 \times 0.01 = -0.01926 = -1.926\%$$
+
 $$\Delta B = -1.926 \Rightarrow \text{New price} = \$98.07$$
 
 **Using Duration + Convexity:**
+
 $$\frac{\Delta B}{B} = -1.926 \times 0.01 + \frac{1}{2} \times 5.0 \times (0.01)^2$$
+
 $$= -0.01926 + 0.00025 = -0.01901 = -1.901\%$$
+
 $$\Delta B = -1.901 \Rightarrow \text{New price} = \$98.10$$
 
 The convexity adjustment improves accuracy!
@@ -889,6 +910,7 @@ Known PVs:
 - Total = 3.910
 
 Remaining:
+
 $$100 - 3.910 = 96.09 = 102e^{-1.5R(1.5)}$$
 
 $$e^{-1.5R(1.5)} = 0.9420$$

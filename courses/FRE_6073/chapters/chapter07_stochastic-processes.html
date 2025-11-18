@@ -447,8 +447,9 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Key Concept: Markov Process</p>
 <p>A <strong>Markov process</strong> is a stochastic process where only the current value of a variable is relevant for predicting the future - the history doesn’t matter.</p>
-<p><strong>Formally:</strong>
-$<span class="math notranslate nohighlight">\(P(X_{t+s} | X_t, X_{t-1}, \ldots, X_0) = P(X_{t+s} | X_t)\)</span>$</p>
+<p><strong>Formally:</strong></p>
+<div class="math notranslate nohighlight">
+\[P(X_{t+s} | X_t, X_{t-1}, \ldots, X_0) = P(X_{t+s} | X_t)\]</div>
 <p><strong>Key Property:</strong> The future is independent of the past, given the present.</p>
 </div>
 <div class="admonition note">
@@ -494,18 +495,22 @@ $<span class="math notranslate nohighlight">\(P(X_{t+s} | X_t, X_{t-1}, \ldots, 
 </ul>
 <p class="sd-card-text">Total change: <span class="math notranslate nohighlight">\(\Delta x_{total} = \Delta x_1 + \Delta x_2\)</span></p>
 <p class="sd-card-text"><strong>Mean:</strong> <span class="math notranslate nohighlight">\(E[\Delta x_{total}] = 0 + 0 = 0\)</span></p>
-<p class="sd-card-text"><strong>Variance (KEY INSIGHT - variances add for independent variables):</strong>
-$<span class="math notranslate nohighlight">\(\text{Var}[\Delta x_{total}] = \text{Var}[\Delta x_1] + \text{Var}[\Delta x_2] = 1 + 1 = 2\)</span>$</p>
+<p class="sd-card-text"><strong>Variance (KEY INSIGHT - variances add for independent variables):</strong></p>
+<div class="math notranslate nohighlight">
+\[\text{Var}[\Delta x_{total}] = \text{Var}[\Delta x_1] + \text{Var}[\Delta x_2] = 1 + 1 = 2\]</div>
 <p class="sd-card-text"><strong>Distribution:</strong> <span class="math notranslate nohighlight">\(\Delta x_{total} \sim N(0, 2)\)</span></p>
 <p class="sd-card-text"><strong>Part 2: Change Over 1/2 Year</strong></p>
 <p class="sd-card-text">Think backward: Two half-year periods make one year.</p>
-<p class="sd-card-text">If each half-year has variance <span class="math notranslate nohighlight">\(v\)</span>, then:
-$<span class="math notranslate nohighlight">\(v + v = 1\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(v = 0.5\)</span>$</p>
+<p class="sd-card-text">If each half-year has variance <span class="math notranslate nohighlight">\(v\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[v + v = 1\]</div>
+<div class="math notranslate nohighlight">
+\[v = 0.5\]</div>
 <p class="sd-card-text"><strong>Distribution:</strong> <span class="math notranslate nohighlight">\(\Delta x_{1/2\text{-year}} \sim N(0, 0.5)\)</span></p>
 <p class="sd-card-text"><strong>Part 3: Change Over <span class="math notranslate nohighlight">\(\Delta t\)</span> Years</strong></p>
-<p class="sd-card-text">By the same logic:
-$<span class="math notranslate nohighlight">\(\text{Var}[\Delta x(\Delta t)] = \Delta t\)</span>$</p>
+<p class="sd-card-text">By the same logic:</p>
+<div class="math notranslate nohighlight">
+\[\text{Var}[\Delta x(\Delta t)] = \Delta t\]</div>
 <p class="sd-card-text"><strong>Distribution:</strong> <span class="math notranslate nohighlight">\(\Delta x(\Delta t) \sim N(0, \Delta t)\)</span></p>
 <p class="sd-card-text"><strong>Final Answer:</strong></p>
 <ol class="arabic simple">
@@ -520,12 +525,15 @@ $<span class="math notranslate nohighlight">\(\text{Var}[\Delta x(\Delta t)] = \
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Critical Distinction:</strong></p>
-<p><strong>Variances are additive:</strong>
-$<span class="math notranslate nohighlight">\(\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y)\)</span>$ (if independent)</p>
-<p><strong>Standard deviations are NOT additive:</strong>
-$<span class="math notranslate nohighlight">\(\sigma(X + Y) \neq \sigma(X) + \sigma(Y)\)</span>$</p>
-<p><strong>Instead:</strong>
-$<span class="math notranslate nohighlight">\(\sigma(X + Y) = \sqrt{\sigma^2(X) + \sigma^2(Y)}\)</span>$</p>
+<p><strong>Variances are additive:</strong></p>
+<div class="math notranslate nohighlight" id="equation-if-independent">
+<span class="eqno">(1)<a class="headerlink" href="#equation-if-independent" title="Link to this equation">#</a></span>\[\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y)\]</div>
+<p><strong>Standard deviations are NOT additive:</strong></p>
+<div class="math notranslate nohighlight">
+\[\sigma(X + Y) \neq \sigma(X) + \sigma(Y)\]</div>
+<p><strong>Instead:</strong></p>
+<div class="math notranslate nohighlight">
+\[\sigma(X + Y) = \sqrt{\sigma^2(X) + \sigma^2(Y)}\]</div>
 <p><strong>For time scaling:</strong></p>
 <ul class="simple">
 <li><p>Variance over time <span class="math notranslate nohighlight">\(T\)</span>: <span class="math notranslate nohighlight">\(\sigma^2 T\)</span></p></li>
@@ -559,10 +567,12 @@ $<span class="math notranslate nohighlight">\(\sigma(X + Y) = \sqrt{\sigma^2(X) 
 <div class="math notranslate nohighlight">
 \[\Delta z = \epsilon \sqrt{\Delta t}\]</div>
 <p>Where <span class="math notranslate nohighlight">\(\epsilon \sim N(0, 1)\)</span> (standard normal random variable)</p>
-<p><strong>Equivalently:</strong>
-$<span class="math notranslate nohighlight">\(\Delta z \sim N(0, \Delta t)\)</span>$</p>
-<p><strong>Over finite time <span class="math notranslate nohighlight">\(T\)</span>:</strong>
-$<span class="math notranslate nohighlight">\(z(T) - z(0) \sim N(0, T)\)</span>$</p>
+<p><strong>Equivalently:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Delta z \sim N(0, \Delta t)\]</div>
+<p><strong>Over finite time <span class="math notranslate nohighlight">\(T\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[z(T) - z(0) \sim N(0, T)\]</div>
 <p><strong>Mean:</strong> <span class="math notranslate nohighlight">\(E[z(T) - z(0)] = 0\)</span>
 <strong>Variance:</strong> <span class="math notranslate nohighlight">\(\text{Var}[z(T) - z(0)] = T\)</span>
 <strong>Standard Deviation:</strong> <span class="math notranslate nohighlight">\(\sigma[z(T) - z(0)] = \sqrt{T}\)</span></p>
@@ -678,8 +688,9 @@ $<span class="math notranslate nohighlight">\(z(T) - z(0) \sim N(0, T)\)</span>$
 <li><p><span class="math notranslate nohighlight">\(b\)</span> = Volatility (standard deviation of change per unit time)</p></li>
 <li><p><span class="math notranslate nohighlight">\(dz\)</span> = Standard Wiener process</p></li>
 </ul>
-<p><strong>Discrete time equivalent:</strong>
-$<span class="math notranslate nohighlight">\(\Delta x = a \Delta t + b \epsilon \sqrt{\Delta t}\)</span>$</p>
+<p><strong>Discrete time equivalent:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Delta x = a \Delta t + b \epsilon \sqrt{\Delta t}\]</div>
 <p>Where <span class="math notranslate nohighlight">\(\epsilon \sim N(0, 1)\)</span></p>
 </div>
 <section id="properties-of-generalized-wiener-process">
@@ -698,8 +709,9 @@ $<span class="math notranslate nohighlight">\(\Delta x = a \Delta t + b \epsilon
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Example Problem: Generalized Wiener Process</p>
-<p>A cash balance <span class="math notranslate nohighlight">\(x\)</span> changes according to:
-$<span class="math notranslate nohighlight">\(dx = 5 \, dt + 2 \, dz\)</span>$</p>
+<p>A cash balance <span class="math notranslate nohighlight">\(x\)</span> changes according to:</p>
+<div class="math notranslate nohighlight">
+\[dx = 5 \, dt + 2 \, dz\]</div>
 <p>Where time is measured in years and <span class="math notranslate nohighlight">\(x\)</span> is in thousands of dollars.</p>
 <p><strong>Questions:</strong></p>
 <ol class="arabic simple">
@@ -778,10 +790,12 @@ Standard Deviation: <span class="math notranslate nohighlight">\(\sqrt{2.0} = 1.
 <li><p><span class="math notranslate nohighlight">\(\sigma\)</span> = Volatility per unit time</p></li>
 <li><p><span class="math notranslate nohighlight">\(dz\)</span> = Wiener process</p></li>
 </ul>
-<p><strong>Discrete approximation:</strong>
-$<span class="math notranslate nohighlight">\(\Delta S = \mu S \Delta t + \sigma S \epsilon \sqrt{\Delta t}\)</span>$</p>
-<p><strong>In percentage terms:</strong>
-$<span class="math notranslate nohighlight">\(\frac{\Delta S}{S} = \mu \Delta t + \sigma \epsilon \sqrt{\Delta t}\)</span>$</p>
+<p><strong>Discrete approximation:</strong></p>
+<div class="math notranslate nohighlight">
+\[\Delta S = \mu S \Delta t + \sigma S \epsilon \sqrt{\Delta t}\]</div>
+<p><strong>In percentage terms:</strong></p>
+<div class="math notranslate nohighlight">
+\[\frac{\Delta S}{S} = \mu \Delta t + \sigma \epsilon \sqrt{\Delta t}\]</div>
 </div>
 <section id="why-this-model">
 <h3>Why This Model?<a class="headerlink" href="#why-this-model" title="Link to this heading">#</a></h3>
@@ -805,24 +819,28 @@ $<span class="math notranslate nohighlight">\(\frac{\Delta S}{S} = \mu \Delta t 
 <p>Itô’s lemma is the stochastic calculus chain rule - essential for derivatives pricing.</p>
 <div class="tip admonition">
 <p class="admonition-title">Key Concept: Itô’s Lemma</p>
-<p>If <span class="math notranslate nohighlight">\(x\)</span> follows the Itô process:
-$<span class="math notranslate nohighlight">\(dx = a(x,t) \, dt + b(x,t) \, dz\)</span>$</p>
+<p>If <span class="math notranslate nohighlight">\(x\)</span> follows the Itô process:</p>
+<div class="math notranslate nohighlight">
+\[dx = a(x,t) \, dt + b(x,t) \, dz\]</div>
 <p>And <span class="math notranslate nohighlight">\(G\)</span> is a function of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(t\)</span>: <span class="math notranslate nohighlight">\(G = G(x,t)\)</span></p>
 <p>Then <span class="math notranslate nohighlight">\(G\)</span> follows:</p>
 <div class="math notranslate nohighlight">
 \[dG = \left(\frac{\partial G}{\partial x} a + \frac{\partial G}{\partial t} + \frac{1}{2} \frac{\partial^2 G}{\partial x^2} b^2\right) dt + \frac{\partial G}{\partial x} b \, dz\]</div>
-<p><strong>Short form:</strong>
-$<span class="math notranslate nohighlight">\(dG = \left(G_x a + G_t + \frac{1}{2} G_{xx} b^2\right) dt + G_x b \, dz\)</span>$</p>
+<p><strong>Short form:</strong></p>
+<div class="math notranslate nohighlight">
+\[dG = \left(G_x a + G_t + \frac{1}{2} G_{xx} b^2\right) dt + G_x b \, dz\]</div>
 </div>
 <section id="why-ito-s-lemma-is-different">
 <h3>Why Itô’s Lemma is Different<a class="headerlink" href="#why-ito-s-lemma-is-different" title="Link to this heading">#</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Key Difference from Ordinary Calculus:</strong></p>
-<p>In ordinary calculus, Taylor expansion:
-$<span class="math notranslate nohighlight">\(dG = \frac{\partial G}{\partial x} dx + \frac{\partial G}{\partial t} dt + \text{higher order terms}\)</span>$</p>
-<p>In stochastic calculus:
-$<span class="math notranslate nohighlight">\(dG = \frac{\partial G}{\partial x} dx + \frac{\partial G}{\partial t} dt + \frac{1}{2} \frac{\partial^2 G}{\partial x^2} (dx)^2 + \ldots\)</span>$</p>
+<p>In ordinary calculus, Taylor expansion:</p>
+<div class="math notranslate nohighlight">
+\[dG = \frac{\partial G}{\partial x} dx + \frac{\partial G}{\partial t} dt + \text{higher order terms}\]</div>
+<p>In stochastic calculus:</p>
+<div class="math notranslate nohighlight">
+\[dG = \frac{\partial G}{\partial x} dx + \frac{\partial G}{\partial t} dt + \frac{1}{2} \frac{\partial^2 G}{\partial x^2} (dx)^2 + \ldots\]</div>
 <p><strong>The <span class="math notranslate nohighlight">\((dx)^2\)</span> term doesn’t vanish!</strong></p>
 <p><strong>Why?</strong> Because:</p>
 <ul class="simple">
@@ -878,8 +896,9 @@ $<span class="math notranslate nohighlight">\(dG = \frac{\partial G}{\partial x}
 <h2>Application: The Lognormal Property<a class="headerlink" href="#application-the-lognormal-property" title="Link to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Example Problem: What Process Does <span class="math notranslate nohighlight">\(\ln S\)</span> Follow?</p>
-<p>Given that stock price follows:
-$<span class="math notranslate nohighlight">\(dS = \mu S \, dt + \sigma S \, dz\)</span>$</p>
+<p>Given that stock price follows:</p>
+<div class="math notranslate nohighlight">
+\[dS = \mu S \, dt + \sigma S \, dz\]</div>
 <p><strong>Question:</strong> What process does <span class="math notranslate nohighlight">\(G = \ln S\)</span> follow?</p>
 <p><strong>Use Itô’s Lemma to find <span class="math notranslate nohighlight">\(d(\ln S)\)</span></strong></p>
 </div>
@@ -899,7 +918,7 @@ $<span class="math notranslate nohighlight">\(dS = \mu S \, dt + \sigma S \, dz\
 <div class="math notranslate nohighlight">
 \[\frac{\partial^2 G}{\partial S^2} = -\frac{1}{S^2}\]</div>
 <div class="math notranslate nohighlight" id="equation-no-explicit-time-dependence">
-<span class="eqno">(1)<a class="headerlink" href="#equation-no-explicit-time-dependence" title="Link to this equation">#</a></span>\[\frac{\partial G}{\partial t} = 0\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-no-explicit-time-dependence" title="Link to this equation">#</a></span>\[\frac{\partial G}{\partial t} = 0\]</div>
 <p class="sd-card-text"><strong>Step 3: Apply Itô’s Lemma</strong></p>
 <div class="math notranslate nohighlight">
 \[d(\ln S) = \left(\frac{1}{S} \cdot \mu S + 0 + \frac{1}{2} \cdot \left(-\frac{1}{S^2}\right) \cdot (\sigma S)^2\right)dt + \frac{1}{S} \cdot \sigma S \, dz\]</div>
@@ -931,10 +950,12 @@ $<span class="math notranslate nohighlight">\(dS = \mu S \, dt + \sigma S \, dz\
 <p><strong>Distribution of <span class="math notranslate nohighlight">\(S_T\)</span>:</strong></p>
 <div class="math notranslate nohighlight">
 \[\ln\left(\frac{S_T}{S_0}\right) \sim N\left(\left(\mu - \frac{\sigma^2}{2}\right)T, \sigma^2 T\right)\]</div>
-<p><strong>Expected value:</strong>
-$<span class="math notranslate nohighlight">\(E[S_T] = S_0 e^{\mu T}\)</span>$</p>
-<p><strong>Variance:</strong>
-$<span class="math notranslate nohighlight">\(\text{Var}[S_T] = S_0^2 e^{2\mu T}(e^{\sigma^2 T} - 1)\)</span>$</p>
+<p><strong>Expected value:</strong></p>
+<div class="math notranslate nohighlight">
+\[E[S_T] = S_0 e^{\mu T}\]</div>
+<p><strong>Variance:</strong></p>
+<div class="math notranslate nohighlight">
+\[\text{Var}[S_T] = S_0^2 e^{2\mu T}(e^{\sigma^2 T} - 1)\]</div>
 </div>
 <section id="understanding-the-lognormal">
 <h3>Understanding the Lognormal<a class="headerlink" href="#understanding-the-lognormal" title="Link to this heading">#</a></h3>
@@ -947,10 +968,12 @@ $<span class="math notranslate nohighlight">\(\text{Var}[S_T] = S_0^2 e^{2\mu T}
 <li><p><strong>Median vs. Mean</strong>: Median &lt; Mean</p></li>
 <li><p><strong>Multiplicative returns</strong>: Returns compound multiplicatively</p></li>
 </ol>
-<p><strong>Median:</strong>
-$<span class="math notranslate nohighlight">\(\text{Median}[S_T] = S_0 e^{(\mu - \sigma^2/2)T}\)</span>$</p>
-<p><strong>Mean:</strong>
-$<span class="math notranslate nohighlight">\(E[S_T] = S_0 e^{\mu T}\)</span>$</p>
+<p><strong>Median:</strong></p>
+<div class="math notranslate nohighlight">
+\[\text{Median}[S_T] = S_0 e^{(\mu - \sigma^2/2)T}\]</div>
+<p><strong>Mean:</strong></p>
+<div class="math notranslate nohighlight">
+\[E[S_T] = S_0 e^{\mu T}\]</div>
 <p><strong>Note:</strong> Mean &gt; Median due to right skew.</p>
 </div>
 <div class="tip admonition">

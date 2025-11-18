@@ -90,7 +90,9 @@ The key insight: We can replicate the option payoff using a portfolio of stock a
 **Goal:** Make the portfolio riskless (same value in both states)
 
 **Riskless condition:**
+
 $$S_0u\Delta - f_u = S_0d\Delta - f_d$$
+
 ```
 
 ### Solving for Delta
@@ -122,10 +124,13 @@ $$\Delta = \frac{f_u - f_d}{S_0u - S_0d}$$
 **Step 3:** Alternative expression for portfolio value today = $S_0\Delta - f$
 
 **Step 4:** Equate the two expressions:
+
 $$S_0\Delta - f = (S_0u\Delta - f_u)e^{-rT}$$
 
 **Step 5:** Solve for $f$:
+
 $$f = S_0\Delta - (S_0u\Delta - f_u)e^{-rT}$$
+
 ```
 
 ### Risk-Neutral Probability
@@ -154,11 +159,15 @@ $$p = \frac{e^{rT} - d}{u - d}$$
 The quantity $p = \frac{e^{rT} - d}{u - d}$ can be interpreted as a probability such that:
 
 **The stock price earns the risk-free rate:**
+
 $$S_0e^{rT} = pS_0u + (1-p)S_0d$$
 
 **Proof:**
+
 $$pS_0u + (1-p)S_0d = \frac{e^{rT} - d}{u - d} \cdot S_0u + \frac{u - e^{rT}}{u - d} \cdot S_0d$$
+
 $$= \frac{S_0(ue^{rT} - ud + ud - de^{rT})}{u - d} = \frac{S_0e^{rT}(u - d)}{u - d} = S_0e^{rT}$$ ✓
+
 ```
 
 ```{important}
@@ -207,9 +216,11 @@ A 3-month call option has a strike price of $21. The risk-free rate is 4% per an
 **Step 1: Calculate Payoffs**
 
 **If stock goes up to $22:**
+
 $$f_u = \max(22 - 21, 0) = \$1$$
 
 **If stock goes down to $18:**
+
 $$f_d = \max(18 - 21, 0) = \$0$$
 
 **Step 2: Calculate Delta**
@@ -239,15 +250,19 @@ $$= \$0.545$$
 **Portfolio:** Long $\Delta = 0.25$ shares, short 1 call
 
 **Value today:**
+
 $$0.25 \times 20 - 0.545 = 5.00 - 0.545 = \$4.455$$
 
 **Value if stock goes up:**
+
 $$0.25 \times 22 - 1 = 5.50 - 1.00 = \$4.50$$
 
 **Value if stock goes down:**
+
 $$0.25 \times 18 - 0 = 4.50 - 0 = \$4.50$$
 
 **Present value of $4.50:**
+
 $$4.50 \times e^{-0.01} = 4.50 \times 0.9900 = \$4.455$$ ✓
 
 **Final Answers:**
@@ -274,7 +289,9 @@ We can also value the option directly from the replicating portfolio:
 **Portfolio composition:** $0.25 \times 20 - f = 4.455$
 
 **Solve for option price:**
+
 $$5.00 - f = 4.455$$
+
 $$f = \$0.545$$ ✓
 
 **Same answer!**
@@ -370,7 +387,9 @@ Where:
 - $\Delta t$ = Length of time step
 
 **Risk-neutral probability:**
+
 $$p = \frac{e^{r\Delta t} - d}{u - d}$$
+
 ```
 
 ```{admonition} Example: CRR Parameters
@@ -561,9 +580,11 @@ A 6-month European put option has a strike price of $48. The risk-free rate is 5
 **Part 1: Calculate Put Payoffs**
 
 **If stock goes up to $60:**
+
 $$f_u = \max(48 - 60, 0) = \$0$$
 
 **If stock goes down to $40:**
+
 $$f_d = \max(48 - 40, 0) = \$8$$
 
 **Part 2: Calculate Delta**
@@ -593,15 +614,19 @@ $$= \$3.41$$
 **Portfolio:** Long $\Delta = -0.40$ shares (i.e., short 0.40 shares), short 1 put
 
 **Value today:**
+
 $$-0.40 \times 50 - 3.41 = -20.00 - 3.41 = -\$23.41$$
 
 Or: Short 0.40 shares, long 1 put:
+
 $$0.40 \times 50 - 3.41 = 20.00 - 3.41 = \$16.59$$
 
 **Value if stock goes up:**
+
 $$0.40 \times 60 - 0 = \$24.00$$
 
 **Value if stock goes down:**
+
 $$0.40 \times 40 - 8 = 16.00 - 8 = \$24.00$$
 
 Wait, let me recalculate. For a put, the replicating portfolio should be:
@@ -619,11 +644,15 @@ Therefore: $p = \$3.41$ ✓
 **Part 6: Verify Risk-Neutral Valuation**
 
 Expected stock price in risk-neutral world:
+
 $$E[S_T] = p \times 60 + (1-p) \times 40$$
+
 $$= 0.5633 \times 60 + 0.4367 \times 40$$
+
 $$= 33.80 + 17.47 = \$51.27$$
 
 Under risk-free growth:
+
 $$S_0 e^{rT} = 50 \times e^{0.025} = 50 \times 1.0253 = \$51.27$$ ✓
 
 **Final Answers:**

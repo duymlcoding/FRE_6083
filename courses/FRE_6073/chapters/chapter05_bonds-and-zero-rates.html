@@ -533,10 +533,12 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Key Concept: Continuous Compounding</p>
 <p><strong>With continuous compounding:</strong></p>
-<p><strong>Future Value:</strong>
-$<span class="math notranslate nohighlight">\(FV = PV \cdot e^{RT}\)</span>$</p>
-<p><strong>Present Value:</strong>
-$<span class="math notranslate nohighlight">\(PV = FV \cdot e^{-RT}\)</span>$</p>
+<p><strong>Future Value:</strong></p>
+<div class="math notranslate nohighlight">
+\[FV = PV \cdot e^{RT}\]</div>
+<p><strong>Present Value:</strong></p>
+<div class="math notranslate nohighlight">
+\[PV = FV \cdot e^{-RT}\]</div>
 <p>Where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(R\)</span> = Continuously compounded rate</p></li>
@@ -590,8 +592,9 @@ You invest $5,000 at 6% per annum with continuous compounding for 3.5 years. How
 <div class="math notranslate nohighlight">
 \[\text{Interest} = 6,168.55 - 5,000 = \$1,168.55\]</div>
 <p class="sd-card-text"><strong>Final Answer:</strong> After 3.5 years, you will have <strong>$6,168.55</strong>.</p>
-<p class="sd-card-text"><strong>Comparison with Annual Compounding:</strong>
-$<span class="math notranslate nohighlight">\(FV = 5,000(1.06)^{3.5} = 5,000 \times 1.2293 = \$6,146.42\)</span>$</p>
+<p class="sd-card-text"><strong>Comparison with Annual Compounding:</strong></p>
+<div class="math notranslate nohighlight">
+\[FV = 5,000(1.06)^{3.5} = 5,000 \times 1.2293 = \$6,146.42\]</div>
 <p class="sd-card-text">Continuous compounding yields $22.13 more (not a huge difference).</p>
 </div>
 </details></section>
@@ -797,8 +800,9 @@ Given the following bond data, construct the zero curve:</p>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(2e^{-0.02225} = 2 \times 0.978 = \$1.96\)</span></p></li>
 <li><p class="sd-card-text">Total = $3.94</p></li>
 </ul>
-<p class="sd-card-text">Remaining present value:
-$<span class="math notranslate nohighlight">\(102.5 - 3.94 = 98.56 = 102e^{-1.5R(1.5)}\)</span>$</p>
+<p class="sd-card-text">Remaining present value:</p>
+<div class="math notranslate nohighlight">
+\[102.5 - 3.94 = 98.56 = 102e^{-1.5R(1.5)}\]</div>
 <div class="math notranslate nohighlight">
 \[e^{-1.5R(1.5)} = 0.9662\]</div>
 <div class="math notranslate nohighlight">
@@ -816,8 +820,9 @@ $<span class="math notranslate nohighlight">\(102.5 - 3.94 = 98.56 = 102e^{-1.5R
 <li><p class="sd-card-text">At 1.5: <span class="math notranslate nohighlight">\(2.5 \times 0.9662 = \$2.416\)</span></p></li>
 <li><p class="sd-card-text">Total = $7.336</p></li>
 </ul>
-<p class="sd-card-text">Remaining:
-$<span class="math notranslate nohighlight">\(105.0 - 7.336 = 97.664 = 102.5e^{-2.0R(2.0)}\)</span>$</p>
+<p class="sd-card-text">Remaining:</p>
+<div class="math notranslate nohighlight">
+\[105.0 - 7.336 = 97.664 = 102.5e^{-2.0R(2.0)}\]</div>
 <div class="math notranslate nohighlight">
 \[e^{-2.0R(2.0)} = 0.9529\]</div>
 <div class="math notranslate nohighlight">
@@ -912,14 +917,18 @@ $<span class="math notranslate nohighlight">\(105.0 - 7.336 = 97.664 = 102.5e^{-
 </table>
 </div>
 <p class="sd-card-text"><strong>Step 2: Discount Each Cash Flow</strong></p>
-<p class="sd-card-text">At 0.5 years:
-$<span class="math notranslate nohighlight">\(PV_1 = 3 \times e^{-0.02010 \times 0.5} = 3 \times e^{-0.01005} = 3 \times 0.99 = \$2.970\)</span>$</p>
-<p class="sd-card-text">At 1.0 years:
-$<span class="math notranslate nohighlight">\(PV_2 = 3 \times e^{-0.02225 \times 1.0} = 3 \times 0.978 = \$2.934\)</span>$</p>
-<p class="sd-card-text">At 1.5 years:
-$<span class="math notranslate nohighlight">\(PV_3 = 3 \times e^{-0.02284 \times 1.5} = 3 \times e^{-0.03426} = 3 \times 0.9663 = \$2.899\)</span>$</p>
-<p class="sd-card-text">At 2.0 years:
-$<span class="math notranslate nohighlight">\(PV_4 = 103 \times e^{-0.02416 \times 2.0} = 103 \times e^{-0.04832} = 103 \times 0.9529 = \$98.15\)</span>$</p>
+<p class="sd-card-text">At 0.5 years:</p>
+<div class="math notranslate nohighlight">
+\[PV_1 = 3 \times e^{-0.02010 \times 0.5} = 3 \times e^{-0.01005} = 3 \times 0.99 = \$2.970\]</div>
+<p class="sd-card-text">At 1.0 years:</p>
+<div class="math notranslate nohighlight">
+\[PV_2 = 3 \times e^{-0.02225 \times 1.0} = 3 \times 0.978 = \$2.934\]</div>
+<p class="sd-card-text">At 1.5 years:</p>
+<div class="math notranslate nohighlight">
+\[PV_3 = 3 \times e^{-0.02284 \times 1.5} = 3 \times e^{-0.03426} = 3 \times 0.9663 = \$2.899\]</div>
+<p class="sd-card-text">At 2.0 years:</p>
+<div class="math notranslate nohighlight">
+\[PV_4 = 103 \times e^{-0.02416 \times 2.0} = 103 \times e^{-0.04832} = 103 \times 0.9529 = \$98.15\]</div>
 <p class="sd-card-text"><strong>Step 3: Sum Present Values</strong></p>
 <div class="math notranslate nohighlight">
 \[\text{Bond Price} = 2.970 + 2.934 + 2.899 + 98.15 = \$106.95\]</div>
@@ -1004,8 +1013,9 @@ The 2-year bond from our previous example trades at $98.39. What is its yield to
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><strong>Step 1: Set Up Par Bond Equation</strong></p>
-<p class="sd-card-text">For a bond trading at par:
-$<span class="math notranslate nohighlight">\(100 = \frac{c}{2}e^{-0.01005} + \frac{c}{2}e^{-0.02225} + \frac{c}{2}e^{-0.03426} + \left(\frac{c}{2} + 100\right)e^{-0.04832}\)</span>$</p>
+<p class="sd-card-text">For a bond trading at par:</p>
+<div class="math notranslate nohighlight">
+\[100 = \frac{c}{2}e^{-0.01005} + \frac{c}{2}e^{-0.02225} + \frac{c}{2}e^{-0.03426} + \left(\frac{c}{2} + 100\right)e^{-0.04832}\]</div>
 <p class="sd-card-text">Where <span class="math notranslate nohighlight">\(c\)</span> is the annual coupon rate.</p>
 <p class="sd-card-text"><strong>Step 2: Calculate Discount Factors</strong></p>
 <ul class="simple">
@@ -1153,14 +1163,18 @@ A 2-year bond with 5% annual coupon (paid semiannually) trades at $100. The yiel
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><strong>Step 1: Calculate Present Value of Each Cash Flow</strong></p>
-<p class="sd-card-text">At 0.5 years:
-$<span class="math notranslate nohighlight">\(PV_1 = 2.50 \times e^{-0.05 \times 0.5} = 2.50 \times 0.9753 = \$2.438\)</span>$</p>
-<p class="sd-card-text">At 1.0 years:
-$<span class="math notranslate nohighlight">\(PV_2 = 2.50 \times e^{-0.05 \times 1.0} = 2.50 \times 0.9512 = \$2.378\)</span>$</p>
-<p class="sd-card-text">At 1.5 years:
-$<span class="math notranslate nohighlight">\(PV_3 = 2.50 \times e^{-0.05 \times 1.5} = 2.50 \times 0.9277 = \$2.319\)</span>$</p>
-<p class="sd-card-text">At 2.0 years:
-$<span class="math notranslate nohighlight">\(PV_4 = 102.50 \times e^{-0.05 \times 2.0} = 102.50 \times 0.9048 = \$92.74\)</span>$</p>
+<p class="sd-card-text">At 0.5 years:</p>
+<div class="math notranslate nohighlight">
+\[PV_1 = 2.50 \times e^{-0.05 \times 0.5} = 2.50 \times 0.9753 = \$2.438\]</div>
+<p class="sd-card-text">At 1.0 years:</p>
+<div class="math notranslate nohighlight">
+\[PV_2 = 2.50 \times e^{-0.05 \times 1.0} = 2.50 \times 0.9512 = \$2.378\]</div>
+<p class="sd-card-text">At 1.5 years:</p>
+<div class="math notranslate nohighlight">
+\[PV_3 = 2.50 \times e^{-0.05 \times 1.5} = 2.50 \times 0.9277 = \$2.319\]</div>
+<p class="sd-card-text">At 2.0 years:</p>
+<div class="math notranslate nohighlight">
+\[PV_4 = 102.50 \times e^{-0.05 \times 2.0} = 102.50 \times 0.9048 = \$92.74\]</div>
 <p class="sd-card-text"><strong>Total:</strong> <span class="math notranslate nohighlight">\(2.438 + 2.378 + 2.319 + 92.74 = \$99.875 ≈ \$100\)</span> ✓</p>
 <p class="sd-card-text"><strong>Step 2: Calculate Weighted Time</strong></p>
 <div class="math notranslate nohighlight">
@@ -1172,9 +1186,10 @@ $<span class="math notranslate nohighlight">\(PV_4 = 102.50 \times e^{-0.05 \tim
 <p class="sd-card-text"><strong>Final Answer:</strong> Duration = <strong>1.926 years</strong></p>
 <p class="sd-card-text"><strong>Interpretation:</strong> For a 1% increase in yield, the bond price will decrease by approximately 1.926%.</p>
 <p class="sd-card-text"><strong>Verification:</strong>
-If yield increases to 6%:
-$<span class="math notranslate nohighlight">\(\Delta B \approx -1.926 \times 100 \times 0.01 = -\$1.93\)</span><span class="math notranslate nohighlight">\(
-New price ≈ \)</span>98.07</p>
+If yield increases to 6%:</p>
+<div class="math notranslate nohighlight">
+\[\Delta B \approx -1.926 \times 100 \times 0.01 = -\$1.93\]</div>
+<p class="sd-card-text">New price ≈ $98.07</p>
 <p class="sd-card-text">Exact calculation: Bond price at 6% yield ≈ $98.11 (very close!)</p>
 </div>
 </details></section>
@@ -1214,13 +1229,18 @@ Modified duration = Macaulay duration (since <span class="math notranslate nohig
 <p class="admonition-title">Example: Duration vs. Duration + Convexity</p>
 <p>Using the previous bond (Duration = 1.926 years), suppose convexity = 5.0.</p>
 <p><strong>Scenario:</strong> Yield increases from 5% to 6% (Δy = 0.01)</p>
-<p><strong>Using Duration Only:</strong>
-$<span class="math notranslate nohighlight">\(\frac{\Delta B}{B} = -1.926 \times 0.01 = -0.01926 = -1.926\%\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(\Delta B = -1.926 \Rightarrow \text{New price} = \$98.07\)</span>$</p>
-<p><strong>Using Duration + Convexity:</strong>
-$<span class="math notranslate nohighlight">\(\frac{\Delta B}{B} = -1.926 \times 0.01 + \frac{1}{2} \times 5.0 \times (0.01)^2\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(= -0.01926 + 0.00025 = -0.01901 = -1.901\%\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(\Delta B = -1.901 \Rightarrow \text{New price} = \$98.10\)</span>$</p>
+<p><strong>Using Duration Only:</strong></p>
+<div class="math notranslate nohighlight">
+\[\frac{\Delta B}{B} = -1.926 \times 0.01 = -0.01926 = -1.926\%\]</div>
+<div class="math notranslate nohighlight">
+\[\Delta B = -1.926 \Rightarrow \text{New price} = \$98.07\]</div>
+<p><strong>Using Duration + Convexity:</strong></p>
+<div class="math notranslate nohighlight">
+\[\frac{\Delta B}{B} = -1.926 \times 0.01 + \frac{1}{2} \times 5.0 \times (0.01)^2\]</div>
+<div class="math notranslate nohighlight">
+\[= -0.01926 + 0.00025 = -0.01901 = -1.901\%\]</div>
+<div class="math notranslate nohighlight">
+\[\Delta B = -1.901 \Rightarrow \text{New price} = \$98.10\]</div>
 <p>The convexity adjustment improves accuracy!</p>
 </div>
 <p><strong>Physical Meaning</strong>: Duration assumes a straight-line relationship between price and yield. Convexity recognizes that the relationship is actually curved, like a parabola. This curvature means that bonds lose less value when yields rise (and gain more when yields fall) than duration alone suggests.</p>
@@ -1336,8 +1356,9 @@ $<span class="math notranslate nohighlight">\(\frac{\Delta B}{B} = -1.926 \times
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(2e^{-0.03046} = 2 \times 0.970 = 1.940\)</span></p></li>
 <li><p class="sd-card-text">Total = 3.910</p></li>
 </ul>
-<p class="sd-card-text">Remaining:
-$<span class="math notranslate nohighlight">\(100 - 3.910 = 96.09 = 102e^{-1.5R(1.5)}\)</span>$</p>
+<p class="sd-card-text">Remaining:</p>
+<div class="math notranslate nohighlight">
+\[100 - 3.910 = 96.09 = 102e^{-1.5R(1.5)}\]</div>
 <div class="math notranslate nohighlight">
 \[e^{-1.5R(1.5)} = 0.9420\]</div>
 <div class="math notranslate nohighlight">

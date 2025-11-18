@@ -258,20 +258,27 @@ Traders use several methods to describe smiles:
 :class: tip
 
 **1. Strike vs. Spot ($K/S_0$)**
+
 $$\text{Implied Vol vs. } K/S_0$$
 
 **2. Strike vs. Forward ($K/F_0$)**
+
 $$\text{Implied Vol vs. } K/F_0$$
+
 - More common in practice
 - Accounts for carry costs
 
 **3. Delta**
+
 $$\text{Implied Vol vs. Delta}$$
+
 - Very common among traders
 - "25-delta call," "10-delta put," etc.
 
 **4. Moneyness (Log)**
+
 $$\text{Implied Vol vs. } \ln(K/S_0)$$
+
 - Symmetric around zero
 ```
 
@@ -470,6 +477,7 @@ A security that guarantees principal while providing upside participation.
 Buy 3-year zero-coupon bond paying $1,000 at maturity:
 
 $$\text{Cost} = 1,000 \times e^{-0.06 \times 3} = 1,000 \times e^{-0.18}$$
+
 $$= 1,000 \times 0.8353 = \$835.27$$
 
 **Step 2: Funds Available for Options**
@@ -944,6 +952,7 @@ $$\text{Max Profit} = 10 - 4 = \$6$$
 Occurs when $S_T \leq 100$:
 
 Both calls expire worthless:
+
 $$\text{Max Loss} = \$4$$ (net premium paid)
 
 **Part 4: Breakeven**
@@ -951,6 +960,7 @@ $$\text{Max Loss} = \$4$$ (net premium paid)
 At breakeven, profit = 0:
 
 $$S_T - 100 - 4 = 0$$
+
 $$S_T = \$104$$
 
 **Part 5: Payoffs**

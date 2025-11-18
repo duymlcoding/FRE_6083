@@ -683,7 +683,9 @@ $$\text{Net cost} = 50,938 - 51,847 = -\$909$$
 The hedge fund **earns** $909 (negative cost = profit)
 
 **Alternative:** Direct calculation
+
 $$\text{Net rate} = 5.35\% - 5.25\% = 0.10\%$$
+
 $$\text{Net earnings} = 50,000,000 \times 0.001 \times \frac{7}{360} = \$972$$
 
 (Small difference due to rounding)
