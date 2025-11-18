@@ -97,7 +97,9 @@ To hedge an option position:
 - Buy 0.4 shares to hedge (makes position delta-neutral)
 
 **General Rule:**
+
 $$\text{Shares to hedge} = -\Delta \times \text{Number of options}$$
+
 ```
 
 ### Variation of Delta with Stock Price
@@ -185,8 +187,11 @@ A bank sells 100,000 European call options on a stock.
 **Part 3: Locked-In Profit**
 
 The theoretical value of the position is:
+
 $$\text{Value} = \text{Share value} - \text{Option value}$$
+
 $$= 52,200 \times 49 - 100,000 \times 2.40$$
+
 $$= \$2,557,800 - \$240,000 = \$2,317,800$$
 
 This exactly equals the net investment!
@@ -194,6 +199,7 @@ This exactly equals the net investment!
 **With continuous rebalancing**, the bank will earn the risk-free rate on this investment:
 
 $$\text{Locked-in profit} = 240,000 - 100,000 \times 2.40 e^{-0.05 \times 0.3846}$$
+
 $$= 240,000 - 235,412 = \$4,588$$
 
 Wait, let me recalculate. The bank sold the options for $240,000 but their true value is $240,000 (they sold at fair value). The profit comes from the bid-ask spread or from selling above model value.
@@ -320,12 +326,17 @@ $$\Delta f \approx \Delta \cdot \Delta S + \frac{1}{2}\Gamma \cdot (\Delta S)^2$
 - Stock price change: $\Delta S = \$2.00$
 
 **Delta-only approximation:**
+
 $$\Delta f \approx 0.60 \times 2.00 = \$1.20$$
+
 **New price**: $\$6.20$
 
 **Delta-gamma approximation:**
+
 $$\Delta f \approx 0.60 \times 2.00 + \frac{1}{2} \times 0.05 \times (2.00)^2$$
+
 $$= 1.20 + 0.10 = \$1.30$$
+
 **New price**: $\$6.30$
 
 **Gamma adjustment**: $+\$0.10$ (makes curvature matter)
@@ -345,15 +356,19 @@ $$= 1.20 + 0.10 = \$1.30$$
 $$\Theta = \frac{\partial f}{\partial t}$$
 
 **Usually expressed as change per calendar day:**
+
 $$\Theta_{\text{day}} = \frac{\Theta}{365}$$
 
 **For European Options (No Dividends):**
 
 **Call:**
+
 $$\Theta_c = -\frac{S_0 N'(d_1) \sigma}{2\sqrt{T}} - rKe^{-rT}N(d_2)$$
 
 **Put:**
+
 $$\Theta_p = -\frac{S_0 N'(d_1) \sigma}{2\sqrt{T}} + rKe^{-rT}N(-d_2)$$
+
 ```
 
 ### Properties of Theta
@@ -372,7 +387,9 @@ $$\Theta_p = -\frac{S_0 N'(d_1) \sigma}{2\sqrt{T}} + rKe^{-rT}N(-d_2)$$
 - Deep ITM/OTM options have lower theta
 
 **Relation to Other Greeks:**
+
 $$\Theta + rS\Delta + \frac{1}{2}\sigma^2 S^2 \Gamma = r f$$
+
 This is the Black-Scholes PDE rearranged!
 ```
 
@@ -463,9 +480,11 @@ $$\rho = \frac{\partial f}{\partial r}$$
 **For European Options (No Dividends):**
 
 **Call:**
+
 $$\rho_c = KT e^{-rT} N(d_2)$$
 
 **Put:**
+
 $$\rho_p = -KT e^{-rT} N(-d_2)$$
 
 **Usually expressed as change per 1% (100 basis points) rate change.**
@@ -501,6 +520,7 @@ $$\rho_p = -KT e^{-rT} N(-d_2)$$
 **Note:** $d_1$ and $d_2$ are modified to include $q$:
 
 $$d_1 = \frac{\ln(S_0/K) + (r - q + \sigma^2/2)T}{\sigma\sqrt{T}}$$
+
 ```
 
 ---
@@ -556,35 +576,47 @@ Let:
 - $w_2$ = Number of Option 2 to buy
 
 **Gamma neutrality:**
+
 $$-5,000 + 0.5w_1 + 0.8w_2 = 0$$
 
 **Vega neutrality:**
+
 $$-8,000 + 2.0w_1 + 1.2w_2 = 0$$
 
 **Step 2: Solve System of Equations**
 
 From gamma equation:
+
 $$0.5w_1 + 0.8w_2 = 5,000$$ ... (1)
 
 From vega equation:
+
 $$2.0w_1 + 1.2w_2 = 8,000$$ ... (2)
 
 Multiply equation (1) by 4:
+
 $$2.0w_1 + 3.2w_2 = 20,000$$ ... (3)
 
 Subtract equation (2) from equation (3):
+
 $$2.0w_2 = 12,000$$
+
 $$w_2 = 6,000$$
 
 Substitute back into equation (1):
+
 $$0.5w_1 + 0.8(6,000) = 5,000$$
+
 $$0.5w_1 + 4,800 = 5,000$$
+
 $$w_1 = 400$$
 
 **Step 3: Check Delta Impact**
 
 Adding options changes delta:
+
 $$\Delta_{\text{new}} = 0 + 0.6(400) + 0.5(6,000)$$
+
 $$= 240 + 3,000 = 3,240$$
 
 **Step 4: Restore Delta Neutrality**
@@ -642,9 +674,11 @@ Where:
 $$\Theta + rS\Delta + \frac{1}{2}\sigma^2 S^2 \Gamma = rf$$
 
 **Rearranging:**
+
 $$\Theta + \frac{1}{2}\sigma^2 S^2 \Gamma = r(f - S\Delta)$$
 
 **For Delta-Neutral Portfolio ($\Delta = 0$):**
+
 $$\Theta + \frac{1}{2}\sigma^2 S^2 \Gamma = rf$$
 
 **Interpretation:**
@@ -712,13 +746,19 @@ The stock currently trades at $100.
 **Part 1: Stock Rises to $102 ($\Delta S = 2$)**
 
 **Delta-only:**
+
 $$\Delta f = \Delta \cdot \Delta S = 0.55 \times 2 = \$1.10$$
+
 **New price**: $5.00 + 1.10 = \$6.10$
 
 **Delta-gamma:**
+
 $$\Delta f = \Delta \cdot \Delta S + \frac{1}{2}\Gamma \cdot (\Delta S)^2$$
+
 $$= 0.55 \times 2 + \frac{1}{2} \times 0.03 \times 4$$
+
 $$= 1.10 + 0.06 = \$1.16$$
+
 **New price**: $5.00 + 1.16 = \$6.16$
 
 **Gamma effect**: +$0.06 (curvature increases value)

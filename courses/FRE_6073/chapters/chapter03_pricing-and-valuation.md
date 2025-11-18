@@ -164,10 +164,13 @@ The value of an existing forward contract depends on:
 **Value Formulas:**
 
 **Long position:**
+
 $$f = (F_0 - K)e^{-rT}$$
 
 **Short position:**
+
 $$f = (K - F_0)e^{-rT}$$
+
 ```
 
 **Physical Meaning**: The value equals the present value of the difference between what you'll pay (or receive) under your contract versus what the market currently prices for that future delivery.
@@ -531,6 +534,7 @@ Risk-free rate: 4% per annum
 Time: 6 months
 
 **Maximum forward price:**
+
 $$F_0 = 1800 \times e^{(0.04+0.005) \times 0.5} = 1800 \times e^{0.0225} = \$1,840.95$$
 
 If $F_0 > \$1,840.95$, arbitrage opportunity exists.
@@ -551,6 +555,7 @@ Where:
 - $q$ = Income/yield from holding
 
 **General relationship:**
+
 $$F_0 = S_0 e^{cT}$$
 
 For investment assets, this is exact.

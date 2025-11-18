@@ -16,6 +16,7 @@ This chapter develops the continuous-time mathematics underlying modern option p
 A **Markov process** is a stochastic process where only the current value of a variable is relevant for predicting the future - the history doesn't matter.
 
 **Formally:**
+
 $$P(X_{t+s} | X_t, X_{t-1}, \ldots, X_0) = P(X_{t+s} | X_t)$$
 
 **Key Property:** The future is independent of the past, given the present.
@@ -67,6 +68,7 @@ Total change: $\Delta x_{total} = \Delta x_1 + \Delta x_2$
 **Mean:** $E[\Delta x_{total}] = 0 + 0 = 0$
 
 **Variance (KEY INSIGHT - variances add for independent variables):**
+
 $$\text{Var}[\Delta x_{total}] = \text{Var}[\Delta x_1] + \text{Var}[\Delta x_2] = 1 + 1 = 2$$
 
 **Distribution:** $\Delta x_{total} \sim N(0, 2)$
@@ -76,7 +78,9 @@ $$\text{Var}[\Delta x_{total}] = \text{Var}[\Delta x_1] + \text{Var}[\Delta x_2]
 Think backward: Two half-year periods make one year.
 
 If each half-year has variance $v$, then:
+
 $$v + v = 1$$
+
 $$v = 0.5$$
 
 **Distribution:** $\Delta x_{1/2\text{-year}} \sim N(0, 0.5)$
@@ -84,6 +88,7 @@ $$v = 0.5$$
 **Part 3: Change Over $\Delta t$ Years**
 
 By the same logic:
+
 $$\text{Var}[\Delta x(\Delta t)] = \Delta t$$
 
 **Distribution:** $\Delta x(\Delta t) \sim N(0, \Delta t)$
@@ -102,12 +107,15 @@ $$\text{Var}[\Delta x(\Delta t)] = \Delta t$$
 **Critical Distinction:**
 
 **Variances are additive:**
+
 $$\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y)$$ (if independent)
 
 **Standard deviations are NOT additive:**
+
 $$\sigma(X + Y) \neq \sigma(X) + \sigma(Y)$$
 
 **Instead:**
+
 $$\sigma(X + Y) = \sqrt{\sigma^2(X) + \sigma^2(Y)}$$
 
 **For time scaling:**
@@ -148,9 +156,11 @@ $$\Delta z = \epsilon \sqrt{\Delta t}$$
 Where $\epsilon \sim N(0, 1)$ (standard normal random variable)
 
 **Equivalently:**
+
 $$\Delta z \sim N(0, \Delta t)$$
 
 **Over finite time $T$:**
+
 $$z(T) - z(0) \sim N(0, T)$$
 
 **Mean:** $E[z(T) - z(0)] = 0$
@@ -213,6 +223,7 @@ Where:
 - $dz$ = Standard Wiener process
 
 **Discrete time equivalent:**
+
 $$\Delta x = a \Delta t + b \epsilon \sqrt{\Delta t}$$
 
 Where $\epsilon \sim N(0, 1)$
@@ -232,12 +243,14 @@ $$\Delta x \sim N(a \Delta t, b^2 \Delta t)$$
 **Over longer time $T$:**
 
 $$x(T) - x(0) \sim N(aT, b^2T)$$
+
 ```
 
 ```{admonition} Example Problem: Generalized Wiener Process
 :class: tip
 
 A cash balance $x$ changes according to:
+
 $$dx = 5 \, dt + 2 \, dz$$
 
 Where time is measured in years and $x$ is in thousands of dollars.
@@ -323,10 +336,13 @@ Where:
 - $dz$ = Wiener process
 
 **Discrete approximation:**
+
 $$\Delta S = \mu S \Delta t + \sigma S \epsilon \sqrt{\Delta t}$$
 
 **In percentage terms:**
+
 $$\frac{\Delta S}{S} = \mu \Delta t + \sigma \epsilon \sqrt{\Delta t}$$
+
 ```
 
 ### Why This Model?
@@ -353,6 +369,7 @@ Itô's lemma is the stochastic calculus chain rule - essential for derivatives p
 :class: tip
 
 If $x$ follows the Itô process:
+
 $$dx = a(x,t) \, dt + b(x,t) \, dz$$
 
 And $G$ is a function of $x$ and $t$: $G = G(x,t)$
@@ -362,7 +379,9 @@ Then $G$ follows:
 $$dG = \left(\frac{\partial G}{\partial x} a + \frac{\partial G}{\partial t} + \frac{1}{2} \frac{\partial^2 G}{\partial x^2} b^2\right) dt + \frac{\partial G}{\partial x} b \, dz$$
 
 **Short form:**
+
 $$dG = \left(G_x a + G_t + \frac{1}{2} G_{xx} b^2\right) dt + G_x b \, dz$$
+
 ```
 
 ### Why Itô's Lemma is Different
@@ -371,9 +390,11 @@ $$dG = \left(G_x a + G_t + \frac{1}{2} G_{xx} b^2\right) dt + G_x b \, dz$$
 **Key Difference from Ordinary Calculus:**
 
 In ordinary calculus, Taylor expansion:
+
 $$dG = \frac{\partial G}{\partial x} dx + \frac{\partial G}{\partial t} dt + \text{higher order terms}$$
 
 In stochastic calculus:
+
 $$dG = \frac{\partial G}{\partial x} dx + \frac{\partial G}{\partial t} dt + \frac{1}{2} \frac{\partial^2 G}{\partial x^2} (dx)^2 + \ldots$$
 
 **The $(dx)^2$ term doesn't vanish!**
@@ -442,6 +463,7 @@ $$dG = \left(\frac{\partial G}{\partial x}a + \frac{\partial G}{\partial t} + \f
 :class: tip
 
 Given that stock price follows:
+
 $$dS = \mu S \, dt + \sigma S \, dz$$
 
 **Question:** What process does $G = \ln S$ follow?
@@ -505,10 +527,13 @@ If $\ln S_T$ is normally distributed, then $S_T$ is **lognormally distributed**.
 $$\ln\left(\frac{S_T}{S_0}\right) \sim N\left(\left(\mu - \frac{\sigma^2}{2}\right)T, \sigma^2 T\right)$$
 
 **Expected value:**
+
 $$E[S_T] = S_0 e^{\mu T}$$
 
 **Variance:**
+
 $$\text{Var}[S_T] = S_0^2 e^{2\mu T}(e^{\sigma^2 T} - 1)$$
+
 ```
 
 ### Understanding the Lognormal
@@ -522,9 +547,11 @@ $$\text{Var}[S_T] = S_0^2 e^{2\mu T}(e^{\sigma^2 T} - 1)$$
 4. **Multiplicative returns**: Returns compound multiplicatively
 
 **Median:**
+
 $$\text{Median}[S_T] = S_0 e^{(\mu - \sigma^2/2)T}$$
 
 **Mean:**
+
 $$E[S_T] = S_0 e^{\mu T}$$
 
 **Note:** Mean > Median due to right skew.

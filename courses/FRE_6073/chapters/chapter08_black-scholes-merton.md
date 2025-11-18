@@ -59,6 +59,7 @@ The BSM model rests on three fundamental ideas:
 :class: important
 
 **Stock Price Process:**
+
 $$dS = \mu S \, dt + \sigma S \, dz$$
 
 **Option Value:**
@@ -66,7 +67,9 @@ $$dS = \mu S \, dt + \sigma S \, dz$$
 - Follows some stochastic process (to be determined)
 
 **By Itô's Lemma:**
+
 $$df = \left(\frac{\partial f}{\partial S}\mu S + \frac{\partial f}{\partial t} + \frac{1}{2}\frac{\partial^2 f}{\partial S^2}\sigma^2 S^2\right)dt + \frac{\partial f}{\partial S}\sigma S \, dz$$
+
 ```
 
 ---
@@ -83,10 +86,13 @@ $$df = \left(\frac{\partial f}{\partial S}\mu S + \frac{\partial f}{\partial t} 
 Where $\Delta = \frac{\partial f}{\partial S}$ (we'll see why shortly)
 
 **Portfolio Value:**
+
 $$\Pi = \Delta S - f$$
 
 **Change in Portfolio Value:**
+
 $$d\Pi = \Delta \, dS - df$$
+
 ```
 
 ### Eliminating Randomness
@@ -97,6 +103,7 @@ $$d\Pi = \Delta \, dS - df$$
 $$d\Pi = \Delta(\mu S \, dt + \sigma S \, dz) - \left[\left(\frac{\partial f}{\partial S}\mu S + \frac{\partial f}{\partial t} + \frac{1}{2}\frac{\partial^2 f}{\partial S^2}\sigma^2 S^2\right)dt + \frac{\partial f}{\partial S}\sigma S \, dz\right]$$
 
 **The $dz$ terms:**
+
 $$\Delta \sigma S \, dz - \frac{\partial f}{\partial S}\sigma S \, dz$$
 
 **Choose $\Delta = \frac{\partial f}{\partial S}$ to eliminate randomness!**
@@ -160,9 +167,11 @@ Solving the BSM differential equation with appropriate boundary conditions yield
 :class: tip
 
 **European Call:**
+
 $$c = S_0 N(d_1) - Ke^{-rT}N(d_2)$$
 
 **European Put:**
+
 $$p = Ke^{-rT}N(-d_2) - S_0 N(-d_1)$$
 
 Where:
