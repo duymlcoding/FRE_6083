@@ -1,0 +1,37 @@
+format: jb-book
+root: index
+title: Home
+
+parts:
+  - caption: Introduction
+    chapters:
+    - file: intro
+
+  - caption: Lectures
+    chapters:
+    - file: chapters/lecture01_sequences-and-sums
+      title: "Lecture 1: Sequences and Sums of Random Variables"
+    - file: chapters/lecture02_convergence-and-limits
+      title: "Lecture 2: Convergence and Limit Theorems"
+    - file: chapters/lecture03_markov-chains
+      title: "Lecture 3: Markov Chains"
+    - file: chapters/lecture04_poisson-process
+      title: "Lecture 4: The Poisson Process"
+    - file: chapters/lecture05_binomial-asset-pricing
+      title: "Lecture 5: Binomial Asset Pricing Model"
+    - file: chapters/lecture06_stochastic-processes
+      title: "Lecture 6: Stochastic Processes"
+    - file: chapters/lecture07_brownian-motion
+      title: "Lecture 7: Random Walk Limit"
+    - file: chapters/lecture09_brownian-motion
+      title: "Lecture 9: Brownian Motion"
+    - file: chapters/lecture10_stochastic-calculus
+      title: "Lecture 10: Stochastic Calculus"
+    - file: chapters/lecture11_black-scholes-model
+      title: "Lecture 11: Black-Scholes Model"
+    - file: chapters/lecture12_black-scholes-pde-finite-difference
+      title: "Lecture 12: Black-Scholes PDE and Finite Difference"
+    - file: chapters/lecture13_portfolio-optimization-discrete-time
+      title: "Lecture 13: Portfolio Optimization"
+    - file: chapters/lecture14_american-options-greeks
+      title: "Lecture 14: American Options and Greeks"

@@ -1,0 +1,8 @@
+jupyter-book>=2.0.0
+sphinx-proof>=0.3.0
+sphinx-togglebutton>=0.3.0
+sphinx-copybutton>=0.5.0
+ghp-import>=2.1.0
+matplotlib>=3.5.0
+numpy>=1.21.0
+scipy>=1.7.0
