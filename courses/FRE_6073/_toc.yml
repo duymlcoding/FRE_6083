@@ -1,0 +1,31 @@
+format: jb-book
+root: index
+title: Home
+
+parts:
+  - caption: Introduction
+    chapters:
+    - file: intro
+
+  - caption: Course Content
+    chapters:
+    - file: chapters/chapter01_introduction-to-derivatives
+      title: "Chapter 1: Introduction to Derivatives"
+    - file: chapters/chapter02_forward-and-futures-contracts
+      title: "Chapter 2: Forward and Futures Contracts"
+    - file: chapters/chapter03_pricing-and-valuation
+      title: "Chapter 3: Pricing and Valuation"
+    - file: chapters/chapter04_interest-rates-and-repo
+      title: "Chapter 4: Interest Rates and Repo Markets"
+    - file: chapters/chapter05_bonds-and-zero-rates
+      title: "Chapter 5: Bonds and Zero Rates"
+    - file: chapters/chapter06_binomial-model
+      title: "Chapter 6: Binomial Asset Pricing Model"
+    - file: chapters/chapter07_stochastic-processes
+      title: "Chapter 7: Stochastic Processes and Brownian Motion"
+    - file: chapters/chapter08_black-scholes-merton
+      title: "Chapter 8: Black-Scholes-Merton Model"
+    - file: chapters/chapter09_the-greeks
+      title: "Chapter 9: Option Greeks and Risk Management"
+    - file: chapters/chapter10_volatility-and-strategies
+      title: "Chapter 10: Volatility Smiles and Trading Strategies"

@@ -1,0 +1,61 @@
+# Book settings
+title: "FRE 6073: Introduction to Derivatives"
+author: "John C. Hull"
+copyright: "2025"
+
+# Repository settings (CRITICAL for GitHub Pages)
+repository:
+  url: https://github.com/duymlcoding/NYU_FRE_Notes
+  path_to_book: courses/FRE_6073
+  branch: main
+
+# HTML output settings
+html:
+  favicon: ""
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  home_page_in_navbar: true
+  baseurl: ""
+
+# Execution settings
+execute:
+  execute_notebooks: "off"
+
+# LaTeX settings
+latex:
+  latex_engine: pdflatex
+
+sphinx:
+  extra_extensions:
+    - sphinx_proof
+    - sphinx_togglebutton
+    - sphinx_copybutton
+  config:
+    html_theme: sphinx_book_theme
+    html_theme_options:
+      repository_url: https://github.com/duymlcoding/NYU_FRE_Notes
+      use_repository_button: true
+      use_issues_button: true
+      use_edit_page_button: true
+      home_page_in_navbar: true
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    mathjax3_config:
+      tex:
+        macros:
+          "\\N": "\\mathbb{N}"
+          "\\R": "\\mathbb{R}"
+          "\\C": "\\mathbb{C}"
+          "\\E": "\\mathbb{E}"
+          "\\P": "\\mathbb{P}"
+
+# Bibtex bibliography
+bibtex_bibfiles:
+  - references.bib
+
+# Exclude patterns
+exclude_patterns:
+  - _build
+  - Thumbs.db
+  - .DS_Store
+  - "**.ipynb_checkpoints"
