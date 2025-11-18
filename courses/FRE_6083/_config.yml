@@ -5,8 +5,8 @@ copyright: "2025"
 
 # Repository settings (CRITICAL for GitHub Pages)
 repository:
-  url: https://github.com/duymlcoding/FRE_6083
-  path_to_book: mynotes
+  url: https://github.com/duymlcoding/NYU_FRE_Notes
+  path_to_book: courses/FRE_6083
   branch: main
 
 # HTML output settings
@@ -34,7 +34,7 @@ sphinx:
   config:
     html_theme: sphinx_book_theme
     html_theme_options:
-      repository_url: https://github.com/duymlcoding/FRE_6083
+      repository_url: https://github.com/duymlcoding/NYU_FRE_Notes
       use_repository_button: true
       use_issues_button: true
       use_edit_page_button: true

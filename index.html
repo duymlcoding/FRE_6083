@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Open-source course notes for NYU Tandon Financial Risk Engineering graduate program">
+    <meta name="author" content="NYU FRE Students">
+    <title>NYU FRE Course Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #57068c 0%, #4a00e0 50%, #8e2de2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+            padding: 60px 50px;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 3px solid #f0f0f0;
+            padding-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 3em;
+            font-weight: 800;
+            background: linear-gradient(135deg, #57068c 0%, #8e2de2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.3em;
+            font-weight: 300;
+        }
+
+        .university {
+            color: #999;
+            font-size: 1em;
+            margin-top: 10px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .course-card {
+            background: linear-gradient(135deg, #57068c 0%, #8e2de2 100%);
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(87, 6, 140, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(87, 6, 140, 0.4);
+        }
+
+        .course-card:hover::before {
+            opacity: 1;
+        }
+
+        .course-card.disabled {
+            background: linear-gradient(135deg, #9e9e9e 0%, #757575 100%);
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .course-card.disabled:hover {
+            transform: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .course-code {
+            display: inline-block;
+            background: rgba(255,255,255,0.25);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.95em;
+            margin-bottom: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            align-self: flex-start;
+        }
+
+        .course-card h2 {
+            font-size: 1.6em;
+            margin-bottom: 12px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .course-card p {
+            font-size: 1em;
+            opacity: 0.95;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .status {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            font-size: 0.9em;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .status.ready {
+            color: #a7ffeb;
+        }
+
+        .status.coming-soon {
+            color: #fff9c4;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+            text-align: center;
+            color: #666;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-link {
+            color: #57068c;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #8e2de2;
+            text-decoration: underline;
+        }
+
+        .github-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+            }
+
+            .logo {
+                font-size: 2.2em;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
+
+            .courses {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">NYU FRE Notes</div>
+            <div class="subtitle">Graduate Course Materials</div>
+            <div class="university">NYU Tandon School of Engineering</div>
+        </div>
+
+        <div class="courses">
+            <!-- FRE 6083 - READY -->
+            <a href="courses/FRE_6083/" class="course-card">
+                <span class="course-code">FRE 6083</span>
+                <h2>Quantitative Methods</h2>
+                <p>Probability foundations, stochastic processes, Brownian motion, Itô calculus, Black-Scholes model, and portfolio optimization</p>
+                <div class="status ready">✓ Available Now</div>
+            </a>
+
+            <!-- FRE 6083 Recitation - COMING SOON -->
+            <a href="#" class="course-card disabled">
+                <span class="course-code">FRE 6083</span>
+                <h2>Recitation Sessions</h2>
+                <p>TA-led recitation materials, problem-solving sessions, and supplementary examples for Quantitative Methods</p>
+                <div class="status coming-soon">⏳ Coming Soon</div>
+            </a>
+
+            <!-- FRE 6073 - COMING SOON -->
+            <a href="#" class="course-card disabled">
+                <span class="course-code">FRE 6073</span>
+                <h2>Course Title</h2>
+                <p>Course description will be added when materials are available</p>
+                <div class="status coming-soon">⏳ Coming Soon</div>
+            </a>
+
+            <!-- FRE 6103 - COMING SOON -->
+            <a href="#" class="course-card disabled">
+                <span class="course-code">FRE 6103</span>
+                <h2>Course Title</h2>
+                <p>Course description will be added when materials are available</p>
+                <div class="status coming-soon">⏳ Coming Soon</div>
+            </a>
+
+            <!-- FRE 6141 - COMING SOON -->
+            <a href="#" class="course-card disabled">
+                <span class="course-code">FRE 6141</span>
+                <h2>Course Title</h2>
+                <p>Course description will be added when materials are available</p>
+                <div class="status coming-soon">⏳ Coming Soon</div>
+            </a>
+
+            <!-- FRE 6731 - COMING SOON -->
+            <a href="#" class="course-card disabled">
+                <span class="course-code">FRE 6731</span>
+                <h2>Course Title</h2>
+                <p>Course description will be added when materials are available</p>
+                <div class="status coming-soon">⏳ Coming Soon</div>
+            </a>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p><strong>NYU Tandon School of Engineering</strong></p>
+                <p>Financial Risk Engineering Program</p>
+                <div class="footer-links">
+                    <a href="https://github.com/duymlcoding/NYU_FRE_Notes" class="footer-link">
+                        <svg class="github-icon" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                        </svg>
+                        View on GitHub
+                    </a>
+                    <a href="https://engineering.nyu.edu/academics/programs/financial-engineering-ms" class="footer-link">FRE Program</a>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.9em; color: #999;">
+                    Open-source educational materials • Maintained by students
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
