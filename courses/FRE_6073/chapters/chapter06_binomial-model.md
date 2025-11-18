@@ -166,7 +166,7 @@ $$S_0e^{rT} = pS_0u + (1-p)S_0d$$
 
 $$pS_0u + (1-p)S_0d = \frac{e^{rT} - d}{u - d} \cdot S_0u + \frac{u - e^{rT}}{u - d} \cdot S_0d$$
 
-$$= \frac{S_0(ue^{rT} - ud + ud - de^{rT})}{u - d} = \frac{S_0e^{rT}(u - d)}{u - d} = S_0e^{rT}$$ ✓
+$$= \frac{S_0(ue^{rT} - ud + ud - de^{rT})}{u - d} = \frac{S_0e^{rT}(u - d)}{u - d} = S_0e^{rT}$$
 
 ```
 
@@ -263,7 +263,7 @@ $$0.25 \times 18 - 0 = 4.50 - 0 = \$4.50$$
 
 **Present value of \$4.50:**
 
-$$4.50 \times e^{-0.01} = 4.50 \times 0.9900 = \$4.455$$ ✓
+$$4.50 \times e^{-0.01} = 4.50 \times 0.9900 = \$4.455$$
 
 **Final Answers:**
 1. Option price: \$0.545
@@ -292,7 +292,7 @@ We can also value the option directly from the replicating portfolio:
 
 $$5.00 - f = 4.455$$
 
-$$f = \$0.545$$ ✓
+$$f = \$0.545$$
 
 **Same answer!**
 ```
@@ -635,11 +635,11 @@ Actually, let's verify: Portfolio is long $\Delta$ shares, short 1 put.
 With $\Delta = -0.40$, we're short 0.40 shares, short 1 put.
 
 Up state: $-0.40 \times 60 - 0 = -24$
-Down state: $-0.40 \times 40 - 8 = -16 - 8 = -24$ ✓
+Down state: $-0.40 \times 40 - 8 = -16 - 8 = -24$
 
 PV: $-24 \times e^{-0.025} = -24 \times 0.9753 = -\$23.41$
 Today: $-0.40 \times 50 - p = -20 - p = -23.41$
-Therefore: $p = \$3.41$ ✓
+Therefore: $p = \$3.41$
 
 **Part 6: Verify Risk-Neutral Valuation**
 
@@ -653,13 +653,13 @@ $$= 33.80 + 17.47 = \$51.27$$
 
 Under risk-free growth:
 
-$$S_0 e^{rT} = 50 \times e^{0.025} = 50 \times 1.0253 = \$51.27$$ ✓
+$$S_0 e^{rT} = 50 \times e^{0.025} = 50 \times 1.0253 = \$51.27$$
 
 **Final Answers:**
 1. Delta: **-0.40** (negative for put)
 2. Put price: \$3.41
 3. Replicating portfolio: **Short 0.40 shares and short 1 put** (or equivalently, long 0.40 shares and long 1 put creates opposite position)
-4. Risk-neutral probability (0.5633) makes expected stock price equal $S_0e^{rT}$ ✓
+4. Risk-neutral probability (0.5633) makes expected stock price equal $S_0e^{rT}$
 ```
 
 ---

@@ -326,7 +326,7 @@ Where:
 
 $$p = 48 \times 0.9753 \times 0.4191 - 50 \times 0.3385$$
 
-$$= 19.621 - 16.925 = \$2.70$$ ✓
+$$= 19.621 - 16.925 = \$2.70$$
 
 **Final Answers:**
 1. $d_1 = 0.4164$, $d_2 = 0.2043$
@@ -565,7 +565,7 @@ Chapter 9 explores **The Greeks**, which measure how option prices change with v
 ```{admonition} Practice Problem 1: Computing Option Prices
 :class: tip
 
-A stock trades at $75. A 3-month European call option has a strike of $72. The risk-free rate is 4% per annum and volatility is 35% per annum.
+A stock trades at \$75. A 3-month European call option has a strike of \$72. The risk-free rate is 4% per annum and volatility is 35% per annum.
 
 **Questions:**
 1. Calculate the call option price
@@ -631,7 +631,7 @@ $$p = 72 \times 0.9900 \times (1-0.5804) - 75 \times (1-0.6473)$$
 
 $$= 71.28 \times 0.4196 - 75 \times 0.3527$$
 
-$$= 29.901 - 26.453 = \$3.45$$ ✓ (small rounding difference)
+$$= 29.901 - 26.453 = \$3.45$$ (small rounding difference)
 
 **Part 3: Probability of Exercise**
 
@@ -639,16 +639,16 @@ $$P(\text{Exercise}) = N(d_2) = 0.5804 = 58.04\%$$
 
 **Part 4: Implied Volatility (if market price is \$6.50)**
 
-If market price is $6.50 instead of theoretical $7.18, we need to find $\sigma_{implied}$ such that BSM formula gives $6.50.
+If market price is \$6.50 instead of theoretical \$7.18, we need to find $\sigma_{implied}$ such that BSM formula gives \$6.50.
 
-Since market price ($6.50) < theoretical price at 35% vol ($7.18), implied volatility must be lower than 35%.
+Since market price (\$6.50) < theoretical price at 35% vol (\$7.18), implied volatility must be lower than 35%.
 
 **Trial and error (or numerical solver):**
 
 Try $\sigma = 0.30$ (30%):
 - $d_1 = 0.4593$, $d_2 = 0.3093$
 - $N(d_1) = 0.6770$, $N(d_2) = 0.6215$
-- $c = 75 \times 0.6770 - 71.28 \times 0.6215 = 50.775 - 44.291 = \$6.48$ ✓
+- $c = 75 \times 0.6770 - 71.28 \times 0.6215 = 50.775 - 44.291 = \$6.48$
 
 **Final Answers:**
 1. Call price: \$7.18 (at 35% vol)
@@ -656,7 +656,7 @@ Try $\sigma = 0.30$ (30%):
 3. Probability of exercise: **58.04%**
 4. Implied volatility: **≈30%** (if market price is \$6.50)
 
-**Interpretation**: The call is in-the-money ($75 > $72) and has significant value. There's a 58% chance (in risk-neutral world) it ends in-the-money. If the market prices it at $6.50, the implied volatility is about 30%, suggesting the market expects lower volatility than the 35% assumption.
+**Interpretation**: The call is in-the-money (\$75 > \$72) and has significant value. There's a 58% chance (in risk-neutral world) it ends in-the-money. If the market prices it at \$6.50, the implied volatility is about 30%, suggesting the market expects lower volatility than the 35% assumption.
 ```
 
 ---
