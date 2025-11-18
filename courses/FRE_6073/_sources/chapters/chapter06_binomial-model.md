@@ -215,11 +215,11 @@ A 3-month call option has a strike price of $21. The risk-free rate is 4% per an
 
 **Step 1: Calculate Payoffs**
 
-**If stock goes up to $22:**
+**If stock goes up to \$22:**
 
 $$f_u = \max(22 - 21, 0) = \$1$$
 
-**If stock goes down to $18:**
+**If stock goes down to \$18:**
 
 $$f_d = \max(18 - 21, 0) = \$0$$
 
@@ -261,12 +261,12 @@ $$0.25 \times 22 - 1 = 5.50 - 1.00 = \$4.50$$
 
 $$0.25 \times 18 - 0 = 4.50 - 0 = \$4.50$$
 
-**Present value of $4.50:**
+**Present value of \$4.50:**
 
 $$4.50 \times e^{-0.01} = 4.50 \times 0.9900 = \$4.455$$ ✓
 
 **Final Answers:**
-1. Option price: **$0.545**
+1. Option price: \$0.545
 2. Delta: **0.25**
 3. Replicating portfolio: Long 0.25 shares, short 1 call, has riskless value of $4.50 at maturity
 
@@ -579,11 +579,11 @@ A 6-month European put option has a strike price of $48. The risk-free rate is 5
 
 **Part 1: Calculate Put Payoffs**
 
-**If stock goes up to $60:**
+**If stock goes up to \$60:**
 
 $$f_u = \max(48 - 60, 0) = \$0$$
 
-**If stock goes down to $40:**
+**If stock goes down to \$40:**
 
 $$f_d = \max(48 - 40, 0) = \$8$$
 
@@ -657,11 +657,9 @@ $$S_0 e^{rT} = 50 \times e^{0.025} = 50 \times 1.0253 = \$51.27$$ ✓
 
 **Final Answers:**
 1. Delta: **-0.40** (negative for put)
-2. Put price: **$3.41**
+2. Put price: \$3.41
 3. Replicating portfolio: **Short 0.40 shares and short 1 put** (or equivalently, long 0.40 shares and long 1 put creates opposite position)
 4. Risk-neutral probability (0.5633) makes expected stock price equal $S_0e^{rT}$ ✓
 ```
 
 ---
-
-**Next Chapter:** [Chapter 7: Stochastic Processes and Brownian Motion →](chapter07_stochastic-processes.md)

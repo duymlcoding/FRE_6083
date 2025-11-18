@@ -188,7 +188,7 @@ The forward price of $102.53 reflects:
 1. The current spot price of $100
 2. Plus the cost of financing ($2.53) at 5% for 6 months
 
-**Final Answer:** The 6-month forward price is **$102.53**.
+**Final Answer:** The 6-month forward price is \$102.53.
 
 **Physical Meaning**: The forward price compensates for the time value of money. If you buy forward, you don't pay until delivery, so the price includes the interest you could have earned on the cash.
 ```
@@ -232,7 +232,7 @@ The corporation is **obligated** to:
 
 **Scenario C: GBP at 1.2230 (Forward Price)**
 - Spot value = Contract price
-- Profit/Loss = **$0**
+- Profit/Loss = \$0
 
 **Part 3: Profit at 1.2500**
 
@@ -644,5 +644,3 @@ Maintenance margin = 3 × $3,500 = $10,500
 ```
 
 ---
-
-**Next Chapter:** [Chapter 3: Pricing and Valuation of Forwards and Futures →](chapter03_pricing-and-valuation.md)

@@ -982,11 +982,11 @@ $$S_T = \$104$$
 - Profit: $10 - 4 = \$6$ (max profit)
 
 **Final Answers:**
-1. Cost: **$4**
-2. Maximum profit: **$6** (at $S_T \geq 110$)
-3. Maximum loss: **$4** (at $S_T \leq 100$)
-4. Breakeven: **$104**
-5. Payoffs: **$95 → -$4; $105 → +$1; $115 → +$6**
+1. Cost: \$4
+2. Maximum profit: \$6 (at $S_T \geq 110$)
+3. Maximum loss: \$4 (at $S_T \leq 100$)
+4. Breakeven: \$104
+5. Payoffs: \$95 → -\$4; \$105 → +\$1; \$115 → +\$6
 
 **Interpretation**: The bull call spread reduces the cost of a bullish position from $6 to $4, but caps the maximum profit at $6. It's appropriate for moderate bullish views where you're willing to cap upside to reduce cost.
 ```

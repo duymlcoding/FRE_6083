@@ -78,7 +78,7 @@ Why must $F_0 = \$51.52$? Consider two strategies:
 
 Both strategies deliver the same result (stock worth $S_T$), so they must have the same cost. Therefore, $F_0 = \$51.52$.
 
-**Final Answer:** The 9-month forward price is **$51.52**.
+**Final Answer:** The 9-month forward price is \$51.52.
 ```
 
 ---
@@ -222,7 +222,7 @@ Your contract has a **positive value of $4.11** because:
 
 $$f = S_0 - Ke^{-rT} = 48 - 45e^{-0.025} = 48 - 43.89 = \$4.11$$
 
-**Final Answer:** The long forward position has a value of **$4.11**.
+**Final Answer:** The long forward position has a value of \$4.11.
 
 **Physical Meaning**: You "locked in" a better deal than what's currently available, so your contract has positive value.
 ```
@@ -709,5 +709,3 @@ To close the long position, Company X would:
 ```
 
 ---
-
-**Next Chapter:** [Chapter 4: Interest Rates and Repo Markets →](chapter04_interest-rates-and-repo.md)

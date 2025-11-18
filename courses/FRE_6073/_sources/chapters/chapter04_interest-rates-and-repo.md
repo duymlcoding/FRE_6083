@@ -181,7 +181,7 @@ A bank needs $10 million cash overnight. It sells Treasury bonds worth $10 milli
 
 **Step 1: Cash Received Today**
 
-The bank receives **$10,000,000** cash today by selling the Treasury bonds.
+The bank receives \$10,000,000 cash today by selling the Treasury bonds.
 
 **Step 2: Calculate Repurchase Price**
 
@@ -204,9 +204,9 @@ Or directly:
 $$\text{Interest} = 10,000,000 \times \frac{0.05}{360} = \$1,389$$
 
 **Final Answer:**
-1. Cash received: **$10,000,000**
-2. Repurchase price: **$10,001,389**
-3. Repo interest: **$1,389**
+1. Cash received: \$10,000,000
+2. Repurchase price: \$10,001,389
+3. Repo interest: \$1,389
 
 **Physical Meaning**: The bank essentially borrowed $10 million overnight at 5% using Treasury bonds as collateral, paying $1,389 in interest.
 ```
@@ -695,9 +695,9 @@ $$\text{Net earnings} = 50,000,000 \times 0.001 \times \frac{7}{360} = \$972$$
 $$\text{Repurchase Price} = 50,000,000 + 50,938 = \$50,050,938$$
 
 **Final Answer:**
-1. Interest paid: **$50,938**
-2. Net financing cost: **-$909** (actually earns money from the spread)
-3. Repurchase price: **$50,050,938**
+1. Interest paid: \$50,938
+2. Net financing cost: -\$909 (actually earns money from the spread)
+3. Repurchase price: \$50,050,938
 
 **Interpretation**: The hedge fund can earn a profit by borrowing at 5.25% in the repo market and lending at 5.35%, capturing a 10 bp spread.
 ```
@@ -756,5 +756,3 @@ SOFR is typically lower than LIBOR was because:
 ```
 
 ---
-
-**Next Chapter:** [Chapter 5: Bonds and Zero Rates →](chapter05_bonds-and-zero-rates.md)

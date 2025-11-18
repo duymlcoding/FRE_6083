@@ -286,8 +286,8 @@ Variance: $2.0$ (thousand dollars)²
 Standard Deviation: $\sqrt{2.0} = 1.414$ thousand dollars
 
 **Final Answers:**
-1. Expected change: **$5,000**
-2. Standard deviation: **$2,000**
+1. Expected change: \$5,000
+2. Standard deviation: \$2,000
 3. Distribution over 6 months: **$N(2500, 1414)$** (in dollars)
 
 **Physical Meaning**: The cash balance drifts upward at $5,000 per year on average, but with random fluctuations having standard deviation $2,000 per year.
@@ -357,7 +357,7 @@ $$\frac{\Delta S}{S} = \mu \Delta t + \sigma \epsilon \sqrt{\Delta t}$$
 5. **Realistic**: Matches observed behavior reasonably well
 ```
 
-**Physical Meaning**: The model says that **percentage changes** (returns) are normally distributed with constant volatility. If the stock is at $100, a typical daily move might be ±2%. If at $50, a typical move is ±1$ (still ±2%).
+**Physical Meaning**: The model says that **percentage changes** (returns) are normally distributed with constant volatility. If the stock is at \$100, a typical daily move might be ±2%. If at \$50, a typical move is ±1$ (still ±2%).
 
 ---
 
@@ -610,10 +610,10 @@ Using log-space (more accurate):
 Converting back: $[e^{4.204}, e^{5.184}] = [\$66.78, \$178.54]$
 
 **Final Answer:**
-- Expected price: **$112.75**
-- Median price: **$109.28**
-- Standard deviation: **$28.64**
-- 95% confidence interval: **[$66.78, $178.54]**
+- Expected price: \$112.75
+- Median price: \$109.28
+- Standard deviation: \$28.64
+- 95% confidence interval: **[\$66.78, \$178.54]**
 
 **Physical Meaning**: The stock is expected to reach $112.75, but there's substantial uncertainty. There's a 2.5% chance it falls below $67 and a 2.5% chance it rises above $179.
 ```
@@ -725,13 +725,11 @@ $$\Delta t = 1/12, \quad \sqrt{\Delta t} = 0.2887$$
 - Total: $\Delta S = 0.42 + 3.46 = 3.88$
 
 **Final Answers:**
-1. Expected price: **$51.26**
+1. Expected price: \$51.26
 2. Std dev of returns: **15%**
-3. Simulated path: $50 → $53.88 → $52.00 → $53.78
+3. Simulated path: \$50 → \$53.88 → \$52.00 → \$53.78
 
 **Note**: Each simulation would produce different results. The distribution of final prices centers around $51.26 with 15% volatility.
 ```
 
 ---
-
-**Next Chapter:** [Chapter 8: The Black-Scholes-Merton Model →](chapter08_black-scholes-merton.md)

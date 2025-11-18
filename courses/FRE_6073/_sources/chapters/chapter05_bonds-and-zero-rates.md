@@ -139,7 +139,7 @@ $$FV = \$6,168.55$$
 
 $$\text{Interest} = 6,168.55 - 5,000 = \$1,168.55$$
 
-**Final Answer:** After 3.5 years, you will have **$6,168.55**.
+**Final Answer:** After 3.5 years, you will have \$6,168.55.
 
 **Comparison with Annual Compounding:**
 
@@ -442,7 +442,7 @@ $$PV_4 = 103 \times e^{-0.02416 \times 2.0} = 103 \times e^{-0.04832} = 103 \tim
 
 $$\text{Bond Price} = 2.970 + 2.934 + 2.899 + 98.15 = \$106.95$$
 
-**Final Answer:** The theoretical price is **$106.95**.
+**Final Answer:** The theoretical price is \$106.95.
 
 **Interpretation**: The 6% coupon bond trades above par ($100) because coupon rates exceed prevailing market rates, making it more valuable.
 ```
@@ -935,5 +935,3 @@ $$= \frac{0.05975 - 0.03046}{0.5} = \frac{0.02929}{0.5} = 0.05858 = 5.858\%$$
 ```
 
 ---
-
-**Next Chapter:** [Chapter 6: The Binomial Model →](chapter06_binomial-model.md)

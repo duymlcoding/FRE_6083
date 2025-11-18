@@ -256,7 +256,7 @@ Enter a **long forward contract** to buy £10 million in 3 months at $1.2230/£
 | $1.2230/£ | $12,230,000 | $12,230,000 | $0 |
 | $1.30/£ | $13,000,000 | $12,230,000 | +$770,000 |
 
-**Final Answer:** **The company should enter a long forward contract for £10 million at $1.2230/£. This eliminates all currency risk, providing budget certainty.**
+**Final Answer:** **The company should enter a long forward contract for £10 million at \$1.2230/£. This eliminates all currency risk, providing budget certainty.**
 
 **Note:** The hedge removes both upside and downside - the company won't benefit if GBP weakens, but also won't suffer if it strengthens.
 ```
@@ -305,10 +305,10 @@ Enter a **long forward contract** to buy £10 million in 3 months at $1.2230/£
 
 **Physical Meaning**: Arbitrage is like buying a product in one store and simultaneously selling it in another store at a higher price - you lock in the profit difference with zero risk.
 
-**Example:** If gold trades at $1,800/oz in New York and $1,805/oz in London:
-- Buy in New York for $1,800
-- Sell in London for $1,805
-- Lock in $5/oz risk-free profit
+**Example:** If gold trades at \$1,800/oz in New York and \$1,805/oz in London:
+- Buy in New York for \$1,800
+- Sell in London for \$1,805
+- Lock in \$5/oz risk-free profit
 
 **Important:** True arbitrage opportunities are rare and disappear quickly as arbitrageurs exploit them.
 
@@ -461,7 +461,7 @@ Cost = 10 contracts × 100 shares/contract × $1/share = **$1,000**
 - With 1,000 shares: 1,000 × $27.50 = $27,500
 - Minus hedge cost: $27,500 - $1,000 = **$26,500 minimum**
 
-**Part 3: Stock Falls to $20**
+**Part 3: Stock Falls to \$20**
 
 Without hedge:
 - Stock value: 1,000 × $20 = $20,000
@@ -471,7 +471,7 @@ With hedge:
 - Minus hedge cost: $27,500 - $1,000 = **$26,500**
 - Gain from hedge: $26,500 - $20,000 = $6,500
 
-**Part 4: Stock Rises to $35**
+**Part 4: Stock Rises to \$35**
 
 - Stock value: 1,000 × $35 = $35,000
 - Puts expire worthless
@@ -482,5 +482,3 @@ With hedge:
 ```
 
 ---
-
-**Next Chapter:** [Chapter 2: Forward and Futures Contracts →](chapter02_forward-and-futures-contracts.md)

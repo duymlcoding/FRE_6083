@@ -81,7 +81,7 @@ Where $N(d_1)$ is from Black-Scholes formula.
 - Deep out-of-the-money: $\Delta \to 0$
 ```
 
-**Physical Meaning**: Delta tells you how many shares of stock replicate the option. A call with $\Delta = 0.6$ moves like 0.6 shares - if the stock rises $1, the call rises $0.60.
+**Physical Meaning**: Delta tells you how many shares of stock replicate the option. A call with $\Delta = 0.6$ moves like 0.6 shares - if the stock rises \$1, the call rises \$0.60.
 
 ### Delta as Hedge Ratio
 
@@ -743,7 +743,7 @@ The stock currently trades at $100.
 
 **Assume initial option price**: $f = \$5.00$ (ATM call)
 
-**Part 1: Stock Rises to $102 ($\Delta S = 2$)**
+**Part 1: Stock Rises to \$102 ($\Delta S = 2$)**
 
 **Delta-only:**
 
@@ -805,5 +805,3 @@ $$= \$1.51$$
 ```
 
 ---
-
-**Next Chapter:** [Chapter 10: Volatility and Option Trading Strategies →](chapter10_volatility-and-strategies.md)

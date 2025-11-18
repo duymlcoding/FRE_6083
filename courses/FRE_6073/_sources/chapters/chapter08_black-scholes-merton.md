@@ -331,8 +331,8 @@ $$= 19.621 - 16.925 = \$2.70$$ ✓
 **Final Answers:**
 1. $d_1 = 0.4164$, $d_2 = 0.2043$
 2. $N(d_1) = 0.6615$, $N(d_2) = 0.5809$
-3. Call price: **$5.89**
-4. Put price: **$2.70**
+3. Call price: \$5.89
+4. Put price: \$2.70
 
 **Interpretation:**
 - The call is in-the-money (stock > strike) and has significant value
@@ -637,7 +637,7 @@ $$= 29.901 - 26.453 = \$3.45$$ ✓ (small rounding difference)
 
 $$P(\text{Exercise}) = N(d_2) = 0.5804 = 58.04\%$$
 
-**Part 4: Implied Volatility (if market price is $6.50)**
+**Part 4: Implied Volatility (if market price is \$6.50)**
 
 If market price is $6.50 instead of theoretical $7.18, we need to find $\sigma_{implied}$ such that BSM formula gives $6.50.
 
@@ -651,14 +651,12 @@ Try $\sigma = 0.30$ (30%):
 - $c = 75 \times 0.6770 - 71.28 \times 0.6215 = 50.775 - 44.291 = \$6.48$ ✓
 
 **Final Answers:**
-1. Call price: **$7.18** (at 35% vol)
-2. Put price: **$3.46**
+1. Call price: \$7.18 (at 35% vol)
+2. Put price: \$3.46
 3. Probability of exercise: **58.04%**
-4. Implied volatility: **≈30%** (if market price is $6.50)
+4. Implied volatility: **≈30%** (if market price is \$6.50)
 
 **Interpretation**: The call is in-the-money ($75 > $72) and has significant value. There's a 58% chance (in risk-neutral world) it ends in-the-money. If the market prices it at $6.50, the implied volatility is about 30%, suggesting the market expects lower volatility than the 35% assumption.
 ```
 
 ---
-
-**Next Chapter:** [Chapter 9: The Greeks and Risk Management →](chapter09_the-greeks.md)
