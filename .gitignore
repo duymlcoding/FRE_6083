@@ -1,6 +1,8 @@
 # Jupyter Book build files
-mynotes/_build/
+courses/*/_build/
 _build/
+_deploy/
+mynotes/_build/
 
 # Python
 __pycache__/
