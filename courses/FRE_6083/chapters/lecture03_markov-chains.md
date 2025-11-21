@@ -65,6 +65,7 @@ The symmetric random walk introduced in Lecture 1 is a Markov chain:
 - The path taken to reach the current position is irrelevant
 
 **Transition probabilities:**
+
 $$
 \begin{cases}
 j = i+1 & \text{with probability } p \\
@@ -72,6 +73,7 @@ j = i & \text{with probability } r \\
 j = i-1 & \text{with probability } q
 \end{cases}
 $$
+
 where $p + q + r = 1$.
 ```
 
@@ -171,19 +173,23 @@ The Chapman-Kolmogorov equations provide the main general tool for analyzing Mar
 **Chapman-Kolmogorov Equations**
 
 **Scalar Form:**
+
 $$
 p_{i,j}^{(m+n)} = \sum_{k=0}^{\infty} p_{i,k}^{(m)} p_{k,j}^{(n)}, \quad \text{for all } m, n, i, j \geq 0
 $$
 
 **Matrix Form:**
+
 $$
 P^{(m+n)} = P^{(m)} P^{(n)}
 $$
 
 **Corollary:**
+
 $$
 P^{(n)} = \underbrace{P^{(1)} \cdots P^{(1)}}_{n \text{ times}}
 $$
+
 ```
 
 **Physical Meaning:** To go from state $i$ to state $j$ in $m+n$ steps, we must pass through some intermediate state $k$ at step $m$. We sum over all possible intermediate states, weighted by the probabilities of the two-part journey.
@@ -354,9 +360,11 @@ $$
 $$
 
 where:
+
 $$
 t_j(N) = \sum_{k \leq N} \mathbb{I}_{\{X_k = j\}}
 $$
+
 ```
 
 **Physical Meaning:** If you run the Markov chain for a very long time, approximately $100 \times \pi_j$ percent of the time will be spent in state $j$.
@@ -387,6 +395,7 @@ P[X_n = j] = \sum_{i=0}^{\infty} P[X_n = j \mid X_0 = i] P[X_0 = i] = \sum_{i=0}
 $$
 
 **Matrix Form:**
+
 $$
 \boldsymbol{\pi}^{(n)} = \boldsymbol{\pi}^{(0)} P^n
 $$
@@ -428,6 +437,7 @@ $$
 $$
 E[X_n \mid X_0 = i] = \sum_{j=1}^{\infty} j \cdot P[X_n = j \mid X_0 = i] = \sum_{j=1}^{\infty} j \cdot p_{i,j}^{(n)}
 $$
+
 ```
 
 ## The Two-State Markov Chain
@@ -442,6 +452,7 @@ Consider a two-state Markov chain with states $\{0, 1\}$.
 - **State 1:** A claim is made
 
 **Transition Probabilities:**
+
 $$
 P[X_{n+1} = 1 \mid X_n = 0] = \alpha, \quad P[X_{n+1} = 0 \mid X_n = 1] = \beta
 $$
@@ -473,6 +484,7 @@ P^{(n)} = \frac{1}{\alpha + \beta} \begin{bmatrix}
 -\beta & \beta
 \end{bmatrix}
 $$
+
 ```
 
 ### Ergodic Limit
@@ -509,6 +521,7 @@ P = \begin{bmatrix}
 $$
 
 We have:
+
 $$
 P^{2k} = \begin{bmatrix}
 1 & 0 \\
@@ -619,6 +632,7 @@ P = \begin{bmatrix}
 1/2 & 1/2 & 0
 \end{bmatrix}
 $$
+
 ```
 
 We compute successive powers:
@@ -699,9 +713,11 @@ $$
 **Note:** This is the probability of being bankrupt by step $n$, not necessarily at exactly step $n$.
 
 **Eventual Ruin:**
+
 $$
 r_i = \lim_{n \to \infty} r_i^{(n)}
 $$
+
 ```
 
 **Physical Meaning:** Once bankrupt ($X_n = 0$), the player stays bankrupt forever. So $r_i^{(n)}$ is non-decreasing in $n$.
@@ -712,6 +728,7 @@ $$
 **Boundary Conditions and Recursion**
 
 **Boundary conditions:**
+
 $$
 r_0 = 1, \quad r_k = 0
 $$
@@ -725,6 +742,7 @@ r_i = \sum_{l=0}^{+\infty} p_{i,l}^{(1)} r_l
 $$
 
 This leads to the system:
+
 $$
 \begin{cases}
 r_1 = p r_2 + q \\
@@ -732,31 +750,37 @@ r_i = q r_{i-1} + p r_{i+1} & \text{for } i = 2, \ldots, k-2 \\
 r_{k-1} = q r_{k-2}
 \end{cases}
 $$
+
 ```
 
 ```{dropdown} Solution for Fair Game ($p = q = 1/2$)
 
 Rewriting the general equation:
+
 $$
 (p+q)r_i = qr_{i-1} + pr_{i+1}
 $$
 
 Iterating:
+
 $$
 r_{i+1} - r_i = \frac{q}{p}(r_i - r_{i-1}) = \left(\frac{q}{p}\right)^i (r_1 - 1)
 $$
 
 For $p = q = 1/2$:
+
 $$
 r_j = 1 + j(r_1 - 1)
 $$
 
 Using the boundary condition $r_{k-1} = \frac{1}{2}r_{k-2}$ with $j = k-1$:
+
 $$
 r_1 = 1 - \frac{1}{k}
 $$
 
 Therefore:
+
 $$
 r_j = 1 - \frac{j}{k} = \frac{k-j}{k}
 $$
@@ -791,14 +815,17 @@ when $p \neq q$.
 Starting with capital $i$ dollars:
 
 **Fair game ($p = 1/2$):**
+
 $$
 r_i = \frac{k-i}{k}
 $$
 
 **Unfair game ($p \neq 1/2$):**
+
 $$
 r_i = \frac{1 - (q/p)^i}{1 - (q/p)^k}
 $$
+
 ```
 
 ## Summary

@@ -23,6 +23,7 @@ This lecture introduces portfolio optimization in discrete time using a one-peri
 **Probability Space:**
 
 We consider an experiment with a finite number of possible outcomes:
+
 $$
 \Omega = \{\omega_1, \ldots, \omega_K\}
 $$
@@ -66,9 +67,11 @@ A utility function is $u: \mathbb{R} \to \mathbb{R}$ such that $w \mapsto u(w)$ 
 **Expected Utility:**
 
 Our measure of portfolio performance is the **expected utility of terminal wealth**:
+
 $$
 E[u(w_1)] = \sum_{\omega \in \Omega} P(\omega) u(w_1(\omega))
 $$
+
 ```
 
 **Physical Meaning:** We evaluate a portfolio not just by its expected return, but by the expected satisfaction it provides, accounting for risk preferences.
@@ -103,6 +106,7 @@ In general, $B = (B(0), B(1))$ is a random variable.
 **Portfolio Representation:**
 
 A trading strategy is denoted by:
+
 $$
 (H_0, H_1, \ldots, H_n, \ldots, H_N) \in \mathbb{R}^{N+1}
 $$
@@ -126,9 +130,11 @@ $$
 $$
 
 **Subject to:**
+
 $$
 w_0 = w \quad \text{(budget constraint)}
 $$
+
 ```
 
 ### The Numeraire
@@ -141,6 +147,7 @@ We make the bank account the **numeraire** (asset of reference) and normalize al
 $$
 \tilde{S}_n(t) = \frac{S_n(t)}{B(t)}
 $$
+
 ```
 
 **Physical Meaning:** Working with discounted prices simplifies the mathematics and reveals the fundamental economic structure.
@@ -151,14 +158,17 @@ $$
 **Initial Wealth (Discounted):**
 
 Since $B(0) = 1$:
+
 $$
 w_0 = H_0 B(0) + H_1 S_1(0) + \cdots + H_N S_N(0) = H_0 + H_1 \tilde{S}_1(0) + \cdots + H_N \tilde{S}_N(0)
 $$
 
 **Terminal Wealth (Discounted):**
+
 $$
 w_1 = B(1)\left(H_0 + H_1 \tilde{S}_1(1) + \cdots + H_N \tilde{S}_N(1)\right)
 $$
+
 ```
 
 ### Price Changes
@@ -169,6 +179,7 @@ $$
 $$
 \Delta \tilde{S}_n = \tilde{S}_n(1) - \tilde{S}_n(0)
 $$
+
 ```
 
 ### Eliminating $H_0$
@@ -176,17 +187,20 @@ $$
 ```{dropdown} Derivation of Terminal Wealth Formula
 
 Since initial wealth is given, we can solve for $H_0$:
+
 $$
 H_0 = w - H_1 \tilde{S}_1(0) - \cdots - H_N \tilde{S}_N(0)
 $$
 
 Substituting into terminal wealth:
+
 $$
 \begin{align}
 w_1 &= B(1)\left(w - H_1 \tilde{S}_1(0) - \cdots - H_N \tilde{S}_N(0) + H_1 \tilde{S}_1(1) + \cdots + H_N \tilde{S}_N(1)\right) \\
 &= B(1)\left\{w + H_1 \Delta\tilde{S}_1 + \cdots + H_N \Delta\tilde{S}_N\right\}
 \end{align}
 $$
+
 ```
 
 ```{important}
@@ -207,6 +221,7 @@ $$
 **Arbitrage Opportunity:**
 
 An arbitrage opportunity is a strategy $H^a$ such that:
+
 $$
 w + \sum_{n=1}^N H_n^a \Delta\tilde{S}_n \geq w
 $$
@@ -231,11 +246,13 @@ If there exists an arbitrage opportunity, there **cannot exist** a solution to t
 - $H^a$ is an arbitrage opportunity
 
 **Consider the strategy:**
+
 $$
 H = \hat{H} + H^a
 $$
 
 **Discounted terminal wealth:**
+
 $$
 w + \sum_{n=1}^N H_n \Delta\tilde{S}_n = w + \sum_{n=1}^N \hat{H}_n \Delta\tilde{S}_n + \sum_{n=1}^N H_n^a \Delta\tilde{S}_n \geq w + \sum_{n=1}^N \hat{H}_n \Delta\tilde{S}_n
 $$
@@ -267,6 +284,7 @@ If there is a solution to the optimization problem, then:
 $$
 \sum_{\omega \in \Omega} P(\omega) u\left(B(1, \omega)\left\{w + \sum_{n=1}^N H_n \Delta\tilde{S}_n(\omega)\right\}\right)
 $$
+
 ```
 
 ### Gradient Condition
@@ -277,6 +295,7 @@ $$
 At the optimum, the gradient with respect to $(H_1, \ldots, H_N)$ equals zero.
 
 For all $n = 1, \ldots, N$:
+
 $$
 \sum_{\omega \in \Omega} P(\omega) u'\left(B(1, \omega)\left\{w + \sum_{n=1}^N H_n \Delta\tilde{S}_n(\omega)\right\}\right) B(1, \omega) \Delta\tilde{S}_n(\omega) = 0
 $$
@@ -292,6 +311,7 @@ where $u'$ denotes the first derivative of $u$.
 $$
 E[B(1) u'(w_1) \Delta\tilde{S}_n] = 0, \quad n = 1, \ldots, N
 $$
+
 ```
 
 **Physical Meaning:** At the optimum, the expected marginal change in utility (weighted by the discount factor) from each risky asset must be zero.
@@ -304,9 +324,11 @@ $$
 **Risk-Neutral Measure $\tilde{P}$:**
 
 Under a risk-neutral probability measure $\tilde{P}$, discounted asset prices are martingales:
+
 $$
 E^{\tilde{P}}[\Delta\tilde{S}_n] = \sum_{\omega \in \Omega} \tilde{P}(\omega) \Delta\tilde{S}_n(\omega) = 0, \quad n = 1, \ldots, N
 $$
+
 ```
 
 ### Comparison with Optimality
@@ -321,9 +343,11 @@ $$
 $$
 
 **Normalization:** We verify that:
+
 $$
 \sum_{k=1}^K \tilde{P}(\omega_k) = 1
 $$
+
 ```
 
 **Physical Meaning:** The risk-neutral probabilities are the physical probabilities weighted by the marginal utility and discount factor, then normalized.
@@ -342,15 +366,18 @@ E^{\tilde{P}}[w_1 / B(1)] &= \sum_{\omega \in \Omega} \tilde{P}(\omega) \frac{w_
 &= w = w_0
 \end{align}
 $$
+
 ```
 
 ```{important}
 **Martingale Property:**
 
 The discounted wealth process is a martingale under the risk-neutral measure:
+
 $$
 E^{\tilde{P}}[w_1 / B(1)] = w_0
 $$
+
 ```
 
 **Physical Meaning:** Under risk-neutral probabilities, discounted wealth has no expected growth—this is the fundamental property of arbitrage-free pricing.
@@ -409,6 +436,7 @@ $$
 $$
 
 where the feasible set is:
+
 $$
 V_w = \left\{v \in \mathbb{R}^K : E^{\tilde{P}}[v / B(1)] = w\right\}
 $$
@@ -428,9 +456,11 @@ $$
 $$
 
 where $\lambda$ is chosen such that the solution satisfies:
+
 $$
 E^{\tilde{P}}[v / B(1)] = w
 $$
+
 ```
 
 ```{dropdown} Reformulation
@@ -442,6 +472,7 @@ $$
 &= \sum_\omega P(\omega)[u(v(\omega)) - (\tilde{P}(\omega)/P(\omega)) v(\omega)/B(1,\omega) \cdot \lambda]
 \end{align}
 $$
+
 ```
 
 ### First-Order Condition
@@ -450,11 +481,13 @@ $$
 **Optimality Condition:**
 
 For each $\omega \in \Omega$:
+
 $$
 u'(v(\omega)) = \frac{\tilde{P}(\omega)}{P(\omega) B(1, \omega)} \lambda
 $$
 
 **Solving for $v$:**
+
 $$
 v(\omega) = (u')^{-1}\left(\frac{\lambda \tilde{P}(\omega)}{P(\omega) B(1, \omega)}\right)
 $$
@@ -529,11 +562,13 @@ Once we determine the optimal terminal wealth $w_1$ from Step 1, Step 2 is strai
 ```{dropdown} Solution for $\tilde{P}$
 
 **Martingale conditions:**
+
 $$
 E^{\tilde{P}}[\Delta\tilde{S}_n] = \sum_{\omega \in \Omega} \tilde{P}(\omega) \Delta\tilde{S}_n(\omega) = 0, \quad n = 1, 2
 $$
 
 **System of equations:**
+
 $$
 \begin{cases}
 0 \cdot \tilde{P}(\omega_1) + 2\tilde{P}(\omega_2) - 2\tilde{P}(\omega_3) = 0 \\
@@ -543,9 +578,11 @@ $$
 $$
 
 **Unique solution:**
+
 $$
 \tilde{P}(\omega_1) = 1/3, \quad \tilde{P}(\omega_2) = 1/3, \quad \tilde{P}(\omega_3) = 1/3
 $$
+
 ```
 
 ### Radon-Nikodym Derivative
@@ -558,9 +595,11 @@ L(\omega) = \frac{\tilde{P}(\omega)}{P(\omega)}
 $$
 
 gives:
+
 $$
 L(\omega_1) = 2/3, \quad L(\omega_2) = L(\omega_3) = 4/3
 $$
+
 ```
 
 ### Step 2: Optimal Wealth Formula
@@ -568,29 +607,35 @@ $$
 ```{dropdown} Derivation
 
 **Inverse utility function:**
+
 $$
 (u')^{-1}(y) = -\ln y
 $$
 
 **Optimal wealth:**
+
 $$
 w_1(\omega) = -\ln(\lambda L(\omega) / B(1))
 $$
 
 **Determining $\lambda$:**
+
 $$
 w = E^{\tilde{P}}[-\ln((\tilde{P}/P) / B(1)) / B(1)] = -\ln(\lambda) E^{\tilde{P}}[1/B(1)] - E^{\tilde{P}}[\ln(L/B(1)) / B(1)]
 $$
 
 Therefore:
+
 $$
 \lambda = \exp\left\{-\frac{w + E^{\tilde{P}}[\ln(L/B(1)) / B(1)]}{E^{\tilde{P}}[1/B(1)]}\right\}
 $$
 
 **Simplified formula:**
+
 $$
 w_1 = w + \frac{E^{\tilde{P}}[\ln(L/B(1)) / B(1)]}{E^{\tilde{P}}[1/B(1)]} - \ln(L/B(1))
 $$
+
 ```
 
 ### Numerical Results
@@ -599,6 +644,7 @@ $$
 **Computed Values:**
 
 Using $B(1) = 10/9$:
+
 $$
 E^{\tilde{P}}[\ln(L/B(1))] = -0.04873
 $$
@@ -609,9 +655,11 @@ $$
 - $w_1(\omega_3) = w(10/9) - 0.23105$
 
 **Optimal objective value:**
+
 $$
 E[u(w_1)] = -E[L/B(1)] = -E^{\tilde{P}}[1/B(1)] = -9/10
 $$
+
 ```
 
 ### Step 3: Finding the Replicating Strategy
@@ -624,6 +672,7 @@ w_1 / B(1) = w + H_1 \Delta\tilde{S}_1 + H_2 \Delta\tilde{S}_2
 $$
 
 **Equivalent system:**
+
 $$
 \begin{cases}
 0.41590 = 0 \cdot H_1 + 3H_2 \\
@@ -633,23 +682,28 @@ $$
 $$
 
 **Unique solution:**
+
 $$
 H_1 = -0.03466, \quad H_2 = 0.13863
 $$
+
 ```
 
 ### Computing Cash Position
 
 ```{note}
 **Budget constraint:**
+
 $$
 w = H_0 + 6H_1 + 10H_2
 $$
 
 **Solving for $H_0$:**
+
 $$
 H_0 = w - 1.17834
 $$
+
 ```
 
 **Physical Meaning:**

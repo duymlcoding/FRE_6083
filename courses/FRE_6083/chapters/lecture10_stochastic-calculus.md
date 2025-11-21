@@ -147,16 +147,19 @@ $$
 We define the Ito integral $I(t) = \int_0^t \Delta(u) dW(u)$ successively:
 
 **On $[0, t_1)$:**
+
 $$
 I(t) = \Delta(t_0)[W(t) - W(t_0)] = \Delta(0)W(t)
 $$
 
 **On $[t_1, t_2)$:**
+
 $$
 I(t) = \Delta(0)W(t_1) + \Delta(t_1)[W(t) - W(t_1)]
 $$
 
 **On $[t_2, t_3)$:**
+
 $$
 I(t) = \Delta(0)W(t_1) + \Delta(t_1)[W(t_2) - W(t_1)] + \Delta(t_2)[W(t) - W(t_2)]
 $$
@@ -171,6 +174,7 @@ For $t \in [t_k, t_{k+1}]$:
 $$
 I(t) = \sum_{j=0}^{k-1} \Delta(t_j)[W(t_{j+1}) - W(t_j)] + \Delta(t_k)[W(t) - W(t_k)]
 $$
+
 ```
 
 **Physical Meaning:** The integral is a weighted sum of Brownian motion increments, where weights $\Delta(t_j)$ are determined at the left endpoint of each interval.
@@ -213,9 +217,11 @@ We now consider more general integrands and summarize the theory.
 1. **Adapted:** If the path of $W$ has been observed up to time $t$, then $\Delta$ is also known up to time $t$
 
 2. **Square Integrability:**
+
    $$
    E\left[\int_0^T \Delta(u)^2 du\right] < +\infty
    $$
+
 ```
 
 ### Approximation by Piecewise Constant Functions
@@ -234,6 +240,7 @@ $$
 $$
 \int_0^t \Delta(u) dW(u) = \lim_{n \to \infty} \int_0^t \Delta_n(u) dW(u)
 $$
+
 ```
 
 The limit is meant in $L^2(P)$, that is, for all $t \in [0, T]$:
@@ -260,6 +267,7 @@ We chose to construct the Ito integral on any interval of the form $[0, t]$ wher
 2. **Adapted:** If one knows the path of the Brownian motion up to time $t$, then one also knows $I$ with certainty up to time $t$, for each $t \in [0, T]$
 
 3. **Linearity:** For all real numbers $c_1, c_2$ and integrands $\Delta_1, \Delta_2$:
+
    $$
    \int_0^t [c_1\Delta_1(s) + c_2\Delta_2(s)]dW(s) = c_1\int_0^t \Delta_1(s)dW(s) + c_2\int_0^t \Delta_2(s)dW(s)
    $$
@@ -269,14 +277,17 @@ We chose to construct the Ito integral on any interval of the form $[0, t]$ wher
 5. **Zero Expectation:** $E[I(t)] = 0$ for all $t \in [0, T]$
 
 6. **Ito's Isometry:**
+
    $$
    E[I^2(t)] = E\left[\int_0^t \Delta^2(u) du\right]
    $$
 
 7. **Quadratic Variation:**
+
    $$
    [I, I](t) = \int_0^t \Delta^2(u) du
    $$
+
 ```
 
 **Physical Meaning:** The Ito integral of an adapted process is a martingale with zero expectation. Its variance grows according to the integrated squared integrand.
@@ -289,6 +300,7 @@ When the integrand is **deterministic** (not random), we have a special result.
 **Ito Integral with Deterministic Integrand:**
 
 Let:
+
 $$
 I(t) = \int_0^t \delta(s) dW(s)
 $$
@@ -312,19 +324,23 @@ These "multiplication rules" are fundamental for Ito calculus.
 **Differential Rules:**
 
 1. **Quadratic variation of Brownian motion:**
+
    $$
    dW(t) \cdot dW(t) = dt
    $$
 
 2. **Deterministic time has zero quadratic variation:**
+
    $$
    dt \cdot dt = 0
    $$
 
 3. **Cross-variation of Brownian motion with time is zero:**
+
    $$
    dW(t) \cdot dt = 0
    $$
+
 ```
 
 **Physical Meaning:** The Brownian motion's infinitesimal increments squared equal infinitesimal time. This is the key difference from ordinary calculus where $(dt)^2 = 0$.
@@ -365,6 +381,7 @@ $$
 $$
 f(W(t)) = f(0) + \int_0^t f'(W(s))dW(s) + \int_0^t \frac{1}{2}f''(W(s))ds
 $$
+
 ```
 
 **Physical Meaning:** There's an extra term $\frac{1}{2}f''(W(t))dt$ that doesn't appear in ordinary calculus. This comes from the non-zero quadratic variation of Brownian motion.
@@ -385,6 +402,7 @@ This can be rewritten as:
 $$
 df(t, W(t)) = \left[f_t(t, W(t)) + \frac{1}{2}f_{xx}(t, W(t))\right]dt + f_x(t, W(t))dW(t)
 $$
+
 ```
 
 **Physical Meaning:** When a function depends on both time $t$ and the Brownian motion $W(t)$, we get contributions from time evolution ($f_t dt$), spatial movement ($f_x dW$), and the second-order correction ($\frac{1}{2}f_{xx} dt$).
@@ -405,9 +423,11 @@ $$
 where $\mu$ and $\sigma$ are stochastic processes that are known with certainty up to time $t$ if the standard Brownian motion is known up to time $t$, for each $t \in [0, T]$.
 
 **Differential Form:**
+
 $$
 dX(t) = \mu(t)dt + \sigma(t)dW(t)
 $$
+
 ```
 
 **Physical Meaning:** An Ito process has both a deterministic trend $\mu(t)$ and random fluctuations driven by $\sigma(t)dW(t)$.
@@ -428,6 +448,7 @@ where:
 $$
 dX(t)dX(t) = \sigma^2(t)dW(t)dW(t) = \sigma^2(t)dt
 $$
+
 ```
 
 **Integral Form:**
@@ -460,6 +481,7 @@ X(t) &= X(0) + \int_0^t \mu_1(s)ds + \int_0^t \sigma_{11}(s)dW_1(s) + \int_0^t \
 Y(t) &= Y(0) + \int_0^t \mu_2(s)ds + \int_0^t \sigma_{21}(s)dW_1(s) + \int_0^t \sigma_{22}(s)dW_2(s)
 \end{align}
 $$
+
 ```
 
 ### Multidimensional Ito's Formula
@@ -486,6 +508,7 @@ dY(t)dY(t) &= (\sigma_{21}^2 + \sigma_{22}^2)dt \\
 dX(t)dY(t) &= (\sigma_{11}\sigma_{21} + \sigma_{12}\sigma_{22})dt
 \end{align}
 $$
+
 ```
 
 ### The Product Rule
@@ -546,6 +569,7 @@ dS(t) &= df(t, X(t)) \\
 &= S(t)\mu dt + S(t)\sigma dW(t)
 \end{align}
 $$
+
 ```
 
 ```{important}
@@ -629,6 +653,7 @@ The cross terms vanish, so:
 $$
 \sum_{j=0}^{n-1} \left(\log\frac{S_{j+1}}{S_j}\right)^2 \approx \sigma^2 T
 $$
+
 ```
 
 ```{important}
@@ -683,6 +708,7 @@ where $\kappa, \theta, \sigma > 0$ are positive constants.
 $$
 R(t) = e^{-\kappa t}R(0) + \theta(1 - e^{-\kappa t}) + \sigma e^{-\kappa t}\int_0^t e^{\kappa s}dW(s)
 $$
+
 ```
 
 ### Verification Using Ito's Formula
@@ -690,11 +716,13 @@ $$
 ```{dropdown} Proof that This is the Solution
 
 Define:
+
 $$
 X(t) = \int_0^t e^{\kappa s}dW(s)
 $$
 
 and:
+
 $$
 f(t, x) = e^{-\kappa t}R(0) + \theta(1 - e^{-\kappa t}) + \sigma e^{-\kappa t}x
 $$
@@ -727,6 +755,7 @@ This confirms the solution.
 ### Distribution of R(t)
 
 The integral:
+
 $$
 \int_0^t e^{\kappa s}dW(s)
 $$
@@ -743,14 +772,17 @@ $$
 $R(t)$ is normally distributed with:
 
 **Mean:**
+
 $$
 \mu_R(t) = e^{-\kappa t}R(0) + \theta(1 - e^{-\kappa t})
 $$
 
 **Variance:**
+
 $$
 \sigma_R^2(t) = \frac{\sigma^2}{2\kappa}(1 - e^{-2\kappa t})
 $$
+
 ```
 
 **Physical Meaning:**

@@ -66,9 +66,11 @@ A counting process $N$ is said to be a **Poisson process with rate** $\lambda > 
 2. **Independent increments:** The process has independent increments
 
 3. **Poisson distributed increments:** The increment $N(t+s) - N(s)$ is Poisson distributed with mean $\lambda t$, i.e.,
+
    $$
    P[N(t+s) - N(s) = n] = e^{-\lambda t} \frac{(\lambda t)^n}{n!}, \quad \text{for all } n = 0, 1, 2, \ldots
    $$
+
 ```
 
 **Physical Meaning:** The Poisson process is completely characterized by a single parameter $\lambda$ (the rate). Events occur randomly over time, with the number of events in any interval depending only on the length of that interval, not on when it starts.
@@ -81,14 +83,17 @@ A counting process $N$ is said to be a **Poisson process with rate** $\lambda > 
 1. **Stationary increments:** $N$ has stationary increments (the distribution of $N(t+s) - N(s)$ depends only on $t$, not on $s$)
 
 2. **Expected number of events:**
+
    $$
    E[N(t)] = E[N(t) - N(0)] = \lambda t
    $$
 
 3. **Variance:**
+
    $$
    \text{var}[N(t)] = \text{var}[N(t) - N(0)] = \lambda t
    $$
+
 ```
 
 **Physical Meaning:** The parameter $\lambda$ can be seen as the **average rate of jumps per unit of time**. In other words, the average number of jumps in the interval $[0, t]$ is equal to $\lambda t$.
@@ -111,6 +116,7 @@ It is easy to show (see Ross [1]) that $T_1, T_2, \ldots, T_n$ are i.i.d. expone
 $$
 f_{T_i}(t) = \lambda e^{-\lambda t}, \quad t \geq 0
 $$
+
 ```
 
 **Physical Meaning:** The time between successive events follows an exponential distribution. This is a memoryless distribution: the probability of the next event in the next $\Delta t$ time units doesn't depend on how long you've already waited.
@@ -125,6 +131,7 @@ The Poisson process possesses the **Markov property**. Consequently, the inter-a
 $$
 P[T_i > T + t \mid T_i > t] = P[T_i > T]
 $$
+
 ```
 
 **Physical Meaning:** If you've already waited $t$ time units for the next event, the probability of waiting an additional $T$ time units is the same as if you'd just started waiting. The process has "no memory" of how long you've been waiting.
@@ -153,6 +160,7 @@ It turns out that $S_n$ has a **gamma distribution** with parameters $n$ and $\l
 $$
 f_{S_n}(t) = e^{-\lambda t} \frac{(\lambda t)^{n-1}}{(n-1)!}, \quad t \geq 0
 $$
+
 ```
 
 **Physical Meaning:** The time until the $n$th event follows a gamma distribution, which is the sum of $n$ independent exponential random variables.
@@ -194,6 +202,7 @@ P[N(t+1) - N(t) \geq 1] &= 1 - P[N(1) - N(0) = 0] \\
 &\approx 0.632
 \end{align}
 $$
+
 ```
 
 ```{dropdown} Question 2: Probability of no claims in 2 consecutive weeks
@@ -210,6 +219,7 @@ P[N(t+2) - N(t) = 0] &= P[N(2) - N(0) = 0] \\
 &\approx 0.135
 \end{align}
 $$
+
 ```
 
 ```{dropdown} Question 3: Conditional probability
@@ -248,6 +258,7 @@ E[T_i] &= \int_0^{+\infty} t \lambda e^{-\lambda t} \, dt \\
 &= 1 \text{ week}
 \end{align}
 $$
+
 ```
 
 ## An Aggregate Loss Model in Insurance
@@ -454,9 +465,11 @@ We consider a Poisson process with rate $\lambda > 0$ and we recall that $E[N(t)
 We also consider a sequence $X_1, X_2, X_3, \ldots$ of i.i.d. random variables with common mean $\mu$ and common variance $\sigma^2$, that are also independent of $N(t)$.
 
 1. Compute:
+
    $$
    \text{cov}\left(N(t), \sum_{i=1}^{N(t)} X_i\right)
    $$
+
 ```
 
 ### Problem 4

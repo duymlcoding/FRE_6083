@@ -34,6 +34,7 @@ Let $C_A(t)$ denote the price of an American call option at time $t$, with strik
 **American Option Value:**
 
 At any time $t \leq T$:
+
 $$
 C_A(t) = \max(S(t) - K, C_{\text{cont}}(t))
 $$
@@ -68,6 +69,7 @@ At time $t$, you can either:
 2. Wait until $T$: receive $C_{\text{cont}}(t)$
 
 Therefore:
+
 $$
 C_A(t) = \max(S(t) - K, C_{\text{cont}}(t)) \geq C_{\text{cont}}(t) = C_E(t)
 $$
@@ -83,6 +85,7 @@ $$
 **Theorem: No Early Exercise for Calls Without Dividends**
 
 For an American call option on a **non-dividend-paying** asset:
+
 $$
 C_A(t) = C_{\text{cont}}(t) = C_E(t) \quad \text{for all } t \leq T
 $$
@@ -107,14 +110,17 @@ $$
 where the last inequality holds because $e^{-r(T-t)} < 1$ for $t < T$ and $r > 0$.
 
 **Conclusion:**
+
 $$
 \max(S(t) - K, C_{\text{cont}}(t)) > S(t) - K \quad \text{for all } t < T
 $$
 
 Therefore:
+
 $$
 C_A(t) = C_{\text{cont}}(t) = C_E(t)
 $$
+
 ```
 
 **Physical Meaning:** Even when in-the-money, it's better to sell the American call or hold it than to exercise it early. The time value of the option exceeds the benefit of immediate exercise.
@@ -145,9 +151,11 @@ $$
 3. Invest proceeds of $\$5$ in a 3-month bond
 
 **Cash position in 3 months:**
+
 $$
 5 \times e^{0.05 \times 0.25} = 5 \times 1.0126 = \$5.06
 $$
+
 ```
 
 ### Strategy 2: Short the Asset and Hold the Option
@@ -191,6 +199,7 @@ Simply **sell the call** in the market. This captures both intrinsic value and t
 **Black-Scholes Model with Dividends:**
 
 Under the risk-neutral measure:
+
 $$
 dS(t) = (r - \delta)S(t)dt + \sigma S(t)d\tilde{W}(t)
 $$
@@ -207,21 +216,25 @@ where:
 ```{dropdown} Dividend Accumulation
 
 If dividends are reinvested in the cash account, $D(t)$ satisfies:
+
 $$
 dD(t) = (rD(t) + \delta S(t))dt, \quad D(0) = 0
 $$
 
 **Discounted dividend process:**
+
 $$
 d(e^{-rt}D(t)) = \delta e^{-rt}S(t)dt
 $$
 
 **Integrating from 0 to $t$:**
+
 $$
 e^{-rt}D(t) = \int_0^t e^{-ru}S(u)\delta \, du
 $$
 
 **Taking expectations:**
+
 $$
 \tilde{E}[e^{-rt}D(t)] = \int_0^t \tilde{E}[e^{-ru}S(u)]\delta \, du = \int_0^t S(0)e^{-\delta u}\delta \, du = S(0)(1 - e^{-\delta t})
 $$
@@ -235,19 +248,23 @@ by the martingale property of $e^{-(r-\delta)t}S(t)$.
 **Put-Call Parity (Dividend Case):**
 
 At time $T$:
+
 $$
 (K - S(T))^+ + S(T) = (S(T) - K)^+ + K
 $$
 
 **Taking discounted expectations under $\tilde{P}$:**
+
 $$
 e^{-rT}\tilde{E}[(K - S(T))^+] + e^{-rT}\tilde{E}[S(T)] = e^{-rT}\tilde{E}[(S(T) - K)^+] + e^{-rT}K
 $$
 
 **Using martingale property:**
+
 $$
 S(0)e^{-\delta T} + P_E(0) = C_E(0) + e^{-rT}K
 $$
+
 ```
 
 ### Early Exercise with Dividends
@@ -261,11 +278,13 @@ For American calls on dividend-paying assets, early exercise **may be optimal**.
 ```{dropdown} Analysis
 
 From put-call parity:
+
 $$
 C_A(0) \geq C_E(0) = P_E(0) + S(0)e^{-\delta T} - e^{-rT}K
 $$
 
 But:
+
 $$
 P_E(0) + S(0)e^{-\delta T} - e^{-rT}K \not\geq S(0) - K
 $$
@@ -333,6 +352,7 @@ $$
 $$
 \Theta(t, s) = \frac{\partial c}{\partial t}(t, s)
 $$
+
 ```
 
 **Physical Meaning:**
@@ -346,14 +366,17 @@ $$
 **PDE Formulation:**
 
 The Black-Scholes PDE:
+
 $$
 \frac{\partial c}{\partial t} + \frac{1}{2}\sigma^2 s^2 \frac{\partial^2 c}{\partial s^2} + rs\frac{\partial c}{\partial s} - rc = 0
 $$
 
 can be rewritten as:
+
 $$
 \frac{1}{2}\sigma^2 s^2 \Gamma = \Theta + r(c - s\Delta)
 $$
+
 ```
 
 **Physical Meaning:** This equation balances the convexity correction (gamma term) against time decay and the cost of carry.
@@ -384,21 +407,25 @@ $$
 **Greeks for European Call:**
 
 **Delta:**
+
 $$
 \Delta(t, s) = N(d_+(T-t, s))
 $$
 
 **Gamma:**
+
 $$
 \Gamma(t, s) = \frac{N'(d_+(T-t, s))}{s\sigma\sqrt{T-t}}
 $$
 
 **Theta:**
+
 $$
 \Theta(t, s) = -\frac{1}{2}\sigma s \frac{N'(d_+(T-t, s))}{\sqrt{T-t}} + rKe^{-r(T-t)}N(d_-(T-t, s))
 $$
 
 where:
+
 $$
 d_\pm(T-t, s) = \frac{\ln(s/K) + (r \pm \frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}
 $$
@@ -412,19 +439,23 @@ and $N(\cdot)$ is the standard normal CDF, $N'(\cdot)$ is the standard normal PD
 **Greeks for European Put:**
 
 **Delta:**
+
 $$
 \Delta(t, s) = N(d_+(T-t, s)) - 1
 $$
 
 **Gamma:**
+
 $$
 \Gamma(t, s) = \frac{N'(d_+(T-t, s))}{s\sigma\sqrt{T-t}}
 $$
 
 **Theta:**
+
 $$
 \Theta(t, s) = -\frac{1}{2}\sigma s \frac{N'(d_+(T-t, s))}{\sqrt{T-t}} - rKe^{-r(T-t)}N(-d_-(T-t, s))
 $$
+
 ```
 
 ### Properties
@@ -458,6 +489,7 @@ Consider a portfolio that is:
 **Hedging Portfolio Evolution:**
 
 The hedging portfolio value $X(t)$ evolves as:
+
 $$
 dX(t) = \Delta(t, S(t))dS(t) + r(X(t) - \Delta(t, S(t))S(t))dt
 $$
@@ -472,11 +504,13 @@ $$
 ```{dropdown} Derivation of P&L Dynamics
 
 The value of the portfolio (long call, short hedge):
+
 $$
 d(c(t, S(t)) - X(t))
 $$
 
 Expanding:
+
 $$
 \begin{align}
 &= dc(t, S(t)) - \Delta(t, S(t))dS(t) - r(X(t) - \Delta(t, S(t))S(t))dt \\
@@ -485,6 +519,7 @@ $$
 &= \left(\Theta(t, S(t)) - r(X(t) - \Delta(t, S(t))S(t)) + \frac{1}{2}\sigma^2 S(t)^2 \Gamma(t, S(t))\right)dt
 \end{align}
 $$
+
 ```
 
 ```{important}
@@ -520,6 +555,7 @@ $$
 &\quad - \Delta(t, S(t))(S(t + \Delta t) - S(t)) - r(X(t) - \Delta(t, S(t))S(t))\Delta t
 \end{align}
 $$
+
 ```
 
 **Physical Meaning:** Even with a perfect delta hedge ($\Delta = c_s$), we cannot completely eliminate risk because of:
@@ -538,6 +574,7 @@ Consider a portfolio that is:
 - **Short** the delta hedge
 
 **Portfolio value:**
+
 $$
 V(t) = c(t, S(t)) - \Delta_c(t)S(t)
 $$
@@ -548,6 +585,7 @@ where $\Delta_c(t) = \Delta(t, S(t))$ is the delta of the call.
 ### Delta of the Portfolio
 
 Define the portfolio value function:
+
 $$
 v(t, s) = c(t, s) - \Delta_c(t)s
 $$
@@ -622,6 +660,7 @@ $$
 &\quad - r(X(t) - \beta S(t) - \alpha c')dt
 \end{align}
 $$
+
 ```
 
 ### Gamma Neutrality
@@ -646,6 +685,7 @@ where $\Gamma_c$ and $\Gamma_{c'}$ are the gammas of the two options.
 $$
 \beta = c_s - \alpha c'_s
 $$
+
 ```
 
 ### Resulting P&L
@@ -660,6 +700,7 @@ $$
 where $\Theta_c$ and $\Theta_{c'}$ are the thetas of the two options.
 
 **Premium over risk-free:**
+
 $$
 \Theta_c - \alpha\Theta_{c'}
 $$
@@ -672,6 +713,7 @@ $$
 ### Portfolio Greeks
 
 Define the portfolio value:
+
 $$
 H(t) = c(t, S(t)) - \beta S(t) - \alpha c'(t, S(t))
 $$
@@ -702,6 +744,7 @@ $$
 For a holder of a European call who does **not hedge**:
 
 **At maturity:**
+
 $$
 \text{P\&L}(T) = (S(T) - K)^+ - e^{rT}C(0, S(0))
 $$
@@ -715,6 +758,7 @@ $$
 **Hedged P&L:**
 
 For a holder who **does hedge**:
+
 $$
 \text{P\&L}(T) = (S(T) - K)^+ - X(T)
 $$
@@ -771,11 +815,13 @@ $$
 **Vega Definition:**
 
 Measures sensitivity to volatility $\sigma$:
+
 $$
 \mathcal{V} = \frac{\partial c}{\partial \sigma}
 $$
 
 **Black-Scholes Formula:**
+
 $$
 \mathcal{V} = sN'(d_+(T-t, s))\sqrt{T-t} = s\sqrt{T-t}\sigma \Gamma
 $$
@@ -797,14 +843,17 @@ Vega is proportional to gamma. Options with high gamma also have high vega.
 **Higher-Order Greeks:**
 
 **Volga (Vomma):** Second derivative with respect to volatility
+
 $$
 \frac{\partial^2 c}{\partial \sigma^2}
 $$
 
 **Vanna:** Cross-derivative
+
 $$
 \frac{\partial^2 c}{\partial s \partial \sigma}
 $$
+
 ```
 
 **Physical Meaning:**
@@ -817,9 +866,11 @@ $$
 **Rho Definition:**
 
 Measures sensitivity to interest rate $r$:
+
 $$
 \rho = \frac{\partial c}{\partial r}
 $$
+
 ```
 
 **Physical Meaning:** How much the option price changes when interest rates change by 1%. Less important for short-dated options, more important for long-dated options.
@@ -834,9 +885,11 @@ $$
 Let volatility fluctuate randomly over time: $\sigma(t)$.
 
 **Option price:** Now depends on $\sigma(t)$:
+
 $$
 c(t, S(t), \sigma(t))
 $$
+
 ```
 
 ### Ito's Formula
@@ -851,6 +904,7 @@ dc(t, S(t), \sigma(t)) &= c_t dt + c_s dS(t) + c_\sigma d\sigma(t) \\
 &\quad + c_{s\sigma}dS(t)d\sigma(t)
 \end{align}
 $$
+
 ```
 
 ### Delta-Gamma Hedge with Two Options
@@ -869,14 +923,17 @@ Then the portfolio is also **vega-neutral**!
 ```{dropdown} Proof
 
 **Portfolio vega:**
+
 $$
 \mathcal{V}_{\text{portfolio}} = c_\sigma - \alpha c'_\sigma = s\sqrt{T-t}\sigma \Gamma_c - \alpha s\sqrt{T-t}\sigma \Gamma_{c'}
 $$
 
 Since $\alpha = \Gamma_c / \Gamma_{c'}$:
+
 $$
 \mathcal{V}_{\text{portfolio}} = s\sqrt{T-t}\sigma \Gamma_c - \frac{\Gamma_c}{\Gamma_{c'}} s\sqrt{T-t}\sigma \Gamma_{c'} = 0
 $$
+
 ```
 
 **Physical Meaning:** Hedging gamma automatically hedges vega when using options on the same underlying with the same volatility exposure.
@@ -893,6 +950,7 @@ d(\text{P\&L}(t)) &= (\Theta_c - \alpha\Theta_{c'} - r(X(t) - \beta S(t) - \alph
 &\quad + \frac{1}{2}(c_{\sigma\sigma} - \alpha c'_{\sigma\sigma})(d\sigma(t))^2
 \end{align}
 $$
+
 ```
 
 **Physical Meaning:** Even with delta-gamma-vega neutrality, there remain higher-order risks:

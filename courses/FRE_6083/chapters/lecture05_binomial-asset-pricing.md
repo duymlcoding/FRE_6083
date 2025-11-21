@@ -70,6 +70,7 @@ S_0 & \nearrow & \\
 & & S_1(T) = S_0 d
 \end{array}
 $$
+
 ```
 
 **Physical Meaning:** The stock can either go up by a factor $u$ or down by a factor $d$. This simplified model captures the essential uncertainty in asset prices while remaining tractable.
@@ -108,6 +109,7 @@ In order to rule out arbitrage in the above model, we must have the inequalities
 $$
 0 < d < 1 + r < u \tag{1}
 $$
+
 ```
 
 **Physical Meaning:** The risk-free rate must lie between the down and up factors. If this fails, you can make guaranteed profits with zero initial investment.
@@ -134,10 +136,13 @@ An **arbitrage strategy** is a trading strategy that allows an investor starting
 **Payoff at Time 1:**
 - Stock price is either $S_0 u$ or $S_0 d$
 - In the **worst case** scenario (tail), wealth is:
+
   $$
   S_0 d - S_0(1+r) \geq 0
   $$
+
 - In the **best case** (head), net worth is:
+
   $$
   S_0 u - S_0(1+r) > 0
   $$
@@ -159,10 +164,13 @@ An **arbitrage strategy** is a trading strategy that allows an investor starting
 - Money market value: $(1+r)S_0$
 - Stock repurchase cost: either $S_0 d$ or $S_0 u$
 - In the **worst case** (head), wealth is:
+
   $$
   (1+r)S_0 - S_0 u \geq 0
   $$
+
 - In the **best case** (tail), wealth is:
+
   $$
   (1+r)S_0 - S_0 d > 0
   $$
@@ -304,6 +312,7 @@ This particular choice leads to the simple option pricing formula:
 $$
 V_0 = \frac{1}{1+r}(\tilde{p} V_1(H) + (1-\tilde{p})V_1(T))
 $$
+
 ```
 
 Indeed, since $V_0 = X_0$, the above choice gives us a formula for the option price at time 0, in terms of the coefficient $\tilde{p}$, option payoff, and risk-free rate.
@@ -338,6 +347,7 @@ for $\tilde{p}$, we find:
 $$
 \tilde{p} = \frac{1+r-d}{u-d}, \quad 1-\tilde{p} = \frac{u-1-r}{u-d}
 $$
+
 ```
 
 Note that under the assumptions we made (no-arbitrage condition), $\tilde{p}$ belongs to the interval $(0, 1)$.
@@ -354,6 +364,7 @@ Finally, we can compute $\Delta_0$ by subtracting equation (4) from equation (5)
 $$
 \Delta_0 = \frac{V_1(H) - V_1(T)}{S_1(H) - S_1(T)}
 $$
+
 ```
 
 **Physical Meaning:** The hedge ratio equals the change in option value divided by the change in stock price. This is the number of shares needed to replicate the option's payoff.
@@ -441,6 +452,7 @@ Finally, as seen earlier, you may rewrite the risk-neutral pricing formula as th
 $$
 V_0 = \frac{1}{1+r} \tilde{E}[V_1]
 $$
+
 ```
 
 This fundamental formula is the cornerstone of derivative pricing theory.
@@ -564,6 +576,7 @@ The wealth $X_{n+1}$ at time $n+1$ is defined recursively as:
 $$
 X_{n+1} = \Delta_n S_{n+1} + (1+r)(X_n - \Delta_n S_n), \quad \text{for all } n = 0, 1, \ldots, N-1
 $$
+
 ```
 
 ```{important}
@@ -634,9 +647,11 @@ Finally, in addition to being free of arbitrage, this model is said to be **comp
 - Maturity $N = 3$
 
 **Payoff:**
+
 $$
 V_3 = (S_3 - 3)^+
 $$
+
 ```
 
 ### Risk-Neutral Probabilities
@@ -704,6 +719,7 @@ V_2(TT) &= \frac{4}{5}\left[\frac{1}{2} V_3(TTH) + \frac{1}{2} V_3(TTT)\right] \
 &= 0
 \end{align}
 $$
+
 ```
 
 ### Backward Induction: Time 1
@@ -726,6 +742,7 @@ V_1(T) &= \frac{4}{5}\left[\frac{1}{2} V_2(TH) + \frac{1}{2} V_2(TT)\right] \\
 &= 0.8
 \end{align}
 $$
+
 ```
 
 ### Initial Option Value
