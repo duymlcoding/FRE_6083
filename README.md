@@ -9,298 +9,174 @@
 
 ## 📚 Available Courses
 
-### ✅ Currently Available
-
 | Course Code | Course Title | Status | View Notes |
 |------------|--------------|---------|------------|
 | **FRE 6083** | Quantitative Methods | ✓ Live | [View Course →](https://duymlcoding.github.io/NYU_FRE_Notes/courses/FRE_6083/) |
 | **FRE 6073** | Introduction to Derivatives | ✓ Live | [View Course →](https://duymlcoding.github.io/NYU_FRE_Notes/courses/FRE_6073/) |
 
-### ⏳ Coming Soon
-
-| Course Code | Status |
-|------------|---------|
-| **FRE 6083 Recitation** | Materials pending |
-| **FRE 6103** | Materials pending |
-| **FRE 6141** | Materials pending |
-| **FRE 6731** | Materials pending |
-
----
-
-## 🎯 About This Project
-
-This repository contains professionally formatted course notes for NYU Tandon's Financial Risk Engineering graduate program. All notes are converted from raw lecture materials into interactive Jupyter Books with:
-
-- ✨ Professional LaTeX math rendering
-- 📖 Interactive admonitions and dropdowns
-- 🎨 Clean, readable formatting
-- 📱 Mobile-responsive design
-- 🔍 Full-text search functionality
-- 🌐 Deployed on GitHub Pages for easy access
-
----
-
-## 🏗️ Repository Structure
-
-```
-NYU_FRE_Notes/
-├── index.html                          # Landing page for all courses
-├── courses/                            # All course materials
-│   ├── FRE_6083/                      # FRE 6083 - Quantitative Methods
-│   │   ├── _config.yml                # Jupyter Book configuration
-│   │   ├── _toc.yml                   # Table of contents
-│   │   ├── index.md                   # Course homepage
-│   │   ├── intro.md                   # Course introduction
-│   │   ├── chapters/                  # Lecture notes (13 chapters)
-│   │   ├── raw_materials/             # Original .txt files
-│   │   ├── references.bib             # Bibliography
-│   │   └── requirements.txt           # Python dependencies
-│   │
-│   ├── FRE_6083_Recitation/          # FRE 6083 TA materials
-│   │   └── raw_materials/            # Upload .txt files here
-│   │
-│   ├── FRE_6073/                     # FRE 6073 - Introduction to Derivatives
-│   │   ├── _config.yml                # Jupyter Book configuration
-│   │   ├── _toc.yml                   # Table of contents
-│   │   ├── index.md                   # Course homepage
-│   │   ├── intro.md                   # Course introduction
-│   │   ├── chapters/                  # Lecture notes (10 chapters)
-│   │   ├── raw_materials/             # Original .txt files
-│   │   ├── references.bib             # Bibliography
-│   │   └── requirements.txt           # Python dependencies
-│   │
-│   ├── FRE_6103/                     # Course materials
-│   │   └── raw_materials/            # Upload .txt files here
-│   │
-│   ├── FRE_6141/                     # Course materials
-│   │   └── raw_materials/            # Upload .txt files here
-│   │
-│   └── FRE_6731/                     # Course materials
-│       └── raw_materials/            # Upload .txt files here
-│
-├── deploy.sh                          # Multi-course deployment script
-├── .gitignore                         # Git ignore rules
-├── README.md                          # This file
-├── DEPLOYMENT_INSTRUCTIONS.md         # Detailed deployment guide
-└── MULTI_COURSE_GUIDE.md             # Guide for adding new courses
-```
-
 ---
 
 ## 🚀 Quick Start
 
-### Viewing the Notes
+### For AI Agents & Developers
 
-Visit the live site: **[https://duymlcoding.github.io/NYU_FRE_Notes/](https://duymlcoding.github.io/NYU_FRE_Notes/)**
+**Prerequisites:**
+- Python 3.8+
+- Git
+- Bash shell (Git Bash on Windows, Terminal on Mac/Linux)
 
-### Local Development
+**Complete Setup & Deployment:**
 
-1. **Clone the repository:**
 ```bash
+# 1. Clone repository
 git clone https://github.com/duymlcoding/NYU_FRE_Notes.git
 cd NYU_FRE_Notes
-```
 
-2. **Install dependencies:**
-```bash
+# 2. Set up Python environment (REQUIRED)
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# 3. Install dependencies (IMPORTANT: Use pinned version)
 pip install -r courses/FRE_6083/requirements.txt
-```
 
-3. **Build a course locally:**
-```bash
-# Build FRE 6083
-jupyter-book build courses/FRE_6083/
-
-# View locally
-cd courses/FRE_6083/_build/html
-python -m http.server 8000
-# Open browser to http://localhost:8000
-```
-
-4. **Deploy all courses:**
-```bash
-chmod +x deploy.sh
+# 4. Build and deploy all courses
 ./deploy.sh
 ```
 
----
-
-## 📝 Adding New Course Materials
-
-### For Course Contributors
-
-Want to add materials for a new course? Follow these steps:
-
-1. **Upload your .txt lecture files** to the appropriate `raw_materials/` directory:
-   - `courses/FRE_XXXX/raw_materials/`
-
-2. **Tag Claude** (or create an issue) to convert the materials:
-   - "Claude, please convert FRE XXXX materials to Jupyter Book format"
-
-3. **Review and merge** the converted materials
-
-4. **Deploy** using `./deploy.sh`
-
-See **[MULTI_COURSE_GUIDE.md](MULTI_COURSE_GUIDE.md)** for detailed instructions.
+**That's it!** The site will be live at https://duymlcoding.github.io/NYU_FRE_Notes/ in 1-2 minutes.
 
 ---
 
-## 🎓 FRE 6083: Quantitative Methods
-
-### Course Overview
-
-Comprehensive coverage of probability theory and stochastic processes for quantitative finance, taught by Professor Agnès Tourin.
-
-### Topics Covered
-
-1. **Sequences and Sums of Random Variables** - Binomial models, CLT, LLN
-2. **Convergence and Limit Theorems** - Modes of convergence, characteristic functions
-3. **Markov Chains** - Transition matrices, stationary distributions
-4. **Poisson Processes** - Counting processes, exponential distributions
-5. **Binomial Asset Pricing Model** - Risk-neutral pricing, arbitrage
-6. **Stochastic Processes** - Filtrations, martingales, stopping times
-7. **Brownian Motion (Part 1)** - Construction, properties, scaling
-8. **Brownian Motion (Part 2)** - Quadratic variation, first passage times
-9. **Stochastic Calculus** - Itô integral, Itô's lemma
-10. **Black-Scholes Model** - Derivation, risk-neutral pricing
-11. **Black-Scholes PDE & Finite Difference Methods**
-12. **Portfolio Optimization (Discrete Time)** - Mean-variance optimization
-13. **American Options & Greeks** - Early exercise, hedging parameters
-
-### Features
-
-- 📐 Full LaTeX mathematical notation
-- 💡 Physical interpretations after key formulas
-- 🔍 Worked examples with dropdown solutions
-- 📊 Clear theorem and proof formatting
-- 🎯 Important concept highlighting
-
----
-
-## 🎓 FRE 6073: Introduction to Derivatives
-
-### Course Overview
-
-Comprehensive introduction to derivative securities, covering fundamental principles from basic concepts to advanced pricing models and risk management techniques. Based on John C. Hull's "Options, Futures, and Other Derivatives" (11th Edition).
-
-### Topics Covered
-
-1. **Introduction to Derivatives** - Market structure, trading venues, uses
-2. **Forward and Futures Contracts** - Mechanics, exchanges, margins, delivery
-3. **Pricing and Valuation** - Forward pricing formulas, cost of carry
-4. **Interest Rates and Repo Markets** - Treasury markets, LIBOR/SOFR, repo mechanics
-5. **Bonds and Zero Rates** - Bootstrap method, duration, convexity
-6. **Binomial Asset Pricing Model** - Risk-neutral valuation, multi-period trees
-7. **Stochastic Processes** - Brownian motion, Itô processes, Itô's lemma
-8. **Black-Scholes-Merton Model** - Derivation, European option pricing
-9. **Option Greeks** - Delta, gamma, theta, vega, rho, portfolio hedging
-10. **Volatility and Strategies** - Volatility smiles, surfaces, trading strategies
-
-### Features
-
-- 📈 Comprehensive derivatives coverage
-- 📐 Full mathematical derivations
-- 💼 Real market examples
-- 📊 Payoff diagrams and visual aids
-- 🎯 Practical trading strategies
-
----
-
-## 🛠️ Technical Details
-
-### Built With
-
-- [Jupyter Book](https://jupyterbook.org/) (v1.0.4.post1) - Static site generator
-- [Sphinx](https://www.sphinx-doc.org/) (v7.4.7) - Documentation builder
-- [MathJax 3](https://www.mathjax.org/) - LaTeX math rendering
-- [MyST Markdown](https://myst-parser.readthedocs.io/) - Enhanced markdown parser
-- [GitHub Pages](https://pages.github.com/) - Hosting
-
-### Jupyter Book Extensions
-
-- `sphinx-proof` - Theorems, proofs, definitions
-- `sphinx-togglebutton` - Collapsible content
-- `sphinx-copybutton` - Copy code blocks
-
-### Python Dependencies
+## 📁 Repository Structure
 
 ```
-jupyter-book>=1.0.0,<2.0.0
-sphinx-proof>=0.3.0
-sphinx-togglebutton>=0.3.0
-sphinx-copybutton>=0.5.0
-ghp-import>=2.1.0
-matplotlib>=3.5.0
-numpy>=1.21.0
+NYU_FRE_Notes/
+├── index.html                    # Landing page
+├── deploy.sh                     # Deployment script (BUILD + DEPLOY)
+├── courses/                      # All course materials
+│   ├── FRE_6083/                # Quantitative Methods
+│   │   ├── _config.yml          # Jupyter Book config
+│   │   ├── _toc.yml             # Table of contents
+│   │   ├── chapters/            # Lecture Markdown files (EDIT THESE)
+│   │   └── requirements.txt     # Python dependencies
+│   └── FRE_6073/                # Introduction to Derivatives
+│       └── ...
+└── DEPLOYMENT.md                 # Detailed deployment guide
 ```
+
+---
+
+## 🛠️ Common Tasks
+
+### Edit Course Content
+
+```bash
+# 1. Edit Markdown files
+vim courses/FRE_6083/chapters/lecture01_sequences-and-sums.md
+
+# 2. Rebuild and redeploy
+source venv/bin/activate  # If not already activated
+./deploy.sh
+```
+
+### Add New Course
+
+See [DEPLOYMENT.md](DEPLOYMENT.md#adding-new-courses) for detailed instructions.
+
+### Fix Formatting Issues
+
+**IMPORTANT**: Display math blocks (`$$`) MUST have blank lines before and after:
+
+```markdown
+❌ WRONG:
+Some text:
+$$
+math here
+$$
+```
+
+```markdown
+✅ CORRECT:
+Some text:
+
+$$
+math here
+$$
+
+Next paragraph
+```
+
+---
+
+## 🔧 Technical Stack
+
+- **Jupyter Book** v1.0.4.post1 (pinned - v2.x has bugs)
+- **Sphinx** v7.4.7
+- **MathJax 3** for LaTeX rendering
+- **GitHub Pages** for hosting
+- **Python 3.8+**
 
 ---
 
 ## 📖 Documentation
 
-- **[DEPLOYMENT_INSTRUCTIONS.md](DEPLOYMENT_INSTRUCTIONS.md)** - Step-by-step deployment guide
-- **[MULTI_COURSE_GUIDE.md](MULTI_COURSE_GUIDE.md)** - Adding multiple courses
-- **Course READMEs** - Each `raw_materials/` folder has upload instructions
+- **[DEPLOYMENT.md](DEPLOYMENT.md)** - Complete deployment guide for AI agents & developers
+- **[MULTI_COURSE_GUIDE.md](MULTI_COURSE_GUIDE.md)** - How to add new courses
+
+---
+
+## ⚠️ Important Notes for AI Agents
+
+### Critical Requirements
+
+1. **Always use virtual environment** - Python externally managed environments will fail
+2. **Use jupyter-book v1.0.4.post1** - Version 2.x has EISDIR bugs
+3. **Blank lines around `$$`** - Required for proper math rendering
+4. **Test on Mac/Linux** - Windows requires Git Bash or WSL
+
+### Common Issues & Solutions
+
+| Issue | Solution |
+|-------|----------|
+| `externally managed environment` | Create venv: `python3 -m venv venv && source venv/bin/activate` |
+| `EISDIR: illegal operation` | Downgrade: `pip install 'jupyter-book==1.0.4.post1'` |
+| Math not rendering | Add blank lines before/after `$$` blocks |
+| `403 error` on push | Use `ghp-import` (included in requirements.txt) |
+| WSL path errors on Windows | Use Git Bash instead |
+
+### Deployment Verification
+
+After running `./deploy.sh`, verify:
+1. Script completes without errors
+2. Visit https://duymlcoding.github.io/NYU_FRE_Notes/ (wait 1-2 min)
+3. Check display math renders correctly in `<div>` blocks, not inline
 
 ---
 
 ## 🤝 Contributing
 
-This is an open-source educational project maintained by NYU FRE students. Contributions are welcome!
-
-### How to Contribute
-
-1. **Add course materials** - Upload .txt files to appropriate directories
-2. **Fix typos or errors** - Submit pull requests with corrections
-3. **Improve formatting** - Enhance existing notes
-4. **Share feedback** - Open issues with suggestions
-
-### Contribution Guidelines
-
-- Maintain consistent formatting across all courses
-- Use proper LaTeX syntax for mathematical expressions
-- Include "Physical Meaning" sections after key formulas
-- Add worked examples where appropriate
-- Follow existing Jupyter Book admonitions style
+Contributions welcome! Please:
+- Maintain consistent formatting
+- Use proper LaTeX syntax with blank lines around `$$`
+- Test locally before deploying
+- Follow existing admonitions style
 
 ---
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - See [LICENSE](LICENSE) for details.
 
-### Course Materials
-
-Individual course materials may have additional copyright restrictions. Please respect the intellectual property of course instructors.
-
----
-
-## 🔗 Links
-
-- **Live Site:** [https://duymlcoding.github.io/NYU_FRE_Notes/](https://duymlcoding.github.io/NYU_FRE_Notes/)
-- **Repository:** [https://github.com/duymlcoding/NYU_FRE_Notes](https://github.com/duymlcoding/NYU_FRE_Notes)
-- **NYU FRE Program:** [https://engineering.nyu.edu/academics/programs/financial-engineering-ms](https://engineering.nyu.edu/academics/programs/financial-engineering-ms)
-- **Jupyter Book Docs:** [https://jupyterbook.org/](https://jupyterbook.org/)
-
----
-
-## 📧 Contact
-
-For questions or suggestions:
-
-- Open an issue in this repository
-- Contact NYU FRE program administration
-- Reach out to course contributors
+Course materials may have additional copyright restrictions. Respect instructor intellectual property.
 
 ---
 
 ## 🙏 Acknowledgments
 
-- **Professor Agnès Tourin** - FRE 6083 course content
-- **John C. Hull** - FRE 6073 course materials based on "Options, Futures, and Other Derivatives"
-- **NYU Tandon School of Engineering** - Financial Risk Engineering program
-- **All course TAs and instructors** - Original lecture materials
-- **Student contributors** - Converting and maintaining these notes
+- **Professor Agnès Tourin** - FRE 6083
+- **John C. Hull** - FRE 6073 materials
+- **NYU Tandon School of Engineering**
+- **Student contributors**
 
 ---
 
@@ -310,6 +186,6 @@ For questions or suggestions:
 
 *Open-source educational materials for the FRE community*
 
-[View Live Site](https://duymlcoding.github.io/NYU_FRE_Notes/) • [Report Issue](https://github.com/duymlcoding/NYU_FRE_Notes/issues) • [Contribute](https://github.com/duymlcoding/NYU_FRE_Notes/pulls)
+[View Live Site](https://duymlcoding.github.io/NYU_FRE_Notes/) • [Deployment Guide](DEPLOYMENT.md) • [Report Issue](https://github.com/duymlcoding/NYU_FRE_Notes/issues)
 
 </div>

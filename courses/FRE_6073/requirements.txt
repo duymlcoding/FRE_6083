@@ -1,7 +1,12 @@
+# Core dependencies for Jupyter Book deployment
+# IMPORTANT: jupyter-book v2.x has bugs (EISDIR errors) - stay on v1.x
 jupyter-book>=1.0.0,<2.0.0
 sphinx-proof>=0.3.0
 sphinx-togglebutton>=0.3.0
 sphinx-copybutton>=0.5.0
 ghp-import>=2.1.0
+
+# Optional: Scientific computing (if needed for notebooks)
 matplotlib>=3.5.0
 numpy>=1.21.0
+scipy>=1.7.0
