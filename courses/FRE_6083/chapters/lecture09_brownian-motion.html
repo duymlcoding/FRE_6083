@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -503,13 +503,15 @@ W(t) - W(0)
 <p><strong>Definition: Standard Brownian Motion</strong></p>
 <p>We consider a process <span class="math notranslate nohighlight">\(\{W(t); t \geq 0\}\)</span> satisfying <span class="math notranslate nohighlight">\(W(0) = 0\)</span>.</p>
 <p>The process <span class="math notranslate nohighlight">\(\{W(t); t \geq 0\}\)</span> is said to be a <strong>Brownian motion</strong> (or <strong>Wiener process</strong>) if:</p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><strong>Continuity:</strong> <span class="math notranslate nohighlight">\(W\)</span> is continuous in the variable <span class="math notranslate nohighlight">\(t\)</span></p></li>
-<li><p><strong>Independent Increments:</strong> For all <span class="math notranslate nohighlight">\(0 = t_0 &lt; t_1 &lt; t_2 &lt; \cdots &lt; t_n\)</span>, the increments
-$<span class="math notranslate nohighlight">\(
-W(t_1) - W(t_0), \quad W(t_2) - W(t_1), \quad \ldots, \quad W(t_n) - W(t_{n-1})
-\)</span>$
-are independent</p></li>
+<li><p><strong>Independent Increments:</strong> For all <span class="math notranslate nohighlight">\(0 = t_0 &lt; t_1 &lt; t_2 &lt; \cdots &lt; t_n\)</span>, the increments</p>
+<div class="math notranslate nohighlight">
+\[
+   W(t_1) - W(t_0), \quad W(t_2) - W(t_1), \quad \ldots, \quad W(t_n) - W(t_{n-1})
+   \]</div>
+<p>are independent</p>
+</li>
 <li><p><strong>Stationary Increments:</strong> For all <span class="math notranslate nohighlight">\(j = 0, \ldots, n-1\)</span>, the increment <span class="math notranslate nohighlight">\(W(t_{j+1}) - W(t_j)\)</span> is normally distributed with mean 0 and variance <span class="math notranslate nohighlight">\(t_{j+1} - t_j\)</span></p></li>
 </ol>
 </div>
@@ -893,13 +895,15 @@ P[\tau_0 \leq t] &amp;= \frac{2}{\sqrt{2\pi}} \int_{|X(0)|/(\sigma\sqrt{t})}^{+\
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Applications in Finance:</strong></p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><strong>Option Pricing:</strong> The reflection principle is used for pricing <strong>Barrier options</strong> (e.g., up-and-out calls where the option becomes worthless when the stock price rises above a prescribed barrier <span class="math notranslate nohighlight">\(B &gt; K\)</span>)</p></li>
-<li><p><strong>Maximum Distribution:</strong> The payout of barrier options depends on the distribution of the maximum to date:
-$<span class="math notranslate nohighlight">\(
-M(t) = \max_{0 \leq s \leq t} W(s)
-\)</span>$
-which is also determined using the reflection principle</p></li>
+<li><p><strong>Maximum Distribution:</strong> The payout of barrier options depends on the distribution of the maximum to date:</p>
+<div class="math notranslate nohighlight">
+\[
+   M(t) = \max_{0 \leq s \leq t} W(s)
+   \]</div>
+<p>which is also determined using the reflection principle</p>
+</li>
 <li><p><strong>Credit Risk:</strong> Merton and Black-Cox developed models for pricing equity and bonds with default risk. Defaulting occurs when the value of assets <span class="math notranslate nohighlight">\(A(t)\)</span>, modeled as a geometric Brownian motion, falls below a prescribed barrier</p></li>
 </ol>
 </div>
@@ -1014,13 +1018,15 @@ S(u) = S(0) + \sigma W(u), \quad u \geq 0
 <p class="admonition-title">Exercise 3: Transformations of Brownian Motion</p>
 <p>We consider a standard Brownian motion <span class="math notranslate nohighlight">\(W\)</span>.</p>
 <p><strong>Questions:</strong></p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>Is the process <span class="math notranslate nohighlight">\(t \in [0, +\infty) \mapsto W(ct^2)\)</span>, where <span class="math notranslate nohighlight">\(c\)</span> is a positive constant, a standard Brownian motion? Justify your answer.</p></li>
 <li><p>Is <span class="math notranslate nohighlight">\(t \in [0, +\infty) \mapsto \sqrt{t}W(1)\)</span> a standard Brownian motion? Justify your answer.</p></li>
-<li><p>Compute the mean and autocovariance function of the process:
-$<span class="math notranslate nohighlight">\(
-X(t) = \int_0^t W(s) ds
-\)</span>$</p></li>
+<li><p>Compute the mean and autocovariance function of the process:</p>
+<div class="math notranslate nohighlight">
+\[
+   X(t) = \int_0^t W(s) ds
+   \]</div>
+</li>
 <li><p>Consider the process <span class="math notranslate nohighlight">\(S(t) = \mu t + \sigma W(t)\)</span> for <span class="math notranslate nohighlight">\(t \in [0, T]\)</span>, where <span class="math notranslate nohighlight">\(\mu, \sigma &gt; 0\)</span> are both positive constants. Compute <span class="math notranslate nohighlight">\(P[S(T) &lt; 0]\)</span>.</p></li>
 </ol>
 </div>
@@ -1036,21 +1042,25 @@ M(t) = \max_{0 \leq s \leq t} W(s)
 \]</div>
 <p><strong>Questions:</strong></p>
 <ol class="arabic">
-<li><p>Show that:
-$<span class="math notranslate nohighlight">\(
-P\left[\max_{0 \leq s \leq t} W(s) \geq m\right] = P[\tau_m \leq t]
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span>\tau_m<span class="math notranslate nohighlight">\( denotes the first time \)</span>W<span class="math notranslate nohighlight">\( hits the level \)</span>m$.</p></li>
+<li><p>Show that:</p>
+<div class="math notranslate nohighlight">
+\[
+   P\left[\max_{0 \leq s \leq t} W(s) \geq m\right] = P[\tau_m \leq t]
+   \]</div>
+<p>where <span class="math notranslate nohighlight">\(\tau_m\)</span> denotes the first time <span class="math notranslate nohighlight">\(W\)</span> hits the level <span class="math notranslate nohighlight">\(m\)</span>.</p>
+</li>
 <li><p>Deduce the cumulative distribution and density functions of <span class="math notranslate nohighlight">\(M(t)\)</span>.</p></li>
-<li><p>Consider the partition of the time interval <span class="math notranslate nohighlight">\([0, t]\)</span>:
-$<span class="math notranslate nohighlight">\(
-0, \frac{t}{n}, \frac{2t}{n}, \ldots, \frac{jt}{n}, \ldots, \frac{nt}{n} = t
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span>n &gt; 1<span class="math notranslate nohighlight">\(, and define the moving average process:
-\)</span><span class="math notranslate nohighlight">\(
-X_n = \frac{\sum_{j=n-k}^{n} W(jt/n)}{k+1}
-\)</span><span class="math notranslate nohighlight">\(
-for some \)</span>n \geq k$.</p>
+<li><p>Consider the partition of the time interval <span class="math notranslate nohighlight">\([0, t]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   0, \frac{t}{n}, \frac{2t}{n}, \ldots, \frac{jt}{n}, \ldots, \frac{nt}{n} = t
+   \]</div>
+<p>where <span class="math notranslate nohighlight">\(n &gt; 1\)</span>, and define the moving average process:</p>
+<div class="math notranslate nohighlight">
+\[
+   X_n = \frac{\sum_{j=n-k}^{n} W(jt/n)}{k+1}
+   \]</div>
+<p>for some <span class="math notranslate nohighlight">\(n \geq k\)</span>.</p>
 <p>Compute the expectation and variance of <span class="math notranslate nohighlight">\(X_n\)</span>.</p>
 </li>
 </ol>
@@ -1061,18 +1071,22 @@ for some \)</span>n \geq k$.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 5: Martingales and Transformations</p>
 <p><strong>Questions:</strong></p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>Let <span class="math notranslate nohighlight">\(Y\)</span> be a standard normal random variable. For all <span class="math notranslate nohighlight">\(t \geq 0\)</span>, let <span class="math notranslate nohighlight">\(X(t) = \sqrt{t}Y\)</span>. Is <span class="math notranslate nohighlight">\(X\)</span> a standard Brownian motion? Justify.</p></li>
 <li><p>Let <span class="math notranslate nohighlight">\(W\)</span> be a standard Brownian motion. Show that <span class="math notranslate nohighlight">\(W^2(t) - t\)</span> is a martingale.</p></li>
-<li><p>Consider a standard Brownian motion <span class="math notranslate nohighlight">\(W\)</span>. Show that the following process is a standard Brownian motion:
-$<span class="math notranslate nohighlight">\(
-B(t) = cW(t/c^2) \quad \text{for all } t \geq 0
-\)</span>$</p></li>
-<li><p>Consider a standard Brownian motion <span class="math notranslate nohighlight">\(W\)</span>, and the process:
-$<span class="math notranslate nohighlight">\(
-B(0) = 0, \quad B(t) = tW(1/t) \quad \text{for all } t &gt; 0
-\)</span><span class="math notranslate nohighlight">\(
-Show that \)</span>B$ is a standard Brownian motion by using the definition.</p></li>
+<li><p>Consider a standard Brownian motion <span class="math notranslate nohighlight">\(W\)</span>. Show that the following process is a standard Brownian motion:</p>
+<div class="math notranslate nohighlight">
+\[
+   B(t) = cW(t/c^2) \quad \text{for all } t \geq 0
+   \]</div>
+</li>
+<li><p>Consider a standard Brownian motion <span class="math notranslate nohighlight">\(W\)</span>, and the process:</p>
+<div class="math notranslate nohighlight">
+\[
+   B(0) = 0, \quad B(t) = tW(1/t) \quad \text{for all } t &gt; 0
+   \]</div>
+<p>Show that <span class="math notranslate nohighlight">\(B\)</span> is a standard Brownian motion by using the definition.</p>
+</li>
 </ol>
 </div>
 </section>

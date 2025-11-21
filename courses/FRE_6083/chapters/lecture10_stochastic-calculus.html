@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -615,18 +615,21 @@ S(t) = S(0) + \int_0^t b(u, S(u)) du + \int_0^t \sigma(u, S(u)) dW(u)
 <section id="successive-definition-on-intervals">
 <h3>Successive Definition on Intervals<a class="headerlink" href="#successive-definition-on-intervals" title="Link to this heading">#</a></h3>
 <p>We define the Ito integral <span class="math notranslate nohighlight">\(I(t) = \int_0^t \Delta(u) dW(u)\)</span> successively:</p>
-<p><strong>On <span class="math notranslate nohighlight">\([0, t_1)\)</span>:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>On <span class="math notranslate nohighlight">\([0, t_1)\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 I(t) = \Delta(t_0)[W(t) - W(t_0)] = \Delta(0)W(t)
-\)</span>$</p>
-<p><strong>On <span class="math notranslate nohighlight">\([t_1, t_2)\)</span>:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>On <span class="math notranslate nohighlight">\([t_1, t_2)\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 I(t) = \Delta(0)W(t_1) + \Delta(t_1)[W(t) - W(t_1)]
-\)</span>$</p>
-<p><strong>On <span class="math notranslate nohighlight">\([t_2, t_3)\)</span>:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>On <span class="math notranslate nohighlight">\([t_2, t_3)\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 I(t) = \Delta(0)W(t_1) + \Delta(t_1)[W(t_2) - W(t_1)] + \Delta(t_2)[W(t) - W(t_2)]
-\)</span>$</p>
+\]</div>
 </section>
 <section id="general-formula">
 <h3>General Formula<a class="headerlink" href="#general-formula" title="Link to this heading">#</a></h3>
@@ -674,12 +677,14 @@ I(t) = \sum_{j=0}^{k-1} \Delta(t_j)[W(t_{j+1}) - W(t_j)] + \Delta(t_k)[W(t) - W(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Assumptions on the Integrand <span class="math notranslate nohighlight">\(\Delta(t)\)</span>:</strong></p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><strong>Adapted:</strong> If the path of <span class="math notranslate nohighlight">\(W\)</span> has been observed up to time <span class="math notranslate nohighlight">\(t\)</span>, then <span class="math notranslate nohighlight">\(\Delta\)</span> is also known up to time <span class="math notranslate nohighlight">\(t\)</span></p></li>
-<li><p><strong>Square Integrability:</strong>
-$<span class="math notranslate nohighlight">\(
-E\left[\int_0^T \Delta(u)^2 du\right] &lt; +\infty
-\)</span>$</p></li>
+<li><p><strong>Square Integrability:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   E\left[\int_0^T \Delta(u)^2 du\right] &lt; +\infty
+   \]</div>
+</li>
 </ol>
 </div>
 </section>
@@ -719,23 +724,29 @@ E\left[\int_0^T \Delta(u)^2 du\right] &lt; +\infty
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Key Properties:</strong></p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><strong>Continuity:</strong> <span class="math notranslate nohighlight">\(I(t)\)</span> is continuous in <span class="math notranslate nohighlight">\(t\)</span></p></li>
 <li><p><strong>Adapted:</strong> If one knows the path of the Brownian motion up to time <span class="math notranslate nohighlight">\(t\)</span>, then one also knows <span class="math notranslate nohighlight">\(I\)</span> with certainty up to time <span class="math notranslate nohighlight">\(t\)</span>, for each <span class="math notranslate nohighlight">\(t \in [0, T]\)</span></p></li>
-<li><p><strong>Linearity:</strong> For all real numbers <span class="math notranslate nohighlight">\(c_1, c_2\)</span> and integrands <span class="math notranslate nohighlight">\(\Delta_1, \Delta_2\)</span>:
-$<span class="math notranslate nohighlight">\(
-\int_0^t [c_1\Delta_1(s) + c_2\Delta_2(s)]dW(s) = c_1\int_0^t \Delta_1(s)dW(s) + c_2\int_0^t \Delta_2(s)dW(s)
-\)</span>$</p></li>
+<li><p><strong>Linearity:</strong> For all real numbers <span class="math notranslate nohighlight">\(c_1, c_2\)</span> and integrands <span class="math notranslate nohighlight">\(\Delta_1, \Delta_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   \int_0^t [c_1\Delta_1(s) + c_2\Delta_2(s)]dW(s) = c_1\int_0^t \Delta_1(s)dW(s) + c_2\int_0^t \Delta_2(s)dW(s)
+   \]</div>
+</li>
 <li><p><strong>Martingale Property:</strong> <span class="math notranslate nohighlight">\(I(t)\)</span> is a martingale</p></li>
 <li><p><strong>Zero Expectation:</strong> <span class="math notranslate nohighlight">\(E[I(t)] = 0\)</span> for all <span class="math notranslate nohighlight">\(t \in [0, T]\)</span></p></li>
-<li><p><strong>Ito’s Isometry:</strong>
-$<span class="math notranslate nohighlight">\(
-E[I^2(t)] = E\left[\int_0^t \Delta^2(u) du\right]
-\)</span>$</p></li>
-<li><p><strong>Quadratic Variation:</strong>
-$<span class="math notranslate nohighlight">\(
-[I, I](t) = \int_0^t \Delta^2(u) du
-\)</span>$</p></li>
+<li><p><strong>Ito’s Isometry:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   E[I^2(t)] = E\left[\int_0^t \Delta^2(u) du\right]
+   \]</div>
+</li>
+<li><p><strong>Quadratic Variation:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   [I, I](t) = \int_0^t \Delta^2(u) du
+   \]</div>
+</li>
 </ol>
 </div>
 <p><strong>Physical Meaning:</strong> The Ito integral of an adapted process is a martingale with zero expectation. Its variance grows according to the integrated squared integrand.</p>
@@ -746,10 +757,11 @@ $<span class="math notranslate nohighlight">\(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Ito Integral with Deterministic Integrand:</strong></p>
-<p>Let:
-$<span class="math notranslate nohighlight">\(
+<p>Let:</p>
+<div class="math notranslate nohighlight">
+\[
 I(t) = \int_0^t \delta(s) dW(s)
-\)</span>$</p>
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(\delta(s)\)</span> is a <strong>deterministic function</strong> of time.</p>
 <p>Then <span class="math notranslate nohighlight">\(I(t)\)</span> is <strong>normally distributed</strong> with:</p>
 <ul class="simple">
@@ -766,19 +778,25 @@ I(t) = \int_0^t \delta(s) dW(s)
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Differential Rules:</strong></p>
-<ol class="arabic simple">
-<li><p><strong>Quadratic variation of Brownian motion:</strong>
-$<span class="math notranslate nohighlight">\(
-dW(t) \cdot dW(t) = dt
-\)</span>$</p></li>
-<li><p><strong>Deterministic time has zero quadratic variation:</strong>
-$<span class="math notranslate nohighlight">\(
-dt \cdot dt = 0
-\)</span>$</p></li>
-<li><p><strong>Cross-variation of Brownian motion with time is zero:</strong>
-$<span class="math notranslate nohighlight">\(
-dW(t) \cdot dt = 0
-\)</span>$</p></li>
+<ol class="arabic">
+<li><p><strong>Quadratic variation of Brownian motion:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   dW(t) \cdot dW(t) = dt
+   \]</div>
+</li>
+<li><p><strong>Deterministic time has zero quadratic variation:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   dt \cdot dt = 0
+   \]</div>
+</li>
+<li><p><strong>Cross-variation of Brownian motion with time is zero:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   dW(t) \cdot dt = 0
+   \]</div>
+</li>
 </ol>
 </div>
 <p><strong>Physical Meaning:</strong> The Brownian motion’s infinitesimal increments squared equal infinitesimal time. This is the key difference from ordinary calculus where <span class="math notranslate nohighlight">\((dt)^2 = 0\)</span>.</p>
@@ -849,10 +867,11 @@ df(t, W(t)) = \left[f_t(t, W(t)) + \frac{1}{2}f_{xx}(t, W(t))\right]dt + f_x(t, 
 X(t) = X(0) + \int_0^t \mu(s) ds + \int_0^t \sigma(s) dW(s)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span> are stochastic processes that are known with certainty up to time <span class="math notranslate nohighlight">\(t\)</span> if the standard Brownian motion is known up to time <span class="math notranslate nohighlight">\(t\)</span>, for each <span class="math notranslate nohighlight">\(t \in [0, T]\)</span>.</p>
-<p><strong>Differential Form:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Differential Form:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 dX(t) = \mu(t)dt + \sigma(t)dW(t)
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> An Ito process has both a deterministic trend <span class="math notranslate nohighlight">\(\mu(t)\)</span> and random fluctuations driven by <span class="math notranslate nohighlight">\(\sigma(t)dW(t)\)</span>.</p>
 <section id="ito-s-formula-for-ito-processes">
@@ -1125,14 +1144,16 @@ R(t) = e^{-\kappa t}R(0) + \theta(1 - e^{-\kappa t}) + \sigma e^{-\kappa t}\int_
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Proof that This is the Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Define:
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text">Define:</p>
+<div class="math notranslate nohighlight">
+\[
 X(t) = \int_0^t e^{\kappa s}dW(s)
-\)</span>$</p>
-<p class="sd-card-text">and:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text">and:</p>
+<div class="math notranslate nohighlight">
+\[
 f(t, x) = e^{-\kappa t}R(0) + \theta(1 - e^{-\kappa t}) + \sigma e^{-\kappa t}x
-\)</span>$</p>
+\]</div>
 <p class="sd-card-text"><strong>Step 1:</strong> Compute partial derivatives:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1158,10 +1179,11 @@ dR(t) &amp;= df(t, X(t)) \\
 </details></section>
 <section id="distribution-of-r-t">
 <h3>Distribution of R(t)<a class="headerlink" href="#distribution-of-r-t" title="Link to this heading">#</a></h3>
-<p>The integral:
-$<span class="math notranslate nohighlight">\(
+<p>The integral:</p>
+<div class="math notranslate nohighlight">
+\[
 \int_0^t e^{\kappa s}dW(s)
-\)</span>$</p>
+\]</div>
 <p>is an Ito integral with a <strong>deterministic integrand</strong>, so it is normally distributed with mean 0 and variance:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1171,14 +1193,16 @@ $<span class="math notranslate nohighlight">\(
 <p class="admonition-title">Important</p>
 <p><strong>Distribution of Vasicek Process:</strong></p>
 <p><span class="math notranslate nohighlight">\(R(t)\)</span> is normally distributed with:</p>
-<p><strong>Mean:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Mean:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \mu_R(t) = e^{-\kappa t}R(0) + \theta(1 - e^{-\kappa t})
-\)</span>$</p>
-<p><strong>Variance:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Variance:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \sigma_R^2(t) = \frac{\sigma^2}{2\kappa}(1 - e^{-2\kappa t})
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong></p>
 <ul class="simple">

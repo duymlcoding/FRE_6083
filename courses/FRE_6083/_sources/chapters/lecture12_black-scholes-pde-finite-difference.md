@@ -70,6 +70,7 @@ We discretize the time interval $[0, T]$ into $N$ subintervals.
 **Complete Mesh:**
 
 We work with the mesh:
+
 $$
 \{(n\Delta t, i\Delta x) \mid n = 0, \ldots, N; \, i \in \mathbb{Z}\}
 $$
@@ -97,6 +98,7 @@ u_t(t, x) - u_{xx}(t, x) = 0 \quad \text{for } (t, x) \in (0, T] \times \mathbb{
 $$
 
 **Initial condition:**
+
 $$
 u(0, x) = u_0(x)
 $$
@@ -123,14 +125,17 @@ $$
 $$
 
 **Rearranged form:**
+
 $$
 u_i^{n+1} = u_i^n + \Delta t \left\{\frac{u_{i+1}^n + u_{i-1}^n - 2u_i^n}{\Delta x^2}\right\}
 $$
 
 **Initial condition:**
+
 $$
 u_i^0 = u_0(i\Delta x)
 $$
+
 ```
 
 **Physical Meaning:** The scheme is "explicit" because we can directly compute $u_i^{n+1}$ at time step $n+1$ from known values at time step $n$, without solving a system of equations.
@@ -183,6 +188,7 @@ u_i^{n+1} = u_i^n + u_t(n\Delta t, x_i)\Delta t + \frac{1}{2}u_{tt}(n\Delta t, x
 $$
 
 Therefore:
+
 $$
 \frac{u_i^{n+1} - u_i^n}{\Delta t} = u_t(n\Delta t, x_i) + \frac{1}{2}u_{tt}\Delta t + \Delta t \epsilon(\Delta t)
 $$
@@ -202,6 +208,7 @@ $$
 $$
 
 **Equivalent form:**
+
 $$
 \Delta t \leq \frac{1}{2}\Delta x^2
 $$
@@ -236,6 +243,7 @@ The second derivative is evaluated at time $(n+1)\Delta t$ instead of $n\Delta t
 $$
 \frac{u_i^{n+1} - u_i^n}{\Delta t} - \frac{u_{i+1}^{n+1} + u_{i-1}^{n+1} - 2u_i^{n+1}}{\Delta x^2} = 0
 $$
+
 ```
 
 **Physical Meaning:** The scheme is "implicit" because $u_i^{n+1}$ appears on both sides of the equation, requiring us to solve a system of equations at each time step.
@@ -267,6 +275,7 @@ u_t + ru - \frac{1}{2}\sigma^2 x^2 u_{xx} - rx u_x = 0, \quad \text{in } [0, T) 
 $$
 
 **Terminal condition:**
+
 $$
 u(T, x) = (x - K)^+
 $$
@@ -299,14 +308,17 @@ We make the change of variable $\tau = T - t$ where:
 - $t$ = real time
 
 Define the new function:
+
 $$
 v(\tau, x) = u(t, x)
 $$
 
 **Derivatives:**
+
 $$
 u_t = -v_\tau, \quad u_x = v_x, \quad u_{xx} = v_{xx}
 $$
+
 ```
 
 ```{dropdown} Derivation of PDE for $v$
@@ -318,14 +330,17 @@ $$
 $$
 
 **Rearranged:**
+
 $$
 v_\tau + rv - \frac{1}{2}\sigma^2 x^2 v_{xx} - rx v_x = 0, \quad \text{in } (0, T] \times [0, +\infty)
 $$
 
 **Initial condition:**
+
 $$
 v(0, x) = (x - K)^+
 $$
+
 ```
 
 **Physical Meaning:** This change converts the terminal condition into an initial condition, which is more natural for finite difference schemes that march forward in time.
@@ -342,14 +357,17 @@ The Black-Scholes PDE is **degenerate** at $x = 0$ because the second derivative
 **Change of Variable:**
 
 Make the change of variable $y = \log x$ and define:
+
 $$
 w(\tau, y) = v(\tau, x)
 $$
 
 **Derivatives:**
+
 $$
 v_\tau = w_\tau, \quad v_x = w_y \frac{1}{x}, \quad v_{xx} = w_{yy}\frac{1}{x^2} + w_y\left(-\frac{1}{x^2}\right)
 $$
+
 ```
 
 ```{dropdown} Derivation of PDE for $w$
@@ -361,9 +379,11 @@ w_\tau + rw - \frac{1}{2}\sigma^2 w_{yy} - \left(r - \frac{1}{2}\sigma^2\right)w
 $$
 
 **Initial condition:**
+
 $$
 w(0, y) = (e^y - K)^+
 $$
+
 ```
 
 **Physical Meaning:** Working in log-price space removes the degeneracy and makes the PDE uniformly parabolic. This is analogous to working with log-returns in empirical finance.
@@ -391,23 +411,28 @@ $$
 This is an **ODE** with terminal condition $u(T, 0)$.
 
 **Solution:**
+
 $$
 u(t, 0) = e^{-r(T-t)} u(T, 0)
 $$
 
 Since $u(T, 0) = (0 - K)^+ = 0$, we have:
+
 $$
 u(t, 0) = 0
 $$
+
 ```
 
 ```{important}
 **Boundary Condition:**
 
 At the left boundary ($x = 0$ or $y = -R$):
+
 $$
 w(\tau, -R) \approx 0
 $$
+
 ```
 
 **Physical Meaning:** A call option with zero stock price is worthless, both at maturity and before.
@@ -457,6 +482,7 @@ $$
 $$
 rw(\tau, y) \approx r u_i^{n+1}
 $$
+
 ```
 
 ### Complete Implicit Scheme
@@ -469,6 +495,7 @@ $$
 $$
 
 **Initial condition:**
+
 $$
 u_i^0 = (e^{y_i} - K)^+
 $$
@@ -537,9 +564,11 @@ A_h \mathbf{u}_h^{n+1} = \mathbf{u}_h^n
 $$
 
 **Solution:**
+
 $$
 \mathbf{u}_h^{n+1} = A_h^{-1} \mathbf{u}_h^n
 $$
+
 ```
 
 ```{warning}
@@ -568,6 +597,7 @@ Since $A_h$ is **tridiagonal**, solving the system can be done efficiently and a
 In practice, we work on a bounded domain $[-R, R]$ where $R$ is large enough.
 
 **New Mesh:**
+
 $$
 \{(\tau_n, y_i) \mid n = 0, \ldots, N; \, i = -M, \ldots, M\}
 $$
@@ -583,11 +613,13 @@ where:
 **Boundary Conditions:**
 
 **At $y = -R$ (left boundary, $x \approx 0$):**
+
 $$
 w(\tau, -R) \approx 0
 $$
 
 **At $y = R$ (right boundary, $x \to \infty$):**
+
 $$
 w(\tau, R) \approx e^R - e^{-r\tau}K
 $$
@@ -626,6 +658,7 @@ The first row of matrix $A_h$ has only 2 coefficients (coefficient $a$ is missin
 **Right Boundary Treatment:**
 
 We must impose:
+
 $$
 u_M^n = e^{M\Delta y} - e^{-r(n\Delta\tau)}K
 $$
@@ -635,9 +668,11 @@ For $i = M-1$, coefficient $c$ is missing in the last row of $A_h$. This coeffic
 **Solution:** Incorporate the Dirichlet condition in the **right-hand side**.
 
 The last component of the right-hand side becomes:
+
 $$
 u_{M-1}^n + \left\{-\frac{1}{2}\sigma^2\frac{\Delta\tau}{\Delta y^2} + \left(r - \frac{1}{2}\sigma^2\right)\frac{\Delta\tau}{2\Delta y}\right\}\left(e^{M\Delta y} - e^{-r((n+1)\Delta\tau)}K\right)
 $$
+
 ```
 
 **Physical Meaning:** We build the known boundary value into the system, converting a constraint into part of the right-hand side vector.
@@ -650,6 +685,7 @@ $$
 **Tridiagonal System:**
 
 We solve:
+
 $$
 A_h \mathbf{u}_h^{n+1} = \mathbf{B}_h^n
 $$
@@ -665,6 +701,7 @@ a & b & c & & \\
 & & & a & b
 \end{bmatrix}
 $$
+
 ```
 
 ### Right-Hand Side Vector
@@ -718,6 +755,7 @@ $$
 - Define vectors $\mathbf{a}, \mathbf{b}, \mathbf{c}$ (or full matrix $A_h$)
 
 **Step 3: Initialize**
+
 $$
 u_i^0 = (e^{i\Delta y} - K)^+, \quad \text{for } i = -M, \ldots, M
 $$
@@ -729,12 +767,15 @@ For $n = 0, \ldots, N-1$:
 4.1. Define $\mathbf{B}_h^n$ (right-hand side)
 
 4.2. Given $(u_i^n)_{i=-M}^M$, solve:
+
 $$
 A_h \mathbf{u}_h^{n+1} = \mathbf{B}_h^n
 $$
+
 to compute $u_i^{n+1}$ for $i = -M+1, \ldots, M-1$
 
 4.3. Set boundary values:
+
 $$
 u_{-M}^{n+1} = 0, \quad u_M^{n+1} = e^{M\Delta y} - e^{-r((n+1)\Delta\tau)}K
 $$

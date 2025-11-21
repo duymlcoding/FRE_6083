@@ -98,6 +98,7 @@ In a discrete probability model, this simplifies to:
 $$
 E[X] = \sum_{\omega \in \Omega} X(\omega) P(\omega)
 $$
+
 ```
 
 For the Bernoulli variable defined above:
@@ -169,6 +170,7 @@ For all real numbers $a, b$ and all random variables $X, Y$:
 $$
 E[aX + bY] = aE[X] + bE[Y]
 $$
+
 ```
 
 **Physical Meaning:** If you roll a die $n$ times with success probability $p = 1/6$, you expect to see $np = n/6$ sixes on average.
@@ -191,20 +193,24 @@ This can also be rewritten as:
 $$
 \text{cov}(X, Y) = E[XY] - E[X]E[Y]
 $$
+
 ```
 
 ```{note}
 **Covariance Properties:**
 
 1. **Linearity:** For three random variables $X$, $Y$, $Z$:
+
    $$
    \text{cov}(X, Y+Z) = \text{cov}(X, Y) + \text{cov}(X, Z)
    $$
 
 2. **General Sum Formula:** For sums of $n$ and $m$ random variables:
+
    $$
    \text{cov}\left(\sum_{i=1}^{n} X_i, \sum_{j=1}^{m} Y_j\right) = \sum_{i=1}^{n} \sum_{j=1}^{m} \text{cov}(X_i, Y_j)
    $$
+
 ```
 
 **Physical Meaning:** Covariance measures how two random variables move together. Positive covariance means they tend to increase together; negative covariance means when one increases, the other tends to decrease.
@@ -225,6 +231,7 @@ $$
 $$
 \text{var}\left(\sum_{i=1}^{n} X_i\right) = \sum_{i=1}^{n} \text{var}(X_i) + 2\sum_{i=1}^{n} \sum_{j<i} \text{cov}(X_i, X_j)
 $$
+
 ```
 
 ### Special Case: Independent Variables
@@ -273,19 +280,23 @@ Independence does not always hold in financial models. Sometimes we must use the
 1. **Deterministic Variables:** $\text{var}[X] = 0$ if and only if $X$ is deterministic (constant).
 
 2. **Linear Combination:** For all $(a, b) \in \mathbb{R}^2$ and random variables $(X, Y)$:
+
    $$
    \text{var}[aX + bY] = a^2\text{var}[X] + b^2\text{var}[Y] + 2ab\,\text{cov}(X, Y)
    $$
 
 3. **Cauchy-Schwarz Inequality:** For all random variables $X$, $Y$:
+
    $$
    |\text{cov}(X, Y)|^2 \leq \text{var}[X]\,\text{var}[Y]
    $$
 
    Equivalently:
+
    $$
    |E[XY]|^2 \leq E[X^2]E[Y^2]
    $$
+
 ```
 
 ### Consequences and Special Cases
@@ -332,6 +343,7 @@ The correlation coefficient measures the **linear dependence** of two random var
 $$
 \rho_{X,Y} = \frac{\text{cov}(X, Y)}{\sqrt{\text{var}[X]\,\text{var}[Y]}}
 $$
+
 ```
 
 ### Properties of Correlation
@@ -419,6 +431,7 @@ R &= \frac{\sum_{i=1}^{N} n_i S_i(1) - \sum_{i=1}^{N} n_i S_i(0)}{\sum_{i=1}^{N}
 &= \omega_1 X_1 + \omega_2 X_2 + \cdots + \omega_N X_N
 \end{align}
 $$
+
 ```
 
 ```{important}
@@ -502,6 +515,7 @@ F_{X+Y}(z) &= P[X + Y \leq z] \\
 &= \int_{-\infty}^{+\infty} F_X(z-y) f_Y(y) \, dy
 \end{align}
 $$
+
 ```
 
 ```{important}
@@ -526,14 +540,17 @@ Let $F_{n-1}$, $f_{n-1}$ be the cumulative distribution function and density fun
 **$n$-fold Convolution Formulas:**
 
 **CDF:**
+
 $$
 F_n(x) = \int_{-\infty}^{+\infty} F(x-y) f_{n-1}(y) \, dy
 $$
 
 **PDF (by differentiation):**
+
 $$
 f_n(x) = \int_{-\infty}^{+\infty} f(x-y) f_{n-1}(y) \, dy
 $$
+
 ```
 
 ### Example Problem
@@ -619,6 +636,7 @@ $$
 &= 0
 \end{align}
 $$
+
 ```
 
 **Physical Meaning:** The sample mean is uncorrelated with the deviation of any individual observation from the sample mean.
@@ -635,6 +653,7 @@ Let $X_1, \ldots, X_n$ be $n$ independent and identically distributed random var
 $$
 S_n^2 = \frac{1}{n} \sum_{i=1}^{n} (X_i - \overline{Y}_n)^2
 $$
+
 ```
 
 ### Expectation of Sample Variance
@@ -645,6 +664,7 @@ $$
 $$
 E[S_n^2] = \frac{n-1}{n}\sigma^2
 $$
+
 ```
 
 ```{note}
@@ -677,6 +697,7 @@ $$
 **Properties Under Normality:**
 
 1. **Sample Mean Distribution:** $\overline{Y}_n$ is also distributed normally, with mean $\mu$ and variance $\frac{\sigma^2}{n}$:
+
    $$
    \overline{Y}_n \sim \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
    $$
@@ -684,9 +705,11 @@ $$
 2. **Independence:** $\overline{Y}_n$ is independent of $S_n^2$.
 
 3. **Sample Variance Distribution:** $S_n^2$ has a chi-square distribution with $n-1$ degrees of freedom (after appropriate scaling):
+
    $$
    \frac{(n-1)S_n^2}{\sigma^2} \sim \chi^2_{n-1}
    $$
+
 ```
 
 ```{seealso}
@@ -737,6 +760,7 @@ E[e^{tY_n}] &= E\left[e^{t\sum_{k=1}^{n} X_k}\right] \\
 &= \exp\left(\sum_{k=1}^{n} p_k(e^t - 1)\right)
 \end{align}
 $$
+
 ```
 
 ```{important}
@@ -749,9 +773,11 @@ $$
 $$
 
 **Recall:** The moment generating function of a Poisson distribution is:
+
 $$
 E[e^{tX}] = e^{\lambda(e^t - 1)}
 $$
+
 ```
 
 **Physical Meaning:** When dealing with many trials, each with a small probability of success, the total number of successes follows approximately a Poisson distribution. This is why the Poisson distribution models rare events (insurance claims, equipment failures, etc.).
@@ -799,26 +825,33 @@ $$
 **Random Walk Properties:**
 
 1. **Expected Step:**
+
    $$
    E[X_k] = p - (1-p) = 2p - 1
    $$
+
    For a fair coin ($p = 0.5$): $E[X_k] = 0$
 
 2. **Expected Position:**
+
    $$
    E[Y_n | Y_0 = 0] = \sum_{k=1}^{n} E[X_k] = n(2p-1)
    $$
+
    For a fair coin: $E[Y_n] = 0$ (no drift)
 
 3. **Variance of Step:**
+
    $$
    \text{var}[X_k] = E[X_k^2] - (E[X_k])^2 = 1 - (2p-1)^2 = 4p(1-p)
    $$
 
 4. **Variance of Position:**
+
    $$
    \text{var}[Y_n] = \sum_{k=1}^{n} \text{var}[X_k] = 4pn(1-p)
    $$
+
    For a fair coin: $\text{var}[Y_n] = n$ (variance grows linearly with time)
 ```
 
@@ -938,6 +971,7 @@ Another density that decreases at the same rate as Pareto when $\alpha = 1$ is t
 $$
 g(x) = \frac{1}{\pi} \frac{1}{1 + x^2}, \quad \text{for } x \in \mathbb{R}
 $$
+
 ```
 
 ```{warning}
@@ -1033,14 +1067,18 @@ where $i = \sqrt{-1}$ is the imaginary unit.
 
 - The characteristic function **always exists**, in contrast to the moment generating function.
 - Can be rewritten as:
+
   $$
   \varphi_X(u) = \int e^{iux} \, dF_X(x)
   $$
+
   where $F_X$ denotes the cumulative distribution function of $X$.
 - When $X$ has a density function $f_X$:
+
   $$
   \varphi_X(u) = \int e^{iux} f_X(x) \, dx
   $$
+
 ```
 
 ### Sum of Independent Variables
@@ -1081,6 +1119,7 @@ We present a simplified aggregate loss model in insurance.
 $$
 S_N = \sum_{n=1}^{N} X_n
 $$
+
 ```
 
 ### Expected Loss
@@ -1105,6 +1144,7 @@ $$
 &= N\sigma^2
 \end{align}
 $$
+
 ```
 
 ```{important}
@@ -1127,15 +1167,19 @@ $$
 **Context:** We consider a continuous random variable $X$ representing the profit and loss of a portfolio.
 
 **Definition - Value at Risk (VaR):**
+
 $$
 \text{VaR}_q(X) = x_q
 $$
+
 where $x_q$ denotes the $q$-quantile of the distribution of $X$.
 
 **Quantile Definition:** Denoting by $F$ the cumulative distribution function of the loss:
+
 $$
 x_q = F^{-1}(q)
 $$
+
 where $F^{-1}$ denotes the inverse function of $F$.
 
 **Interpretation:** There is only a $q\%$ probability of incurring a loss of at least $\text{VaR}_q$ during the time period.

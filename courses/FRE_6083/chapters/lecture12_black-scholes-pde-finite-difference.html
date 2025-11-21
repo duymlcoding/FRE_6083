@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -543,10 +543,11 @@ document.write(`
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Complete Mesh:</strong></p>
-<p>We work with the mesh:
-$<span class="math notranslate nohighlight">\(
+<p>We work with the mesh:</p>
+<div class="math notranslate nohighlight">
+\[
 \{(n\Delta t, i\Delta x) \mid n = 0, \ldots, N; \, i \in \mathbb{Z}\}
-\)</span>$</p>
+\]</div>
 <p>where <span class="math notranslate nohighlight">\((\Delta t, \Delta x)\)</span> are the discretization steps and <span class="math notranslate nohighlight">\(N\)</span> satisfies <span class="math notranslate nohighlight">\(N\Delta t = T\)</span>.</p>
 </div>
 <p><strong>Notation:</strong> We denote by <span class="math notranslate nohighlight">\(u_i^n\)</span> the approximation of the option value <span class="math notranslate nohighlight">\(u\)</span> at the grid point <span class="math notranslate nohighlight">\((n\Delta t, i\Delta x)\)</span>:</p>
@@ -568,10 +569,11 @@ u(n\Delta t, i\Delta x) \approx u_i^n
 \[
 u_t(t, x) - u_{xx}(t, x) = 0 \quad \text{for } (t, x) \in (0, T] \times \mathbb{R}
 \]</div>
-<p><strong>Initial condition:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Initial condition:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 u(0, x) = u_0(x)
-\)</span>$</p>
+\]</div>
 <p><strong>Assumptions:</strong> <span class="math notranslate nohighlight">\(u_0\)</span> is continuous and bounded in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 </div>
 <p><strong>Physical Meaning:</strong> The heat equation models diffusion processes. In finance, it’s related to option pricing through variable transformations.</p>
@@ -595,14 +597,16 @@ u(0, x) = u_0(x)
 \[
 \frac{u_i^{n+1} - u_i^n}{\Delta t} - \frac{u_{i+1}^n + u_{i-1}^n - 2u_i^n}{\Delta x^2} = 0
 \]</div>
-<p><strong>Rearranged form:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Rearranged form:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 u_i^{n+1} = u_i^n + \Delta t \left\{\frac{u_{i+1}^n + u_{i-1}^n - 2u_i^n}{\Delta x^2}\right\}
-\)</span>$</p>
-<p><strong>Initial condition:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Initial condition:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 u_i^0 = u_0(i\Delta x)
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> The scheme is “explicit” because we can directly compute <span class="math notranslate nohighlight">\(u_i^{n+1}\)</span> at time step <span class="math notranslate nohighlight">\(n+1\)</span> from known values at time step <span class="math notranslate nohighlight">\(n\)</span>, without solving a system of equations.</p>
 <div class="admonition note">
@@ -651,10 +655,11 @@ u_{i-1}^n = u_i^n - u_x(n\Delta t, x_i)\Delta x + \frac{1}{2}u_{xx}(n\Delta t, x
 \[
 u_i^{n+1} = u_i^n + u_t(n\Delta t, x_i)\Delta t + \frac{1}{2}u_{tt}(n\Delta t, x_i)\Delta t^2 + \Delta t^2 \epsilon(\Delta t)
 \]</div>
-<p class="sd-card-text">Therefore:
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text">Therefore:</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{u_i^{n+1} - u_i^n}{\Delta t} = u_t(n\Delta t, x_i) + \frac{1}{2}u_{tt}\Delta t + \Delta t \epsilon(\Delta t)
-\)</span>$</p>
+\]</div>
 <p class="sd-card-text">The truncation error for the first time derivative is <strong>order 1</strong>.</p>
 </div>
 </details></section>
@@ -668,10 +673,11 @@ $<span class="math notranslate nohighlight">\(
 \[
 \left(1 + \frac{2\Delta t}{\Delta x^2}\right) \geq 0
 \]</div>
-<p><strong>Equivalent form:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Equivalent form:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \Delta t \leq \frac{1}{2}\Delta x^2
-\)</span>$</p>
+\]</div>
 <p><strong>Consequence:</strong> If this condition is violated, instabilities occur and the scheme does not converge.</p>
 </div>
 <p><strong>Physical Meaning:</strong> The time step must be small enough relative to the spatial step. This is a fundamental limitation of explicit schemes: very small time steps may be required, leading to high computational cost.</p>
@@ -733,10 +739,11 @@ $<span class="math notranslate nohighlight">\(
 \[
 u_t + ru - \frac{1}{2}\sigma^2 x^2 u_{xx} - rx u_x = 0, \quad \text{in } [0, T) \times [0, +\infty)
 \]</div>
-<p><strong>Terminal condition:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Terminal condition:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 u(T, x) = (x - K)^+
-\)</span>$</p>
+\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(r\)</span> = risk-free interest rate</p></li>
@@ -767,14 +774,16 @@ u(T, x) = (x - K)^+
 <li><p><span class="math notranslate nohighlight">\(\tau\)</span> = time to expiration</p></li>
 <li><p><span class="math notranslate nohighlight">\(t\)</span> = real time</p></li>
 </ul>
-<p>Define the new function:
-$<span class="math notranslate nohighlight">\(
+<p>Define the new function:</p>
+<div class="math notranslate nohighlight">
+\[
 v(\tau, x) = u(t, x)
-\)</span>$</p>
-<p><strong>Derivatives:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Derivatives:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 u_t = -v_\tau, \quad u_x = v_x, \quad u_{xx} = v_{xx}
-\)</span>$</p>
+\]</div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -784,14 +793,16 @@ u_t = -v_\tau, \quad u_x = v_x, \quad u_{xx} = v_{xx}
 \[
 -v_\tau + rv - \frac{1}{2}\sigma^2 x^2 v_{xx} - rx v_x = 0
 \]</div>
-<p class="sd-card-text"><strong>Rearranged:</strong>
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text"><strong>Rearranged:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 v_\tau + rv - \frac{1}{2}\sigma^2 x^2 v_{xx} - rx v_x = 0, \quad \text{in } (0, T] \times [0, +\infty)
-\)</span>$</p>
-<p class="sd-card-text"><strong>Initial condition:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text"><strong>Initial condition:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 v(0, x) = (x - K)^+
-\)</span>$</p>
+\]</div>
 </div>
 </details><p><strong>Physical Meaning:</strong> This change converts the terminal condition into an initial condition, which is more natural for finite difference schemes that march forward in time.</p>
 </section>
@@ -805,14 +816,16 @@ v(0, x) = (x - K)^+
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Change of Variable:</strong></p>
-<p>Make the change of variable <span class="math notranslate nohighlight">\(y = \log x\)</span> and define:
-$<span class="math notranslate nohighlight">\(
+<p>Make the change of variable <span class="math notranslate nohighlight">\(y = \log x\)</span> and define:</p>
+<div class="math notranslate nohighlight">
+\[
 w(\tau, y) = v(\tau, x)
-\)</span>$</p>
-<p><strong>Derivatives:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Derivatives:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 v_\tau = w_\tau, \quad v_x = w_y \frac{1}{x}, \quad v_{xx} = w_{yy}\frac{1}{x^2} + w_y\left(-\frac{1}{x^2}\right)
-\)</span>$</p>
+\]</div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -822,10 +835,11 @@ v_\tau = w_\tau, \quad v_x = w_y \frac{1}{x}, \quad v_{xx} = w_{yy}\frac{1}{x^2}
 \[
 w_\tau + rw - \frac{1}{2}\sigma^2 w_{yy} - \left(r - \frac{1}{2}\sigma^2\right)w_y = 0, \quad \text{in } (0, T] \times \mathbb{R}
 \]</div>
-<p class="sd-card-text"><strong>Initial condition:</strong>
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text"><strong>Initial condition:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 w(0, y) = (e^y - K)^+
-\)</span>$</p>
+\]</div>
 </div>
 </details><p><strong>Physical Meaning:</strong> Working in log-price space removes the degeneracy and makes the PDE uniformly parabolic. This is analogous to working with log-returns in empirical finance.</p>
 </section>
@@ -848,22 +862,25 @@ w(0, y) = (e^y - K)^+
 u_t(t, 0) = -ru(t, 0)
 \]</div>
 <p class="sd-card-text">This is an <strong>ODE</strong> with terminal condition <span class="math notranslate nohighlight">\(u(T, 0)\)</span>.</p>
-<p class="sd-card-text"><strong>Solution:</strong>
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text"><strong>Solution:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 u(t, 0) = e^{-r(T-t)} u(T, 0)
-\)</span>$</p>
-<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(u(T, 0) = (0 - K)^+ = 0\)</span>, we have:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(u(T, 0) = (0 - K)^+ = 0\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[
 u(t, 0) = 0
-\)</span>$</p>
+\]</div>
 </div>
 </details><div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Boundary Condition:</strong></p>
-<p>At the left boundary (<span class="math notranslate nohighlight">\(x = 0\)</span> or <span class="math notranslate nohighlight">\(y = -R\)</span>):
-$<span class="math notranslate nohighlight">\(
+<p>At the left boundary (<span class="math notranslate nohighlight">\(x = 0\)</span> or <span class="math notranslate nohighlight">\(y = -R\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
 w(\tau, -R) \approx 0
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> A call option with zero stock price is worthless, both at maturity and before.</p>
 </section>
@@ -925,10 +942,11 @@ rw(\tau, y) \approx r u_i^{n+1}
 \[
 \frac{u_i^{n+1} - u_i^n}{\Delta\tau} + r u_i^{n+1} - \frac{1}{2}\sigma^2 \frac{u_{i+1}^{n+1} + u_{i-1}^{n+1} - 2u_i^{n+1}}{\Delta y^2} - \left(r - \frac{1}{2}\sigma^2\right)\frac{u_{i+1}^{n+1} - u_{i-1}^{n+1}}{2\Delta y} = 0
 \]</div>
-<p><strong>Initial condition:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Initial condition:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 u_i^0 = (e^{y_i} - K)^+
-\)</span>$</p>
+\]</div>
 <p><strong>Stability:</strong> The scheme is <strong>unconditionally stable</strong> and hence convergent for every arbitrary pair <span class="math notranslate nohighlight">\((\Delta\tau, \Delta y)\)</span>.</p>
 </div>
 <p><strong>Physical Meaning:</strong> Being fully implicit, the scheme is stable for any time step size, allowing us to balance accuracy and computational efficiency.</p>
@@ -993,10 +1011,11 @@ c = -\left(r - \frac{1}{2}\sigma^2\right)\frac{\Delta\tau}{2\Delta y} - \frac{1}
 \[
 A_h \mathbf{u}_h^{n+1} = \mathbf{u}_h^n
 \]</div>
-<p><strong>Solution:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Solution:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \mathbf{u}_h^{n+1} = A_h^{-1} \mathbf{u}_h^n
-\)</span>$</p>
+\]</div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1024,10 +1043,11 @@ $<span class="math notranslate nohighlight">\(
 <p class="admonition-title">Note</p>
 <p><strong>Practical Consideration:</strong></p>
 <p>In practice, we work on a bounded domain <span class="math notranslate nohighlight">\([-R, R]\)</span> where <span class="math notranslate nohighlight">\(R\)</span> is large enough.</p>
-<p><strong>New Mesh:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>New Mesh:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \{(\tau_n, y_i) \mid n = 0, \ldots, N; \, i = -M, \ldots, M\}
-\)</span>$</p>
+\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(N\Delta\tau = T\)</span></p></li>
@@ -1040,14 +1060,16 @@ $<span class="math notranslate nohighlight">\(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Boundary Conditions:</strong></p>
-<p><strong>At <span class="math notranslate nohighlight">\(y = -R\)</span> (left boundary, <span class="math notranslate nohighlight">\(x \approx 0\)</span>):</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>At <span class="math notranslate nohighlight">\(y = -R\)</span> (left boundary, <span class="math notranslate nohighlight">\(x \approx 0\)</span>):</strong></p>
+<div class="math notranslate nohighlight">
+\[
 w(\tau, -R) \approx 0
-\)</span>$</p>
-<p><strong>At <span class="math notranslate nohighlight">\(y = R\)</span> (right boundary, <span class="math notranslate nohighlight">\(x \to \infty\)</span>):</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>At <span class="math notranslate nohighlight">\(y = R\)</span> (right boundary, <span class="math notranslate nohighlight">\(x \to \infty\)</span>):</strong></p>
+<div class="math notranslate nohighlight">
+\[
 w(\tau, R) \approx e^R - e^{-r\tau}K
-\)</span>$</p>
+\]</div>
 <p>This corresponds to the deep in-the-money call value.</p>
 </div>
 <p><strong>Physical Meaning:</strong></p>
@@ -1082,16 +1104,18 @@ w(\tau, R) \approx e^R - e^{-r\tau}K
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Right Boundary Treatment:</strong></p>
-<p>We must impose:
-$<span class="math notranslate nohighlight">\(
+<p>We must impose:</p>
+<div class="math notranslate nohighlight">
+\[
 u_M^n = e^{M\Delta y} - e^{-r(n\Delta\tau)}K
-\)</span>$</p>
+\]</div>
 <p>For <span class="math notranslate nohighlight">\(i = M-1\)</span>, coefficient <span class="math notranslate nohighlight">\(c\)</span> is missing in the last row of <span class="math notranslate nohighlight">\(A_h\)</span>. This coefficient would multiply <span class="math notranslate nohighlight">\(u_M^n\)</span>.</p>
 <p><strong>Solution:</strong> Incorporate the Dirichlet condition in the <strong>right-hand side</strong>.</p>
-<p>The last component of the right-hand side becomes:
-$<span class="math notranslate nohighlight">\(
+<p>The last component of the right-hand side becomes:</p>
+<div class="math notranslate nohighlight">
+\[
 u_{M-1}^n + \left\{-\frac{1}{2}\sigma^2\frac{\Delta\tau}{\Delta y^2} + \left(r - \frac{1}{2}\sigma^2\right)\frac{\Delta\tau}{2\Delta y}\right\}\left(e^{M\Delta y} - e^{-r((n+1)\Delta\tau)}K\right)
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> We build the known boundary value into the system, converting a constraint into part of the right-hand side vector.</p>
 </section>
@@ -1103,10 +1127,11 @@ u_{M-1}^n + \left\{-\frac{1}{2}\sigma^2\frac{\Delta\tau}{\Delta y^2} + \left(r -
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Tridiagonal System:</strong></p>
-<p>We solve:
-$<span class="math notranslate nohighlight">\(
+<p>We solve:</p>
+<div class="math notranslate nohighlight">
+\[
 A_h \mathbf{u}_h^{n+1} = \mathbf{B}_h^n
-\)</span>$</p>
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(A_h\)</span> is a <span class="math notranslate nohighlight">\((2M-1) \times (2M-1)\)</span> matrix:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1176,22 +1201,25 @@ u_{M-1}^n - c(e^{M\Delta y} - e^{-r((n+1)\Delta\tau)}K)
 <ul class="simple">
 <li><p>Define vectors <span class="math notranslate nohighlight">\(\mathbf{a}, \mathbf{b}, \mathbf{c}\)</span> (or full matrix <span class="math notranslate nohighlight">\(A_h\)</span>)</p></li>
 </ul>
-<p><strong>Step 3: Initialize</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Step 3: Initialize</strong></p>
+<div class="math notranslate nohighlight">
+\[
 u_i^0 = (e^{i\Delta y} - K)^+, \quad \text{for } i = -M, \ldots, M
-\)</span>$</p>
+\]</div>
 <p><strong>Step 4: Time Loop</strong></p>
 <p>For <span class="math notranslate nohighlight">\(n = 0, \ldots, N-1\)</span>:</p>
 <p>4.1. Define <span class="math notranslate nohighlight">\(\mathbf{B}_h^n\)</span> (right-hand side)</p>
-<p>4.2. Given <span class="math notranslate nohighlight">\((u_i^n)_{i=-M}^M\)</span>, solve:
-$<span class="math notranslate nohighlight">\(
+<p>4.2. Given <span class="math notranslate nohighlight">\((u_i^n)_{i=-M}^M\)</span>, solve:</p>
+<div class="math notranslate nohighlight">
+\[
 A_h \mathbf{u}_h^{n+1} = \mathbf{B}_h^n
-\)</span><span class="math notranslate nohighlight">\(
-to compute \)</span>u_i^{n+1}<span class="math notranslate nohighlight">\( for \)</span>i = -M+1, \ldots, M-1$</p>
-<p>4.3. Set boundary values:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>to compute <span class="math notranslate nohighlight">\(u_i^{n+1}\)</span> for <span class="math notranslate nohighlight">\(i = -M+1, \ldots, M-1\)</span></p>
+<p>4.3. Set boundary values:</p>
+<div class="math notranslate nohighlight">
+\[
 u_{-M}^{n+1} = 0, \quad u_M^{n+1} = e^{M\Delta y} - e^{-r((n+1)\Delta\tau)}K
-\)</span>$</p>
+\]</div>
 <p><strong>Step 5: Extract Solution</strong></p>
 <ul class="simple">
 <li><p>Option price at time 0: <span class="math notranslate nohighlight">\(u_0^N\)</span> (at <span class="math notranslate nohighlight">\(y = 0\)</span>, i.e., <span class="math notranslate nohighlight">\(x = K\)</span>)</p></li>

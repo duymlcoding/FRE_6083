@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -493,10 +493,11 @@ document.write(`
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Probability Space:</strong></p>
-<p>We consider an experiment with a finite number of possible outcomes:
-$<span class="math notranslate nohighlight">\(
+<p>We consider an experiment with a finite number of possible outcomes:</p>
+<div class="math notranslate nohighlight">
+\[
 \Omega = \{\omega_1, \ldots, \omega_K\}
-\)</span>$</p>
+\]</div>
 <p><strong>Time Structure:</strong></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(t = 0\)</span>: Beginning of the period (investment time)</p></li>
@@ -541,10 +542,11 @@ $<span class="math notranslate nohighlight">\(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Expected Utility:</strong></p>
-<p>Our measure of portfolio performance is the <strong>expected utility of terminal wealth</strong>:
-$<span class="math notranslate nohighlight">\(
+<p>Our measure of portfolio performance is the <strong>expected utility of terminal wealth</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
 E[u(w_1)] = \sum_{\omega \in \Omega} P(\omega) u(w_1(\omega))
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> We evaluate a portfolio not just by its expected return, but by the expected satisfaction it provides, accounting for risk preferences.</p>
 </section>
@@ -580,10 +582,11 @@ E[u(w_1)] = \sum_{\omega \in \Omega} P(\omega) u(w_1(\omega))
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Portfolio Representation:</strong></p>
-<p>A trading strategy is denoted by:
-$<span class="math notranslate nohighlight">\(
+<p>A trading strategy is denoted by:</p>
+<div class="math notranslate nohighlight">
+\[
 (H_0, H_1, \ldots, H_n, \ldots, H_N) \in \mathbb{R}^{N+1}
-\)</span>$</p>
+\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(H_n\)</span> = number of shares of the <span class="math notranslate nohighlight">\(n\)</span>th asset held</p></li>
@@ -604,10 +607,11 @@ $<span class="math notranslate nohighlight">\(
 \[
 \max_{(H_0, \ldots, H_N) \in \mathbb{R}^{N+1}} E[u(w_1)]
 \]</div>
-<p><strong>Subject to:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Subject to:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 w_0 = w \quad \text{(budget constraint)}
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="the-numeraire">
@@ -628,14 +632,16 @@ w_0 = w \quad \text{(budget constraint)}
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Initial Wealth (Discounted):</strong></p>
-<p>Since <span class="math notranslate nohighlight">\(B(0) = 1\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p>Since <span class="math notranslate nohighlight">\(B(0) = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 w_0 = H_0 B(0) + H_1 S_1(0) + \cdots + H_N S_N(0) = H_0 + H_1 \tilde{S}_1(0) + \cdots + H_N \tilde{S}_N(0)
-\)</span>$</p>
-<p><strong>Terminal Wealth (Discounted):</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Terminal Wealth (Discounted):</strong></p>
+<div class="math notranslate nohighlight">
+\[
 w_1 = B(1)\left(H_0 + H_1 \tilde{S}_1(1) + \cdots + H_N \tilde{S}_N(1)\right)
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="price-changes">
@@ -654,17 +660,19 @@ w_1 = B(1)\left(H_0 + H_1 \tilde{S}_1(1) + \cdots + H_N \tilde{S}_N(1)\right)
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Derivation of Terminal Wealth Formula</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Since initial wealth is given, we can solve for <span class="math notranslate nohighlight">\(H_0\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text">Since initial wealth is given, we can solve for <span class="math notranslate nohighlight">\(H_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 H_0 = w - H_1 \tilde{S}_1(0) - \cdots - H_N \tilde{S}_N(0)
-\)</span>$</p>
-<p class="sd-card-text">Substituting into terminal wealth:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text">Substituting into terminal wealth:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{align}
 w_1 &amp;= B(1)\left(w - H_1 \tilde{S}_1(0) - \cdots - H_N \tilde{S}_N(0) + H_1 \tilde{S}_1(1) + \cdots + H_N \tilde{S}_N(1)\right) \\
 &amp;= B(1)\left\{w + H_1 \Delta\tilde{S}_1 + \cdots + H_N \Delta\tilde{S}_N\right\}
 \end{align}
-\)</span>$</p>
+\end{split}\]</div>
 </div>
 </details><div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -684,10 +692,11 @@ w_1 &amp;= B(1)\left(w - H_1 \tilde{S}_1(0) - \cdots - H_N \tilde{S}_N(0) + H_1 
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Arbitrage Opportunity:</strong></p>
-<p>An arbitrage opportunity is a strategy <span class="math notranslate nohighlight">\(H^a\)</span> such that:
-$<span class="math notranslate nohighlight">\(
+<p>An arbitrage opportunity is a strategy <span class="math notranslate nohighlight">\(H^a\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[
 w + \sum_{n=1}^N H_n^a \Delta\tilde{S}_n \geq w
-\)</span>$</p>
+\]</div>
 <p>with strict inequality for at least one outcome <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 <p><strong>Physical Meaning:</strong> A risk-free profit with no initial investment.</p>
 </div>
@@ -707,14 +716,16 @@ w + \sum_{n=1}^N H_n^a \Delta\tilde{S}_n \geq w
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\hat{H}\)</span> is a solution to the optimization problem</p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(H^a\)</span> is an arbitrage opportunity</p></li>
 </ul>
-<p class="sd-card-text"><strong>Consider the strategy:</strong>
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text"><strong>Consider the strategy:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 H = \hat{H} + H^a
-\)</span>$</p>
-<p class="sd-card-text"><strong>Discounted terminal wealth:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text"><strong>Discounted terminal wealth:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 w + \sum_{n=1}^N H_n \Delta\tilde{S}_n = w + \sum_{n=1}^N \hat{H}_n \Delta\tilde{S}_n + \sum_{n=1}^N H_n^a \Delta\tilde{S}_n \geq w + \sum_{n=1}^N \hat{H}_n \Delta\tilde{S}_n
-\)</span>$</p>
+\]</div>
 <p class="sd-card-text">with strict inequality for at least one <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 <p class="sd-card-text"><strong>Conclusion:</strong> By concavity and strict increase of <span class="math notranslate nohighlight">\(u\)</span>, strategy <span class="math notranslate nohighlight">\(H\)</span> yields better utility than <span class="math notranslate nohighlight">\(\hat{H}\)</span>, contradicting optimality of <span class="math notranslate nohighlight">\(\hat{H}\)</span>.</p>
 </div>
@@ -752,10 +763,11 @@ w + \sum_{n=1}^N H_n \Delta\tilde{S}_n = w + \sum_{n=1}^N \hat{H}_n \Delta\tilde
 <p class="admonition-title">Important</p>
 <p><strong>First-Order Necessary Condition:</strong></p>
 <p>At the optimum, the gradient with respect to <span class="math notranslate nohighlight">\((H_1, \ldots, H_N)\)</span> equals zero.</p>
-<p>For all <span class="math notranslate nohighlight">\(n = 1, \ldots, N\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p>For all <span class="math notranslate nohighlight">\(n = 1, \ldots, N\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 \sum_{\omega \in \Omega} P(\omega) u'\left(B(1, \omega)\left\{w + \sum_{n=1}^N H_n \Delta\tilde{S}_n(\omega)\right\}\right) B(1, \omega) \Delta\tilde{S}_n(\omega) = 0
-\)</span>$</p>
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(u'\)</span> denotes the first derivative of <span class="math notranslate nohighlight">\(u\)</span>.</p>
 </div>
 </section>
@@ -779,10 +791,11 @@ E[B(1) u'(w_1) \Delta\tilde{S}_n] = 0, \quad n = 1, \ldots, N
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Risk-Neutral Measure <span class="math notranslate nohighlight">\(\tilde{P}\)</span>:</strong></p>
-<p>Under a risk-neutral probability measure <span class="math notranslate nohighlight">\(\tilde{P}\)</span>, discounted asset prices are martingales:
-$<span class="math notranslate nohighlight">\(
+<p>Under a risk-neutral probability measure <span class="math notranslate nohighlight">\(\tilde{P}\)</span>, discounted asset prices are martingales:</p>
+<div class="math notranslate nohighlight">
+\[
 E^{\tilde{P}}[\Delta\tilde{S}_n] = \sum_{\omega \in \Omega} \tilde{P}(\omega) \Delta\tilde{S}_n(\omega) = 0, \quad n = 1, \ldots, N
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="comparison-with-optimality">
@@ -795,10 +808,11 @@ E^{\tilde{P}}[\Delta\tilde{S}_n] = \sum_{\omega \in \Omega} \tilde{P}(\omega) \D
 \[
 \tilde{P}(\omega) = \frac{P(\omega) B(1, \omega) u'(w_1(\omega))}{E[B(1) u'(w_1)]}
 \]</div>
-<p><strong>Normalization:</strong> We verify that:
-$<span class="math notranslate nohighlight">\(
+<p><strong>Normalization:</strong> We verify that:</p>
+<div class="math notranslate nohighlight">
+\[
 \sum_{k=1}^K \tilde{P}(\omega_k) = 1
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> The risk-neutral probabilities are the physical probabilities weighted by the marginal utility and discount factor, then normalized.</p>
 </section>
@@ -823,10 +837,11 @@ E^{\tilde{P}}[w_1 / B(1)] &amp;= \sum_{\omega \in \Omega} \tilde{P}(\omega) \fra
 </details><div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Martingale Property:</strong></p>
-<p>The discounted wealth process is a martingale under the risk-neutral measure:
-$<span class="math notranslate nohighlight">\(
+<p>The discounted wealth process is a martingale under the risk-neutral measure:</p>
+<div class="math notranslate nohighlight">
+\[
 E^{\tilde{P}}[w_1 / B(1)] = w_0
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> Under risk-neutral probabilities, discounted wealth has no expected growth—this is the fundamental property of arbitrage-free pricing.</p>
 </section>
@@ -879,10 +894,11 @@ E^{\tilde{P}}[w_1 / B(1)] = w_0
 \[
 \max_{v \in V_w} E[u(v)]
 \]</div>
-<p>where the feasible set is:
-$<span class="math notranslate nohighlight">\(
+<p>where the feasible set is:</p>
+<div class="math notranslate nohighlight">
+\[
 V_w = \left\{v \in \mathbb{R}^K : E^{\tilde{P}}[v / B(1)] = w\right\}
-\)</span>$</p>
+\]</div>
 <p><strong>Interpretation:</strong> Find the wealth process with largest expected utility among all martingales (under <span class="math notranslate nohighlight">\(\tilde{P}\)</span>).</p>
 </div>
 <p><strong>Physical Meaning:</strong> We search over all possible terminal wealths that are consistent with our initial budget (in present value terms).</p>
@@ -896,10 +912,11 @@ V_w = \left\{v \in \mathbb{R}^K : E^{\tilde{P}}[v / B(1)] = w\right\}
 \[
 \max_v E[u(v)] - \lambda E^{\tilde{P}}[v / B(1)]
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is chosen such that the solution satisfies:
-$<span class="math notranslate nohighlight">\(
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is chosen such that the solution satisfies:</p>
+<div class="math notranslate nohighlight">
+\[
 E^{\tilde{P}}[v / B(1)] = w
-\)</span>$</p>
+\]</div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -919,14 +936,16 @@ E^{\tilde{P}}[v / B(1)] = w
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Optimality Condition:</strong></p>
-<p>For each <span class="math notranslate nohighlight">\(\omega \in \Omega\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p>For each <span class="math notranslate nohighlight">\(\omega \in \Omega\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 u'(v(\omega)) = \frac{\tilde{P}(\omega)}{P(\omega) B(1, \omega)} \lambda
-\)</span>$</p>
-<p><strong>Solving for <span class="math notranslate nohighlight">\(v\)</span>:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Solving for <span class="math notranslate nohighlight">\(v\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 v(\omega) = (u')^{-1}\left(\frac{\lambda \tilde{P}(\omega)}{P(\omega) B(1, \omega)}\right)
-\)</span>$</p>
+\]</div>
 <p>where <span class="math notranslate nohighlight">\((u')^{-1}\)</span> denotes the inverse function of <span class="math notranslate nohighlight">\(u'\)</span>.</p>
 </div>
 </section>
@@ -1015,22 +1034,25 @@ w = E^{\tilde{P}}[w_1 / B(1)] = E^{\tilde{P}}\left[(u')^{-1}\left(\frac{\lambda 
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution for <span class="math notranslate nohighlight">\(\tilde{P}\)</span></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>Martingale conditions:</strong>
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text"><strong>Martingale conditions:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 E^{\tilde{P}}[\Delta\tilde{S}_n] = \sum_{\omega \in \Omega} \tilde{P}(\omega) \Delta\tilde{S}_n(\omega) = 0, \quad n = 1, 2
-\)</span>$</p>
-<p class="sd-card-text"><strong>System of equations:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text"><strong>System of equations:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{cases}
 0 \cdot \tilde{P}(\omega_1) + 2\tilde{P}(\omega_2) - 2\tilde{P}(\omega_3) = 0 \\
 3\tilde{P}(\omega_1) - 1\tilde{P}(\omega_2) - 2\tilde{P}(\omega_3) = 0 \\
 \tilde{P}(\omega_1) + \tilde{P}(\omega_2) + \tilde{P}(\omega_3) = 1
 \end{cases}
-\)</span>$</p>
-<p class="sd-card-text"><strong>Unique solution:</strong>
-$<span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p class="sd-card-text"><strong>Unique solution:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \tilde{P}(\omega_1) = 1/3, \quad \tilde{P}(\omega_2) = 1/3, \quad \tilde{P}(\omega_3) = 1/3
-\)</span>$</p>
+\]</div>
 </div>
 </details></section>
 <section id="radon-nikodym-derivative">
@@ -1042,10 +1064,11 @@ $<span class="math notranslate nohighlight">\(
 \[
 L(\omega) = \frac{\tilde{P}(\omega)}{P(\omega)}
 \]</div>
-<p>gives:
-$<span class="math notranslate nohighlight">\(
+<p>gives:</p>
+<div class="math notranslate nohighlight">
+\[
 L(\omega_1) = 2/3, \quad L(\omega_2) = L(\omega_3) = 4/3
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="step-2-optimal-wealth-formula">
@@ -1053,26 +1076,31 @@ L(\omega_1) = 2/3, \quad L(\omega_2) = L(\omega_3) = 4/3
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Derivation</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>Inverse utility function:</strong>
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text"><strong>Inverse utility function:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 (u')^{-1}(y) = -\ln y
-\)</span>$</p>
-<p class="sd-card-text"><strong>Optimal wealth:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text"><strong>Optimal wealth:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 w_1(\omega) = -\ln(\lambda L(\omega) / B(1))
-\)</span>$</p>
-<p class="sd-card-text"><strong>Determining <span class="math notranslate nohighlight">\(\lambda\)</span>:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text"><strong>Determining <span class="math notranslate nohighlight">\(\lambda\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 w = E^{\tilde{P}}[-\ln((\tilde{P}/P) / B(1)) / B(1)] = -\ln(\lambda) E^{\tilde{P}}[1/B(1)] - E^{\tilde{P}}[\ln(L/B(1)) / B(1)]
-\)</span>$</p>
-<p class="sd-card-text">Therefore:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text">Therefore:</p>
+<div class="math notranslate nohighlight">
+\[
 \lambda = \exp\left\{-\frac{w + E^{\tilde{P}}[\ln(L/B(1)) / B(1)]}{E^{\tilde{P}}[1/B(1)]}\right\}
-\)</span>$</p>
-<p class="sd-card-text"><strong>Simplified formula:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text"><strong>Simplified formula:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 w_1 = w + \frac{E^{\tilde{P}}[\ln(L/B(1)) / B(1)]}{E^{\tilde{P}}[1/B(1)]} - \ln(L/B(1))
-\)</span>$</p>
+\]</div>
 </div>
 </details></section>
 <section id="numerical-results">
@@ -1080,20 +1108,22 @@ w_1 = w + \frac{E^{\tilde{P}}[\ln(L/B(1)) / B(1)]}{E^{\tilde{P}}[1/B(1)]} - \ln(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Computed Values:</strong></p>
-<p>Using <span class="math notranslate nohighlight">\(B(1) = 10/9\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p>Using <span class="math notranslate nohighlight">\(B(1) = 10/9\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 E^{\tilde{P}}[\ln(L/B(1))] = -0.04873
-\)</span>$</p>
+\]</div>
 <p><strong>Optimal wealth:</strong></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(w_1(\omega_1) = w(10/9) + 0.46209\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(w_1(\omega_2) = w(10/9) - 0.23105\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(w_1(\omega_3) = w(10/9) - 0.23105\)</span></p></li>
 </ul>
-<p><strong>Optimal objective value:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Optimal objective value:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 E[u(w_1)] = -E[L/B(1)] = -E^{\tilde{P}}[1/B(1)] = -9/10
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="step-3-finding-the-replicating-strategy">
@@ -1105,32 +1135,36 @@ E[u(w_1)] = -E[L/B(1)] = -E^{\tilde{P}}[1/B(1)] = -9/10
 \[
 w_1 / B(1) = w + H_1 \Delta\tilde{S}_1 + H_2 \Delta\tilde{S}_2
 \]</div>
-<p><strong>Equivalent system:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Equivalent system:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{cases}
 0.41590 = 0 \cdot H_1 + 3H_2 \\
 -0.20795 = 2H_1 - H_2 \\
 -0.20795 = -2H_1 - 2H_2
 \end{cases}
-\)</span>$</p>
-<p><strong>Unique solution:</strong>
-$<span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p><strong>Unique solution:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 H_1 = -0.03466, \quad H_2 = 0.13863
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="computing-cash-position">
 <h3>Computing Cash Position<a class="headerlink" href="#computing-cash-position" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Budget constraint:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Budget constraint:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 w = H_0 + 6H_1 + 10H_2
-\)</span>$</p>
-<p><strong>Solving for <span class="math notranslate nohighlight">\(H_0\)</span>:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Solving for <span class="math notranslate nohighlight">\(H_0\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 H_0 = w - 1.17834
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong></p>
 <ul class="simple">

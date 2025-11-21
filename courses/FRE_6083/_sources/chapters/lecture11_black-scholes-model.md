@@ -227,6 +227,7 @@ Dividing both sides by $e^{-rt}$:
 $$
 V(t) = \tilde{E}[e^{-r(T-t)}V(T) \mid \{\tilde{W}(s); 0 \leq s \leq t\}], \quad t \in [0, T]
 $$
+
 ```
 
 **Physical Meaning:** The option value at time $t$ equals the expected discounted payoff under the risk-neutral measure, conditional on information up to time $t$.
@@ -244,6 +245,7 @@ V(t) &= \tilde{E}[e^{-r(T-t)}V(T) \mid \{S(s); 0 \leq s \leq t\}] \\
 &= \tilde{E}[e^{-r(T-t)}V(T) \mid S(t)]
 \end{align}
 $$
+
 ```
 
 **Physical Meaning:** Essentially, as in the binomial tree model, $V(t)$ equals the **discounted expected payoff** under the risk-neutral probability measure, given the asset price at time $t$.
@@ -264,6 +266,7 @@ where $K$ is the strike price.
 $$
 V(t) = \tilde{E}[e^{-r(T-t)}(S(T) - K)^+ \mid S(t)]
 $$
+
 ```
 
 It is fairly easy to derive a **closed-form formula** for the price of a European call from this risk-neutral pricing formula.
@@ -327,6 +330,7 @@ $$
 $$
 v(t, s) = \tilde{E}[e^{-r(T-t)}V(T) \mid S(t) = s]
 $$
+
 ```
 
 ### Goal
@@ -409,6 +413,7 @@ which is equivalent to:
 $$
 y < \frac{1}{\sigma\sqrt{T-t}}\left[\log\frac{s}{K} + \left(r + \frac{\sigma^2}{2}\right)(T-t)\right]
 $$
+
 ```
 
 ### Defining $d_{\pm}$
@@ -436,6 +441,7 @@ d_-(\tau, s) &= \frac{1}{\sigma\sqrt{\tau}}\left[\log\frac{s}{K} + \left(r - \fr
 d_+(\tau, s) &= \frac{1}{\sigma\sqrt{\tau}}\left[\log\frac{s}{K} + \left(r + \frac{\sigma^2}{2}\right)\tau\right]
 \end{align}
 $$
+
 ```
 
 ### The Black-Scholes Formula
@@ -532,6 +538,7 @@ p(t, s) &= v(t, s) - s + Ke^{-r(T-t)} \\
 &= Ke^{-r(T-t)}N(-d_-(T-t, s)) - s \, N(-d_+(T-t, s))
 \end{align}
 $$
+
 ```
 
 **Physical Meaning:** The put formula has a similar structure to the call formula, but with complementary probabilities $N(-d_+)$ and $N(-d_-)$ reflecting the payoff when the stock price falls below the strike.
@@ -553,6 +560,7 @@ dv(t, S(t)) &= v_t(t, S(t))dt + v_s(t, S(t))dS(t) + \frac{1}{2}v_{ss}(t, S(t))dS
 &\quad + \sigma S(t)v_s(t, S(t))dW(t)
 \end{align}
 $$
+
 ```
 
 ### The Hedging Portfolio
@@ -573,6 +581,7 @@ The evolution of the investor's self-financing portfolio is:
 $$
 dX(t) = \Delta(t)dS(t) + r(X(t) - \Delta(t)S(t))dt
 $$
+
 ```
 
 **Physical Meaning:** The change in portfolio value comes from:
@@ -636,9 +645,11 @@ v_t(t, s) + rsv_s(t, s) + \frac{1}{2}\sigma^2 s^2 v_{ss}(t, s) = rv(t, s)
 $$
 
 **Terminal Condition:**
+
 $$
 v(T, s) = (s - K)^+
 $$
+
 ```
 
 **Physical Meaning:** The option price must satisfy this PDE. The PDE incorporates:
@@ -728,17 +739,21 @@ where $Y$ is a standard normal random variable.
 2. **For each** $i = 1, \ldots, n$:
 
    2.1. **Generate** $S_i(T)$ using:
+
         $$
         S_i(T) = s\exp\left\{\left(r - \frac{1}{2}\sigma^2\right)T + \sigma\sqrt{T} \, Y_i\right\}
         $$
+
         where $Y_i$ is drawn from the standard normal distribution and $Y_1, Y_2, \ldots, Y_n$ are independent
 
    2.2. **Set** $C_i = e^{-rT}(S_i(T) - K)^+$
 
 3. **Compute the average:**
+
    $$
    \hat{C}_n = \frac{1}{n}\sum_{i=1}^{n} C_i
    $$
+
 ```
 
 **Physical Meaning:** Simulate many possible future stock prices under the risk-neutral measure, compute the discounted payoff for each, and average them.
@@ -759,12 +774,15 @@ Since the rate of convergence of Monte Carlo simulations is only $\frac{1}{\sqrt
 **Statistical Properties:**
 
 1. **Strong Law of Large Numbers:** The estimator:
+
    $$
    \hat{C}_n = \frac{1}{n}\sum_{i=1}^{n} C_i
    $$
+
    converges to the price of the European call as $n \to \infty$
 
 2. **Unbiased Estimator:**
+
    $$
    E[\hat{C}_n] = \tilde{E}[e^{-rT}(S(T) - K)^+ \mid S(0) = s]
    $$
@@ -774,9 +792,11 @@ Since the rate of convergence of Monte Carlo simulations is only $\frac{1}{\sqrt
    - Standard deviation: $s_C/\sqrt{n}$
 
    where $s_C$ can be estimated by the unbiased estimator:
+
    $$
    s_C = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(C_i - \hat{C}_n)^2}
    $$
+
 ```
 
 **Physical Meaning:** Monte Carlo provides a probabilistic approximation. The error decreases as $1/\sqrt{n}$, and we can quantify our uncertainty using the standard deviation estimate.

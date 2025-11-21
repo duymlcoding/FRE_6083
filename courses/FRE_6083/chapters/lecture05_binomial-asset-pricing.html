@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -608,16 +608,20 @@ B_1 = (1+r)B_0
 <li><p class="sd-card-text">Debt at time 1: <span class="math notranslate nohighlight">\(S_0(1+r)\)</span></p></li>
 </ul>
 <p class="sd-card-text"><strong>Payoff at Time 1:</strong></p>
-<ul class="simple">
+<ul>
 <li><p class="sd-card-text">Stock price is either <span class="math notranslate nohighlight">\(S_0 u\)</span> or <span class="math notranslate nohighlight">\(S_0 d\)</span></p></li>
-<li><p class="sd-card-text">In the <strong>worst case</strong> scenario (tail), wealth is:
-$<span class="math notranslate nohighlight">\(
-S_0 d - S_0(1+r) \geq 0
-\)</span>$</p></li>
-<li><p class="sd-card-text">In the <strong>best case</strong> (head), net worth is:
-$<span class="math notranslate nohighlight">\(
-S_0 u - S_0(1+r) &gt; 0
-\)</span>$</p></li>
+<li><p class="sd-card-text">In the <strong>worst case</strong> scenario (tail), wealth is:</p>
+<div class="math notranslate nohighlight">
+\[
+  S_0 d - S_0(1+r) \geq 0
+  \]</div>
+</li>
+<li><p class="sd-card-text">In the <strong>best case</strong> (head), net worth is:</p>
+<div class="math notranslate nohighlight">
+\[
+  S_0 u - S_0(1+r) &gt; 0
+  \]</div>
+</li>
 </ul>
 <p class="sd-card-text"><strong>Conclusion:</strong> The investor is guaranteed to finish with nonnegative wealth and has a positive probability of strictly positive wealth. This is an arbitrage opportunity!</p>
 </div>
@@ -634,17 +638,21 @@ S_0 u - S_0(1+r) &gt; 0
 <li><p class="sd-card-text">Invest proceeds <span class="math notranslate nohighlight">\(S_0\)</span> in the money market</p></li>
 </ul>
 <p class="sd-card-text"><strong>Payoff at Time 1:</strong></p>
-<ul class="simple">
+<ul>
 <li><p class="sd-card-text">Money market value: <span class="math notranslate nohighlight">\((1+r)S_0\)</span></p></li>
 <li><p class="sd-card-text">Stock repurchase cost: either <span class="math notranslate nohighlight">\(S_0 d\)</span> or <span class="math notranslate nohighlight">\(S_0 u\)</span></p></li>
-<li><p class="sd-card-text">In the <strong>worst case</strong> (head), wealth is:
-$<span class="math notranslate nohighlight">\(
-(1+r)S_0 - S_0 u \geq 0
-\)</span>$</p></li>
-<li><p class="sd-card-text">In the <strong>best case</strong> (tail), wealth is:
-$<span class="math notranslate nohighlight">\(
-(1+r)S_0 - S_0 d &gt; 0
-\)</span>$</p></li>
+<li><p class="sd-card-text">In the <strong>worst case</strong> (head), wealth is:</p>
+<div class="math notranslate nohighlight">
+\[
+  (1+r)S_0 - S_0 u \geq 0
+  \]</div>
+</li>
+<li><p class="sd-card-text">In the <strong>best case</strong> (tail), wealth is:</p>
+<div class="math notranslate nohighlight">
+\[
+  (1+r)S_0 - S_0 d &gt; 0
+  \]</div>
+</li>
 </ul>
 <p class="sd-card-text"><strong>Conclusion:</strong> Again, this exhibits an arbitrage opportunity!</p>
 </div>
@@ -1075,10 +1083,11 @@ X_N(\omega_1 \omega_2 \ldots \omega_N) = V_N(\omega_1 \omega_2 \ldots \omega_N)
 <li><p>Strike <span class="math notranslate nohighlight">\(K = 3\)</span></p></li>
 <li><p>Maturity <span class="math notranslate nohighlight">\(N = 3\)</span></p></li>
 </ul>
-<p><strong>Payoff:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Payoff:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 V_3 = (S_3 - 3)^+
-\)</span>$</p>
+\]</div>
 </div>
 <section id="id4">
 <h3>Risk-Neutral Probabilities<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>

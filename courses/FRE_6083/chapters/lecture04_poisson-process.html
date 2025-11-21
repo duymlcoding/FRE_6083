@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -502,13 +502,15 @@ document.write(`
 <p class="admonition-title">Important</p>
 <p><strong>Definition: Poisson Process</strong></p>
 <p>A counting process <span class="math notranslate nohighlight">\(N\)</span> is said to be a <strong>Poisson process with rate</strong> <span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span> if:</p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><strong>Initial condition:</strong> <span class="math notranslate nohighlight">\(N(0) = 0\)</span></p></li>
 <li><p><strong>Independent increments:</strong> The process has independent increments</p></li>
-<li><p><strong>Poisson distributed increments:</strong> The increment <span class="math notranslate nohighlight">\(N(t+s) - N(s)\)</span> is Poisson distributed with mean <span class="math notranslate nohighlight">\(\lambda t\)</span>, i.e.,
-$<span class="math notranslate nohighlight">\(
-P[N(t+s) - N(s) = n] = e^{-\lambda t} \frac{(\lambda t)^n}{n!}, \quad \text{for all } n = 0, 1, 2, \ldots
-\)</span>$</p></li>
+<li><p><strong>Poisson distributed increments:</strong> The increment <span class="math notranslate nohighlight">\(N(t+s) - N(s)\)</span> is Poisson distributed with mean <span class="math notranslate nohighlight">\(\lambda t\)</span>, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[
+   P[N(t+s) - N(s) = n] = e^{-\lambda t} \frac{(\lambda t)^n}{n!}, \quad \text{for all } n = 0, 1, 2, \ldots
+   \]</div>
+</li>
 </ol>
 </div>
 <p><strong>Physical Meaning:</strong> The Poisson process is completely characterized by a single parameter <span class="math notranslate nohighlight">\(\lambda\)</span> (the rate). Events occur randomly over time, with the number of events in any interval depending only on the length of that interval, not on when it starts.</p>
@@ -517,16 +519,20 @@ P[N(t+s) - N(s) = n] = e^{-\lambda t} \frac{(\lambda t)^n}{n!}, \quad \text{for 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Immediate Consequences:</strong></p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><strong>Stationary increments:</strong> <span class="math notranslate nohighlight">\(N\)</span> has stationary increments (the distribution of <span class="math notranslate nohighlight">\(N(t+s) - N(s)\)</span> depends only on <span class="math notranslate nohighlight">\(t\)</span>, not on <span class="math notranslate nohighlight">\(s\)</span>)</p></li>
-<li><p><strong>Expected number of events:</strong>
-$<span class="math notranslate nohighlight">\(
-E[N(t)] = E[N(t) - N(0)] = \lambda t
-\)</span>$</p></li>
-<li><p><strong>Variance:</strong>
-$<span class="math notranslate nohighlight">\(
-\text{var}[N(t)] = \text{var}[N(t) - N(0)] = \lambda t
-\)</span>$</p></li>
+<li><p><strong>Expected number of events:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   E[N(t)] = E[N(t) - N(0)] = \lambda t
+   \]</div>
+</li>
+<li><p><strong>Variance:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   \text{var}[N(t)] = \text{var}[N(t) - N(0)] = \lambda t
+   \]</div>
+</li>
 </ol>
 </div>
 <p><strong>Physical Meaning:</strong> The parameter <span class="math notranslate nohighlight">\(\lambda\)</span> can be seen as the <strong>average rate of jumps per unit of time</strong>. In other words, the average number of jumps in the interval <span class="math notranslate nohighlight">\([0, t]\)</span> is equal to <span class="math notranslate nohighlight">\(\lambda t\)</span>.</p>
@@ -860,11 +866,13 @@ X(t) = x_0 \prod_{i=1}^{N(t)} Y_i
 <p class="admonition-title">Problem 3: Covariance with Sum</p>
 <p>We consider a Poisson process with rate <span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span> and we recall that <span class="math notranslate nohighlight">\(E[N(t)] = \text{var}(N(t)) = \lambda t\)</span>.</p>
 <p>We also consider a sequence <span class="math notranslate nohighlight">\(X_1, X_2, X_3, \ldots\)</span> of i.i.d. random variables with common mean <span class="math notranslate nohighlight">\(\mu\)</span> and common variance <span class="math notranslate nohighlight">\(\sigma^2\)</span>, that are also independent of <span class="math notranslate nohighlight">\(N(t)\)</span>.</p>
-<ol class="arabic simple">
-<li><p>Compute:
-$<span class="math notranslate nohighlight">\(
-\text{cov}\left(N(t), \sum_{i=1}^{N(t)} X_i\right)
-\)</span>$</p></li>
+<ol class="arabic">
+<li><p>Compute:</p>
+<div class="math notranslate nohighlight">
+\[
+   \text{cov}\left(N(t), \sum_{i=1}^{N(t)} X_i\right)
+   \]</div>
+</li>
 </ol>
 </div>
 </section>

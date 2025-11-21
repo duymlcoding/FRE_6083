@@ -28,6 +28,7 @@ The sequence $X_n$ converges to the limit $X$ as $n \to +\infty$ if and only if:
 $$
 \text{For all } \omega \in \Omega, \quad X_n(\omega) \to X(\omega) \text{ as } n \to +\infty
 $$
+
 ```
 
 ```{warning}
@@ -46,6 +47,7 @@ Consequently, it needs to be replaced by **weaker concepts of convergence**, suc
 **Experiment:** Infinite coin toss with probability $p$ of falling on heads.
 
 **Random Variable:**
+
 $$
 X_n = \begin{cases}
 1 & \text{if a head is obtained at the } n\text{th toss} \\
@@ -54,9 +56,11 @@ X_n = \begin{cases}
 $$
 
 **Study the Limit:**
+
 $$
 \lim_{n \to +\infty} \frac{X_1(\omega) + X_2(\omega) + \cdots + X_n(\omega)}{n}
 $$
+
 ```
 
 **Observations:**
@@ -102,6 +106,7 @@ A sequence of random variables $X_n$ converges in probability to $X$ as $n \to +
 $$
 \lim_{n \to +\infty} P\{\omega: |X_n(\omega) - X(\omega)| > \epsilon\} = 0, \quad \text{for every } \epsilon > 0
 $$
+
 ```
 
 **Physical Meaning:** For any tolerance level $\epsilon > 0$, the probability that $X_n$ differs from $X$ by more than $\epsilon$ goes to zero as $n$ increases. The values of $X_n$ cluster around $X$ with high probability for large $n$.
@@ -134,6 +139,7 @@ Let $F$ denote the distribution function obtained at the limit. The sequence of 
 $$
 \lim_{n \to +\infty} F_n(x) = F(x) \quad \text{at each point } x \text{ of continuity of } F
 $$
+
 ```
 
 ```{note}
@@ -214,6 +220,7 @@ $$
 $$
 
 Equivalently:
+
 $$
 \frac{S_n - n\mu}{\sigma\sqrt{n}} \xrightarrow{d} \mathcal{N}(0, 1)
 $$
@@ -281,14 +288,17 @@ $$
 **Properties of the Sample Mean:**
 
 1. **Consistency:** By the strong law of large numbers, the estimator $\hat{\mu}_n$ is **consistent**, i.e.,
+
    $$
    \hat{\mu}_n \to \mu \quad \text{almost surely as } n \to +\infty
    $$
 
 2. **Unbiasedness:** The estimator is **unbiased**, that is,
+
    $$
    E[\hat{\mu}_n] = \mu
    $$
+
 ```
 
 **Physical Meaning:**
@@ -391,28 +401,35 @@ $$
 1. The variables $Y_i(x)$ are **i.i.d.**
 
 2. The common mean of $Y_i(x)$ is $F(x)$:
+
    $$
    E[Y_i(x)] = P[X_i \leq x] = F(x)
    $$
 
 3. The **empirical distribution function**:
+
    $$
    F_n(x) = \frac{1}{n} \sum_{i=1}^{n} Y_i(x)
    $$
+
    satisfies:
+
    $$
    \lim_{n \to +\infty} F_n(x) = F(x) \quad \text{a.s., } \forall x
    $$
 
 4. The common variance of $Y_i(x)$ is:
+
    $$
    \text{var}[Y_i(x)] = F(x)(1 - F(x))
    $$
 
 5. The distribution of the error for the approximation of $F$ by $F_n$ as $n \to +\infty$ is **normal and centered**. The rate of convergence is:
+
    $$
    \frac{\sqrt{F(x)(1 - F(x))}}{\sqrt{n}}
    $$
+
 ```
 
 **Physical Meaning:** We can estimate an unknown distribution function $F$ by counting the fraction of observations that fall below each value $x$. This empirical distribution converges to the true distribution.
@@ -427,6 +444,7 @@ The theorem gives an even stronger result. It tells us that the convergence is *
 $$
 \sup_x |F_n(x) - F(x)| \to 0 \quad \text{a.s. as } n \to +\infty
 $$
+
 ```
 
 **Physical Meaning:** The empirical distribution function converges to the true distribution function uniformly over all values of $x$, not just pointwise. This is a remarkably strong result!
@@ -487,9 +505,11 @@ By the Central Limit Theorem, the error is **normally distributed** with:
 - Variance: $\frac{\sigma^2}{n}$
 
 where:
+
 $$
 \sigma^2 = \int_0^1 (f(x) - a)^2 \, dx
 $$
+
 ```
 
 ### Variance Estimation
@@ -504,9 +524,11 @@ $$
 $$
 
 where:
+
 $$
 \hat{a}_n = \frac{1}{n} \sum_{i=1}^{n} f(U_i)
 $$
+
 ```
 
 ### When to Use Monte Carlo
@@ -636,6 +658,7 @@ $$
 **Martingale with Respect to Another Process:**
 
 If:
+
 $$
 E[X_{k+n} \mid \{Y_m, m = 0, \ldots, k\}] = X_k
 $$
@@ -697,19 +720,23 @@ $p = 0.5$ is the **only value** of $p$ for which the random walk is a martingale
 **Three Cases:**
 
 1. **$p = 0.5$:** The random walk is a **martingale** (fair game)
+
    $$
    E[X_n \mid X_0 = 0] = 0
    $$
 
 2. **$p < 0.5$:** The random walk tends to **fall** and is called a **discrete-time supermartingale**
+
    $$
    E[X_n \mid X_0 = 0] = n(2p - 1) < 0
    $$
 
 3. **$p > 0.5$:** The random walk tends to **rise** and is called a **discrete-time submartingale**
+
    $$
    E[X_n \mid X_0 = 0] = n(2p - 1) > 0
    $$
+
 ```
 
 ### Formal Definitions

@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -707,15 +707,19 @@ E[aX + bY] = aE[X] + bE[Y]
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Covariance Properties:</strong></p>
-<ol class="arabic simple">
-<li><p><strong>Linearity:</strong> For three random variables <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span>, <span class="math notranslate nohighlight">\(Z\)</span>:
-$<span class="math notranslate nohighlight">\(
-\text{cov}(X, Y+Z) = \text{cov}(X, Y) + \text{cov}(X, Z)
-\)</span>$</p></li>
-<li><p><strong>General Sum Formula:</strong> For sums of <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(m\)</span> random variables:
-$<span class="math notranslate nohighlight">\(
-\text{cov}\left(\sum_{i=1}^{n} X_i, \sum_{j=1}^{m} Y_j\right) = \sum_{i=1}^{n} \sum_{j=1}^{m} \text{cov}(X_i, Y_j)
-\)</span>$</p></li>
+<ol class="arabic">
+<li><p><strong>Linearity:</strong> For three random variables <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span>, <span class="math notranslate nohighlight">\(Z\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   \text{cov}(X, Y+Z) = \text{cov}(X, Y) + \text{cov}(X, Z)
+   \]</div>
+</li>
+<li><p><strong>General Sum Formula:</strong> For sums of <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(m\)</span> random variables:</p>
+<div class="math notranslate nohighlight">
+\[
+   \text{cov}\left(\sum_{i=1}^{n} X_i, \sum_{j=1}^{m} Y_j\right) = \sum_{i=1}^{n} \sum_{j=1}^{m} \text{cov}(X_i, Y_j)
+   \]</div>
+</li>
 </ol>
 </div>
 <p><strong>Physical Meaning:</strong> Covariance measures how two random variables move together. Positive covariance means they tend to increase together; negative covariance means when one increases, the other tends to decrease.</p>
@@ -781,18 +785,22 @@ $<span class="math notranslate nohighlight">\(
 <p><strong>Key Properties:</strong></p>
 <ol class="arabic">
 <li><p><strong>Deterministic Variables:</strong> <span class="math notranslate nohighlight">\(\text{var}[X] = 0\)</span> if and only if <span class="math notranslate nohighlight">\(X\)</span> is deterministic (constant).</p></li>
-<li><p><strong>Linear Combination:</strong> For all <span class="math notranslate nohighlight">\((a, b) \in \mathbb{R}^2\)</span> and random variables <span class="math notranslate nohighlight">\((X, Y)\)</span>:
-$<span class="math notranslate nohighlight">\(
-\text{var}[aX + bY] = a^2\text{var}[X] + b^2\text{var}[Y] + 2ab\,\text{cov}(X, Y)
-\)</span>$</p></li>
-<li><p><strong>Cauchy-Schwarz Inequality:</strong> For all random variables <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span>:
-$<span class="math notranslate nohighlight">\(
-|\text{cov}(X, Y)|^2 \leq \text{var}[X]\,\text{var}[Y]
-\)</span>$</p>
-<p>Equivalently:
-$<span class="math notranslate nohighlight">\(
-|E[XY]|^2 \leq E[X^2]E[Y^2]
-\)</span>$</p>
+<li><p><strong>Linear Combination:</strong> For all <span class="math notranslate nohighlight">\((a, b) \in \mathbb{R}^2\)</span> and random variables <span class="math notranslate nohighlight">\((X, Y)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   \text{var}[aX + bY] = a^2\text{var}[X] + b^2\text{var}[Y] + 2ab\,\text{cov}(X, Y)
+   \]</div>
+</li>
+<li><p><strong>Cauchy-Schwarz Inequality:</strong> For all random variables <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   |\text{cov}(X, Y)|^2 \leq \text{var}[X]\,\text{var}[Y]
+   \]</div>
+<p>Equivalently:</p>
+<div class="math notranslate nohighlight">
+\[
+   |E[XY]|^2 \leq E[X^2]E[Y^2]
+   \]</div>
 </li>
 </ol>
 </div>
@@ -1024,14 +1032,16 @@ F_{X+Y}(z) = \int_{-\infty}^{+\infty} F_X(z-y) f_Y(y) \, dy
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong><span class="math notranslate nohighlight">\(n\)</span>-fold Convolution Formulas:</strong></p>
-<p><strong>CDF:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>CDF:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 F_n(x) = \int_{-\infty}^{+\infty} F(x-y) f_{n-1}(y) \, dy
-\)</span>$</p>
-<p><strong>PDF (by differentiation):</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>PDF (by differentiation):</strong></p>
+<div class="math notranslate nohighlight">
+\[
 f_n(x) = \int_{-\infty}^{+\infty} f(x-y) f_{n-1}(y) \, dy
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="example-problem">
@@ -1169,16 +1179,20 @@ X_i \sim \mathcal{N}(\mu, \sigma^2), \quad i = 1, \ldots, n
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Properties Under Normality:</strong></p>
-<ol class="arabic simple">
-<li><p><strong>Sample Mean Distribution:</strong> <span class="math notranslate nohighlight">\(\overline{Y}_n\)</span> is also distributed normally, with mean <span class="math notranslate nohighlight">\(\mu\)</span> and variance <span class="math notranslate nohighlight">\(\frac{\sigma^2}{n}\)</span>:
-$<span class="math notranslate nohighlight">\(
-\overline{Y}_n \sim \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
-\)</span>$</p></li>
+<ol class="arabic">
+<li><p><strong>Sample Mean Distribution:</strong> <span class="math notranslate nohighlight">\(\overline{Y}_n\)</span> is also distributed normally, with mean <span class="math notranslate nohighlight">\(\mu\)</span> and variance <span class="math notranslate nohighlight">\(\frac{\sigma^2}{n}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   \overline{Y}_n \sim \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
+   \]</div>
+</li>
 <li><p><strong>Independence:</strong> <span class="math notranslate nohighlight">\(\overline{Y}_n\)</span> is independent of <span class="math notranslate nohighlight">\(S_n^2\)</span>.</p></li>
-<li><p><strong>Sample Variance Distribution:</strong> <span class="math notranslate nohighlight">\(S_n^2\)</span> has a chi-square distribution with <span class="math notranslate nohighlight">\(n-1\)</span> degrees of freedom (after appropriate scaling):
-$<span class="math notranslate nohighlight">\(
-\frac{(n-1)S_n^2}{\sigma^2} \sim \chi^2_{n-1}
-\)</span>$</p></li>
+<li><p><strong>Sample Variance Distribution:</strong> <span class="math notranslate nohighlight">\(S_n^2\)</span> has a chi-square distribution with <span class="math notranslate nohighlight">\(n-1\)</span> degrees of freedom (after appropriate scaling):</p>
+<div class="math notranslate nohighlight">
+\[
+   \frac{(n-1)S_n^2}{\sigma^2} \sim \chi^2_{n-1}
+   \]</div>
+</li>
 </ol>
 </div>
 <div class="admonition seealso">
@@ -1240,10 +1254,11 @@ E[e^{tY_n}] &amp;= E\left[e^{t\sum_{k=1}^{n} X_k}\right] \\
 \[
 \lambda = \sum_{k=1}^{n} p_k
 \]</div>
-<p><strong>Recall:</strong> The moment generating function of a Poisson distribution is:
-$<span class="math notranslate nohighlight">\(
+<p><strong>Recall:</strong> The moment generating function of a Poisson distribution is:</p>
+<div class="math notranslate nohighlight">
+\[
 E[e^{tX}] = e^{\lambda(e^t - 1)}
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> When dealing with many trials, each with a small probability of success, the total number of successes follows approximately a Poisson distribution. This is why the Poisson distribution models rare events (insurance claims, equipment failures, etc.).</p>
 </section>
@@ -1286,26 +1301,34 @@ Y_0 = 0, \quad Y_n = \sum_{k=1}^{n} X_k
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Random Walk Properties:</strong></p>
-<ol class="arabic simple">
-<li><p><strong>Expected Step:</strong>
-$<span class="math notranslate nohighlight">\(
-E[X_k] = p - (1-p) = 2p - 1
-\)</span><span class="math notranslate nohighlight">\(
-For a fair coin (\)</span>p = 0.5<span class="math notranslate nohighlight">\(): \)</span>E[X_k] = 0$</p></li>
-<li><p><strong>Expected Position:</strong>
-$<span class="math notranslate nohighlight">\(
-E[Y_n | Y_0 = 0] = \sum_{k=1}^{n} E[X_k] = n(2p-1)
-\)</span><span class="math notranslate nohighlight">\(
-For a fair coin: \)</span>E[Y_n] = 0$ (no drift)</p></li>
-<li><p><strong>Variance of Step:</strong>
-$<span class="math notranslate nohighlight">\(
-\text{var}[X_k] = E[X_k^2] - (E[X_k])^2 = 1 - (2p-1)^2 = 4p(1-p)
-\)</span>$</p></li>
-<li><p><strong>Variance of Position:</strong>
-$<span class="math notranslate nohighlight">\(
-\text{var}[Y_n] = \sum_{k=1}^{n} \text{var}[X_k] = 4pn(1-p)
-\)</span><span class="math notranslate nohighlight">\(
-For a fair coin: \)</span>\text{var}[Y_n] = n$ (variance grows linearly with time)</p></li>
+<ol class="arabic">
+<li><p><strong>Expected Step:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   E[X_k] = p - (1-p) = 2p - 1
+   \]</div>
+<p>For a fair coin (<span class="math notranslate nohighlight">\(p = 0.5\)</span>): <span class="math notranslate nohighlight">\(E[X_k] = 0\)</span></p>
+</li>
+<li><p><strong>Expected Position:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   E[Y_n | Y_0 = 0] = \sum_{k=1}^{n} E[X_k] = n(2p-1)
+   \]</div>
+<p>For a fair coin: <span class="math notranslate nohighlight">\(E[Y_n] = 0\)</span> (no drift)</p>
+</li>
+<li><p><strong>Variance of Step:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   \text{var}[X_k] = E[X_k^2] - (E[X_k])^2 = 1 - (2p-1)^2 = 4p(1-p)
+   \]</div>
+</li>
+<li><p><strong>Variance of Position:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   \text{var}[Y_n] = \sum_{k=1}^{n} \text{var}[X_k] = 4pn(1-p)
+   \]</div>
+<p>For a fair coin: <span class="math notranslate nohighlight">\(\text{var}[Y_n] = n\)</span> (variance grows linearly with time)</p>
+</li>
 </ol>
 </div>
 <div class="admonition note">
@@ -1513,17 +1536,21 @@ Y_{t+1} = Y_t + \epsilon_{t+1}
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Advantages of Characteristic Function:</strong></p>
-<ul class="simple">
+<ul>
 <li><p>The characteristic function <strong>always exists</strong>, in contrast to the moment generating function.</p></li>
-<li><p>Can be rewritten as:
-$<span class="math notranslate nohighlight">\(
-\varphi_X(u) = \int e^{iux} \, dF_X(x)
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span>F_X<span class="math notranslate nohighlight">\( denotes the cumulative distribution function of \)</span>X$.</p></li>
-<li><p>When <span class="math notranslate nohighlight">\(X\)</span> has a density function <span class="math notranslate nohighlight">\(f_X\)</span>:
-$<span class="math notranslate nohighlight">\(
-\varphi_X(u) = \int e^{iux} f_X(x) \, dx
-\)</span>$</p></li>
+<li><p>Can be rewritten as:</p>
+<div class="math notranslate nohighlight">
+\[
+  \varphi_X(u) = \int e^{iux} \, dF_X(x)
+  \]</div>
+<p>where <span class="math notranslate nohighlight">\(F_X\)</span> denotes the cumulative distribution function of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+</li>
+<li><p>When <span class="math notranslate nohighlight">\(X\)</span> has a density function <span class="math notranslate nohighlight">\(f_X\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+  \varphi_X(u) = \int e^{iux} f_X(x) \, dx
+  \]</div>
+</li>
 </ul>
 </div>
 </section>
@@ -1612,16 +1639,18 @@ E[S_N] = E\left[\sum_{n=1}^{N} X_n\right] = \sum_{n=1}^{N} E[X_n] = N\mu
 <div class="tip admonition">
 <p class="admonition-title">Problem 1: Reflecting on Normal Distribution in Risk Management</p>
 <p><strong>Context:</strong> We consider a continuous random variable <span class="math notranslate nohighlight">\(X\)</span> representing the profit and loss of a portfolio.</p>
-<p><strong>Definition - Value at Risk (VaR):</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Definition - Value at Risk (VaR):</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \text{VaR}_q(X) = x_q
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span>x_q<span class="math notranslate nohighlight">\( denotes the \)</span>q<span class="math notranslate nohighlight">\(-quantile of the distribution of \)</span>X$.</p>
-<p><strong>Quantile Definition:</strong> Denoting by <span class="math notranslate nohighlight">\(F\)</span> the cumulative distribution function of the loss:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(x_q\)</span> denotes the <span class="math notranslate nohighlight">\(q\)</span>-quantile of the distribution of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p><strong>Quantile Definition:</strong> Denoting by <span class="math notranslate nohighlight">\(F\)</span> the cumulative distribution function of the loss:</p>
+<div class="math notranslate nohighlight">
+\[
 x_q = F^{-1}(q)
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span>F^{-1}<span class="math notranslate nohighlight">\( denotes the inverse function of \)</span>F$.</p>
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(F^{-1}\)</span> denotes the inverse function of <span class="math notranslate nohighlight">\(F\)</span>.</p>
 <p><strong>Interpretation:</strong> There is only a <span class="math notranslate nohighlight">\(q\%\)</span> probability of incurring a loss of at least <span class="math notranslate nohighlight">\(\text{VaR}_q\)</span> during the time period.</p>
 <p><strong>Questions:</strong></p>
 <ol class="arabic">

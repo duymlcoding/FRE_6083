@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -617,10 +617,11 @@ document.write(`
 <p>Consider the discrete-time and discrete-state process that we have seen in the first lecture: the symmetric random walk.</p>
 <p><strong>Experiment <span class="math notranslate nohighlight">\(\mathcal{E}\)</span>:</strong> A coin is tossed infinitely many times</p>
 <p><strong>Time set:</strong> <span class="math notranslate nohighlight">\(\mathcal{T} = \{0, 1, 2, \ldots\}\)</span></p>
-<p><strong>Sample space:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Sample space:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \Omega = \{\omega = \omega_1 \omega_2 \ldots \omega_n \mid \omega_n \text{ is the outcome of the } n\text{th coin toss}\}
-\)</span>$</p>
+\]</div>
 <p>At each toss, a <strong>head</strong> or a <strong>tail</strong> is obtained with respective probabilities <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(1-p\)</span>.</p>
 </div>
 <section id="one-step-increment">
@@ -650,12 +651,14 @@ X_0 = 0, \quad X_n = \sum_{i=1}^{n} Y_i \quad \text{for all } n \geq 1
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>First and Second Moments:</strong></p>
-<ul class="simple">
+<ul>
 <li><p><strong>First moment (mean):</strong> <span class="math notranslate nohighlight">\(E[X(t)]\)</span></p></li>
-<li><p><strong>Second moment (variance):</strong>
-$<span class="math notranslate nohighlight">\(
-\text{Var}[X(t)] = E[(X(t) - E[X(t)])^2]
-\)</span>$</p></li>
+<li><p><strong>Second moment (variance):</strong></p>
+<div class="math notranslate nohighlight">
+\[
+  \text{Var}[X(t)] = E[(X(t) - E[X(t)])^2]
+  \]</div>
+</li>
 </ul>
 </div>
 <p>Some examples were shown in Chapter 1. One can also compute higher moments in a similar way, provided they exist.</p>
@@ -792,10 +795,11 @@ X_{k_{i+1}} - X_{k_i} = \sum_{j=k_i+1}^{k_{i+1}} Y_j
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Properties of Random Walk:</strong></p>
-<p>The increments:
-$<span class="math notranslate nohighlight">\(
+<p>The increments:</p>
+<div class="math notranslate nohighlight">
+\[
 X_{k_1} - X_0, \quad X_{k_2} - X_{k_1}, \quad \ldots, \quad X_{k_i+1} - X_{k_i}, \quad \ldots, \quad X_{k_m} - X_{k_{m-1}}
-\)</span>$</p>
+\]</div>
 <p>are <strong>independent</strong> random variables. So we can state that the random walk has <strong>independent increments</strong>.</p>
 <p>Clearly, the increments of the random walk are also <strong>stationary</strong> since the coin tosses are independent and identical.</p>
 </div>
@@ -804,12 +808,14 @@ X_{k_1} - X_0, \quad X_{k_2} - X_{k_1}, \quad \ldots, \quad X_{k_i+1} - X_{k_i},
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Derivation of Mean and Variance</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>Mean of increment:</strong>
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text"><strong>Mean of increment:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 E[X_{k_{i+1}} - X_{k_i}] = \sum_{j=k_i+1}^{k_{i+1}} E[Y_j] = 0
-\)</span>$</p>
-<p class="sd-card-text"><strong>Variance of increment:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text"><strong>Variance of increment:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{align}
 \text{Var}[X_{k_{i+1}} - X_{k_i}] &amp;= E\left[\left(\sum_{j=k_i+1}^{k_{i+1}} Y_j\right)^2\right] \\
 &amp;= E\left[\sum_{j=k_i+1}^{k_{i+1}} Y_j^2 + \sum_{j=k_i+1}^{k_{i+1}} \sum_{k \neq j} Y_j Y_k\right] \\
@@ -817,7 +823,7 @@ $<span class="math notranslate nohighlight">\(
 &amp;= \sum_{j=k_i+1}^{k_{i+1}} 1 + \sum_{j=k_i+1}^{k_{i+1}} \sum_{k \neq j} 0 \\
 &amp;= k_{i+1} - k_i
 \end{align}
-\)</span>$</p>
+\end{split}\]</div>
 </div>
 </details><p><strong>Physical Meaning:</strong> The variance of the increment over the time interval <span class="math notranslate nohighlight">\([k_i, k_{i+1}]\)</span> is equal to <span class="math notranslate nohighlight">\(k_{i+1} - k_i\)</span>, the length of the interval. This is characteristic of diffusive processes.</p>
 </section>
@@ -933,20 +939,26 @@ F(x_1, \ldots, x_n; t_1, \ldots, t_n) = F(x_1, \ldots, x_n; t_1+s, \ldots, t_n+s
 <p><strong>SSS Implies WSS:</strong></p>
 <p>If the process <span class="math notranslate nohighlight">\(X\)</span> is strict stationary, it will also satisfy the wide-sense stationarity definition.</p>
 <p><strong>Proof:</strong></p>
-<ol class="arabic simple">
-<li><p>If <span class="math notranslate nohighlight">\(X\)</span> is strict stationary, we have that for all <span class="math notranslate nohighlight">\(t \geq 0\)</span>:
-$<span class="math notranslate nohighlight">\(
-E[X(t)] = E[X(0)]
-\)</span>$</p></li>
-<li><p>By strict stationarity of <span class="math notranslate nohighlight">\(X\)</span>:
-$<span class="math notranslate nohighlight">\(
-E[X(t)X(t+h)] = E[X(0)X(h)]
-\)</span><span class="math notranslate nohighlight">\(
-which only depends on \)</span>h$.</p></li>
-<li><p>Finally, if <span class="math notranslate nohighlight">\(X\)</span> is strict stationary, its variance does not depend on time:
-$<span class="math notranslate nohighlight">\(
-\text{var}(X(t)) = E[X(t)X(t)] - E[X(t)]^2 = E[X(0)^2] - E[X(0)]^2
-\)</span>$</p></li>
+<ol class="arabic">
+<li><p>If <span class="math notranslate nohighlight">\(X\)</span> is strict stationary, we have that for all <span class="math notranslate nohighlight">\(t \geq 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   E[X(t)] = E[X(0)]
+   \]</div>
+</li>
+<li><p>By strict stationarity of <span class="math notranslate nohighlight">\(X\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   E[X(t)X(t+h)] = E[X(0)X(h)]
+   \]</div>
+<p>which only depends on <span class="math notranslate nohighlight">\(h\)</span>.</p>
+</li>
+<li><p>Finally, if <span class="math notranslate nohighlight">\(X\)</span> is strict stationary, its variance does not depend on time:</p>
+<div class="math notranslate nohighlight">
+\[
+   \text{var}(X(t)) = E[X(t)X(t)] - E[X(t)]^2 = E[X(0)^2] - E[X(0)]^2
+   \]</div>
+</li>
 </ol>
 </div>
 </section>
@@ -980,8 +992,9 @@ E[X(t)] = tE[Y]
 <p class="sd-card-text"><strong>Mean:</strong>
 Firstly, we have seen earlier that, for all <span class="math notranslate nohighlight">\(k\)</span>, <span class="math notranslate nohighlight">\(E[X_k] = 0\)</span>. So the random walk <span class="math notranslate nohighlight">\((X_k)_k\)</span> is independent of the time index <span class="math notranslate nohighlight">\(k\)</span>.</p>
 <p class="sd-card-text"><strong>Autocovariance:</strong>
-Next, we need to compute:
-$<span class="math notranslate nohighlight">\(
+Next, we need to compute:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{align}
 R_X(k, k+j) &amp;= E[X_k X_{k+j}] \\
 &amp;= E[X_k(X_{k+j} - X_k) + X_k^2] \\
@@ -989,7 +1002,7 @@ R_X(k, k+j) &amp;= E[X_k X_{k+j}] \\
 &amp;= 0 + E[X_k^2] \\
 &amp;= k
 \end{align}
-\)</span>$</p>
+\end{split}\]</div>
 <p class="sd-card-text"><strong>Conclusion:</strong> The symmetric random walk is <strong>not WSS</strong> since <span class="math notranslate nohighlight">\(R_X(k, k+j)\)</span> depends on the time variable <span class="math notranslate nohighlight">\(k\)</span>.</p>
 </div>
 </details><p><strong>Physical Meaning:</strong> Even though the random walk has constant mean, its autocovariance structure changes with absolute time, making it non-stationary.</p>
@@ -1112,14 +1125,15 @@ X_k = \bar{X}_k + \sum_{j=1}^{m} c_{kj} Z_j
 <p class="admonition-title">Note</p>
 <p><strong>Key Properties:</strong></p>
 <p>An immediate consequence of this definition is that any <strong>affine combination</strong> of multi-normally distributed random vectors has a multi-normal distribution.</p>
-<p>Furthermore:
-$<span class="math notranslate nohighlight">\(
+<p>Furthermore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{align}
 E[X_k] &amp;= \bar{X}_k \\
 \text{Var}[X_k] &amp;= \sum_{j=1}^{m} c_{kj}^2 \\
 \text{Cov}[X_i, X_k] &amp;= \sum_{l=1}^{m} c_{il} c_{kl}
 \end{align}
-\)</span>$</p>
+\end{split}\]</div>
 </div>
 </section>
 <section id="joint-distribution">
@@ -1254,18 +1268,20 @@ E[\langle X \rangle_{\tau}] = \frac{1}{\tau} \int_0^{\tau} E[X(t)] \, dt = m
 <p class="admonition-title">Example 1: Time-Independent Process (Not Ergodic)</p>
 <p>Let <span class="math notranslate nohighlight">\(X(t) = Y\)</span>, where <span class="math notranslate nohighlight">\(Y\)</span> is a random variable, for all <span class="math notranslate nohighlight">\(t\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(X\)</span> is <strong>not mean-ergodic</strong>.</p>
-<p>Indeed:
-$<span class="math notranslate nohighlight">\(
+<p>Indeed:</p>
+<div class="math notranslate nohighlight">
+\[
 E[X(t)] = E[Y]
-\)</span>$</p>
+\]</div>
 <div class="math notranslate nohighlight">
 \[
 \langle X \rangle_s = \frac{1}{s} \int_0^s X(u) \, du = \frac{1}{s} \int_0^s Y \, du = Y
 \]</div>
-<p>Consequently:
-$<span class="math notranslate nohighlight">\(
+<p>Consequently:</p>
+<div class="math notranslate nohighlight">
+\[
 \text{var}[\langle X \rangle_s] = \text{var}[Y] \neq 0
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> The time average equals the random variable <span class="math notranslate nohighlight">\(Y\)</span> itself, not its expected value. Different sample paths give different time averages.</p>
 <div class="tip admonition">
@@ -1308,10 +1324,11 @@ E[\langle X \rangle_k] = E\left[\frac{1}{k} \sum_{i=1}^{k} X_i\right] = \frac{1}
 \[
 \langle Z \rangle_k = \frac{1}{k+1} \sum_{i=0}^{k} (X_{i+1} - X_i) = \frac{1}{k+1}(X_{k+1} - X_0) = \frac{X_{k+1}}{k+1}
 \]</div>
-<p class="sd-card-text">Hence:
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text">Hence:</p>
+<div class="math notranslate nohighlight">
+\[
 E[\langle Z \rangle_k] = 0
-\)</span>$</p>
+\]</div>
 <p class="sd-card-text">and, similarly as in the previous example:</p>
 <div class="math notranslate nohighlight">
 \[

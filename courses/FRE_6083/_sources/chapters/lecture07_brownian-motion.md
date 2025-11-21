@@ -76,6 +76,7 @@ The **quadratic variation** of the symmetric random walk up to time $k$ is denot
 $$
 [X, X]_k = \sum_{j=1}^{k} (X_j - X_{j-1})^2
 $$
+
 ```
 
 ### Computation
@@ -195,6 +196,7 @@ The increments of the rescaled random walk are **stationary**.
 $$
 E[W^{(n)}(t) - W^{(n)}(s)] = 0
 $$
+
 ```
 
 ```{dropdown} Derivation of Variance
@@ -209,6 +211,7 @@ $$
 &= t - s
 \end{align}
 $$
+
 ```
 
 ```{important}
@@ -217,6 +220,7 @@ $$
 $$
 \text{Var}[W^{(n)}(t) - W^{(n)}(s)] = t - s
 $$
+
 ```
 
 **Physical Meaning:** Even though we're taking many small steps, the cumulative variance over a time interval $[s, t]$ is $t-s$. The scaling balances step size against number of steps perfectly.
@@ -254,6 +258,7 @@ $$
 $$
 [W^{(n)}, W^{(n)}](t) = t
 $$
+
 ```
 
 **Physical Meaning:** The quadratic variation equals time itself. This is a fundamental property that distinguishes Brownian motion from smooth functions (which have zero quadratic variation).
@@ -297,6 +302,7 @@ As $n \to +\infty$:
 $$
 W^{(n)}(t) \xrightarrow{d} \mathcal{N}(0, t)
 $$
+
 ```
 
 **Physical Meaning:** No matter what the original step distribution (as long as it has mean 0 and variance 1), the rescaled sum converges to a normal distribution. This is the power of the Central Limit Theorem.
@@ -443,6 +449,7 @@ S_0 & \nearrow & \\
 & & S_1(T) = S_0 d
 \end{array}
 $$
+
 ```
 
 ### Multi-Period Extension
@@ -592,6 +599,7 @@ Equivalently, $\log(S(t))$ has a normal distribution with:
 $$
 S(t) = S(0) e^{-\frac{1}{2}\sigma^2 t + \sigma W(t)}, \quad t \in [0, T]
 $$
+
 ```
 
 ### Advantages
@@ -661,6 +669,7 @@ $$
 $$
 50 \times 0.0416 = 2.08 \text{ dollars}
 $$
+
 ```
 
 **Physical Meaning:** Volatility measures the intensity of random fluctuations. Higher volatility means more uncertain price movements and higher option values.
@@ -745,6 +754,7 @@ One can also relate $x$ to the log return we computed earlier:
 $$
 x = \frac{r(t, \Delta t)}{\Delta t}
 $$
+
 ```
 
 **Physical Meaning:** The continuously compounded return is just the log return divided by the time interval. Its expected value is less than $\mu$ by the amount $\frac{1}{2}\sigma^2$, which is the Jensen's inequality correction term.

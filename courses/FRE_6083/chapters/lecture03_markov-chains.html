@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -534,15 +534,16 @@ P[X_{n+1} = j \mid X_n = i, X_{n-1} = i_{n-1}, \ldots, X_0 = i_0] = P[X_{n+1} = 
 <li><p>The next position depends only on the current position and the coin toss</p></li>
 <li><p>The path taken to reach the current position is irrelevant</p></li>
 </ul>
-<p><strong>Transition probabilities:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Transition probabilities:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{cases}
 j = i+1 &amp; \text{with probability } p \\
 j = i &amp; \text{with probability } r \\
 j = i-1 &amp; \text{with probability } q
 \end{cases}
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span>p + q + r = 1$.</p>
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(p + q + r = 1\)</span>.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -634,18 +635,21 @@ p_{i,j}^{(n)} = P[X_{m+n} = j \mid X_m = i]
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Chapman-Kolmogorov Equations</strong></p>
-<p><strong>Scalar Form:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Scalar Form:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 p_{i,j}^{(m+n)} = \sum_{k=0}^{\infty} p_{i,k}^{(m)} p_{k,j}^{(n)}, \quad \text{for all } m, n, i, j \geq 0
-\)</span>$</p>
-<p><strong>Matrix Form:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Matrix Form:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 P^{(m+n)} = P^{(m)} P^{(n)}
-\)</span>$</p>
-<p><strong>Corollary:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Corollary:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 P^{(n)} = \underbrace{P^{(1)} \cdots P^{(1)}}_{n \text{ times}}
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> To go from state <span class="math notranslate nohighlight">\(i\)</span> to state <span class="math notranslate nohighlight">\(j\)</span> in <span class="math notranslate nohighlight">\(m+n\)</span> steps, we must pass through some intermediate state <span class="math notranslate nohighlight">\(k\)</span> at step <span class="math notranslate nohighlight">\(m\)</span>. We sum over all possible intermediate states, weighted by the probabilities of the two-part journey.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -801,10 +805,11 @@ p_{i,j}^{n+1} = \sum_{k=0}^{\infty} p_{i,k}^n p_{k,j}, \quad \text{for all state
 \[
 \frac{t_j(N)}{N} \to \pi_j \quad \text{as } N \to +\infty \quad \text{(almost surely)}
 \]</div>
-<p>where:
-$<span class="math notranslate nohighlight">\(
+<p>where:</p>
+<div class="math notranslate nohighlight">
+\[
 t_j(N) = \sum_{k \leq N} \mathbb{I}_{\{X_k = j\}}
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> If you run the Markov chain for a very long time, approximately <span class="math notranslate nohighlight">\(100 \times \pi_j\)</span> percent of the time will be spent in state <span class="math notranslate nohighlight">\(j\)</span>.</p>
 </section>
@@ -834,10 +839,11 @@ t_j(N) = \sum_{k \leq N} \mathbb{I}_{\{X_k = j\}}
 \[
 P[X_n = j] = \sum_{i=0}^{\infty} P[X_n = j \mid X_0 = i] P[X_0 = i] = \sum_{i=0}^{\infty} p_{i,j}^{(n)} P[X_0 = i]
 \]</div>
-<p><strong>Matrix Form:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Matrix Form:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \boldsymbol{\pi}^{(n)} = \boldsymbol{\pi}^{(0)} P^n
-\)</span>$</p>
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(\boldsymbol{\pi}^{(n)} = (\pi_1^{(n)}, \pi_2^{(n)}, \ldots, \pi_i^{(n)})\)</span> represents the distribution at time <span class="math notranslate nohighlight">\(n\)</span>.</p>
 </div>
 <div class="admonition note">
@@ -887,10 +893,11 @@ E[X_n \mid X_0 = i] = \sum_{j=1}^{\infty} j \cdot P[X_n = j \mid X_0 = i] = \sum
 <li><p><strong>State 0:</strong> No claim is made</p></li>
 <li><p><strong>State 1:</strong> A claim is made</p></li>
 </ul>
-<p><strong>Transition Probabilities:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Transition Probabilities:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 P[X_{n+1} = 1 \mid X_n = 0] = \alpha, \quad P[X_{n+1} = 0 \mid X_n = 1] = \beta
-\)</span>$</p>
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha, \beta \in (0, 1)\)</span> are given parameters.</p>
 </div>
 <section id="transition-matrix">
@@ -951,8 +958,9 @@ P = \begin{bmatrix}
 1 &amp; 0
 \end{bmatrix}
 \end{split}\]</div>
-<p>We have:
-$<span class="math notranslate nohighlight">\(
+<p>We have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 P^{2k} = \begin{bmatrix}
 1 &amp; 0 \\
 0 &amp; 1
@@ -960,7 +968,7 @@ P^{2k} = \begin{bmatrix}
 0 &amp; 1 \\
 1 &amp; 0
 \end{bmatrix}
-\)</span>$</p>
+\end{split}\]</div>
 <p>The sequence <span class="math notranslate nohighlight">\(P^n\)</span> does not converge. This chain is <strong>periodic</strong> with period 2, hence not ergodic.</p>
 </div>
 </section>
@@ -1157,10 +1165,11 @@ q &amp; 0 &amp; p &amp; &amp; &amp; \\
 r_i^{(n)} = P[X_n = 0 \mid X_0 = i] = p_{i,0}^{(n)}
 \]</div>
 <p><strong>Note:</strong> This is the probability of being bankrupt by step <span class="math notranslate nohighlight">\(n\)</span>, not necessarily at exactly step <span class="math notranslate nohighlight">\(n\)</span>.</p>
-<p><strong>Eventual Ruin:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Eventual Ruin:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 r_i = \lim_{n \to \infty} r_i^{(n)}
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> Once bankrupt (<span class="math notranslate nohighlight">\(X_n = 0\)</span>), the player stays bankrupt forever. So <span class="math notranslate nohighlight">\(r_i^{(n)}\)</span> is non-decreasing in <span class="math notranslate nohighlight">\(n\)</span>.</p>
 </section>
@@ -1169,48 +1178,55 @@ r_i = \lim_{n \to \infty} r_i^{(n)}
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Boundary Conditions and Recursion</strong></p>
-<p><strong>Boundary conditions:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Boundary conditions:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 r_0 = 1, \quad r_k = 0
-\)</span>$</p>
+\]</div>
 <p><strong>Chapman-Kolmogorov approach:</strong></p>
 <p>Letting <span class="math notranslate nohighlight">\(n \to +\infty\)</span> in the Chapman-Kolmogorov equations yields:</p>
 <div class="math notranslate nohighlight">
 \[
 r_i = \sum_{l=0}^{+\infty} p_{i,l}^{(1)} r_l
 \]</div>
-<p>This leads to the system:
-$<span class="math notranslate nohighlight">\(
+<p>This leads to the system:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{cases}
 r_1 = p r_2 + q \\
 r_i = q r_{i-1} + p r_{i+1} &amp; \text{for } i = 2, \ldots, k-2 \\
 r_{k-1} = q r_{k-2}
 \end{cases}
-\)</span>$</p>
+\end{split}\]</div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution for Fair Game (<span class="math notranslate nohighlight">\(p = q = 1/2\)</span>)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Rewriting the general equation:
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text">Rewriting the general equation:</p>
+<div class="math notranslate nohighlight">
+\[
 (p+q)r_i = qr_{i-1} + pr_{i+1}
-\)</span>$</p>
-<p class="sd-card-text">Iterating:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text">Iterating:</p>
+<div class="math notranslate nohighlight">
+\[
 r_{i+1} - r_i = \frac{q}{p}(r_i - r_{i-1}) = \left(\frac{q}{p}\right)^i (r_1 - 1)
-\)</span>$</p>
-<p class="sd-card-text">For <span class="math notranslate nohighlight">\(p = q = 1/2\)</span>:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text">For <span class="math notranslate nohighlight">\(p = q = 1/2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 r_j = 1 + j(r_1 - 1)
-\)</span>$</p>
-<p class="sd-card-text">Using the boundary condition <span class="math notranslate nohighlight">\(r_{k-1} = \frac{1}{2}r_{k-2}\)</span> with <span class="math notranslate nohighlight">\(j = k-1\)</span>:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text">Using the boundary condition <span class="math notranslate nohighlight">\(r_{k-1} = \frac{1}{2}r_{k-2}\)</span> with <span class="math notranslate nohighlight">\(j = k-1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 r_1 = 1 - \frac{1}{k}
-\)</span>$</p>
-<p class="sd-card-text">Therefore:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text">Therefore:</p>
+<div class="math notranslate nohighlight">
+\[
 r_j = 1 - \frac{j}{k} = \frac{k-j}{k}
-\)</span>$</p>
+\]</div>
 <p class="sd-card-text"><strong>Physical Meaning:</strong> For a fair game, the probability of ruin starting with <span class="math notranslate nohighlight">\(i\)</span> dollars is simply the ratio of how far you are from the goal.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1237,14 +1253,16 @@ r_j = \frac{1 - (q/p)^j}{1 - (q/p)^k}
 <p class="admonition-title">Important</p>
 <p><strong>Summary: Probability of Ruin</strong></p>
 <p>Starting with capital <span class="math notranslate nohighlight">\(i\)</span> dollars:</p>
-<p><strong>Fair game (<span class="math notranslate nohighlight">\(p = 1/2\)</span>):</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Fair game (<span class="math notranslate nohighlight">\(p = 1/2\)</span>):</strong></p>
+<div class="math notranslate nohighlight">
+\[
 r_i = \frac{k-i}{k}
-\)</span>$</p>
-<p><strong>Unfair game (<span class="math notranslate nohighlight">\(p \neq 1/2\)</span>):</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Unfair game (<span class="math notranslate nohighlight">\(p \neq 1/2\)</span>):</strong></p>
+<div class="math notranslate nohighlight">
+\[
 r_i = \frac{1 - (q/p)^i}{1 - (q/p)^k}
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 </section>

@@ -58,9 +58,11 @@ The process $\{W(t); t \geq 0\}$ is said to be a **Brownian motion** (or **Wiene
 1. **Continuity:** $W$ is continuous in the variable $t$
 
 2. **Independent Increments:** For all $0 = t_0 < t_1 < t_2 < \cdots < t_n$, the increments
+
    $$
    W(t_1) - W(t_0), \quad W(t_2) - W(t_1), \quad \ldots, \quad W(t_n) - W(t_{n-1})
    $$
+
    are independent
 
 3. **Stationary Increments:** For all $j = 0, \ldots, n-1$, the increment $W(t_{j+1}) - W(t_j)$ is normally distributed with mean 0 and variance $t_{j+1} - t_j$
@@ -158,6 +160,7 @@ t_1 & t_2 & \cdots & t_2 \\
 t_1 & t_2 & \cdots & t_n
 \end{bmatrix}
 $$
+
 ```
 
 **Physical Meaning:** The covariance between values at times $s$ and $t$ equals the minimum of the two times. Values close in time are highly correlated.
@@ -172,6 +175,7 @@ The Brownian motion satisfies the **Markov property** if for all $0 \leq s \leq 
 $$
 P[W(t) \leq x \mid \{W(u); 0 \leq u \leq s\}] = P[W(t) \leq x \mid W(s)]
 $$
+
 ```
 
 **Physical Meaning:** When you look at the future distribution of the Brownian motion, conditionally on its past realizations, the only relevant data is the most recent observation. The past path doesn't matter, only where you are now.
@@ -192,6 +196,7 @@ Taking into account the Markov property, we can rewrite this as:
 $$
 E[W(t) \mid W(s)] = W(s), \quad \forall \, 0 \leq s < t
 $$
+
 ```
 
 **Physical Meaning:** The best prediction of future position, given all past information, is the current position. The Brownian motion is a "fair game" with no drift.
@@ -274,6 +279,7 @@ A continuous function $f$ defined on the real line is said to be **Lipschitz con
 $$
 |f(x) - f(y)| \leq C|x - y|
 $$
+
 ```
 
 ## Quadratic Variation for the Brownian Motion
@@ -288,6 +294,7 @@ For all $T \geq 0$:
 $$
 [W, W](T) = T \quad \text{almost surely}
 $$
+
 ```
 
 ### Definition of Quadratic Variation
@@ -314,6 +321,7 @@ The **quadratic variation** of any function $f$ of the variable $t$ is defined a
 $$
 [f, f](T) = \lim_{\substack{h \to 0 \\ n \to +\infty}} \sum_{i=1}^{n} (f(t_j) - f(t_{j-1}))^2
 $$
+
 ```
 
 **Physical Meaning:** This measures the accumulated squared changes along a path. For smooth functions, this sum approaches zero as we refine the partition. For Brownian motion, it approaches $T$.
@@ -377,6 +385,7 @@ $$
 $$
 P[W(t) \geq a \mid \tau_a \leq t] = \frac{1}{2}
 $$
+
 ```
 
 **Physical Meaning:** Knowing that the Brownian motion has hit $a$ sometime before time $t$, the Brownian motion is equally likely to be above $a$ as below $a$ at time $t$. This is due to the symmetry of the Brownian motion.
@@ -419,6 +428,7 @@ $$
 $$
 P[\tau_a \leq t] = 2\left(1 - \Phi\left(\frac{|a|}{\sqrt{t}}\right)\right)
 $$
+
 ```
 
 ### Density Function
@@ -454,6 +464,7 @@ where:
 $$
 \tau_0 = \inf\{t \geq 0; X(t) \leq 0\} = \inf\left\{t \geq 0; W(t) \leq -\frac{X(0)}{\sigma}\right\}
 $$
+
 ```
 
 ```{dropdown} Solution
@@ -480,9 +491,11 @@ where $\Phi$ is the standard normal cumulative distribution function.
 1. **Option Pricing:** The reflection principle is used for pricing **Barrier options** (e.g., up-and-out calls where the option becomes worthless when the stock price rises above a prescribed barrier $B > K$)
 
 2. **Maximum Distribution:** The payout of barrier options depends on the distribution of the maximum to date:
+
    $$
    M(t) = \max_{0 \leq s \leq t} W(s)
    $$
+
    which is also determined using the reflection principle
 
 3. **Credit Risk:** Merton and Black-Cox developed models for pricing equity and bonds with default risk. Defaulting occurs when the value of assets $A(t)$, modeled as a geometric Brownian motion, falls below a prescribed barrier
@@ -540,6 +553,7 @@ e^{(\mu - \frac{1}{2}\sigma^2)t} E[e^{\sigma\sqrt{t}Y}] &= e^{(\mu - \frac{1}{2}
 &= e^{\mu t}
 \end{align}
 $$
+
 ```
 
 ```{important}
@@ -548,6 +562,7 @@ $$
 $$
 E[X(t)] = e^{\mu t}
 $$
+
 ```
 
 **Physical Meaning:** The geometric Brownian motion has exponential growth (or decay) on average at rate $\mu$. This is why it's used to model stock prices with a constant expected return.
@@ -622,6 +637,7 @@ We consider a standard Brownian motion $W$.
 2. Is $t \in [0, +\infty) \mapsto \sqrt{t}W(1)$ a standard Brownian motion? Justify your answer.
 
 3. Compute the mean and autocovariance function of the process:
+
    $$
    X(t) = \int_0^t W(s) ds
    $$
@@ -643,21 +659,27 @@ $$
 **Questions:**
 
 1. Show that:
+
    $$
    P\left[\max_{0 \leq s \leq t} W(s) \geq m\right] = P[\tau_m \leq t]
    $$
+
    where $\tau_m$ denotes the first time $W$ hits the level $m$.
 
 2. Deduce the cumulative distribution and density functions of $M(t)$.
 
 3. Consider the partition of the time interval $[0, t]$:
+
    $$
    0, \frac{t}{n}, \frac{2t}{n}, \ldots, \frac{jt}{n}, \ldots, \frac{nt}{n} = t
    $$
+
    where $n > 1$, and define the moving average process:
+
    $$
    X_n = \frac{\sum_{j=n-k}^{n} W(jt/n)}{k+1}
    $$
+
    for some $n \geq k$.
 
    Compute the expectation and variance of $X_n$.
@@ -675,14 +697,17 @@ $$
 2. Let $W$ be a standard Brownian motion. Show that $W^2(t) - t$ is a martingale.
 
 3. Consider a standard Brownian motion $W$. Show that the following process is a standard Brownian motion:
+
    $$
    B(t) = cW(t/c^2) \quad \text{for all } t \geq 0
    $$
 
 4. Consider a standard Brownian motion $W$, and the process:
+
    $$
    B(0) = 0, \quad B(t) = tW(1/t) \quad \text{for all } t > 0
    $$
+
    Show that $B$ is a standard Brownian motion by using the definition.
 ```
 

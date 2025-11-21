@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -1101,10 +1101,11 @@ v_t(t, S(t)) + rS(t)v_s(t, S(t)) + \frac{1}{2}\sigma^2 S(t)^2 v_{ss}(t, S(t)) = 
 \[
 v_t(t, s) + rsv_s(t, s) + \frac{1}{2}\sigma^2 s^2 v_{ss}(t, s) = rv(t, s)
 \]</div>
-<p><strong>Terminal Condition:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Terminal Condition:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 v(T, s) = (s - K)^+
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> The option price must satisfy this PDE. The PDE incorporates:</p>
 <ul class="simple">
@@ -1189,17 +1190,22 @@ S(T) = s\exp\left\{\left(r - \frac{1}{2}\sigma^2\right)T + \sigma\sqrt{T} \, Y\r
 <ol class="arabic">
 <li><p><strong>Start</strong> with <span class="math notranslate nohighlight">\(S(0) = s\)</span></p></li>
 <li><p><strong>For each</strong> <span class="math notranslate nohighlight">\(i = 1, \ldots, n\)</span>:</p>
-<p>2.1. <strong>Generate</strong> <span class="math notranslate nohighlight">\(S_i(T)\)</span> using:
-$<span class="math notranslate nohighlight">\(
-     S_i(T) = s\exp\left\{\left(r - \frac{1}{2}\sigma^2\right)T + \sigma\sqrt{T} \, Y_i\right\}
-     \)</span><span class="math notranslate nohighlight">\(
-     where \)</span>Y_i<span class="math notranslate nohighlight">\( is drawn from the standard normal distribution and \)</span>Y_1, Y_2, \ldots, Y_n$ are independent</p>
+<p>2.1. <strong>Generate</strong> <span class="math notranslate nohighlight">\(S_i(T)\)</span> using:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> $$
+ S_i(T) = s\exp\left\{\left(r - \frac{1}{2}\sigma^2\right)T + \sigma\sqrt{T} \, Y_i\right\}
+ $$
+
+ where $Y_i$ is drawn from the standard normal distribution and $Y_1, Y_2, \ldots, Y_n$ are independent
+</pre></div>
+</div>
 <p>2.2. <strong>Set</strong> <span class="math notranslate nohighlight">\(C_i = e^{-rT}(S_i(T) - K)^+\)</span></p>
 </li>
-<li><p><strong>Compute the average:</strong>
-$<span class="math notranslate nohighlight">\(
-\hat{C}_n = \frac{1}{n}\sum_{i=1}^{n} C_i
-\)</span>$</p></li>
+<li><p><strong>Compute the average:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   \hat{C}_n = \frac{1}{n}\sum_{i=1}^{n} C_i
+   \]</div>
+</li>
 </ol>
 </div>
 <p><strong>Physical Meaning:</strong> Simulate many possible future stock prices under the risk-neutral measure, compute the discounted payoff for each, and average them.</p>
@@ -1222,24 +1228,29 @@ $<span class="math notranslate nohighlight">\(
 <p class="admonition-title">Important</p>
 <p><strong>Statistical Properties:</strong></p>
 <ol class="arabic">
-<li><p><strong>Strong Law of Large Numbers:</strong> The estimator:
-$<span class="math notranslate nohighlight">\(
-\hat{C}_n = \frac{1}{n}\sum_{i=1}^{n} C_i
-\)</span><span class="math notranslate nohighlight">\(
-converges to the price of the European call as \)</span>n \to \infty$</p></li>
-<li><p><strong>Unbiased Estimator:</strong>
-$<span class="math notranslate nohighlight">\(
-E[\hat{C}_n] = \tilde{E}[e^{-rT}(S(T) - K)^+ \mid S(0) = s]
-\)</span>$</p></li>
+<li><p><strong>Strong Law of Large Numbers:</strong> The estimator:</p>
+<div class="math notranslate nohighlight">
+\[
+   \hat{C}_n = \frac{1}{n}\sum_{i=1}^{n} C_i
+   \]</div>
+<p>converges to the price of the European call as <span class="math notranslate nohighlight">\(n \to \infty\)</span></p>
+</li>
+<li><p><strong>Unbiased Estimator:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   E[\hat{C}_n] = \tilde{E}[e^{-rT}(S(T) - K)^+ \mid S(0) = s]
+   \]</div>
+</li>
 <li><p><strong>Central Limit Theorem:</strong> The distribution of the error is normal with:</p>
 <ul class="simple">
 <li><p>Mean: 0</p></li>
 <li><p>Standard deviation: <span class="math notranslate nohighlight">\(s_C/\sqrt{n}\)</span></p></li>
 </ul>
-<p>where <span class="math notranslate nohighlight">\(s_C\)</span> can be estimated by the unbiased estimator:
-$<span class="math notranslate nohighlight">\(
-s_C = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(C_i - \hat{C}_n)^2}
-\)</span>$</p>
+<p>where <span class="math notranslate nohighlight">\(s_C\)</span> can be estimated by the unbiased estimator:</p>
+<div class="math notranslate nohighlight">
+\[
+   s_C = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(C_i - \hat{C}_n)^2}
+   \]</div>
 </li>
 </ol>
 </div>

@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -518,10 +518,11 @@ document.write(`
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>American Option Value:</strong></p>
-<p>At any time <span class="math notranslate nohighlight">\(t \leq T\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p>At any time <span class="math notranslate nohighlight">\(t \leq T\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 C_A(t) = \max(S(t) - K, C_{\text{cont}}(t))
-\)</span>$</p>
+\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(S(t) - K\)</span> = immediate exercise value (intrinsic value)</p></li>
@@ -551,10 +552,11 @@ C_A(t) \geq C_E(t)
 <li><p class="sd-card-text">Exercise immediately: receive <span class="math notranslate nohighlight">\(S(t) - K\)</span></p></li>
 <li><p class="sd-card-text">Wait until <span class="math notranslate nohighlight">\(T\)</span>: receive <span class="math notranslate nohighlight">\(C_{\text{cont}}(t)\)</span></p></li>
 </ol>
-<p class="sd-card-text">Therefore:
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text">Therefore:</p>
+<div class="math notranslate nohighlight">
+\[
 C_A(t) = \max(S(t) - K, C_{\text{cont}}(t)) \geq C_{\text{cont}}(t) = C_E(t)
-\)</span>$</p>
+\]</div>
 <p class="sd-card-text"><strong>Backward induction:</strong> Iterate this argument backward in time to show <span class="math notranslate nohighlight">\(C_A(t) \geq C_E(t)\)</span> for all <span class="math notranslate nohighlight">\(t \leq T\)</span>.</p>
 </div>
 </details></section>
@@ -566,10 +568,11 @@ C_A(t) = \max(S(t) - K, C_{\text{cont}}(t)) \geq C_{\text{cont}}(t) = C_E(t)
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Theorem: No Early Exercise for Calls Without Dividends</strong></p>
-<p>For an American call option on a <strong>non-dividend-paying</strong> asset:
-$<span class="math notranslate nohighlight">\(
+<p>For an American call option on a <strong>non-dividend-paying</strong> asset:</p>
+<div class="math notranslate nohighlight">
+\[
 C_A(t) = C_{\text{cont}}(t) = C_E(t) \quad \text{for all } t \leq T
-\)</span>$</p>
+\]</div>
 <p><strong>Conclusion:</strong> It is <strong>never optimal</strong> to exercise early a call on a non-dividend-paying asset.</p>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -587,14 +590,16 @@ C_A(t) &amp;= \max(S(t) - K, C_{\text{cont}}(t)) \\
 \end{align}
 \end{split}\]</div>
 <p class="sd-card-text">where the last inequality holds because <span class="math notranslate nohighlight">\(e^{-r(T-t)} &lt; 1\)</span> for <span class="math notranslate nohighlight">\(t &lt; T\)</span> and <span class="math notranslate nohighlight">\(r &gt; 0\)</span>.</p>
-<p class="sd-card-text"><strong>Conclusion:</strong>
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text"><strong>Conclusion:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \max(S(t) - K, C_{\text{cont}}(t)) &gt; S(t) - K \quad \text{for all } t &lt; T
-\)</span>$</p>
-<p class="sd-card-text">Therefore:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text">Therefore:</p>
+<div class="math notranslate nohighlight">
+\[
 C_A(t) = C_{\text{cont}}(t) = C_E(t)
-\)</span>$</p>
+\]</div>
 </div>
 </details><p><strong>Physical Meaning:</strong> Even when in-the-money, it’s better to sell the American call or hold it than to exercise it early. The time value of the option exceeds the benefit of immediate exercise.</p>
 </section>
@@ -624,10 +629,11 @@ C_A(t) = C_{\text{cont}}(t) = C_E(t)
 <li><p>Sell the share at <span class="math notranslate nohighlight">\(\$105\)</span></p></li>
 <li><p>Invest proceeds of <span class="math notranslate nohighlight">\(\$5\)</span> in a 3-month bond</p></li>
 </ol>
-<p><strong>Cash position in 3 months:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Cash position in 3 months:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 5 \times e^{0.05 \times 0.25} = 5 \times 1.0126 = \$5.06
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="strategy-2-short-the-asset-and-hold-the-option">
@@ -672,10 +678,11 @@ $<span class="math notranslate nohighlight">\(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Black-Scholes Model with Dividends:</strong></p>
-<p>Under the risk-neutral measure:
-$<span class="math notranslate nohighlight">\(
+<p>Under the risk-neutral measure:</p>
+<div class="math notranslate nohighlight">
+\[
 dS(t) = (r - \delta)S(t)dt + \sigma S(t)d\tilde{W}(t)
-\)</span>$</p>
+\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> = continuous dividend rate</p></li>
@@ -689,22 +696,26 @@ dS(t) = (r - \delta)S(t)dt + \sigma S(t)d\tilde{W}(t)
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Dividend Accumulation</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">If dividends are reinvested in the cash account, <span class="math notranslate nohighlight">\(D(t)\)</span> satisfies:
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text">If dividends are reinvested in the cash account, <span class="math notranslate nohighlight">\(D(t)\)</span> satisfies:</p>
+<div class="math notranslate nohighlight">
+\[
 dD(t) = (rD(t) + \delta S(t))dt, \quad D(0) = 0
-\)</span>$</p>
-<p class="sd-card-text"><strong>Discounted dividend process:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text"><strong>Discounted dividend process:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 d(e^{-rt}D(t)) = \delta e^{-rt}S(t)dt
-\)</span>$</p>
-<p class="sd-card-text"><strong>Integrating from 0 to <span class="math notranslate nohighlight">\(t\)</span>:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text"><strong>Integrating from 0 to <span class="math notranslate nohighlight">\(t\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 e^{-rt}D(t) = \int_0^t e^{-ru}S(u)\delta \, du
-\)</span>$</p>
-<p class="sd-card-text"><strong>Taking expectations:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text"><strong>Taking expectations:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \tilde{E}[e^{-rt}D(t)] = \int_0^t \tilde{E}[e^{-ru}S(u)]\delta \, du = \int_0^t S(0)e^{-\delta u}\delta \, du = S(0)(1 - e^{-\delta t})
-\)</span>$</p>
+\]</div>
 <p class="sd-card-text">by the martingale property of <span class="math notranslate nohighlight">\(e^{-(r-\delta)t}S(t)\)</span>.</p>
 </div>
 </details></section>
@@ -713,18 +724,21 @@ $<span class="math notranslate nohighlight">\(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Put-Call Parity (Dividend Case):</strong></p>
-<p>At time <span class="math notranslate nohighlight">\(T\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p>At time <span class="math notranslate nohighlight">\(T\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 (K - S(T))^+ + S(T) = (S(T) - K)^+ + K
-\)</span>$</p>
-<p><strong>Taking discounted expectations under <span class="math notranslate nohighlight">\(\tilde{P}\)</span>:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Taking discounted expectations under <span class="math notranslate nohighlight">\(\tilde{P}\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 e^{-rT}\tilde{E}[(K - S(T))^+] + e^{-rT}\tilde{E}[S(T)] = e^{-rT}\tilde{E}[(S(T) - K)^+] + e^{-rT}K
-\)</span>$</p>
-<p><strong>Using martingale property:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Using martingale property:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 S(0)e^{-\delta T} + P_E(0) = C_E(0) + e^{-rT}K
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="early-exercise-with-dividends">
@@ -737,14 +751,16 @@ S(0)e^{-\delta T} + P_E(0) = C_E(0) + e^{-rT}K
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Analysis</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">From put-call parity:
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text">From put-call parity:</p>
+<div class="math notranslate nohighlight">
+\[
 C_A(0) \geq C_E(0) = P_E(0) + S(0)e^{-\delta T} - e^{-rT}K
-\)</span>$</p>
-<p class="sd-card-text">But:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text">But:</p>
+<div class="math notranslate nohighlight">
+\[
 P_E(0) + S(0)e^{-\delta T} - e^{-rT}K \not\geq S(0) - K
-\)</span>$</p>
+\]</div>
 <p class="sd-card-text">in general (depends on <span class="math notranslate nohighlight">\(\delta\)</span>).</p>
 <p class="sd-card-text">The presence of <span class="math notranslate nohighlight">\(\delta\)</span> means we cannot use the same argument as in the no-dividend case.</p>
 </div>
@@ -819,14 +835,16 @@ P_E(0) + S(0)e^{-\delta T} - e^{-rT}K \not\geq S(0) - K
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>PDE Formulation:</strong></p>
-<p>The Black-Scholes PDE:
-$<span class="math notranslate nohighlight">\(
+<p>The Black-Scholes PDE:</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{\partial c}{\partial t} + \frac{1}{2}\sigma^2 s^2 \frac{\partial^2 c}{\partial s^2} + rs\frac{\partial c}{\partial s} - rc = 0
-\)</span>$</p>
-<p>can be rewritten as:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>can be rewritten as:</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{1}{2}\sigma^2 s^2 \Gamma = \Theta + r(c - s\Delta)
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> This equation balances the convexity correction (gamma term) against time decay and the cost of carry.</p>
 </section>
@@ -865,22 +883,26 @@ $<span class="math notranslate nohighlight">\(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Greeks for European Call:</strong></p>
-<p><strong>Delta:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Delta:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \Delta(t, s) = N(d_+(T-t, s))
-\)</span>$</p>
-<p><strong>Gamma:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Gamma:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \Gamma(t, s) = \frac{N'(d_+(T-t, s))}{s\sigma\sqrt{T-t}}
-\)</span>$</p>
-<p><strong>Theta:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Theta:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \Theta(t, s) = -\frac{1}{2}\sigma s \frac{N'(d_+(T-t, s))}{\sqrt{T-t}} + rKe^{-r(T-t)}N(d_-(T-t, s))
-\)</span>$</p>
-<p>where:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>where:</p>
+<div class="math notranslate nohighlight">
+\[
 d_\pm(T-t, s) = \frac{\ln(s/K) + (r \pm \frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}
-\)</span>$</p>
+\]</div>
 <p>and <span class="math notranslate nohighlight">\(N(\cdot)\)</span> is the standard normal CDF, <span class="math notranslate nohighlight">\(N'(\cdot)\)</span> is the standard normal PDF.</p>
 </div>
 </section>
@@ -889,18 +911,21 @@ d_\pm(T-t, s) = \frac{\ln(s/K) + (r \pm \frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Greeks for European Put:</strong></p>
-<p><strong>Delta:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Delta:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \Delta(t, s) = N(d_+(T-t, s)) - 1
-\)</span>$</p>
-<p><strong>Gamma:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Gamma:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \Gamma(t, s) = \frac{N'(d_+(T-t, s))}{s\sigma\sqrt{T-t}}
-\)</span>$</p>
-<p><strong>Theta:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Theta:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \Theta(t, s) = -\frac{1}{2}\sigma s \frac{N'(d_+(T-t, s))}{\sqrt{T-t}} - rKe^{-r(T-t)}N(-d_-(T-t, s))
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="properties">
@@ -939,10 +964,11 @@ $<span class="math notranslate nohighlight">\(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Hedging Portfolio Evolution:</strong></p>
-<p>The hedging portfolio value <span class="math notranslate nohighlight">\(X(t)\)</span> evolves as:
-$<span class="math notranslate nohighlight">\(
+<p>The hedging portfolio value <span class="math notranslate nohighlight">\(X(t)\)</span> evolves as:</p>
+<div class="math notranslate nohighlight">
+\[
 dX(t) = \Delta(t, S(t))dS(t) + r(X(t) - \Delta(t, S(t))S(t))dt
-\)</span>$</p>
+\]</div>
 <p><strong>Interpretation:</strong></p>
 <ul class="simple">
 <li><p>First term: gains/losses from holding stock</p></li>
@@ -955,19 +981,21 @@ dX(t) = \Delta(t, S(t))dS(t) + r(X(t) - \Delta(t, S(t))S(t))dt
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Derivation of P&amp;L Dynamics</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The value of the portfolio (long call, short hedge):
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text">The value of the portfolio (long call, short hedge):</p>
+<div class="math notranslate nohighlight">
+\[
 d(c(t, S(t)) - X(t))
-\)</span>$</p>
-<p class="sd-card-text">Expanding:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text">Expanding:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{align}
 &amp;= dc(t, S(t)) - \Delta(t, S(t))dS(t) - r(X(t) - \Delta(t, S(t))S(t))dt \\
 &amp;= \left(\Theta(t, S(t)) + \frac{1}{2}\sigma^2 S(t)^2 \Gamma(t, S(t))\right)dt + \Delta(t, S(t))dS(t) \\
 &amp;\quad - \Delta(t, S(t))dS(t) - r(X(t) - \Delta(t, S(t))S(t))dt \\
 &amp;= \left(\Theta(t, S(t)) - r(X(t) - \Delta(t, S(t))S(t)) + \frac{1}{2}\sigma^2 S(t)^2 \Gamma(t, S(t))\right)dt
 \end{align}
-\)</span>$</p>
+\end{split}\]</div>
 </div>
 </details><div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -1023,19 +1051,21 @@ $<span class="math notranslate nohighlight">\(
 <li><p><strong>Long</strong> a call option with price <span class="math notranslate nohighlight">\(c(t, s)\)</span></p></li>
 <li><p><strong>Short</strong> the delta hedge</p></li>
 </ul>
-<p><strong>Portfolio value:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Portfolio value:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 V(t) = c(t, S(t)) - \Delta_c(t)S(t)
-\)</span>$</p>
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Delta_c(t) = \Delta(t, S(t))\)</span> is the delta of the call.</p>
 </div>
 </section>
 <section id="delta-of-the-portfolio">
 <h3>Delta of the Portfolio<a class="headerlink" href="#delta-of-the-portfolio" title="Link to this heading">#</a></h3>
-<p>Define the portfolio value function:
-$<span class="math notranslate nohighlight">\(
+<p>Define the portfolio value function:</p>
+<div class="math notranslate nohighlight">
+\[
 v(t, s) = c(t, s) - \Delta_c(t)s
-\)</span>$</p>
+\]</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Portfolio Delta:</strong></p>
@@ -1146,20 +1176,22 @@ v(t, s) = c(t, s) - \Delta_c(t)s
 dc(t, S(t)) - dX(t) = (\Theta_c - \alpha\Theta_{c'} - r(X(t) - \beta S(t) - \alpha c'))dt
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\Theta_c\)</span> and <span class="math notranslate nohighlight">\(\Theta_{c'}\)</span> are the thetas of the two options.</p>
-<p><strong>Premium over risk-free:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Premium over risk-free:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \Theta_c - \alpha\Theta_{c'}
-\)</span>$</p>
+\]</div>
 <p><strong>Key observation:</strong> No <span class="math notranslate nohighlight">\(dS\)</span> term (delta-neutral) and no <span class="math notranslate nohighlight">\((dS)^2\)</span> term (gamma-neutral)!</p>
 </div>
 <p><strong>Physical Meaning:</strong> The delta-gamma-neutral portfolio earns theta (time decay) without exposure to stock price movements or convexity risk.</p>
 </section>
 <section id="portfolio-greeks">
 <h3>Portfolio Greeks<a class="headerlink" href="#portfolio-greeks" title="Link to this heading">#</a></h3>
-<p>Define the portfolio value:
-$<span class="math notranslate nohighlight">\(
+<p>Define the portfolio value:</p>
+<div class="math notranslate nohighlight">
+\[
 H(t) = c(t, S(t)) - \beta S(t) - \alpha c'(t, S(t))
-\)</span>$</p>
+\]</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Portfolio Greeks:</strong></p>
@@ -1184,10 +1216,11 @@ H(t) = c(t, S(t)) - \beta S(t) - \alpha c'(t, S(t))
 <p class="admonition-title">Note</p>
 <p><strong>Unhedged P&amp;L:</strong></p>
 <p>For a holder of a European call who does <strong>not hedge</strong>:</p>
-<p><strong>At maturity:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>At maturity:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \text{P\&amp;L}(T) = (S(T) - K)^+ - e^{rT}C(0, S(0))
-\)</span>$</p>
+\]</div>
 <p><strong>Interpretation:</strong> Payoff minus the future value of the initial cost.</p>
 </div>
 </section>
@@ -1196,10 +1229,11 @@ $<span class="math notranslate nohighlight">\(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Hedged P&amp;L:</strong></p>
-<p>For a holder who <strong>does hedge</strong>:
-$<span class="math notranslate nohighlight">\(
+<p>For a holder who <strong>does hedge</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
 \text{P\&amp;L}(T) = (S(T) - K)^+ - X(T)
-\)</span>$</p>
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(X(T)\)</span> is the terminal value of the hedging portfolio.</p>
 </div>
 <p><strong>Physical Meaning:</strong> The hedge transforms the risky payoff into a (hopefully) deterministic profit equal to the option’s initial theoretical value.</p>
@@ -1252,14 +1286,16 @@ dc(t, S(t)) - dX(t) &amp;= c_t dt + c_s dS(t) + \frac{1}{2}c_{ss}(dS(t))^2 \\
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Vega Definition:</strong></p>
-<p>Measures sensitivity to volatility <span class="math notranslate nohighlight">\(\sigma\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p>Measures sensitivity to volatility <span class="math notranslate nohighlight">\(\sigma\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 \mathcal{V} = \frac{\partial c}{\partial \sigma}
-\)</span>$</p>
-<p><strong>Black-Scholes Formula:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Black-Scholes Formula:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \mathcal{V} = sN'(d_+(T-t, s))\sqrt{T-t} = s\sqrt{T-t}\sigma \Gamma
-\)</span>$</p>
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(s = S(t)\)</span>.</p>
 </div>
 <p><strong>Physical Meaning:</strong> Vega measures how much the option price changes for a 1% change in volatility. It’s crucial for volatility trading and risk management.</p>
@@ -1274,14 +1310,16 @@ $<span class="math notranslate nohighlight">\(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Higher-Order Greeks:</strong></p>
-<p><strong>Volga (Vomma):</strong> Second derivative with respect to volatility
-$<span class="math notranslate nohighlight">\(
+<p><strong>Volga (Vomma):</strong> Second derivative with respect to volatility</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{\partial^2 c}{\partial \sigma^2}
-\)</span>$</p>
-<p><strong>Vanna:</strong> Cross-derivative
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Vanna:</strong> Cross-derivative</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{\partial^2 c}{\partial s \partial \sigma}
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong></p>
 <ul class="simple">
@@ -1294,10 +1332,11 @@ $<span class="math notranslate nohighlight">\(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Rho Definition:</strong></p>
-<p>Measures sensitivity to interest rate <span class="math notranslate nohighlight">\(r\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p>Measures sensitivity to interest rate <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 \rho = \frac{\partial c}{\partial r}
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Physical Meaning:</strong> How much the option price changes when interest rates change by 1%. Less important for short-dated options, more important for long-dated options.</p>
 </section>
@@ -1310,10 +1349,11 @@ $<span class="math notranslate nohighlight">\(
 <p class="admonition-title">Note</p>
 <p><strong>Generalization:</strong></p>
 <p>Let volatility fluctuate randomly over time: <span class="math notranslate nohighlight">\(\sigma(t)\)</span>.</p>
-<p><strong>Option price:</strong> Now depends on <span class="math notranslate nohighlight">\(\sigma(t)\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p><strong>Option price:</strong> Now depends on <span class="math notranslate nohighlight">\(\sigma(t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 c(t, S(t), \sigma(t))
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="ito-s-formula">
@@ -1346,14 +1386,16 @@ dc(t, S(t), \sigma(t)) &amp;= c_t dt + c_s dS(t) + c_\sigma d\sigma(t) \\
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Proof</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>Portfolio vega:</strong>
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text"><strong>Portfolio vega:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \mathcal{V}_{\text{portfolio}} = c_\sigma - \alpha c'_\sigma = s\sqrt{T-t}\sigma \Gamma_c - \alpha s\sqrt{T-t}\sigma \Gamma_{c'}
-\)</span>$</p>
-<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\alpha = \Gamma_c / \Gamma_{c'}\)</span>:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\alpha = \Gamma_c / \Gamma_{c'}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 \mathcal{V}_{\text{portfolio}} = s\sqrt{T-t}\sigma \Gamma_c - \frac{\Gamma_c}{\Gamma_{c'}} s\sqrt{T-t}\sigma \Gamma_{c'} = 0
-\)</span>$</p>
+\]</div>
 </div>
 </details><p><strong>Physical Meaning:</strong> Hedging gamma automatically hedges vega when using options on the same underlying with the same volatility exposure.</p>
 </section>

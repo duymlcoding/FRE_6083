@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -516,17 +516,19 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Example: Limiting Frequency of Heads</p>
 <p><strong>Experiment:</strong> Infinite coin toss with probability <span class="math notranslate nohighlight">\(p\)</span> of falling on heads.</p>
-<p><strong>Random Variable:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Random Variable:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 X_n = \begin{cases}
 1 &amp; \text{if a head is obtained at the } n\text{th toss} \\
 0 &amp; \text{if a tail is obtained at the } n\text{th toss}
 \end{cases}
-\)</span>$</p>
-<p><strong>Study the Limit:</strong>
-$<span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p><strong>Study the Limit:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \lim_{n \to +\infty} \frac{X_1(\omega) + X_2(\omega) + \cdots + X_n(\omega)}{n}
-\)</span>$</p>
+\]</div>
 </div>
 <p><strong>Observations:</strong></p>
 <ul class="simple">
@@ -672,10 +674,11 @@ P\left\{\omega: \lim_{n \to +\infty} X_n(\omega) = X(\omega)\right\} = 1
 \[
 \frac{S_n - n\mu}{\sigma\sqrt{n}} \quad \text{converges in distribution to a standard normal distribution}
 \]</div>
-<p>Equivalently:
-$<span class="math notranslate nohighlight">\(
+<p>Equivalently:</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{S_n - n\mu}{\sigma\sqrt{n}} \xrightarrow{d} \mathcal{N}(0, 1)
-\)</span>$</p>
+\]</div>
 <p><strong>Physical Meaning:</strong> The normalized sum of many i.i.d. random variables becomes approximately normally distributed, regardless of the original distribution of the <span class="math notranslate nohighlight">\(X_i\)</span>.</p>
 </div>
 </section>
@@ -730,15 +733,19 @@ $<span class="math notranslate nohighlight">\(
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Properties of the Sample Mean:</strong></p>
-<ol class="arabic simple">
-<li><p><strong>Consistency:</strong> By the strong law of large numbers, the estimator <span class="math notranslate nohighlight">\(\hat{\mu}_n\)</span> is <strong>consistent</strong>, i.e.,
-$<span class="math notranslate nohighlight">\(
-\hat{\mu}_n \to \mu \quad \text{almost surely as } n \to +\infty
-\)</span>$</p></li>
-<li><p><strong>Unbiasedness:</strong> The estimator is <strong>unbiased</strong>, that is,
-$<span class="math notranslate nohighlight">\(
-E[\hat{\mu}_n] = \mu
-\)</span>$</p></li>
+<ol class="arabic">
+<li><p><strong>Consistency:</strong> By the strong law of large numbers, the estimator <span class="math notranslate nohighlight">\(\hat{\mu}_n\)</span> is <strong>consistent</strong>, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[
+   \hat{\mu}_n \to \mu \quad \text{almost surely as } n \to +\infty
+   \]</div>
+</li>
+<li><p><strong>Unbiasedness:</strong> The estimator is <strong>unbiased</strong>, that is,</p>
+<div class="math notranslate nohighlight">
+\[
+   E[\hat{\mu}_n] = \mu
+   \]</div>
+</li>
 </ol>
 </div>
 <p><strong>Physical Meaning:</strong></p>
@@ -821,28 +828,37 @@ Y_i(x) = \mathbb{I}_{\{X_i \leq x\}}
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Properties of <span class="math notranslate nohighlight">\(Y_i(x)\)</span>:</strong></p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>The variables <span class="math notranslate nohighlight">\(Y_i(x)\)</span> are <strong>i.i.d.</strong></p></li>
-<li><p>The common mean of <span class="math notranslate nohighlight">\(Y_i(x)\)</span> is <span class="math notranslate nohighlight">\(F(x)\)</span>:
-$<span class="math notranslate nohighlight">\(
-E[Y_i(x)] = P[X_i \leq x] = F(x)
-\)</span>$</p></li>
-<li><p>The <strong>empirical distribution function</strong>:
-$<span class="math notranslate nohighlight">\(
-F_n(x) = \frac{1}{n} \sum_{i=1}^{n} Y_i(x)
-\)</span><span class="math notranslate nohighlight">\(
-satisfies:
-\)</span><span class="math notranslate nohighlight">\(
-\lim_{n \to +\infty} F_n(x) = F(x) \quad \text{a.s., } \forall x
-\)</span>$</p></li>
-<li><p>The common variance of <span class="math notranslate nohighlight">\(Y_i(x)\)</span> is:
-$<span class="math notranslate nohighlight">\(
-\text{var}[Y_i(x)] = F(x)(1 - F(x))
-\)</span>$</p></li>
-<li><p>The distribution of the error for the approximation of <span class="math notranslate nohighlight">\(F\)</span> by <span class="math notranslate nohighlight">\(F_n\)</span> as <span class="math notranslate nohighlight">\(n \to +\infty\)</span> is <strong>normal and centered</strong>. The rate of convergence is:
-$<span class="math notranslate nohighlight">\(
-\frac{\sqrt{F(x)(1 - F(x))}}{\sqrt{n}}
-\)</span>$</p></li>
+<li><p>The common mean of <span class="math notranslate nohighlight">\(Y_i(x)\)</span> is <span class="math notranslate nohighlight">\(F(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   E[Y_i(x)] = P[X_i \leq x] = F(x)
+   \]</div>
+</li>
+<li><p>The <strong>empirical distribution function</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+   F_n(x) = \frac{1}{n} \sum_{i=1}^{n} Y_i(x)
+   \]</div>
+<p>satisfies:</p>
+<div class="math notranslate nohighlight">
+\[
+   \lim_{n \to +\infty} F_n(x) = F(x) \quad \text{a.s., } \forall x
+   \]</div>
+</li>
+<li><p>The common variance of <span class="math notranslate nohighlight">\(Y_i(x)\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+   \text{var}[Y_i(x)] = F(x)(1 - F(x))
+   \]</div>
+</li>
+<li><p>The distribution of the error for the approximation of <span class="math notranslate nohighlight">\(F\)</span> by <span class="math notranslate nohighlight">\(F_n\)</span> as <span class="math notranslate nohighlight">\(n \to +\infty\)</span> is <strong>normal and centered</strong>. The rate of convergence is:</p>
+<div class="math notranslate nohighlight">
+\[
+   \frac{\sqrt{F(x)(1 - F(x))}}{\sqrt{n}}
+   \]</div>
+</li>
 </ol>
 </div>
 <p><strong>Physical Meaning:</strong> We can estimate an unknown distribution function <span class="math notranslate nohighlight">\(F\)</span> by counting the fraction of observations that fall below each value <span class="math notranslate nohighlight">\(x\)</span>. This empirical distribution converges to the true distribution.</p>
@@ -911,10 +927,11 @@ a = E[f(U)]
 <li><p>Mean: 0</p></li>
 <li><p>Variance: <span class="math notranslate nohighlight">\(\frac{\sigma^2}{n}\)</span></p></li>
 </ul>
-<p>where:
-$<span class="math notranslate nohighlight">\(
+<p>where:</p>
+<div class="math notranslate nohighlight">
+\[
 \sigma^2 = \int_0^1 (f(x) - a)^2 \, dx
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="variance-estimation">
@@ -927,10 +944,11 @@ $<span class="math notranslate nohighlight">\(
 \[
 \hat{\sigma}^2 = \frac{1}{n-1} \sum_{i=1}^{n} |f(U_i) - \hat{a}_n|^2
 \]</div>
-<p>where:
-$<span class="math notranslate nohighlight">\(
+<p>where:</p>
+<div class="math notranslate nohighlight">
+\[
 \hat{a}_n = \frac{1}{n} \sum_{i=1}^{n} f(U_i)
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 <section id="when-to-use-monte-carlo">
@@ -1052,10 +1070,11 @@ E[X_{k+n} \mid \{X_m, m = 0, \ldots, k\}] = X_k
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Martingale with Respect to Another Process:</strong></p>
-<p>If:
-$<span class="math notranslate nohighlight">\(
+<p>If:</p>
+<div class="math notranslate nohighlight">
+\[
 E[X_{k+n} \mid \{Y_m, m = 0, \ldots, k\}] = X_k
-\)</span>$</p>
+\]</div>
 <p>then <span class="math notranslate nohighlight">\((X_n)_n\)</span> is said to be a <strong>discrete-time martingale with respect to the process</strong> <span class="math notranslate nohighlight">\((Y_n)_n\)</span>.</p>
 </div>
 </section>
@@ -1110,19 +1129,25 @@ E[X_n \mid X_0 = 0] = \sum_{i=1}^{n} E[Y_i] = n(2p - 1)
 <p><strong>When is the Random Walk a Martingale?</strong></p>
 <p><span class="math notranslate nohighlight">\(p = 0.5\)</span> is the <strong>only value</strong> of <span class="math notranslate nohighlight">\(p\)</span> for which the random walk is a martingale.</p>
 <p><strong>Three Cases:</strong></p>
-<ol class="arabic simple">
-<li><p><strong><span class="math notranslate nohighlight">\(p = 0.5\)</span>:</strong> The random walk is a <strong>martingale</strong> (fair game)
-$<span class="math notranslate nohighlight">\(
-E[X_n \mid X_0 = 0] = 0
-\)</span>$</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(p &lt; 0.5\)</span>:</strong> The random walk tends to <strong>fall</strong> and is called a <strong>discrete-time supermartingale</strong>
-$<span class="math notranslate nohighlight">\(
-E[X_n \mid X_0 = 0] = n(2p - 1) &lt; 0
-\)</span>$</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(p &gt; 0.5\)</span>:</strong> The random walk tends to <strong>rise</strong> and is called a <strong>discrete-time submartingale</strong>
-$<span class="math notranslate nohighlight">\(
-E[X_n \mid X_0 = 0] = n(2p - 1) &gt; 0
-\)</span>$</p></li>
+<ol class="arabic">
+<li><p><strong><span class="math notranslate nohighlight">\(p = 0.5\)</span>:</strong> The random walk is a <strong>martingale</strong> (fair game)</p>
+<div class="math notranslate nohighlight">
+\[
+   E[X_n \mid X_0 = 0] = 0
+   \]</div>
+</li>
+<li><p><strong><span class="math notranslate nohighlight">\(p &lt; 0.5\)</span>:</strong> The random walk tends to <strong>fall</strong> and is called a <strong>discrete-time supermartingale</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   E[X_n \mid X_0 = 0] = n(2p - 1) &lt; 0
+   \]</div>
+</li>
+<li><p><strong><span class="math notranslate nohighlight">\(p &gt; 0.5\)</span>:</strong> The random walk tends to <strong>rise</strong> and is called a <strong>discrete-time submartingale</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   E[X_n \mid X_0 = 0] = n(2p - 1) &gt; 0
+   \]</div>
+</li>
 </ol>
 </div>
 </section>

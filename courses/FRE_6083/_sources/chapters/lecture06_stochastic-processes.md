@@ -141,6 +141,7 @@ Consider the discrete-time and discrete-state process that we have seen in the f
 **Time set:** $\mathcal{T} = \{0, 1, 2, \ldots\}$
 
 **Sample space:**
+
 $$
 \Omega = \{\omega = \omega_1 \omega_2 \ldots \omega_n \mid \omega_n \text{ is the outcome of the } n\text{th coin toss}\}
 $$
@@ -179,9 +180,11 @@ Here, we fix the time $t$.
 - **First moment (mean):** $E[X(t)]$
 
 - **Second moment (variance):**
+
   $$
   \text{Var}[X(t)] = E[(X(t) - E[X(t)])^2]
   $$
+
 ```
 
 Some examples were shown in Chapter 1. One can also compute higher moments in a similar way, provided they exist.
@@ -210,6 +213,7 @@ Given an arbitrary set of $k$ times $t_1, t_2, \ldots, t_k$, the joint cumulativ
 $$
 F(x_1, \ldots, x_k; t_1, \ldots, t_k) = P[X(t_1) \leq x_1, \ldots, X(t_k) \leq x_k]
 $$
+
 ```
 
 **Physical Meaning:** This captures the joint behavior of the process at multiple time points, which is essential for understanding the dynamics.
@@ -224,6 +228,7 @@ In the discrete case, the distribution of order $k$ can also be described by the
 $$
 P(x_1, \ldots, x_k; n_1, \ldots, n_k) = P[X_{n_1} = x_1, \ldots, X_{n_k} = x_k]
 $$
+
 ```
 
 ```{note}
@@ -234,6 +239,7 @@ In the continuous case, when the joint cumulative distribution function is diffe
 $$
 f(x_1, \ldots, x_k; t_1, \ldots, t_k) = \frac{\partial^k}{\partial x_1 \cdots \partial x_k} F(x_1, \ldots, x_k; t_1, \ldots, t_k)
 $$
+
 ```
 
 ## Independence and Stationarity of Increments
@@ -283,6 +289,7 @@ X_k = \begin{cases}
 0 & \text{otherwise}
 \end{cases}
 $$
+
 ```
 
 ### Distribution and Expectation
@@ -341,6 +348,7 @@ $$
 **Properties of Random Walk:**
 
 The increments:
+
 $$
 X_{k_1} - X_0, \quad X_{k_2} - X_{k_1}, \quad \ldots, \quad X_{k_i+1} - X_{k_i}, \quad \ldots, \quad X_{k_m} - X_{k_{m-1}}
 $$
@@ -355,11 +363,13 @@ Clearly, the increments of the random walk are also **stationary** since the coi
 ```{dropdown} Derivation of Mean and Variance
 
 **Mean of increment:**
+
 $$
 E[X_{k_{i+1}} - X_{k_i}] = \sum_{j=k_i+1}^{k_{i+1}} E[Y_j] = 0
 $$
 
 **Variance of increment:**
+
 $$
 \begin{align}
 \text{Var}[X_{k_{i+1}} - X_{k_i}] &= E\left[\left(\sum_{j=k_i+1}^{k_{i+1}} Y_j\right)^2\right] \\
@@ -369,6 +379,7 @@ $$
 &= k_{i+1} - k_i
 \end{align}
 $$
+
 ```
 
 **Physical Meaning:** The variance of the increment over the time interval $[k_i, k_{i+1}]$ is equal to $k_{i+1} - k_i$, the length of the interval. This is characteristic of diffusive processes.
@@ -403,6 +414,7 @@ and can also be written as:
 $$
 C_X(t_1, t_2) = E[(X(t_1) - E[X(t_1)])(X(t_2) - E[X(t_2)])]
 $$
+
 ```
 
 **Physical Meaning:** The autocovariance measures how the process at time $t_1$ is related to the process at time $t_2$. Positive values indicate they tend to move together.
@@ -415,6 +427,7 @@ At the point $(t_1, t_2)$, it is given by:
 $$
 \rho_X(t_1, t_2) = \frac{C_X(t_1, t_2)}{(\text{Var}[X(t_1)] \text{Var}[X(t_2)])^{1/2}}
 $$
+
 ```
 
 **Physical Meaning:** The autocorrelation is a normalized version of autocovariance, always between -1 and 1, making it easier to interpret the strength of the relationship.
@@ -460,6 +473,7 @@ Subtracting the product of the expectations, we find that the autocovariance fun
 $$
 C_X(n+p, n) = n\sigma^2
 $$
+
 ```
 
 **Physical Meaning:** The autocovariance depends on the smaller of the two time indices, reflecting the cumulative variance up to that point.
@@ -476,6 +490,7 @@ $X$ is **strict sense stationary** if for all $s, n, t_1, \ldots, t_n, x_1, \ldo
 $$
 F(x_1, \ldots, x_n; t_1, \ldots, t_n) = F(x_1, \ldots, x_n; t_1+s, \ldots, t_n+s)
 $$
+
 ```
 
 **Physical Meaning:** The distribution of the stationary process is independent of a time shift. The statistical properties don't change over time, though the process itself may still vary.
@@ -499,20 +514,25 @@ If the process $X$ is strict stationary, it will also satisfy the wide-sense sta
 
 **Proof:**
 1. If $X$ is strict stationary, we have that for all $t \geq 0$:
+
    $$
    E[X(t)] = E[X(0)]
    $$
 
 2. By strict stationarity of $X$:
+
    $$
    E[X(t)X(t+h)] = E[X(0)X(h)]
    $$
+
    which only depends on $h$.
 
 3. Finally, if $X$ is strict stationary, its variance does not depend on time:
+
    $$
    \text{var}(X(t)) = E[X(t)X(t)] - E[X(t)]^2 = E[X(0)^2] - E[X(0)]^2
    $$
+
 ```
 
 ## Examples of Stationarity
@@ -554,6 +574,7 @@ Firstly, we have seen earlier that, for all $k$, $E[X_k] = 0$. So the random wal
 
 **Autocovariance:**
 Next, we need to compute:
+
 $$
 \begin{align}
 R_X(k, k+j) &= E[X_k X_{k+j}] \\
@@ -626,6 +647,7 @@ $$
 &= \sigma^2 \frac{1 - a^{2(n+1)}}{1 - a^2}
 \end{align}
 $$
+
 ```
 
 ```{important}
@@ -684,6 +706,7 @@ where $\bar{X}_k \in \mathbb{R}$ and $Z_j \sim \mathcal{N}(0,1)$.
 An immediate consequence of this definition is that any **affine combination** of multi-normally distributed random vectors has a multi-normal distribution.
 
 Furthermore:
+
 $$
 \begin{align}
 E[X_k] &= \bar{X}_k \\
@@ -691,6 +714,7 @@ E[X_k] &= \bar{X}_k \\
 \text{Cov}[X_i, X_k] &= \sum_{l=1}^{m} c_{il} c_{kl}
 \end{align}
 $$
+
 ```
 
 ### Joint Distribution
@@ -811,6 +835,7 @@ A process $X$ with constant mean $m$ is said to be **mean-ergodic** if:
 $$
 \lim_{\tau \to +\infty} \text{var}[\langle X \rangle_{\tau}] = 0
 $$
+
 ```
 
 Since:
@@ -829,6 +854,7 @@ A process $X$ with constant mean $m$ is said to be mean-ergodic if:
 $$
 \lim_{\tau \to +\infty} E[(\langle X \rangle_{\tau} - m)^2] = 0
 $$
+
 ```
 
 **Physical Meaning:** For an ergodic process, you can estimate the ensemble average (expected value over all outcomes) by computing a time average along a single sample path. This is crucial for empirical analysis where we only observe one realization.
@@ -843,6 +869,7 @@ Let $X(t) = Y$, where $Y$ is a random variable, for all $t$.
 $X$ is **not mean-ergodic**.
 
 Indeed:
+
 $$
 E[X(t)] = E[Y]
 $$
@@ -852,9 +879,11 @@ $$
 $$
 
 Consequently:
+
 $$
 \text{var}[\langle X \rangle_s] = \text{var}[Y] \neq 0
 $$
+
 ```
 
 **Physical Meaning:** The time average equals the random variable $Y$ itself, not its expected value. Different sample paths give different time averages.
@@ -869,6 +898,7 @@ In a discrete-time setting, the integral must be replaced by a discrete sum:
 $$
 \langle X \rangle_N = \frac{1}{N+1} \sum_{n=0}^{N} X(n, \omega)
 $$
+
 ```
 
 ```{dropdown} Verification of Ergodicity
@@ -889,6 +919,7 @@ $$
 &= 0
 \end{align}
 $$
+
 ```
 
 ```{admonition} Example 3: One-Step Increment of Random Walk (Ergodic)
@@ -906,6 +937,7 @@ $$
 $$
 
 Hence:
+
 $$
 E[\langle Z \rangle_k] = 0
 $$
@@ -915,6 +947,7 @@ and, similarly as in the previous example:
 $$
 \lim_{k \to +\infty} \text{var}[\langle Z \rangle_k] = \lim_{k \to +\infty} \frac{1}{(k+1)^2} (k+1) = 0
 $$
+
 ```
 
 ## The Features of Real Financial Data
