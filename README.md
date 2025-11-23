@@ -13,6 +13,7 @@
 |------------|--------------|---------|------------|
 | **FRE 6083** | Quantitative Methods | ✓ Live | [View Course →](https://duymlcoding.github.io/NYU_FRE_Notes/courses/FRE_6083/) |
 | **FRE 6073** | Introduction to Derivatives | ✓ Live | [View Course →](https://duymlcoding.github.io/NYU_FRE_Notes/courses/FRE_6073/) |
+| **FRE 6103** | Valuation Methods for Financial Engineering | ✓ Live | [View Course →](https://duymlcoding.github.io/NYU_FRE_Notes/courses/FRE_6103/) |
 
 ---
 
@@ -59,7 +60,9 @@ NYU_FRE_Notes/
 │   │   ├── _toc.yml             # Table of contents
 │   │   ├── chapters/            # Lecture Markdown files (EDIT THESE)
 │   │   └── requirements.txt     # Python dependencies
-│   └── FRE_6073/                # Introduction to Derivatives
+│   ├── FRE_6073/                # Introduction to Derivatives
+│   │   └── ...
+│   └── FRE_6103/                # Valuation Methods
 │       └── ...
 └── DEPLOYMENT.md                 # Detailed deployment guide
 ```
@@ -175,6 +178,7 @@ Course materials may have additional copyright restrictions. Respect instructor 
 
 - **Professor Agnès Tourin** - FRE 6083
 - **John C. Hull** - FRE 6073 materials
+- **David C. Shimko** - FRE 6103 materials
 - **NYU Tandon School of Engineering**
 - **Student contributors**
 

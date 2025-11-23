@@ -322,7 +322,9 @@ $$ E[Y] = e^{\mu + \frac{1}{2}\sigma^2} $$
 
 We usually define the drift $\mu$ in terms of the *expected rate of return* of the stock:
 
-$$ E[S_{t+1}] = S_t e^{\mu} $$ (using continuous compounding notation).
+$$ E[S_{t+1}] = S_t e^{\mu} $$
+
+(using continuous compounding notation).
 
 Matching the expectations:
 
