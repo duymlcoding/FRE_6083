@@ -590,9 +590,13 @@ Assume each day represents 1/360 of a year.
 **Step 1: Calculate Daily Factors**
 
 Day 1: $1 + \frac{0.0500}{360} = 1.000139$
+
 Day 2: $1 + \frac{0.0502}{360} = 1.000139$
+
 Day 3: $1 + \frac{0.0501}{360} = 1.000139$
+
 Day 4: $1 + \frac{0.0503}{360} = 1.000140$
+
 Day 5: $1 + \frac{0.0502}{360} = 1.000139$
 
 **Step 2: Compound the Factors**

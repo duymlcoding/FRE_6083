@@ -58,8 +58,6 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"macros": {"\\N": "\\mathbb{N}", "\\R": "\\mathbb{R}", "\\C": "\\mathbb{C}", "\\E": "\\mathbb{E}", "\\P": "\\mathbb{P}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/chapter01_introduction-to-derivatives';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -694,8 +692,8 @@ A U.S. company will pay £10 million for imports from Britain in 3 months. The c
 <p class="sd-card-text"><strong>Step 1: Identify the Risk</strong></p>
 <p class="sd-card-text">The company faces <strong>currency risk</strong>:</p>
 <ul class="simple">
-<li><p class="sd-card-text">If GBP strengthens to <span class="math notranslate nohighlight">\(1.30/£, cost = \)</span>13,000,000</p></li>
-<li><p class="sd-card-text">If GBP weakens to <span class="math notranslate nohighlight">\(1.20/£, cost = \)</span>12,000,000</p></li>
+<li><p class="sd-card-text">If GBP strengthens to $1.30/£, cost = $13,000,000</p></li>
+<li><p class="sd-card-text">If GBP weakens to $1.20/£, cost = $12,000,000</p></li>
 <li><p class="sd-card-text">At current rate: $12,230,000</p></li>
 </ul>
 <p class="sd-card-text">The company wants certainty.</p>
@@ -709,7 +707,7 @@ A U.S. company will pay £10 million for imports from Britain in 3 months. The c
 </ul>
 <p class="sd-card-text"><strong>Hedged Position:</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Locked in cost: £10M × <span class="math notranslate nohighlight">\(1.2230/£ = \)</span>12,230,000</p></li>
+<li><p class="sd-card-text">Locked in cost: £10M × $1.2230/£ = $12,230,000</p></li>
 <li><p class="sd-card-text">No matter what happens to exchange rate</p></li>
 </ul>
 <p class="sd-card-text"><strong>Outcome Table:</strong></p>
@@ -954,7 +952,7 @@ A U.S. company will pay £10 million for imports from Britain in 3 months. The c
 <h2>Practice Problems<a class="headerlink" href="#practice-problems" title="Link to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Practice Problem 1</p>
-<p>An investor owns 1,000 shares of stock currently worth <span class="math notranslate nohighlight">\(28 per share. A two-month put option with a strike price of \)</span>27.50 costs $1. The investor decides to hedge by buying 10 put option contracts (each contract covers 100 shares).</p>
+<p>An investor owns 1,000 shares of stock currently worth $28 per share. A two-month put option with a strike price of $27.50 costs $1. The investor decides to hedge by buying 10 put option contracts (each contract covers 100 shares).</p>
 <p><strong>Questions:</strong></p>
 <ol class="arabic simple">
 <li><p>What is the total cost of the hedge?</p></li>
@@ -967,32 +965,32 @@ A U.S. company will pay £10 million for imports from Britain in 3 months. The c
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution to Practice Problem 1</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><strong>Part 1: Cost of Hedge</strong></p>
-<p class="sd-card-text">Cost = 10 contracts × 100 shares/contract × <span class="math notranslate nohighlight">\(1/share = **\)</span>1,000**</p>
+<p class="sd-card-text">Cost = 10 contracts × 100 shares/contract × $1/share = <strong>$1,000</strong></p>
 <p class="sd-card-text"><strong>Part 2: Minimum Portfolio Value</strong></p>
 <ul class="simple">
 <li><p class="sd-card-text">Each put guarantees the right to sell at $27.50</p></li>
-<li><p class="sd-card-text">With 1,000 shares: 1,000 × <span class="math notranslate nohighlight">\(27.50 = \)</span>27,500</p></li>
-<li><p class="sd-card-text">Minus hedge cost: <span class="math notranslate nohighlight">\(27,500 - \)</span>1,000 = <strong>$26,500 minimum</strong></p></li>
+<li><p class="sd-card-text">With 1,000 shares: 1,000 × $27.50 = $27,500</p></li>
+<li><p class="sd-card-text">Minus hedge cost: $27,500 - $1,000 = <strong>$26,500 minimum</strong></p></li>
 </ul>
 <p class="sd-card-text"><strong>Part 3: Stock Falls to $20</strong></p>
 <p class="sd-card-text">Without hedge:</p>
 <ul class="simple">
-<li><p class="sd-card-text">Stock value: 1,000 × <span class="math notranslate nohighlight">\(20 = \)</span>20,000</p></li>
+<li><p class="sd-card-text">Stock value: 1,000 × $20 = $20,000</p></li>
 </ul>
 <p class="sd-card-text">With hedge:</p>
 <ul class="simple">
-<li><p class="sd-card-text">Exercise puts: Sell 1,000 shares at <span class="math notranslate nohighlight">\(27.50 = \)</span>27,500</p></li>
-<li><p class="sd-card-text">Minus hedge cost: <span class="math notranslate nohighlight">\(27,500 - \)</span>1,000 = <strong>$26,500</strong></p></li>
-<li><p class="sd-card-text">Gain from hedge: <span class="math notranslate nohighlight">\(26,500 - \)</span>20,000 = $6,500</p></li>
+<li><p class="sd-card-text">Exercise puts: Sell 1,000 shares at $27.50 = $27,500</p></li>
+<li><p class="sd-card-text">Minus hedge cost: $27,500 - $1,000 = <strong>$26,500</strong></p></li>
+<li><p class="sd-card-text">Gain from hedge: $26,500 - $20,000 = $6,500</p></li>
 </ul>
 <p class="sd-card-text"><strong>Part 4: Stock Rises to $35</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Stock value: 1,000 × <span class="math notranslate nohighlight">\(35 = \)</span>35,000</p></li>
+<li><p class="sd-card-text">Stock value: 1,000 × $35 = $35,000</p></li>
 <li><p class="sd-card-text">Puts expire worthless</p></li>
-<li><p class="sd-card-text">Net value: <span class="math notranslate nohighlight">\(35,000 - \)</span>1,000 = <strong>$34,000</strong></p></li>
+<li><p class="sd-card-text">Net value: $35,000 - $1,000 = <strong>$34,000</strong></p></li>
 <li><p class="sd-card-text">(Foregone gain of $1,000 is the insurance cost)</p></li>
 </ul>
-<p class="sd-card-text"><strong>Final Answer:</strong> The hedge costs <span class="math notranslate nohighlight">\(1,000 and guarantees a minimum value of \)</span>26,500, protecting against downside while still allowing upside (minus the premium paid).</p>
+<p class="sd-card-text"><strong>Final Answer:</strong> The hedge costs $1,000 and guarantees a minimum value of $26,500, protecting against downside while still allowing upside (minus the premium paid).</p>
 </div>
 </details></section>
 </section>
