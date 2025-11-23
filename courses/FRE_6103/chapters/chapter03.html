@@ -514,8 +514,11 @@ document.write(`
 <p><strong>Definitions:</strong></p>
 <ul>
 <li><p><strong>Simple Annual Rate (SAR):</strong> The quoted annual rate. It ignores compounding within the year. Also called the Annual Percentage Rate (APR).</p></li>
-<li><p><strong>Periodic Rate:</strong> The rate actually applied to the balance each period.
-$<span class="math notranslate nohighlight">\( \text{Periodic Rate} = \frac{\text{SAR}}{m} \)</span>$</p>
+<li><p><strong>Periodic Rate:</strong> The rate actually applied to the balance each period.</p>
+<div class="math notranslate nohighlight">
+\[
+    \text{Periodic Rate} = \frac{\text{SAR}}{m}
+    \]</div>
 <p>where <span class="math notranslate nohighlight">\(m\)</span> is the number of compounding periods per year.</p>
 </li>
 <li><p><strong>Effective Annual Rate (EAR):</strong> The rate you actually earn if you hold the asset for one year, accounting for interest-on-interest.</p></li>
@@ -584,11 +587,15 @@ The continuously compounded rate is often symbolized by <span class="math notran
 <p>Inflation erodes the value of money. We must distinguish between the number of dollars (Nominal) and the purchasing power of those dollars (Real).</p>
 <section id="definitions">
 <h3>1. Definitions<a class="headerlink" href="#definitions" title="Link to this heading">#</a></h3>
-<ul class="simple">
+<ul>
 <li><p><strong>Nominal Dollars:</strong> The face value of currency.</p></li>
 <li><p><strong>Real Dollars:</strong> Purchasing power relative to a base year.</p></li>
-<li><p><strong>CPI (Consumer Price Index):</strong> A standardized basket of goods used to measure price levels.
-$<span class="math notranslate nohighlight">\( \text{Inflation Rate (i)} = \frac{\text{CPI}_{new}}{\text{CPI}_{old}} - 1 \)</span>$</p></li>
+<li><p><strong>CPI (Consumer Price Index):</strong> A standardized basket of goods used to measure price levels.</p>
+<div class="math notranslate nohighlight">
+\[
+    \text{Inflation Rate (i)} = \frac{\text{CPI}_{new}}{\text{CPI}_{old}} - 1
+    \]</div>
+</li>
 </ul>
 </section>
 <section id="the-fisher-equation">
@@ -637,7 +644,9 @@ A contract pays $100,000 adjusted for inflation (<span class="math notranslate n
 <h3>2. After-Tax Valuation<a class="headerlink" href="#after-tax-valuation" title="Link to this heading">#</a></h3>
 <p>If <span class="math notranslate nohighlight">\(\tau_{OI} = \tau_{CG} = \tau\)</span>, valuation is simple:</p>
 <div class="math notranslate nohighlight">
-\[ r_{after-tax} = r_{pre-tax} (1 - \tau) \]</div>
+\[
+r_{after-tax} = r_{pre-tax} (1 - \tau)
+\]</div>
 <p>Simply discount after-tax cash flows at the after-tax rate. The GVE remains unchanged because both sides are multiplied by <span class="math notranslate nohighlight">\((1-\tau)\)</span>.</p>
 <p><strong>The Problem: Differential Taxes</strong>
 If <span class="math notranslate nohighlight">\(\tau_{OI} \neq \tau_{CG}\)</span>, we cannot simply adjust the discount rate.
@@ -681,14 +690,18 @@ Investing for 2 years must yield the same result as investing for 1 year and rol
 <h3>2. Bootstrapping the Yield Curve<a class="headerlink" href="#bootstrapping-the-yield-curve" title="Link to this heading">#</a></h3>
 <p>We often cannot observe spot rates directly for all maturities (only coupons). We must “strip” them.</p>
 <p><strong>The Algorithm:</strong></p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><strong>Year 1:</strong> Observe a 1-year ZCB (or coupon bond nearing maturity). Its yield is the 1-year spot rate <span class="math notranslate nohighlight">\(r_{s1}\)</span>.</p></li>
 <li><p><strong>Year 2:</strong> Observe a 2-year Coupon Bond with price <span class="math notranslate nohighlight">\(P\)</span>.</p>
-<ul class="simple">
+<ul>
 <li><p>It pays Coupon <span class="math notranslate nohighlight">\(C\)</span> at Year 1. Discount this using known <span class="math notranslate nohighlight">\(r_{s1}\)</span>.</p></li>
 <li><p>It pays <span class="math notranslate nohighlight">\(C+F\)</span> at Year 2.</p></li>
-<li><p>Solve for <span class="math notranslate nohighlight">\(r_{s2}\)</span>:
-$<span class="math notranslate nohighlight">\( P = \frac{C}{(1+r_{s1})} + \frac{C+F}{(1+r_{s2})^2} \)</span>$</p></li>
+<li><p>Solve for <span class="math notranslate nohighlight">\(r_{s2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+        P = \frac{C}{(1+r_{s1})} + \frac{C+F}{(1+r_{s2})^2}
+        \]</div>
+</li>
 </ul>
 </li>
 <li><p><strong>Recursion:</strong> Use <span class="math notranslate nohighlight">\(r_{s1}, r_{s2}\)</span> to find <span class="math notranslate nohighlight">\(r_{s3}\)</span> from a 3-year bond, and so on.</p></li>
@@ -702,12 +715,18 @@ An FRN is unique: at every reset date, its value resets to Par (<span class="mat
 <p><strong>Proof via GVE:</strong>
 At time 0, the bond promises to pay <span class="math notranslate nohighlight">\(r_0 F\)</span> (known) at time 1, plus the value of the bond at time 1 (<span class="math notranslate nohighlight">\(V_1\)</span>).</p>
 <div class="math notranslate nohighlight">
-\[ r_0 V_0 = E[V_1 - V_0] + r_0 F \]</div>
+\[
+r_0 V_0 = E[V_1 - V_0] + r_0 F
+\]</div>
 <p>If the bond resets to Par at time 1 (<span class="math notranslate nohighlight">\(V_1 = F\)</span>), then:</p>
 <div class="math notranslate nohighlight">
-\[ r_0 V_0 = (F - V_0) + r_0 F \]</div>
+\[
+r_0 V_0 = (F - V_0) + r_0 F
+\]</div>
 <div class="math notranslate nohighlight">
-\[ V_0 (1+r_0) = F(1+r_0) \implies V_0 = F \]</div>
+\[
+V_0 (1+r_0) = F(1+r_0) \implies V_0 = F
+\]</div>
 <p><strong>Implication:</strong> The value of a pure FRN is always Par immediately after a coupon payment.</p>
 </section>
 </section>
@@ -732,11 +751,19 @@ At time 0, the bond promises to pay <span class="math notranslate nohighlight">\
 <p>IRP relates Spot Rates, Forward Rates, and Interest Rates. It prevents risk-free arbitrage between currencies.</p>
 <p><strong>The Logic:</strong>
 Two strategies must have the same return:</p>
-<ol class="arabic simple">
-<li><p><strong>Domestic:</strong> Invest $1 at domestic rate <span class="math notranslate nohighlight">\(r_{dom}\)</span>.
-$<span class="math notranslate nohighlight">\( \text{Value} = (1 + r_{dom}) \)</span>$</p></li>
-<li><p><strong>Foreign:</strong> Convert $1 to Foreign (<span class="math notranslate nohighlight">\(1/X\)</span>), invest at <span class="math notranslate nohighlight">\(r_{for}\)</span>, then convert back at locked Forward rate <span class="math notranslate nohighlight">\(F\)</span>.
-$<span class="math notranslate nohighlight">\( \text{Value} = \frac{1}{X} (1 + r_{for}) F \)</span>$</p></li>
+<ol class="arabic">
+<li><p><strong>Domestic:</strong> Invest $1 at domestic rate <span class="math notranslate nohighlight">\(r_{dom}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+    \text{Value} = (1 + r_{dom})
+    \]</div>
+</li>
+<li><p><strong>Foreign:</strong> Convert $1 to Foreign (<span class="math notranslate nohighlight">\(1/X\)</span>), invest at <span class="math notranslate nohighlight">\(r_{for}\)</span>, then convert back at locked Forward rate <span class="math notranslate nohighlight">\(F\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+    \text{Value} = \frac{1}{X} (1 + r_{for}) F
+    \]</div>
+</li>
 </ol>
 <p><strong>The Equation:</strong></p>
 <div class="math notranslate nohighlight">
@@ -746,7 +773,9 @@ $<span class="math notranslate nohighlight">\( \text{Value} = \frac{1}{X} (1 + r
 \[F = X \frac{(1 + r_{dom})}{(1 + r_{for})}\]</div>
 <p><strong>Approximation:</strong></p>
 <div class="math notranslate nohighlight">
-\[ \frac{F - X}{X} \approx r_{dom} - r_{for} \]</div>
+\[
+\frac{F - X}{X} \approx r_{dom} - r_{for}
+\]</div>
 <p>The percentage premium of the forward rate equals the interest rate differential.</p>
 </section>
 </section>
@@ -758,7 +787,9 @@ $<span class="math notranslate nohighlight">\( \text{Value} = \frac{1}{X} (1 + r
 <h3>1. The Probabilistic GVE<a class="headerlink" href="#the-probabilistic-gve" title="Link to this heading">#</a></h3>
 <p>The GVE is robust enough to handle randomness.</p>
 <div class="math notranslate nohighlight">
-\[ \text{Required Return} = E[\text{Capital Gain}] + E[\text{Cash Flow}] \]</div>
+\[
+\text{Required Return} = E[\text{Capital Gain}] + E[\text{Cash Flow}]
+\]</div>
 <p><strong>Example: Life Insurance</strong></p>
 <ul class="simple">
 <li><p>Policy pays <span class="math notranslate nohighlight">\(C\)</span> upon death.</p></li>
@@ -783,11 +814,17 @@ If the insured <em>dies</em>, the value is 0 (policy ends).
 </ul>
 <p><strong>GVE Solution:</strong></p>
 <div class="math notranslate nohighlight">
-\[ r V_0 = -\pi V_0 + \pi C \]</div>
+\[
+r V_0 = -\pi V_0 + \pi C
+\]</div>
 <div class="math notranslate nohighlight">
-\[ V_0 (r + \pi) = \pi C \]</div>
+\[
+V_0 (r + \pi) = \pi C
+\]</div>
 <div class="math notranslate nohighlight">
-\[ V_0 = \frac{\pi C}{r + \pi} \]</div>
+\[
+V_0 = \frac{\pi C}{r + \pi}
+\]</div>
 <p>This looks like a perpetuity <span class="math notranslate nohighlight">\(\frac{C}{r}\)</span>, but the discount rate is increased by the hazard rate <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
 </section>
 <section id="default-risk-on-bonds">
@@ -799,21 +836,33 @@ If the insured <em>dies</em>, the value is 0 (policy ends).
 </ul>
 <p><strong>Expected Payoff at Maturity:</strong></p>
 <div class="math notranslate nohighlight">
-\[ E[\text{Payoff}] = (1-\pi)F + \pi(1-\lambda)F \]</div>
+\[
+E[\text{Payoff}] = (1-\pi)F + \pi(1-\lambda)F
+\]</div>
 <div class="math notranslate nohighlight">
-\[ E[\text{Payoff}] = F [1 - \pi\lambda] \]</div>
+\[
+E[\text{Payoff}] = F [1 - \pi\lambda]
+\]</div>
 <p><strong>Valuation:</strong></p>
 <div class="math notranslate nohighlight">
-\[ V_0 = \frac{F (1 - \pi\lambda)}{1 + r} \]</div>
+\[
+V_0 = \frac{F (1 - \pi\lambda)}{1 + r}
+\]</div>
 <p><strong>Credit Spread Approximation:</strong>
 We can model this as a risk-free bond with a higher yield <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[ V_0 = \frac{F}{1 + y} \approx \frac{F (1 - \pi\lambda)}{1 + r} \]</div>
+\[
+V_0 = \frac{F}{1 + y} \approx \frac{F (1 - \pi\lambda)}{1 + r}
+\]</div>
 <p>Implies:</p>
 <div class="math notranslate nohighlight">
-\[ 1 + y \approx \frac{1+r}{1-\pi\lambda} \approx (1+r)(1+\pi\lambda) \]</div>
+\[
+1 + y \approx \frac{1+r}{1-\pi\lambda} \approx (1+r)(1+\pi\lambda)
+\]</div>
 <div class="math notranslate nohighlight">
-\[ y \approx r + \pi\lambda \]</div>
+\[
+y \approx r + \pi\lambda
+\]</div>
 <p><strong>Credit Spread <span class="math notranslate nohighlight">\(\approx\)</span> Expected Loss Rate (<span class="math notranslate nohighlight">\(\pi\lambda\)</span>)</strong>.</p>
 </section>
 </section>
@@ -833,14 +882,22 @@ We can model this as a risk-free bond with a higher yield <span class="math notr
 </ul>
 <p><strong>Step 1: Find the EAR</strong></p>
 <div class="math notranslate nohighlight">
-\[ \text{EAR} = \left( 1 + \frac{0.08}{4} \right)^4 - 1 = (1.02)^4 - 1 = 1.082432 - 1 = 8.2432\% \]</div>
+\[
+\text{EAR} = \left( 1 + \frac{0.08}{4} \right)^4 - 1 = (1.02)^4 - 1 = 1.082432 - 1 = 8.2432\%
+\]</div>
 <p><strong>Step 2: Convert EAR to Monthly SAR</strong></p>
 <div class="math notranslate nohighlight">
-\[ \text{SAR}_{monthly} = 12 \left[ (1.082432)^{1/12} - 1 \right] \]</div>
+\[
+\text{SAR}_{monthly} = 12 \left[ (1.082432)^{1/12} - 1 \right]
+\]</div>
 <div class="math notranslate nohighlight">
-\[ (1.082432)^{1/12} \approx 1.006622 \]</div>
+\[
+(1.082432)^{1/12} \approx 1.006622
+\]</div>
 <div class="math notranslate nohighlight">
-\[ \text{SAR}_{monthly} = 12 \times 0.006622 = 0.07947 = 7.947\% \]</div>
+\[
+\text{SAR}_{monthly} = 12 \times 0.006622 = 0.07947 = 7.947\%
+\]</div>
 <p><strong>Result:</strong> The monthly compounded rate is slightly lower (7.95%) because it compounds more frequently to achieve the same yield.</p>
 </section>
 <hr class="docutils" />
@@ -853,14 +910,22 @@ We can model this as a risk-free bond with a higher yield <span class="math notr
 This corresponds to an EAR of <span class="math notranslate nohighlight">\((1.03)^2 - 1 = 6.09\%\)</span>.</p>
 <p><strong>Calculation:</strong></p>
 <div class="math notranslate nohighlight">
-\[ \delta = \ln(1 + \text{EAR}) = \ln(1.0609) \]</div>
+\[
+\delta = \ln(1 + \text{EAR}) = \ln(1.0609)
+\]</div>
 <p>Alternatively, directly from the semi-annual accumulation:</p>
 <div class="math notranslate nohighlight">
-\[ e^{\delta \times 0.5} = 1.03 \]</div>
+\[
+e^{\delta \times 0.5} = 1.03
+\]</div>
 <div class="math notranslate nohighlight">
-\[ 0.5 \delta = \ln(1.03) \]</div>
+\[
+0.5 \delta = \ln(1.03)
+\]</div>
 <div class="math notranslate nohighlight">
-\[ \delta = 2 \ln(1.03) \approx 2(0.02956) = 5.91\% \]</div>
+\[
+\delta = 2 \ln(1.03) \approx 2(0.02956) = 5.91\%
+\]</div>
 </section>
 <hr class="docutils" />
 <section id="example-3-interest-rate-parity">
@@ -877,11 +942,17 @@ This corresponds to an EAR of <span class="math notranslate nohighlight">\((1.03
 The currency with the <em>higher</em> interest rate (USD) must trade at a forward <em>discount</em> to offset the yield advantage. The EUR (lower rate) must trade at a premium.</p>
 <p><strong>Calculation:</strong></p>
 <div class="math notranslate nohighlight">
-\[ F = 1.30 \times \frac{1.10}{1.08} \]</div>
+\[
+F = 1.30 \times \frac{1.10}{1.08}
+\]</div>
 <div class="math notranslate nohighlight">
-\[ F = 1.30 \times 1.0185 \]</div>
+\[
+F = 1.30 \times 1.0185
+\]</div>
 <div class="math notranslate nohighlight">
-\[ F = 1.324 \text{ USD/EUR} \]</div>
+\[
+F = 1.324 \text{ USD/EUR}
+\]</div>
 <p><strong>Check:</strong>
 Invest $1.30 USD <span class="math notranslate nohighlight">\(\to\)</span> $1.43.
 Invest €1.00 (converted) <span class="math notranslate nohighlight">\(\to\)</span> €1.08.
@@ -903,19 +974,31 @@ Arbitrage free.</p>
 </ul>
 <p><strong>Formula:</strong></p>
 <div class="math notranslate nohighlight">
-\[ V_0 = \frac{F [1 - \pi\lambda]}{1+r} \]</div>
+\[
+V_0 = \frac{F [1 - \pi\lambda]}{1+r}
+\]</div>
 <p><strong>Setup:</strong></p>
 <div class="math notranslate nohighlight">
-\[ 95 = \frac{100 [1 - \pi(0.60)]}{1.03} \]</div>
+\[
+95 = \frac{100 [1 - \pi(0.60)]}{1.03}
+\]</div>
 <p><strong>Algebra:</strong></p>
 <div class="math notranslate nohighlight">
-\[ 95(1.03) = 100 - 60\pi \]</div>
+\[
+95(1.03) = 100 - 60\pi
+\]</div>
 <div class="math notranslate nohighlight">
-\[ 97.85 = 100 - 60\pi \]</div>
+\[
+97.85 = 100 - 60\pi
+\]</div>
 <div class="math notranslate nohighlight">
-\[ 60\pi = 100 - 97.85 = 2.15 \]</div>
+\[
+60\pi = 100 - 97.85 = 2.15
+\]</div>
 <div class="math notranslate nohighlight">
-\[ \pi = \frac{2.15}{60} = 0.0358 \]</div>
+\[
+\pi = \frac{2.15}{60} = 0.0358
+\]</div>
 <p><strong>Result:</strong> The market is pricing in a <strong>3.58% probability of default</strong>.</p>
 </section>
 </section>
@@ -932,9 +1015,13 @@ Arbitrage free.</p>
 <p>Since the bond is at Par (<span class="math notranslate nohighlight">\(P=F\)</span>), there is <strong>no Capital Gain</strong> or Loss upon maturity. The Capital Gains tax rate is irrelevant.
 We only tax the coupons.</p>
 <div class="math notranslate nohighlight">
-\[ r_{AT} = r_{pre-tax} (1 - \tau_{OI}) \]</div>
+\[
+r_{AT} = r_{pre-tax} (1 - \tau_{OI})
+\]</div>
 <div class="math notranslate nohighlight">
-\[ r_{AT} = 5\% (1 - 0.40) = 3\% \]</div>
+\[
+r_{AT} = 5\% (1 - 0.40) = 3\%
+\]</div>
 </details>
 </section>
 <section id="practice-problem-2-bootstrapping">
@@ -951,17 +1038,29 @@ We only tax the coupons.</p>
 <summary><strong>Click for Solution</strong></summary>
 <p>Price = $100. Coupon = $3.</p>
 <div class="math notranslate nohighlight">
-\[ 100 = \frac{3}{1.02} + \frac{103}{(1+r_{s2})^2} \]</div>
+\[
+100 = \frac{3}{1.02} + \frac{103}{(1+r_{s2})^2}
+\]</div>
 <div class="math notranslate nohighlight">
-\[ 100 = 2.941 + \frac{103}{(1+r_{s2})^2} \]</div>
+\[
+100 = 2.941 + \frac{103}{(1+r_{s2})^2}
+\]</div>
 <div class="math notranslate nohighlight">
-\[ 97.059 = \frac{103}{(1+r_{s2})^2} \]</div>
+\[
+97.059 = \frac{103}{(1+r_{s2})^2}
+\]</div>
 <div class="math notranslate nohighlight">
-\[ (1+r_{s2})^2 = \frac{103}{97.059} = 1.0612 \]</div>
+\[
+(1+r_{s2})^2 = \frac{103}{97.059} = 1.0612
+\]</div>
 <div class="math notranslate nohighlight">
-\[ 1+r_{s2} = \sqrt{1.0612} = 1.03015 \]</div>
+\[
+1+r_{s2} = \sqrt{1.0612} = 1.03015
+\]</div>
 <div class="math notranslate nohighlight">
-\[ r_{s2} = 3.015\% \]</div>
+\[
+r_{s2} = 3.015\%
+\]</div>
 </details>
 </section>
 <section id="practice-problem-3-continuous-inflation">
@@ -973,11 +1072,17 @@ We only tax the coupons.</p>
 <summary><strong>Click for Solution</strong></summary>
 <p>For continuous rates, the Fisher equation is additive:</p>
 <div class="math notranslate nohighlight">
-\[ r = \rho + i \]</div>
+\[
+r = \rho + i
+\]</div>
 <div class="math notranslate nohighlight">
-\[ 8\% = \rho + 3\% \]</div>
+\[
+8\% = \rho + 3\%
+\]</div>
 <div class="math notranslate nohighlight">
-\[ \rho = 5\% \]</div>
+\[
+\rho = 5\%
+\]</div>
 <p>(Note: This is exact, unlike the discrete approximation).</p>
 </details>
 </section>

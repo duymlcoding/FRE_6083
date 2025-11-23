@@ -341,7 +341,9 @@ $\text{Cov}(CF, r_m) = 3091 \times (0.1122)^2 = 3091 \times 0.012589 = 38.91$.
 
 $$ E[CF] = a + b E[r_m] $$
 
-$$ E[CF] = 3280 + 3091(0.0776) $$ (Using regression params).
+$$ E[CF] = 3280 + 3091(0.0776) $$
+
+(Using regression params).
 Text says $E[CF] = 3345.53$..
 
 **Step 4: Calculate Certainty Equivalent**

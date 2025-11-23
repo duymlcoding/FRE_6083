@@ -556,11 +556,15 @@ $$
 Let's check the text's specific derivation for $PVLGP$.
 Text says:
 
-$$V_0 = \frac{a+bs}{r} (1+r) v^s + \frac{b(1+r)}{r^2} v^s$$
+$$
+V_0 = \frac{a+bs}{r} (1+r) v^s + \frac{b(1+r)}{r^2} v^s
+$$
 
 Actually, looking at:
 
-$$PV = \left[ \frac{a+bs}{r} + \frac{b(1+r)}{r^2} \right] v^{s-1}$$
+$$
+PV = \left[ \frac{a+bs}{r} + \frac{b(1+r)}{r^2} \right] v^{s-1}
+$$
 
 ### Linearly Growing Annuity ($PVLGA$)
 
