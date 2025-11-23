@@ -444,13 +444,13 @@ $$g(K_2) \approx e^{rT} \frac{c_1 - 2c_2 + c_3}{(\Delta K)^2}$$
 A security that guarantees principal while providing upside participation.
 
 **Example:**
-- Initial investment: $1,000
+- Initial investment: \$1,000
 - 3-year maturity
-- **Guarantee**: Get back at least $1,000
+- **Guarantee**: Get back at least \$1,000
 - **Upside**: Participate in stock index gains
 
 **Construction:**
-1. Buy 3-year zero-coupon bond with face value $1,000
+1. Buy 3-year zero-coupon bond with face value \$1,000
 2. Use remaining funds to buy call options on index
 ```
 
@@ -458,12 +458,12 @@ A security that guarantees principal while providing upside participation.
 :class: tip
 
 **Given:**
-- Investment amount: $1,000
+- Investment amount: \$1,000
 - Maturity: 3 years
 - Risk-free rate: 6% (continuously compounded)
 - Stock index: 1,000
 - Index dividend yield: 1.5%
-- 3-year ATM call option on index costs: $164 per $1,000 notional
+- 3-year ATM call option on index costs: \$164 per \$1,000 notional
 
 **Question:** Design a principal protected note. What participation rate can you offer?
 ```
@@ -472,7 +472,7 @@ A security that guarantees principal while providing upside participation.
 
 **Step 1: Cost of Principal Protection**
 
-Buy 3-year zero-coupon bond paying $1,000 at maturity:
+Buy 3-year zero-coupon bond paying \$1,000 at maturity:
 
 $$\text{Cost} = 1,000 \times e^{-0.06 \times 3} = 1,000 \times e^{-0.18}$$
 
@@ -484,25 +484,25 @@ $$\text{Available} = 1,000 - 835.27 = \$164.73$$
 
 **Step 3: Call Options Purchasable**
 
-Call option cost: $164 per $1,000 of index exposure
+Call option cost: \$164 per \$1,000 of index exposure
 
 $$\text{Number of options} = \frac{164.73}{164} = 1.0045$$
 
 **Step 4: Structure**
 
 **Principal Protected Note:**
-- Guaranteed return: $1,000 (100% principal protection)
+- Guaranteed return: \$1,000 (100% principal protection)
 - Plus: 100% of index gains above 1,000
 
 **If index rises to 1,200:**
-- Bond pays: $1,000
-- Options pay: $200
-- Total: $1,200 (full participation!)
+- Bond pays: \$1,000
+- Options pay: \$200
+- Total: \$1,200 (full participation!)
 
 **If index falls to 800:**
-- Bond pays: $1,000
+- Bond pays: \$1,000
 - Options expire worthless
-- Total: $1,000 (principal protected!)
+- Total: \$1,000 (principal protected!)
 
 **Final Answer:** Can offer **100% participation** in index gains with **full principal protection**.
 
@@ -910,16 +910,16 @@ You've now covered the fundamental concepts of derivatives:
 :class: tip
 
 **Given:**
-- Stock price: $100
-- Call option (Strike $100): $6
-- Call option (Strike $110): $2
+- Stock price: \$100
+- Call option (Strike \$100): \$6
+- Call option (Strike \$110): \$2
 
 **Questions:**
 1. What is the cost to establish a bull call spread?
 2. What is the maximum profit?
 3. What is the maximum loss?
 4. What are the breakeven points?
-5. What is the payoff if the stock ends at $95? $105? $115?
+5. What is the payoff if the stock ends at \$95? \$105? \$115?
 ```
 
 ```{dropdown} Solution to Practice Problem 1
@@ -962,20 +962,20 @@ $$S_T = \$104$$
 **Part 5: Payoffs**
 
 **At $S_T = \$95$:**
-- Long call: $0$
-- Short call: $0$
-- Profit: $0 - 4 = -\$4$ (max loss)
+- Long call: \$0
+- Short call: \$0
+- Profit: \$0 - 4 = -\$4 (max loss)
 
 **At $S_T = \$105$:**
-- Long call: $105 - 100 = 5$
-- Short call: $0$
-- Profit: $5 - 4 = \$1$
+- Long call: \$105 - 100 = 5
+- Short call: \$0
+- Profit: \$5 - 4 = \$1
 
 **At $S_T = \$115$:**
-- Long call: $115 - 100 = 15$
-- Short call: $-(115 - 110) = -5$
-- Net payoff: $15 - 5 = 10$
-- Profit: $10 - 4 = \$6$ (max profit)
+- Long call: \$115 - 100 = 15
+- Short call: -(\$115 - 110) = -5
+- Net payoff: \$15 - 5 = 10
+- Profit: \$10 - 4 = \$6 (max profit)
 
 **Final Answers:**
 1. Cost: \$4
@@ -984,7 +984,7 @@ $$S_T = \$104$$
 4. Breakeven: \$104
 5. Payoffs: \$95 → -\$4; \$105 → +\$1; \$115 → +\$6
 
-**Interpretation**: The bull call spread reduces the cost of a bullish position from $6 to $4, but caps the maximum profit at $6. It's appropriate for moderate bullish views where you're willing to cap upside to reduce cost.
+**Interpretation**: The bull call spread reduces the cost of a bullish position from \$6 to \$4, but caps the maximum profit at \$6. It's appropriate for moderate bullish views where you're willing to cap upside to reduce cost.
 ```
 
 ---

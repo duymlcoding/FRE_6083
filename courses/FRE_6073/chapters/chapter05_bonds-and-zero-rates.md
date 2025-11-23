@@ -31,17 +31,17 @@ Interest rates can be quoted with different compounding conventions, similar to 
 ```{admonition} Example: Effect of Compounding
 :class: tip
 
-**$100 invested for 1 year at 10% annual rate:**
+**\$100 invested for 1 year at 10% annual rate:**
 
 | Compounding Frequency | Formula | Future Value |
 |----------------------|---------|--------------|
-| Annual ($m=1$) | $100(1+0.10)^1$ | $110.00 |
-| Semiannual ($m=2$) | $100(1+0.10/2)^2$ | $110.25 |
-| Quarterly ($m=4$) | $100(1+0.10/4)^4$ | $110.38 |
-| Monthly ($m=12$) | $100(1+0.10/12)^{12}$ | $110.47 |
-| Weekly ($m=52$) | $100(1+0.10/52)^{52}$ | $110.51 |
-| Daily ($m=365$) | $100(1+0.10/365)^{365}$ | $110.52 |
-| Continuous | $100e^{0.10}$ | $110.52 |
+| Annual ($m=1$) | \$100(1+0.10)^1$ | \$110.00 |
+| Semiannual ($m=2$) | \$100(1+0.10/2)^2$ | \$110.25 |
+| Quarterly ($m=4$) | \$100(1+0.10/4)^4$ | \$110.38 |
+| Monthly ($m=12$) | \$100(1+0.10/12)^{12}$ | \$110.47 |
+| Weekly ($m=52$) | \$100(1+0.10/52)^{52}$ | \$110.51 |
+| Daily ($m=365$) | \$100(1+0.10/365)^{365}$ | \$110.52 |
+| Continuous | \$100e^{0.10}$ | \$110.52 |
 ```
 
 **Physical Meaning**: More frequent compounding means interest is added more often, so you earn "interest on interest" sooner, resulting in slightly higher returns.
@@ -111,7 +111,7 @@ Where:
 :class: tip
 
 **Problem Statement:**
-You invest $5,000 at 6% per annum with continuous compounding for 3.5 years. How much will you have?
+You invest \$5,000 at 6% per annum with continuous compounding for 3.5 years. How much will you have?
 
 **Given:**
 - $PV = \$5,000$
@@ -145,7 +145,7 @@ $$\text{Interest} = 6,168.55 - 5,000 = \$1,168.55$$
 
 $$FV = 5,000(1.06)^{3.5} = 5,000 \times 1.2293 = \$6,146.42$$
 
-Continuous compounding yields $22.13 more (not a huge difference).
+Continuous compounding yields \$22.13 more (not a huge difference).
 ```
 
 ---
@@ -279,11 +279,11 @@ Given the following bond data, construct the zero curve:
 
 | Bond | Principal | Time to Maturity | Annual Coupon | Bond Price |
 |------|-----------|------------------|---------------|------------|
-| A | $100 | 0.25 years | $0 | $99.6 |
-| B | $100 | 0.50 years | $0 | $99.0 |
-| C | $100 | 1.00 years | $0 | $97.8 |
-| D | $100 | 1.50 years | $4 | $102.5 |
-| E | $100 | 2.00 years | $5 | $105.0 |
+| A | \$100 | 0.25 years | \$0 | \$99.6 |
+| B | \$100 | 0.50 years | \$0 | \$99.0 |
+| C | \$100 | 1.00 years | \$0 | \$97.8 |
+| D | \$100 | 1.50 years | \$4 | \$102.5 |
+| E | \$100 | 2.00 years | \$5 | \$105.0 |
 
 Calculate the zero rates (continuously compounded) for all maturities.
 ```
@@ -293,7 +293,7 @@ Calculate the zero rates (continuously compounded) for all maturities.
 **Step 1: 3-Month Zero Rate (Bond A)**
 
 Bond A is a pure discount bond:
-- Pay $99.6 today, receive $100 in 0.25 years
+- Pay \$99.6 today, receive \$100 in 0.25 years
 
 $$99.6 = 100 \times e^{-R(0.25) \times 0.25}$$
 
@@ -325,14 +325,14 @@ $$R(1.0) = 0.02225 = 2.225\%$$
 
 **Step 4: 1.5-Year Zero Rate (Bond D)**
 
-Bond D pays coupons: $2 at 0.5 years, $2 at 1.0 years, $102 at 1.5 years
+Bond D pays coupons: \$2 at 0.5 years, \$2 at 1.0 years, \$102 at 1.5 years
 
 $$102.5 = 2e^{-0.02010 \times 0.5} + 2e^{-0.02225 \times 1.0} + 102e^{-R(1.5) \times 1.5}$$
 
 Calculate present value of known cash flows:
-- $2e^{-0.01005} = 2 \times 0.99 = \$1.98$
-- $2e^{-0.02225} = 2 \times 0.978 = \$1.96$
-- Total = $3.94
+- \$2e^{-0.01005} = 2 \times 0.99 = \$1.98$
+- \$2e^{-0.02225} = 2 \times 0.978 = \$1.96$
+- Total = \$3.94
 
 Remaining present value:
 
@@ -346,15 +346,15 @@ $$R(1.5) = 0.02284 = 2.284\%$$
 
 **Step 5: 2-Year Zero Rate (Bond E)**
 
-Bond E pays: $2.5 at 0.5, 1.0, 1.5, and 2.0 years, plus $100 at 2.0 years
+Bond E pays: \$2.5 at 0.5, 1.0, 1.5, and 2.0 years, plus \$100 at 2.0 years
 
 $$105.0 = 2.5e^{-0.01005} + 2.5e^{-0.02225} + 2.5e^{-0.03426} + 102.5e^{-R(2.0) \times 2.0}$$
 
 Known cash flows:
-- At 0.5: $2.5 \times 0.99 = \$2.475$
-- At 1.0: $2.5 \times 0.978 = \$2.445$
-- At 1.5: $2.5 \times 0.9662 = \$2.416$
-- Total = $7.336
+- At 0.5: \$2.5 \times 0.99 = \$2.475$
+- At 1.0: \$2.5 \times 0.978 = \$2.445$
+- At 1.5: \$2.5 \times 0.9662 = \$2.416$
+- Total = \$7.336
 
 Remaining:
 
@@ -404,9 +404,9 @@ Where:
 Using the zero curve from the previous example, calculate the theoretical price of a 2-year bond with 6% annual coupon (paid semiannually).
 
 **Bond specifications:**
-- Face value: $100
+- Face value: \$100
 - Coupon: 6% per annum (3% semiannually)
-- Cash flows: $3 at 0.5, 1.0, 1.5, and 2.0 years, plus $100 at 2.0 years
+- Cash flows: \$3 at 0.5, 1.0, 1.5, and 2.0 years, plus \$100 at 2.0 years
 ```
 
 ```{dropdown} Solution
@@ -415,10 +415,10 @@ Using the zero curve from the previous example, calculate the theoretical price 
 
 | Time (years) | Cash Flow | Zero Rate |
 |--------------|-----------|-----------|
-| 0.5 | $3 | 2.010% |
-| 1.0 | $3 | 2.225% |
-| 1.5 | $3 | 2.284% |
-| 2.0 | $103 | 2.416% |
+| 0.5 | \$3 | 2.010% |
+| 1.0 | \$3 | 2.225% |
+| 1.5 | \$3 | 2.284% |
+| 2.0 | \$103 | 2.416% |
 
 **Step 2: Discount Each Cash Flow**
 
@@ -444,7 +444,7 @@ $$\text{Bond Price} = 2.970 + 2.934 + 2.899 + 98.15 = \$106.95$$
 
 **Final Answer:** The theoretical price is \$106.95.
 
-**Interpretation**: The 6% coupon bond trades above par ($100) because coupon rates exceed prevailing market rates, making it more valuable.
+**Interpretation**: The 6% coupon bond trades above par (\$100) because coupon rates exceed prevailing market rates, making it more valuable.
 ```
 
 ---

@@ -144,7 +144,7 @@ A bank sells 100,000 European call options on a stock.
 **Part 1: Initial Exposure**
 
 **Liability:**
-- Sold 100,000 calls at $2.40 each
+- Sold 100,000 calls at \$2.40 each
 - Total premium received: $100,000 \times \$2.40 = \$240,000$
 
 **Naked Risk:**

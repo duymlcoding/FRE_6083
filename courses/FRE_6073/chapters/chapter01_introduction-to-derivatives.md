@@ -55,7 +55,7 @@ Derivatives play a crucial role in the global financial system by enabling effic
 ```{note}
 **Market Size:**
 
-- The notional value of global derivatives markets exceeds $600 trillion
+- The notional value of global derivatives markets exceeds \$600 trillion
 - This dwarfs the global equity and bond markets combined
 - However, notional value overstates actual risk exposure
 - Net market value (actual risk) is a small fraction of notional value
@@ -217,7 +217,7 @@ A U.S. company will pay £10 million for imports from Britain in 3 months. The c
 
 **Given:**
 - Payment due: £10 million in 3 months
-- Current rate: $1.2230/£
+- Current rate: \$1.2230/£
 - Concern: GBP appreciation
 
 **Find:** How to hedge this risk
@@ -228,15 +228,15 @@ A U.S. company will pay £10 million for imports from Britain in 3 months. The c
 **Step 1: Identify the Risk**
 
 The company faces **currency risk**:
-- If GBP strengthens to $1.30/£, cost = $13,000,000
-- If GBP weakens to $1.20/£, cost = $12,000,000
-- At current rate: $12,230,000
+- If GBP strengthens to \$1.30/£, cost = \$13,000,000
+- If GBP weakens to \$1.20/£, cost = \$12,000,000
+- At current rate: \$12,230,000
 
 The company wants certainty.
 
 **Step 2: Choose Hedging Instrument**
 
-Enter a **long forward contract** to buy £10 million in 3 months at $1.2230/£
+Enter a **long forward contract** to buy £10 million in 3 months at \$1.2230/£
 
 **Step 3: Analyze the Hedge**
 
@@ -245,16 +245,16 @@ Enter a **long forward contract** to buy £10 million in 3 months at $1.2230/£
 - Cost varies with GBP/USD rate
 
 **Hedged Position:**
-- Locked in cost: £10M × $1.2230/£ = $12,230,000
+- Locked in cost: £10M × \$1.2230/£ = \$12,230,000
 - No matter what happens to exchange rate
 
 **Outcome Table:**
 
 | Spot Rate at Maturity | Without Hedge | With Hedge | Difference |
 |-----------------------|---------------|------------|------------|
-| $1.20/£ | $12,000,000 | $12,230,000 | -$230,000 |
-| $1.2230/£ | $12,230,000 | $12,230,000 | $0 |
-| $1.30/£ | $13,000,000 | $12,230,000 | +$770,000 |
+| \$1.20/£ | \$12,000,000 | \$12,230,000 | -\$230,000 |
+| \$1.2230/£ | \$12,230,000 | \$12,230,000 | \$0 |
+| \$1.30/£ | \$13,000,000 | \$12,230,000 | +\$770,000 |
 
 **Final Answer:** **The company should enter a long forward contract for £10 million at \$1.2230/£. This eliminates all currency risk, providing budget certainty.**
 
@@ -440,44 +440,44 @@ In Chapter 2, we'll dive deep into **forward and futures contracts**, exploring 
 ```{admonition} Practice Problem 1
 :class: tip
 
-An investor owns 1,000 shares of stock currently worth $28 per share. A two-month put option with a strike price of $27.50 costs $1. The investor decides to hedge by buying 10 put option contracts (each contract covers 100 shares).
+An investor owns 1,000 shares of stock currently worth \$28 per share. A two-month put option with a strike price of \$27.50 costs \$1. The investor decides to hedge by buying 10 put option contracts (each contract covers 100 shares).
 
 **Questions:**
 1. What is the total cost of the hedge?
 2. What is the minimum portfolio value the investor has locked in?
-3. If the stock falls to $20, what is the net value of the hedged position?
-4. If the stock rises to $35, what is the net value?
+3. If the stock falls to \$20, what is the net value of the hedged position?
+4. If the stock rises to \$35, what is the net value?
 ```
 
 ```{dropdown} Solution to Practice Problem 1
 
 **Part 1: Cost of Hedge**
 
-Cost = 10 contracts × 100 shares/contract × $1/share = **$1,000**
+Cost = 10 contracts × 100 shares/contract × \$1/share = **\$1,000**
 
 **Part 2: Minimum Portfolio Value**
 
-- Each put guarantees the right to sell at $27.50
-- With 1,000 shares: 1,000 × $27.50 = $27,500
-- Minus hedge cost: $27,500 - $1,000 = **$26,500 minimum**
+- Each put guarantees the right to sell at \$27.50
+- With 1,000 shares: 1,000 × \$27.50 = \$27,500
+- Minus hedge cost: \$27,500 - \$1,000 = **\$26,500 minimum**
 
 **Part 3: Stock Falls to \$20**
 
 Without hedge:
-- Stock value: 1,000 × $20 = $20,000
+- Stock value: 1,000 × \$20 = \$20,000
 
 With hedge:
-- Exercise puts: Sell 1,000 shares at $27.50 = $27,500
-- Minus hedge cost: $27,500 - $1,000 = **$26,500**
-- Gain from hedge: $26,500 - $20,000 = $6,500
+- Exercise puts: Sell 1,000 shares at \$27.50 = \$27,500
+- Minus hedge cost: \$27,500 - \$1,000 = **\$26,500**
+- Gain from hedge: \$26,500 - \$20,000 = \$6,500
 
 **Part 4: Stock Rises to \$35**
 
-- Stock value: 1,000 × $35 = $35,000
+- Stock value: 1,000 × \$35 = \$35,000
 - Puts expire worthless
-- Net value: $35,000 - $1,000 = **$34,000**
-- (Foregone gain of $1,000 is the insurance cost)
+- Net value: \$35,000 - \$1,000 = **\$34,000**
+- (Foregone gain of \$1,000 is the insurance cost)
 
-**Final Answer:** The hedge costs $1,000 and guarantees a minimum value of $26,500, protecting against downside while still allowing upside (minus the premium paid).
+**Final Answer:** The hedge costs \$1,000 and guarantees a minimum value of \$26,500, protecting against downside while still allowing upside (minus the premium paid).
 ```
 
