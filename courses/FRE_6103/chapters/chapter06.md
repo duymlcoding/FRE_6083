@@ -43,7 +43,7 @@ Before studying this chapter, you should be familiar with:
 
 ---
 
-## Part 1: The Arithmetic Random Walk (ARW)
+##  The Arithmetic Random Walk (ARW)
 
 The Random Walk hypothesis, popularized by Louis Bachelier in 1900, posits that asset price changes are random and unpredictable. Even if we don't believe markets are truly random, the **Efficient Market Hypothesis** suggests we cannot systematically outperform them, so modeling prices as random is a rational baseline.
 
@@ -147,9 +147,9 @@ This covariance structure allows us to construct the covariance matrix $\mathbf{
 1.  Construct the Covariance Matrix $\mathbf{A}$ where $A_{ij} = \sigma^2 \min(i, j)$.
 2.  Compute Cholesky $\mathbf{R}$ such that $\mathbf{A} = \mathbf{R}\mathbf{R}^T$.
 3.  Generate independent $Z \sim N(0,1)$.
-4.  Path $\mathbf{S} = \mathbf{S}_{mean} + \mathbf{Z}\mathbf{R}^T$.
-    Actually, simpler: $\mathbf{S} = \mathbf{S}_{mean} + \mathbf{R}\mathbf{Z}$? No, in Chapter 5 it was $\mathbf{Z}\mathbf{R}^T$ if $\mathbf{Z}$ is a row vector.
-    Note: For ARW, the Cholesky matrix $\mathbf{R}$ is simply a lower triangular matrix of $\sigma$'s.
+4.  Path $\mathbf{S} = \mathbf{S}_{mean} + \mathbf{Z}\mathbf{R}^T$ (where $\mathbf{Z}$ is a row vector).
+
+    **Note:** For ARW, the Cholesky matrix $\mathbf{R}$ is simply a lower triangular matrix of $\sigma$'s.
     $S_{t+1} = S_t + \mu + \sigma Z_1$
     $S_{t+2} = S_{t+1} + \mu + \sigma Z_2 = S_t + 2\mu + \sigma(Z_1 + Z_2)$
     This confirms the "cumulative sum" structure.
@@ -167,7 +167,7 @@ This covariance structure allows us to construct the covariance matrix $\mathbf{
 
 ---
 
-## Part 2: Mean Reversion (Ornstein-Uhlenbeck)
+##  Mean Reversion (Ornstein-Uhlenbeck)
 
 Commodities (oil, copper, wheat) and interest rates do not wander infinitely like stocks.
 * **High Prices:** Stimulate supply, reduce demand $\to$ Price falls.
@@ -277,7 +277,7 @@ $$
 
 ---
 
-## Part 3: The Geometric Random Walk (GRW)
+##  The Geometric Random Walk (GRW)
 
 To model stock prices while respecting limited liability ($S \ge 0$) and exponential growth, we use the Geometric Random Walk. This is the engine behind the Black-Scholes model.
 
@@ -369,7 +369,7 @@ $\ln(S_{t+j}) \sim N(\ln(S_t) + j(\mu - 0.5\sigma^2), j\sigma^2)$.
 
 ---
 
-## Part 4: Worked Examples
+##  Worked Examples
 
 ```{admonition} Example 1: Simulating an ARW
 :class: tip
@@ -435,7 +435,7 @@ Even though the arithmetic expected return is 10%, the most likely path (geometr
 
 ---
 
-## Part 5: Practice Problems
+##  Practice Problems
 
 ```{admonition} Practice Problem 1: ARW Variance
 :class: tip
@@ -499,7 +499,7 @@ $$ S_1 = 100 (0.9465) = 94.65 $$
 
 ---
 
-## Part 6: Chapter Summary
+##  Chapter Summary
 
 ```{important}
 **Key Concepts Recap**

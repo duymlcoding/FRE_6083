@@ -44,7 +44,7 @@ Before studying this chapter, you should be familiar with:
 
 ---
 
-## Part 1: Foundations of Random Number Generation
+##  Foundations of Random Number Generation
 
 At the heart of every simulation is the **Random Number Generator (RNG)**. Most systems provide a way to generate a **Uniform** random number $U \sim [0, 1]$. The challenge is converting this uniform noise into specific distributions (Normal, Exponential, etc.) that represent financial variables.
 
@@ -164,7 +164,7 @@ $$
 
 ---
 
-## Part 2: The Simulation Core Logic
+##  The Simulation Core Logic
 
 Simulation is an experimental process. Instead of solving an integral analytically, we estimate it statistically.
 
@@ -215,7 +215,7 @@ To reduce the error by a factor of $k$, you must increase the sample size $N$ by
 
 ---
 
-## Part 3: Variance Reduction Techniques
+##  Variance Reduction Techniques
 
 Since increasing $N$ is costly, we use mathematical tricks to reduce the variance $s^2$ without generating more samples.
 
@@ -253,7 +253,7 @@ Since $\text{Cov}(z, -z)$ is negative, the total variance decreases.
 
 ---
 
-## Part 4: Multivariate Simulation (Correlated Variables)
+##  Multivariate Simulation (Correlated Variables)
 
 In finance, assets are correlated. A stock portfolio or a basket of bonds requires us to simulate multiple random variables that move together.
 
@@ -301,7 +301,7 @@ Given $\mathbf{A} = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmat
 
 ---
 
-## Part 5: Advanced Derivations (MGFs and Completing the Square)
+##  Advanced Derivations (MGFs and Completing the Square)
 
 To prove that linear combinations of normals are indeed normal, we look at the **Moment Generating Function (MGF)**. This section provides the mathematical depth required to understand *why* the Cholesky method works.
 
@@ -369,7 +369,7 @@ This is the MGF of a Normal distribution with mean $a\mu_1 + b\mu_2$ and varianc
 
 ---
 
-## Part 6: Copulas and Non-Normal Correlation
+##  Copulas and Non-Normal Correlation
 
 The Cholesky method only works for Normal distributions. What if we need to correlate **Bond Default Times**, which follow a Geometric distribution? We use a **Copula**.
 
@@ -401,7 +401,7 @@ We are correlating the "percentile rankings" of the variables. If Bond A is in t
 
 ---
 
-## Part 7: Worked Examples
+##  Worked Examples
 
 ```{admonition} Example 1: Integrating $\max(Z, c)$
 :class: tip
@@ -471,7 +471,7 @@ If we used different random numbers for $s=10$ and $s=11$, the noise might mask 
 
 ---
 
-## Part 8: Practice Problems
+##  Practice Problems
 
 ```{admonition} Practice Problem 1: Exponential Inverse
 :class: tip
@@ -518,7 +518,7 @@ Range: $[99.6, 100.4]$.
 
 ---
 
-## Part 9: Chapter Summary
+##  Chapter Summary
 
 ```{important}
 **Key Concepts Recap**

@@ -48,7 +48,7 @@ Before studying this chapter, you should be familiar with:
 
 ---
 
-## Part 1: Frequency and Compounding
+##  Frequency and Compounding
 
 Real-world debt instruments rarely pay annually. Consumer loans pay monthly; corporate bonds often pay quarterly; US Government bonds pay semi-annually. We must reconcile these frequencies with standard annual rate quotes.
 
@@ -154,7 +154,7 @@ $$
 
 ---
 
-## Part 2: Inflation and Purchasing Power
+##  Inflation and Purchasing Power
 
 Inflation erodes the value of money. We must distinguish between the number of dollars (Nominal) and the purchasing power of those dollars (Real).
 
@@ -170,33 +170,25 @@ $$
 
 ### 2. The Fisher Equation
 
-The relationship between Nominal Rate ($r$), Real Rate ($\rho$), and Inflation Rate ($i$) is given by the **Fisher Equation**:
+```{important}
+**The Fisher Equation:**
 
 $$
-
 (1 + r) = (1 + \rho)(1 + i)
-
 $$
 
-**Implication:**
-You earn the nominal rate $r$. Part of that pays for the higher cost of goods ($i$), and the rest is your real increase in wealth ($\rho$).
+where:
 
-**Approximation:**
+- $r$ = Nominal interest rate
+- $\rho$ = Real interest rate
+- $i$ = Inflation rate
 
-$$
+**Approximation:** $r \approx \rho + i$
 
-r \approx \rho + i
+**Exact (Continuous):** For continuous rates: $e^r = e^{\rho} e^i \implies r = \rho + i$
+```
 
-$$
-
-**Exact (Continuous):**
-For continuous rates, the approximation becomes an exact equality:
-
-$$
-
-e^r = e^{\rho} e^i \implies r = \rho + i
-
-$$
+**Physical Meaning**: You earn the nominal rate $r$. Part of that pays for the higher cost of goods ($i$), and the rest is your real increase in wealth ($\rho$).
 
 
 
@@ -215,7 +207,7 @@ Both methods yield the exact same Present Value.
 
 ---
 
-## Part 3: Taxation
+##  Taxation
 
 Taxes complicate valuation because different components of return (Ordinary Income vs. Capital Gains) are often taxed at different rates.
 
@@ -255,7 +247,7 @@ This implies an **Effective Tax Rate ($\tau_e$)** for the entire instrument, whi
 
 ---
 
-## Part 4: Variable Interest Rates and Term Structure
+##  Variable Interest Rates and Term Structure
 
 Interest rates are not constant over time. The yield curve (Term Structure) tells us the spot rate for every maturity.
 
@@ -329,7 +321,7 @@ $$
 
 ---
 
-## Part 5: Currency and Exchange Rates
+##  Currency and Exchange Rates
 
 Valuing foreign assets involves two sources of risk: the asset's performance and the exchange rate.
 
@@ -386,7 +378,7 @@ The percentage premium of the forward rate equals the interest rate differential
 
 ---
 
-## Part 6: Event Risk and Default
+##  Event Risk and Default
 
 Finally, we leave the world of "guaranteed" cash flows. We incorporate probabilities of events (Death, Default, Accident) into valuation.
 
@@ -476,7 +468,7 @@ $$
 
 ---
 
-## Part 7: Worked Examples
+##  Worked Examples
 
 ```{admonition} Example 1: Frequency Conversion
 :class: tip
@@ -628,7 +620,7 @@ $$
 
 ---
 
-## Part 8: Practice Problems
+##  Practice Problems
 
 ```{admonition} Practice Problem 1: After-Tax Yield
 :class: tip
@@ -727,7 +719,7 @@ $$
 
 ---
 
-## Part 9: Chapter Summary
+##  Chapter Summary
 
 ### Key Concepts Recap
 :class: important

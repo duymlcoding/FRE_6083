@@ -52,7 +52,7 @@ The concepts in this chapter are used daily by:
 
 ---
 
-## Part 1: Fundamental Concepts
+## Fundamental Concepts
 
 ### What is Financial Engineering?
 
@@ -120,11 +120,17 @@ These are assets whose values are influenced by corporate decisions.
 
 The legal structure of a corporation fundamentally alters valuation through three mechanisms:
 
-1.  **Limited Liability:** Shareholders cannot lose more than their initial investment. This acts like an "insurance policy" or a "put option" for shareholders.
-2.  **Bankruptcy:** The right to default on debt. Instead of paying cash, the firm surrenders its assets to debtholders.
-3.  **Tax Incentives:** Interest on debt is often tax-deductible, increasing net cash flows to the firm.
+```{important}
+**Three Key Mechanisms of Corporate Structure:**
 
-**Summary:** Limited liability, bankruptcy protection, and tax incentives generally **increase** the value of the company.
+1. **Limited Liability:** Shareholders cannot lose more than their initial investment. This acts like an "insurance policy" or a "put option" for shareholders.
+
+2. **Bankruptcy:** The right to default on debt. Instead of paying cash, the firm surrenders its assets to debtholders.
+
+3. **Tax Incentives:** Interest on debt is often tax-deductible, increasing net cash flows to the firm.
+```
+
+**Physical Meaning**: Limited liability, bankruptcy protection, and tax incentives generally increase the value of the company by providing downside protection and cash flow advantages.
 
 ### Contracts as Contingent Assets
 
@@ -144,21 +150,29 @@ Imagine a farmer signs a forward contract to sell wheat at \$4.00/bushel.
 
 It is vital to distinguish between *price* and *value*.
 
-* **Bid Price:** The price a buyer offers (The price you sell at).
-* **Ask Price:** The price a seller offers (The price you buy at).
-* **Value:** The theoretical worth of the asset derived from a model.
+```{note}
+**Key Market Terminology:**
+
+- **Bid Price:** The price a buyer offers (the price you sell at)
+- **Ask Price:** The price a seller offers (the price you buy at)
+- **Value:** The theoretical worth of the asset derived from a model
+```
 
 **Public vs. Private Value:**
-* **Public Value:** The consensus market value.
-* **Private Value:** The value to a specific individual based on their unique constraints, tax situation, or beliefs.
 
+- **Public Value:** The consensus market value
+- **Private Value:** The value to a specific individual based on their unique constraints, tax situation, or beliefs
+
+```{important}
 **The Trading Rule:**
-* **BUY** if Private Valuation > Public Valuation.
-* **SELL** if Private Valuation < Public Valuation.
+
+- **BUY** if Private Valuation > Public Valuation
+- **SELL** if Private Valuation < Public Valuation
+```
 
 ---
 
-## Part 2: Mathematical Framework
+## Mathematical Framework
 
 ### Section 1: Return Metrics
 
@@ -249,23 +263,25 @@ In a functioning market, for a transaction to occur, the buyer and seller must a
 
 Equating Step 1 and Step 2:
 
+```{important}
+**The General Valuation Equation (GVE):**
+
 $$
-
 r V_0 + k \sigma = E[V_1 - V_0] + E[C_1]
-
 $$
 
 where:
-* $r$ = risk-free interest rate
-* $V_0$ = Value at time 0
-* $k$ = Market price of risk
-* $\sigma$ = Standard deviation (risk measure)
-* $E[\cdot]$ = Expected value operator
-* $V_1$ = Value at time 1
-* $C_1$ = Cash flow at time 1
 
-**Physical Interpretation:**
-This equation states that the *cost* of holding the asset (lost interest + risk borne) must equal the *benefit* of holding the asset (price appreciation + cash income).
+- $r$ = risk-free interest rate
+- $V_0$ = Value at time 0
+- $k$ = Market price of risk
+- $\sigma$ = Standard deviation (risk measure)
+- $E[\cdot]$ = Expected value operator
+- $V_1$ = Value at time 1
+- $C_1$ = Cash flow at time 1
+```
+
+**Physical Meaning**: This equation states that the *cost* of holding the asset (lost interest + risk borne) must equal the *benefit* of holding the asset (price appreciation + cash income).
 
 ---
 
@@ -273,31 +289,37 @@ This equation states that the *cost* of holding the asset (lost interest + risk 
 
 Valuation applies to liabilities just as much as assets. Insurance companies use "Reserves" to represent the value of future liabilities.
 
-**Definition:** A Reserve is value kept back to pay future claims.
+```{admonition} Key Concept: Insurance Reserve
+:class: tip
+
+A **Reserve** is value kept back to pay future claims.
 
 There are two ways to calculate reserves, and under consistent assumptions, they yield the same result.
+```
 
-#### 1. Retrospective Reserve (Looking Backward)
-Calculated based on what has already happened.
+```{important}
+**Two Methods for Calculating Reserves:**
+
+**1. Retrospective Reserve (Looking Backward)**
+
+Calculated based on what has already happened:
 
 $$
-
 \text{Reserve} = \text{FV(Premiums Received)} - \text{FV(Benefits & Expenses Paid)}
-
 $$
 
-#### 2. Prospective Reserve (Looking Forward)
-Calculated based on what is expected to happen. This is essentially a Net Present Value calculation.
+**2. Prospective Reserve (Looking Forward)**
+
+Calculated based on what is expected to happen (Net Present Value):
 
 $$
-
 \text{Reserve} = \text{PV(Future Benefits & Expenses)} - \text{PV(Future Premiums)}
-
 $$
+```
 
 ---
 
-## Part 3: Worked Examples
+## Worked Examples
 
 ```{admonition} Example 1: Applying the GVE to a Risk-Free Asset
 :class: tip
@@ -461,7 +483,7 @@ You short sell a stock at \$50 ($V_0$). One year later, the price drops, and you
 **Analysis 2: The "Alternative" Dollarized Approach**
 Let's define the investment by the cash flows relative to the investor's pocket.
 
-* **Initial Investment:** $-\$50$. (Wait, why negative? In this specific accounting view, we treat the liability created as a negative starting position to make the math work for percentages). *Note: The text suggests treating the \$50 received as a "negative investment" to force the math.*
+* **Initial Investment:** $-\$50$ (the liability is treated as a negative starting position to make the math work for percentages).
 
 Let's look at the text's logic carefully:
 1.  "Initial investment = -\$50 (because you receive this amount...)" 
@@ -523,7 +545,7 @@ Both methods yield a Reserve of **50**. This requires the company to hold 50 in 
 
 ---
 
-## Part 4: Practice Problems
+## Practice Problems
 
 Test your understanding with these problems. Try them before looking at solutions!
 
@@ -631,7 +653,7 @@ A publicly traded bond is priced at \$950 (Public Valuation). You have a specifi
 
 ---
 
-## Part 5: Advanced Topics and Extensions
+## Advanced Topics and Extensions
 
 ### Extension 1: The GVE and CAPM
 
@@ -657,7 +679,7 @@ We will focus primarily on **#4 (Benchmark)** and **#5 (NPV)** throughout this c
 
 ---
 
-## Part 6: Chapter Summary
+## Chapter Summary
 
 ### Key Concepts Recap
 :class: important

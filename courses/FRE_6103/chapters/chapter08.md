@@ -43,7 +43,7 @@ Before studying this chapter, you should be familiar with:
 
 ---
 
-## Part 1: The Cash Flow Portfolio Model (CFPM)
+##  The Cash Flow Portfolio Model (CFPM)
 
 The CFPM allows us to value assets based on dollars of cash flow. This avoids the singularities involved in calculating percentage returns for zero-cost investments (like swaps or forwards).
 
@@ -136,8 +136,8 @@ U = E[W_1] - \frac{1}{2} A \cdot Var(W_1)
 $$
 
 Where:
-* $A$: The coefficient of risk aversion.
-* (Note: The slides use $U = E - A \cdot Var$ without the $1/2$ in some places, but we will proceed with the standard derivative logic. The slides later clarify $U = E[W] - A Var(W)$. We will stick to the text's definition).
+
+- $A$: The coefficient of risk aversion
 
 **The Utility Function in Matrix Form:**
 
@@ -146,7 +146,7 @@ $$U(\mathbf{\nu}) = \left[ \mathbf{\nu}^T \mathbf{\mu} + (W_0 - \mathbf{\nu}^T \
 
 ---
 
-## Part 2: Deriving Market Equilibrium
+##  Deriving Market Equilibrium
 
 To find the optimal portfolio, the investor chooses the vector $\mathbf{\nu}$ that maximizes $U$. This is a calculus problem requiring matrix differentiation.
 
@@ -161,15 +161,16 @@ $$
 $$
 
 **Term-by-Term Differentiation:**
-1.  $\frac{\partial}{\partial \nu} (\mathbf{\nu}^T \mathbf{\mu}) = \mathbf{\mu}$
-2.  $\frac{\partial}{\partial \nu} (W_0(1+r)) = \mathbf{0}$
-3.  $\frac{\partial}{\partial \nu} (-\mathbf{\nu}^T \mathbf{V}(1+r)) = -\mathbf{V}(1+r)$
-4.  $\frac{\partial}{\partial \nu} (-A \mathbf{\nu}^T \mathbf{\Sigma} \mathbf{\nu}) = -2A \mathbf{\Sigma} \mathbf{\nu}$ (if utilizing $1/2$ convention) or similar. Let's check the text's specific derivative result.
-    * Text derivation result: $\nabla U = \mathbf{\mu} - \mathbf{V}(1+r) - 2A \mathbf{\Sigma} \mathbf{\nu}$.
-    * *Correction:* The text slides actually derive: $\nabla U = \mathbf{\mu} - \mathbf{V}(1+r) - A (\mathbf{\Sigma} + \mathbf{\Sigma}^T) \mathbf{\nu}$. Since $\mathbf{\Sigma}$ is symmetric, this becomes $\mathbf{\mu} - \mathbf{V}(1+r) - 2A \mathbf{\Sigma} \mathbf{\nu}$. However, slide 26 concludes $\nabla U = \mathbf{\mu} - \mathbf{V}(1+r) - \mathbf{\Sigma} \mathbf{\nu}$... Wait, let's look closely at Slide 21.
-    * Slide 21 uses $U = E - 1/2 A Var$.
-    * Slide 26 says $\nabla U = \mathbf{\mu} - \mathbf{V}(1+r) - A \mathbf{\Sigma} \mathbf{\nu}$.
-    * This implies the derivative of $\frac{1}{2} \mathbf{\nu}^T \mathbf{\Sigma} \mathbf{\nu}$ is $\mathbf{\Sigma} \mathbf{\nu}$. This is correct.
+
+1. $\frac{\partial}{\partial \nu} (\mathbf{\nu}^T \mathbf{\mu}) = \mathbf{\mu}$
+
+2. $\frac{\partial}{\partial \nu} (W_0(1+r)) = \mathbf{0}$
+
+3. $\frac{\partial}{\partial \nu} (-\mathbf{\nu}^T \mathbf{V}(1+r)) = -\mathbf{V}(1+r)$
+
+4. $\frac{\partial}{\partial \nu} \left(-\frac{1}{2}A \mathbf{\nu}^T \mathbf{\Sigma} \mathbf{\nu}\right) = -A \mathbf{\Sigma} \mathbf{\nu}$
+
+This gives: $\nabla U = \mathbf{\mu} - \mathbf{V}(1+r) - A \mathbf{\Sigma} \mathbf{\nu}$
 
 **The Optimal Holdings Vector:**
 Setting the gradient to zero:
@@ -215,12 +216,23 @@ $$
 $$
 
 
-**Physical Interpretation:**
-This is the **Fundamental Valuation Formula of CFPM**.
-* **$\mathbf{V}$**: The value of the assets today.
-* **$\frac{1}{1+r}$**: The risk-free discount factor.
-* **$\mathbf{\mu}$**: The expected future cash flows.
-* **$- A \mathbf{\Sigma} \mathbf{J}$**: The **Risk Discount**. The value is reduced by the risk aversion times the covariance of the assets with the "Market Portfolio" ($\mathbf{J}$).
+```{important}
+**Fundamental Valuation Formula of CFPM:**
+
+$$
+\mathbf{V} = \frac{\mathbf{\mu} - A \mathbf{\Sigma} \mathbf{J}}{1+r}
+$$
+
+where:
+
+- $\mathbf{V}$ = Value vector of assets today
+- $\mathbf{\mu}$ = Expected future cash flows
+- $A$ = Market risk aversion parameter
+- $\mathbf{\Sigma}$ = Covariance matrix
+- $\mathbf{J}$ = Unit vector (market portfolio weights)
+```
+
+**Physical Meaning**: The value is reduced by the risk aversion times the covariance of the assets with the "Market Portfolio" ($\mathbf{J}$). This is the Risk Discount term.
 
 ### 3. The Market Price of Risk ($A$)
 
@@ -259,7 +271,7 @@ This is often called $\lambda$, the **Market Price of Risk**. It tells us how mu
 
 ---
 
-## Part 3: Beta and The "Black Ratio"
+##  Beta and The "Black Ratio"
 
 We can now relate individual assets to the market portfolio, deriving the concept of Beta from first principles.
 
@@ -276,8 +288,7 @@ $$\mathbf{\beta}_{dollar} = \frac{\mathbf{\Sigma} \mathbf{J}}{\mathbf{J}^T \math
 
 $$\mathbf{\beta}_{\%} = \frac{\mathbf{\Sigma} (\mathbf{J} \oslash \mathbf{V})}{(\mathbf{J}^T \mathbf{V})^2}$$
 
-(Wait, let's stick to the simpler algebraic definition derived in the notes).
-The notes define Beta vector $\mathbf{\beta}$ as:
+The Beta vector $\mathbf{\beta}$ is defined as:
 
 $$\mathbf{\beta} = \frac{\mathbf{\Sigma} \mathbf{J} \oslash \mathbf{V}}{\mathbf{J}^T \mathbf{\Sigma} \mathbf{J} / (\mathbf{J}^T \mathbf{V})^2}$$
 
@@ -303,7 +314,7 @@ This constant is the **Black Ratio**. It implies that the risk premium is perfec
 
 ---
 
-## Part 4: Sub-Portfolio Pricing
+##  Sub-Portfolio Pricing
 
 One of the unique strengths of CFPM is that we can price any portfolio relative to any *other* portfolio, not just the total market.
 
@@ -333,7 +344,7 @@ This implies we can construct a zero-beta (risk-free) portfolio by combining $Y$
 
 ---
 
-## Part 5: The Classical Markowitz Model
+##  The Classical Markowitz Model
 
 We now shift to the percentage-return framework (Modern Portfolio Theory). Here, we solve for the **Efficient Frontier**: the set of portfolios that minimize variance for a given target return $R$.
 
@@ -400,7 +411,7 @@ $$\sigma_{min}^2 = 1/A$$
 
 ---
 
-## Part 6: The Tangency Portfolio
+##  The Tangency Portfolio
 
 When we introduce a risk-free asset $r_f$, the efficient frontier changes from a hyperbola to a straight line: the **Capital Market Line (CML)**.
 
@@ -430,7 +441,7 @@ This is a profound result. It states that the optimal mix of risky assets is pro
 
 ---
 
-## Part 7: Worked Examples
+##  Worked Examples
 
 ```{admonition} Example 1: 2-Asset CFPM Equilibrium
 :class: tip
@@ -504,7 +515,7 @@ $w_2 = 0.0044 / 0.0103 = 42.7\%$.
 
 ---
 
-## Part 8: Practice Problems
+##  Practice Problems
 
 ```{admonition} Practice Problem 1: The Market Price of Risk
 :class: tip
@@ -566,7 +577,7 @@ $$E[r_Y] = 0.04 + 0.09 = 0.13$$
 
 ---
 
-## Part 9: Chapter Summary
+##  Chapter Summary
 
 ```{important}
 **Key Concepts Recap**

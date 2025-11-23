@@ -46,7 +46,7 @@ Before studying this chapter, you should be familiar with:
 
 ---
 
-## Part 1: US Government Debt ("Risk-Free")
+##  US Government Debt ("Risk-Free")
 
 The US Government debt market is the bedrock of global finance, valued at over \$30 trillion. While theoretically "risk-free" due to the government's ability to print money, political risks (debt ceilings) do exist . However, for valuation purposes, we treat these as the baseline for zero default risk.
 
@@ -182,7 +182,7 @@ $$
 
 ---
 
-## Part 2: Bootstrapping the Yield Curve
+##  Bootstrapping the Yield Curve
 
 When STRIPS data is unavailable or illiquid, we must infer the ZCB yield curve from coupon-bearing bonds. This process is called **Bootstrapping**.
 
@@ -223,7 +223,7 @@ $$
 
 ---
 
-## Part 3: TIPS and Inflation
+##  TIPS and Inflation
 
 **TIPS (Treasury Inflation-Protected Securities)** allow us to infer the market's expected inflation rate.
 
@@ -279,7 +279,7 @@ If the 10-year Treasury yields 4.0% and the 10-year TIPS yields 2.5%, the market
 
 ---
 
-## Part 4: Municipal Bonds and Implied Tax Rates
+##  Municipal Bonds and Implied Tax Rates
 
 Municipal Bonds ("Munis") are issued by state and local governments. Their primary feature is tax exemption.
 
@@ -330,7 +330,7 @@ If the statutory tax rate is 35%, and the implied rate is only 13%, Munis look "
 
 ---
 
-## Part 5: Corporate Bonds and Credit Risk
+##  Corporate Bonds and Credit Risk
 
 This section introduces the most complex mathematics in the chapter: valuing bonds subject to default.
 
@@ -448,7 +448,7 @@ $$
 
 ---
 
-## Part 6: Worked Examples
+##  Worked Examples
 
 ```{admonition} Example 1: T-Bill Valuation
 :class: tip
@@ -546,7 +546,7 @@ $E[CF_t] = (1-\lambda)CF_t + \lambda CF_t (1-\pi)^t$.
 
 ---
 
-## Part 7: Practice Problems
+##  Practice Problems
 
 ```{admonition} Practice Problem 1: Muni Tax Implication
 :class: tip
@@ -651,7 +651,7 @@ $PV = 98.8 / 1.05 = 94.095$.
 
 ---
 
-## Part 8: Chapter Summary
+##  Chapter Summary
 
 ```{important}
 **Key Concepts Recap**

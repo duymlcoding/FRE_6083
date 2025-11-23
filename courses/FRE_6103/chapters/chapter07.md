@@ -44,7 +44,7 @@ Before studying this chapter, you should be familiar with:
 
 ---
 
-## Part 1: The Nature of Risk
+##  The Nature of Risk
 
 Risk is not just the probability of losing money. In financial engineering, it is the *uncertainty* of future cash flows.
 
@@ -86,7 +86,7 @@ $$
 
 ---
 
-## Part 2: The GVE and Pricing Risk
+##  The GVE and Pricing Risk
 
 The General Valuation Equation (GVE) remains our anchor.
 
@@ -130,7 +130,7 @@ Method 1 (adjusting rates) is hard to apply to derivatives or short positions wh
 
 ---
 
-## Part 3: Risk Capital and Sharpe Ratios
+##  Risk Capital and Sharpe Ratios
 
 Traditional return metrics fail when leverage is involved or when the initial investment is zero (e.g., futures). We need a more robust metric.
 
@@ -168,7 +168,7 @@ The Dollarized Sharpe Ratio is exactly the "Price of Risk" parameter $\lambda$ (
 
 ---
 
-## Part 4: Leverage and Modigliani-Miller
+##  Leverage and Modigliani-Miller
 
 Does borrowing money to invest change the value of the investment? The Modigliani-Miller (MM) theorems say no (in a frictionless world). We can prove this using Sharpe Ratios.
 
@@ -246,7 +246,7 @@ $$
 
 ---
 
-## Part 5: Single Factor Models and Regression
+##  Single Factor Models and Regression
 
 How do we price an asset that isn't traded? We find a proxy—a benchmark—and measure the asset's relationship to it. This is the foundation of the **Capital Asset Pricing Model (CAPM)**.
 
@@ -302,7 +302,7 @@ This is the discount rate we use for the asset.
 
 ---
 
-## Part 6: Pricing a Risky Cash Flow (Worked Example)
+##  Pricing a Risky Cash Flow (Worked Example)
 
 This is the capstone problem of the chapter. We will price a non-traded cash flow using simulation data and the benchmark model.
 
@@ -315,15 +315,9 @@ We have a factory. Its cash flow $CF$ next year is uncertain. We have simulated 
 * $\sigma_m = 11.22\%$.
 * Risk-free rate $r = 3\%$.
 * Regression Slope $b_{dollar} = 41.29$.
-* Intercept $a = 3091$. (Wait, let's check the slide data).
-    * Slide 79: Regression Line $y = 3280 + 3091 x$.
-    * This means intercept $a = 3280$. Slope $b = 3091$. (Actually, let's re-read slide 79 carefully).
-    *  "Regression Line y = 3280 + 3091 x".
-    * Standard notation $y = a + bx$. So $a=3280$, $b=3091$.
-    * Wait, slide 81 calculates "Covariance" using "mb_sigma^2".
-    * Slide 81 says $b = 41.29$. Where did 3091 come from?
-    * Ah, re-reading slide 81: "Cov(CF, r) = m * b_sigma^2... = 41.29".
-    * Let's stick to the derivation logic rather than the potentially confusing slide numbers.
+* Regression Line from Slide 79: $y = 3280 + 3091 x$
+* Standard notation $y = a + bx$ gives: $a=3280$, $b=3091$
+* From Slide 81: Covariance calculation yields $b = 41.29$
 
 **Method A: Certainty Equivalent (The Robust Way)**
 
@@ -364,10 +358,11 @@ Using the text's $\lambda$ (which was 3.78):
 
 $$ \text{Risk Charge} = 3.78 \times 41.29 = 156.08 $$
 
-Wait, let's check the formula on slide 78: $V_0 = \frac{E[CF] - \lambda \text{Cov}}{1+r}$.
-$CE = 3345.53 - (3.78 \times 41.29)$.
-Actually, the text calculates this as:
-$V_0 = \frac{3345.53 - 3.78(41.29)}{1.03} = \frac{3345.53 - 156.07}{1.03} = \frac{3189.46}{1.03} = 3096.56$. 
+Using the formula from slide 78: $V_0 = \frac{E[CF] - \lambda \text{Cov}}{1+r}$:
+
+$$
+V_0 = \frac{3345.53 - 3.78(41.29)}{1.03} = \frac{3345.53 - 156.07}{1.03} = \frac{3189.46}{1.03} = 3096.56
+$$ 
 
 **Method B: Risk-Adjusted Rate (CAPM)**
 
@@ -394,7 +389,7 @@ $$ V_0 = \frac{E[CF]}{1 + r_{adj}} = \frac{3345.53}{1.0804} = 3096.56 $$
 
 ---
 
-## Part 7: Practice Problems
+##  Practice Problems
 
 ```{admonition} Practice Problem 1: The Sharpe Ratio
 :class: tip
@@ -480,7 +475,7 @@ Project Premium = $0.2 \times 5\% = 1\%$.
 
 ---
 
-## Part 8: Chapter Summary
+##  Chapter Summary
 
 ```{admonition} Key Concepts Recap
 :class: important

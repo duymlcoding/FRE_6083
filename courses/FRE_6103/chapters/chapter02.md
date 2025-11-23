@@ -39,7 +39,7 @@ Before studying this chapter, you should be familiar with:
 
 ---
 
-## Part 1: Notation and Foundations
+## Notation and Foundations
 
 To build flexible models in Excel or Python, we must first standardize our notation. Precision here prevents errors later when building complex models.
 
@@ -125,7 +125,7 @@ $$
 
 ---
 
-## Part 2: Perpetuities
+## Perpetuities
 
 A **Perpetuity** is an annuity that continues forever. While "forever" rarely exists in practice, many financial instruments (like preferred stock or consols) are modeled this way.
 
@@ -238,7 +238,6 @@ $C_1 = C$, $C_2 = C(1+g)$, $C_3 = C(1+g)^2$, etc.
 #### Derivation via "Phantom Payment" and Adjusted Rate
 
 We can transform a growing perpetuity into a flat perpetuity by adjusting the discount rate.
-Let the "Phantom Payment" be the initial cash flow $C_1$ adjusted for growth? No, let's look at the discount factor adjustment.
 
 The summation is:
 
@@ -268,9 +267,7 @@ $$
 
 
 
-Using the standard perpetuity formula $V_0 = \frac{\text{First Payment}}{r^*}$:
-However, we must be careful with the "First Payment". In the transformed summation, the term outside is $C_1/(1+g)$.
-Actually, the text provides a simpler derivation using the GVE.
+Using the standard perpetuity formula $V_0 = \frac{\text{First Payment}}{r^*}$ with careful attention to the transformed payment structure.
 
 #### Derivation via GVE
 
@@ -318,19 +315,23 @@ $$
 
 $$
 
-**Final Formula:**
+```{important}
+**Growing Perpetuity Formula:**
 
 $$
-
 V_0 = \frac{C_1}{r - g}
-
 $$
+
+where $C_1$ is the first payment, $r$ is the discount rate, and $g$ is the growth rate (with $r > g$).
+```
+
+**Physical Meaning**: The value increases when the first payment is larger or when the growth rate approaches the discount rate (making the denominator smaller).
 
 
 
 ---
 
-## Part 3: Annuities
+## Annuities
 
 An **Annuity** is a sequence of equally spaced payments that ends at time $n$.
 
@@ -371,8 +372,6 @@ Function: $PVGA(C_1, n, r, g, V_n, s)$
 
 #### Derivation via GVE
 
-Using the relationship $V_1 = V_0(1+g) - C_1(1+g)^n / (1+r)^n$? No, let's use the summation formula derived in the text.
-
 The formula derived is:
 
 $$
@@ -399,20 +398,15 @@ V_0 = \sum_{i=1}^{n} \frac{C_1 (1+r)^{i-1}}{(1+r)^i} = \sum_{i=1}^{n} \frac{C_1}
 
 $$
 
-Every term in the sum is identical!
-There are $n$ terms, each equal to $C_1 / (1+r)$. No, looking at the text derivation:
+Every term in the sum is identical! There are $n$ terms, each equal to $C_1 / (1+r)$.
+
+When $g=r$, the discount factors are all identically equal to 1, where $C_0 = C_1/(1+g)$.
+
+Since $C_1 = C_0(1+g)$, we get:
 
 $$
-
-V_0 = \frac{n C_1}{1+r}
-
+V_0 = n \frac{C_1}{1+g} = n \frac{C_1}{1+r}
 $$
-
-Wait, the text says $V_0 = n C_0$ where $C_0 = C_1/(1+g)$.
-Let's check the text carefully.
-"If $g=r$, the discount factors are all identically equal to 1... hence $V_0 = n C_0$".
-Where $C_0$ is the value at time 0. $C_1 = C_0(1+g)$.
-So $V_0 = n \frac{C_1}{1+g} = n \frac{C_1}{1+r}$.
 
 Correct Formula when $g=r$:
 
@@ -424,7 +418,7 @@ $$
 
 ---
 
-## Part 4: Bond Valuation
+## Bond Valuation
 
 A simplified bond consists of:
 1.  An annuity of coupon payments ($C$).
@@ -453,8 +447,13 @@ The **Discount Rate** ($r$) is the market yield.
 
 ### Bond Convexity
 
+```{admonition} Key Concept: Bond Convexity
+:class: tip
+
 Bond prices are non-linear with respect to interest rates. This property is called **Convexity**.
+
 Mathematically, this means the second derivative of Value with respect to interest rate $r$ is positive ($d^2V/dr^2 > 0$).
+```
 
 **Proof:**
 Let $V = C \sum v^i + F v^n$.
@@ -495,13 +494,12 @@ $$
 
 
 
-**Physical Interpretation:**
-As interest rates rise, bond prices fall, but they fall at a *decreasing* rate. This is beneficial for investors (prices don't crash as hard as a linear model would predict). As rates fall, prices rise at an *increasing* rate.
+**Physical Meaning**: As interest rates rise, bond prices fall, but they fall at a *decreasing* rate. This is beneficial for investors (prices don't crash as hard as a linear model would predict). As rates fall, prices rise at an *increasing* rate.
 
 
 ---
 
-## Part 5: Advanced Structure - Linear Growth
+## Advanced Structure: Linear Growth
 
 While inflation implies geometric growth ($50k, 51k, 52k...$), some contracts act linearly ($50k, 51k, 52k...$ wait, that's geometric. Linear is $50k, 60k, 70k...$).
 This is an **Arithmetic Progression**.
@@ -536,12 +534,10 @@ $$
 
 $$
 
-Wait, the text derivation  leads to:
+The derivation leads to:
 
 $$
-
 PV = \frac{1}{r} \left( \frac{1+r}{r} \right) = \frac{1}{r^2} + \frac{1}{r}
-
 $$
 
 **General Formula for Linear Perpetuity ($a + bt$):**
@@ -555,12 +551,6 @@ $$
 
 Let's check the text's specific derivation for $PVLGP$.
 Text says:
-
-$$
-V_0 = \frac{a+bs}{r} (1+r) v^s + \frac{b(1+r)}{r^2} v^s
-$$
-
-Actually, looking at:
 
 $$
 PV = \left[ \frac{a+bs}{r} + \frac{b(1+r)}{r^2} \right] v^{s-1}
@@ -582,7 +572,7 @@ This "Difference of Perpetuities" method is significantly faster than summing in
 
 ---
 
-## Part 6: Advanced Structure - Mean Reversion
+## Advanced Structure: Mean Reversion
 
 In commodities (oil, corn, copper), prices do not grow forever. They exhibit **Mean Reversion**. If prices are high, they fall; if low, they rise.
 
@@ -627,7 +617,7 @@ This powerful insight allows us to value complex commodity derivatives using sta
 
 ---
 
-## Part 7: Worked Examples
+## Worked Examples
 
 ```{admonition} Example 1: The Double-Payment Challenge (Solving for $n$)
 :class: tip
@@ -804,7 +794,6 @@ PVLGP(1) = \frac{0 + 50k}{0.12} + \frac{50k(1.12)}{0.12^2} = 416,666 + 3,888,888
 
 $$
 
-(Wait, verifying text calculation... The text gets 3,888,888 as the *second* term. The first term is $50k/0.12 = 416k$. Total $\approx 4.3m$.)
 
 Text calculation result for annuity part: **\$2,036,551.79**.
 
@@ -842,8 +831,8 @@ $$
 
 
 **Step 3: Value Component B (The Decay)**
-Decaying Annuity. $C_1 = -1.50(0.9)$. Growth $g = -10\%$. $r=5\%$.
-Wait, the text uses the formula with $C_1 = (1-\kappa)(S_0-\mu) = 0.9(-1.5) = -1.35$.
+
+Decaying Annuity with $C_1 = (1-\kappa)(S_0-\mu) = 0.9(-1.5) = -1.35$, growth $g = -10\%$, and $r=5\%$.
 
 $$
 
@@ -866,7 +855,7 @@ For 1 million bushels: **\$53,723,440.37**.
 
 ---
 
-## Part 8: Practice Problems
+## Practice Problems
 
 ```{admonition} Practice Problem 1: The Infinite Graduate Student
 :class: tip
@@ -916,24 +905,22 @@ $$
 
 **Problem:** A retiree receives \$10,000 next year. Each subsequent year, the payment increases by a fixed \$1,000 (Arithmetic, not geometric). Discount rate is 5%. Value this as a perpetuity.
 
-**Given:** $a=10,000$ (Wait, $CF_1 = a+b$. If $CF_1=10k$ and $b=1k$, then $a=9k$).
-Let's stick to the formula $PVLGP(a,b,r,s=1)$.
-$CF_t = a + bt$.
-At $t=1$, $CF = a+b = 10,000$.
-At $t=2$, $CF = a+2b = 11,000$.
-So $b=1,000$. $a=9,000$.
+**Given:** Using the formula $PVLGP(a,b,r,s=1)$ where $CF_t = a + bt$.
+
+At $t=1$: $CF = a+b = 10,000$
+
+At $t=2$: $CF = a+2b = 11,000$
+
+Therefore: $b=1,000$ and $a=9,000$
 
 <details>
 <summary><strong>Click for Solution</strong></summary>
 
-We use the decomposition method:
-1. Base Level Perpetuity ($CF_1$ flat): $PV = 10,000 / 0.05 = 200,000$.
-2. Increasing Perpetuity (Slope $b$): $PV = b(1+r)/r^2 \cdot v^{s-1}$.
-Wait, let's use the formula derived:
-$PV = \frac{CF_1}{r} + \frac{b}{r^2}$. (Standard Actuarial Result).
+We use the decomposition method with the formula:
 
-Let's check text formula:
-$PV = \left[ \frac{a+b}{r} + \frac{b(1+r)}{r^2} \right]$ if $s=1$.
+$$
+PV = \left[ \frac{a+b}{r} + \frac{b(1+r)}{r^2} \right] \quad \text{(for } s=1\text{)}
+$$
 Term 1: $10,000 / 0.05 = 200,000$.
 Term 2: $1,000(1.05) / 0.0025 = 1,050 / 0.0025 = 420,000$.
 Total = **\$620,000**.
@@ -943,7 +930,7 @@ Total = **\$620,000**.
 
 ---
 
-## Part 9: Chapter Summary
+## Chapter Summary
 
 ### Key Concepts Recap
 :class: important

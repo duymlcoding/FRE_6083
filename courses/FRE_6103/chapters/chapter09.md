@@ -40,7 +40,7 @@ Before studying this chapter, you should be familiar with:
 
 ---
 
-## Part 1: Derivatives in the CFPM Framework
+##  Derivatives in the CFPM Framework
 
 ### 1. Abstract Definition
 
@@ -87,7 +87,7 @@ Find the present value $V_D$ of the derivative given the current price $V_R$ and
 
 ---
 
-## Part 2: The Lognormal Model for Asset Prices
+##  The Lognormal Model for Asset Prices
 
 To value the option, we must model the probability distribution of the reference asset $S_T$. We assume the stock follows a **Geometric Random Walk (GRW)**.
 
@@ -134,7 +134,7 @@ We define $\mu = E[S_T]$ as the expected future price. Note the distinction: $\m
 
 ---
 
-## Part 3: Analytic Derivation of the Call Option Value
+##  Analytic Derivation of the Call Option Value
 
 We seek to calculate the expected payoff of a call option $E[C_T]$ under the physical measure, then convert it to the risk-neutral measure.
 
@@ -254,7 +254,7 @@ Where $d_1, d_2$ depend on the real drift $\alpha$.
 
 ---
 
-## Part 4: The Risk-Neutral Substitution
+##  The Risk-Neutral Substitution
 
 We have the expected future value. To get the present value $V_0$, the CFPM tells us we can use **Risk-Neutral Valuation**.
 
@@ -316,7 +316,7 @@ $$
 
 ---
 
-## Part 5: Worked Examples
+##  Worked Examples
 
 ```{admonition} Example 1: Calculating $d_1$ and $d_2$
 :class: tip
@@ -399,7 +399,7 @@ The market prices the option as if the probability of exercise is 56% ($N(d_2)$ 
 
 ---
 
-## Part 6: Practice Problems
+##  Practice Problems
 
 ```{admonition} Practice Problem 1: Put-Call Parity
 :class: tip
@@ -468,7 +468,7 @@ $$ C \to S_0(1) - X e^{-rT}(0) = S_0 $$
 
 ---
 
-## Part 7: Chapter Summary
+##  Chapter Summary
 
 ```{important}
 **Key Concepts Recap**
