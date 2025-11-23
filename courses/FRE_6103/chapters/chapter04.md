@@ -44,10 +44,6 @@ Before studying this chapter, you should be familiar with:
 - **Calculus:** Basic limits and derivatives for sensitivity analysis.
 ```
 
-```
-
-```
-
 ---
 
 ## Part 1: US Government Debt ("Risk-Free")
@@ -480,7 +476,7 @@ $$ 1 + \text{EAY} = (1.00401)^{1/0.4} = (1.00401)^{2.5} $$
 
 $$ \text{EAY} \approx 1.01005 \implies 1.005\% $$
 
-
+```
 
 ```{admonition} Example 2: Corporate Bond Valuation (Approximate)
 :class: tip
@@ -511,7 +507,7 @@ $$ \kappa = 1.18\% $$
 
 **Insight:** The vast majority of the spread (1.18% vs 0.02%) is due to risk aversion (the premium), not the actuarial expected loss. This is typical for high-grade bonds.
 
-
+```
 
 ```{admonition} Example 3: Exact Default Valuation (The Geometric Model)
 :class: tip
@@ -545,8 +541,6 @@ $E[CF_t] = (1-\lambda)CF_t + \lambda CF_t (1-\pi)^t$.
     $PV = 965.58/1.04^5 = 793.63$.
 
 **Total Value:** Sum of PVs.
-
-
 
 ```
 
@@ -659,8 +653,8 @@ $PV = 98.8 / 1.05 = 94.095$.
 
 ## Part 8: Chapter Summary
 
-### Key Concepts Recap
-:class: important
+```{important}
+**Key Concepts Recap**
 
 **1. Market Prices as Information:**
 We do not just value bonds; we interrogate them. A TIPS price reveals inflation expectations. A Muni price reveals tax brackets. A Corporate price reveals default fears.
@@ -681,6 +675,7 @@ A defaultable bond is mathematically equivalent to a portfolio of:
 $$ V = \sum_{i} PV(\text{Guaranteed CF}) + \sum_{i} PV(\text{Risky CF} | \text{Survival}) $$
 
 By splitting the cash flows into $(1-\lambda)$ (Guaranteed) and $\lambda$ (Risky), we simplify the valuation of complex corporate debt structures.
+```
 
 ### Formula Cheat Sheet
 

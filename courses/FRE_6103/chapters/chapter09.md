@@ -38,11 +38,6 @@ Before studying this chapter, you should be familiar with:
 - **Probability:** Standard Normal CDF $N(x)$ and PDF $n(x)$.
 ```
 
-
-```
-
-```
-
 ---
 
 ## Part 1: Derivatives in the CFPM Framework
@@ -475,8 +470,8 @@ $$ C \to S_0(1) - X e^{-rT}(0) = S_0 $$
 
 ## Part 7: Chapter Summary
 
-### Key Concepts Recap
-:class: important
+```{important}
+**Key Concepts Recap**
 
 **1. Derivatives are Contingent Claims:**
 A derivative is just a function $g(S_T)$. Its value is the risk-neutral expectation of this function discounted at the risk-free rate.
@@ -491,6 +486,7 @@ We do not need to know the stock's beta or the market risk premium to price an o
 * $S N(d_1)$: The value of the stock component (Asset).
 * $X e^{-rT} N(d_2)$: The value of the cash component (Liability).
 * The formula essentially says: "The option is equivalent to owning Delta shares of stock and borrowing money."
+```
 
 ### Formula Cheat Sheet
 
