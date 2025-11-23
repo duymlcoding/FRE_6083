@@ -39,6 +39,10 @@ Before studying this chapter, you should be familiar with:
 ```
 
 
+```
+
+```
+
 ---
 
 ## Part 1: Derivatives in the CFPM Framework
@@ -305,7 +309,7 @@ $$
 
 ## Part 5: Worked Examples
 
-### Example 1: Calculating $d_1$ and $d_2$
+```{admonition} Example 1: Calculating $d_1$ and $d_2$
 :class: tip
 
 **Problem:** Calculate the Black-Scholes parameters.
@@ -330,9 +334,11 @@ From standard normal tables:
 $N(0.35) \approx 0.6368$.
 $N(0.15) \approx 0.5596$.
 
+```
+
 ---
 
-### Example 2: Pricing the Call
+```{admonition} Example 2: Pricing the Call
 :class: tip
 
 **Problem:** Using the values from Example 1, find the Call Price.
@@ -354,9 +360,11 @@ $$ C_0 = 63.68 - 53.23 = 10.45 $$
 **Physical Interpretation:**
 To replicate this option, you would buy 0.6368 shares of stock (costing \$63.68) and borrow \$53.23. The net cost is \$10.45.
 
+```
+
 ---
 
-### Example 3: The Probability of Exercise
+```{admonition} Example 3: The Probability of Exercise
 :class: tip
 
 **Problem:** What is the real-world probability that the option in Example 1 will be exercised if the stock's actual expected return is $\alpha = 15\%$?
@@ -378,11 +386,13 @@ $$ P(S_T > X) = N(d_2^{real}) = N(0.65) \approx 0.7422 $$
 **Insight:**
 The market prices the option as if the probability of exercise is 56% ($N(d_2)$ with $r$), but the real probability (if you believe $\alpha=15\%$) is 74%. The difference reflects the risk premium.
 
+```
+
 ---
 
 ## Part 6: Practice Problems
 
-### Practice Problem 1: Put-Call Parity
+```{admonition} Practice Problem 1: Put-Call Parity
 :class: tip
 
 **Problem:** Using the call price from Example 2 (\$10.45), calculate the price of a European Put with the same parameters.
@@ -403,8 +413,9 @@ $$ P = 10.45 - 4.88 = 5.57 $$
 **Put Price: \$5.57**
 
 </details>
+```
 
-### Practice Problem 2: Intrinsic vs. Time Value
+```{admonition} Practice Problem 2: Intrinsic vs. Time Value
 :class: tip
 
 **Problem:** An option has $S=110, X=100, C=15$. What is the Intrinsic Value and Time Value?
@@ -421,8 +432,9 @@ $$ IV = \max(S-X, 0) = \max(110-100, 0) = 10 $$
 $$ TV = \text{Price} - \text{Intrinsic} = 15 - 10 = 5 $$
 
 </details>
+```
 
-### Practice Problem 3: Volatility Impact
+```{admonition} Practice Problem 3: Volatility Impact
 :class: tip
 
 **Problem:** If volatility $\sigma$ increases, what happens to $d_1$ and the Call Price? Analyze the limits as $\sigma \to \infty$.
@@ -443,6 +455,7 @@ $$ C \to S_0(1) - X e^{-rT}(0) = S_0 $$
 **Interpretation:** If volatility is infinite, the upside is unlimited, but the downside is capped at 0 (limited liability). The option becomes as valuable as the stock itself because you are almost guaranteed to be deep in the money (or the probability weight of the strike payment vanishes relative to the massive upside tail).
 
 </details>
+```
 
 ---
 

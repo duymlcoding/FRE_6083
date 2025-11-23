@@ -629,7 +629,7 @@ This powerful insight allows us to value complex commodity derivatives using sta
 
 ## Part 7: Worked Examples
 
-### Example 1: The Double-Payment Challenge (Solving for $n$)
+```{admonition} Example 1: The Double-Payment Challenge (Solving for $n$)
 :class: tip
 
 **Context:** A client receives a structured settlement. We need to manipulate the annuity formula to solve for time $n$.
@@ -717,10 +717,11 @@ $$
 
 
 **Final Answer:** The client can receive \$100,000 for roughly 7.24 years.
+```
 
 ---
 
-### Example 2: The Growing Annuity with Inflation
+```{admonition} Example 2: The Growing Annuity with Inflation
 :class: tip
 
 **Context:** Same client, but now the \$50,000 payments grow by 2% inflation ($g$). We want to double the base payment to \$100,000 (also growing at 2%).
@@ -774,12 +775,11 @@ $$
 **Calculation:**
 Term inside log $\approx 1 - 0.38 = 0.62$.
 $n \approx 8.37$ years.
-
-
+```
 
 ---
 
-### Example 3: Valuing a Client Acquisition Strategy (Linear Growth)
+```{admonition} Example 3: Valuing a Client Acquisition Strategy (Linear Growth)
 :class: tip
 
 **Context:** A business brings in 1 new client per year for 15 years. Each client pays \$50,000/year in perpetuity. $r=12\%$.
@@ -816,10 +816,11 @@ $V_0 = 1,141,851.63$.
 
 **Step 3: Total Value**
 $Total = 2,036,551.79 + 1,141,851.63 = \mathbf{\$3,178,403.45}$.
+```
 
 ---
 
-### Example 4: Mean Reversion Corn Prices
+```{admonition} Example 4: Mean Reversion Corn Prices
 :class: tip
 
 **Context:** Current corn price $S_0 = \$3.50$. Long run mean $\mu = \$5.00$. Speed $\kappa = 10\%$. Rate $r=5\%$.
@@ -861,12 +862,13 @@ $$
 **Step 4: Total Value**
 $PV_{total} = 62.31 - 8.59 = 53.72$ per bushel.
 For 1 million bushels: **\$53,723,440.37**.
+```
 
 ---
 
 ## Part 8: Practice Problems
 
-### Practice Problem 1: The Infinite Graduate Student
+```{admonition} Practice Problem 1: The Infinite Graduate Student
 :class: tip
 
 **Problem:** A university endowment wants to fund a scholarship that pays \$20,000 next year, growing by 3% annually forever. The endowment can earn 7% per year. How much must be deposited today?
@@ -886,8 +888,9 @@ V_0 = \frac{20,000}{0.07 - 0.03} = \frac{20,000}{0.04} = \$500,000
 $$
 
 </details>
+```
 
-### Practice Problem 2: The "Zero" Coupon Bond
+```{admonition} Practice Problem 2: The "Zero" Coupon Bond
 :class: tip
 
 **Problem:** A 10-year Zero Coupon Bond has a Face Value of \$1,000. The yield (discount rate) is 6%. What is its price?
@@ -906,8 +909,9 @@ V = \frac{1000}{(1.06)^{10}} = \frac{1000}{1.7908} = \$558.39
 $$
 
 </details>
+```
 
-### Practice Problem 3: The Arithmetic Pension
+```{admonition} Practice Problem 3: The Arithmetic Pension
 :class: tip
 
 **Problem:** A retiree receives \$10,000 next year. Each subsequent year, the payment increases by a fixed \$1,000 (Arithmetic, not geometric). Discount rate is 5%. Value this as a perpetuity.
@@ -935,6 +939,7 @@ Term 2: $1,000(1.05) / 0.0025 = 1,050 / 0.0025 = 420,000$.
 Total = **\$620,000**.
 
 </details>
+```
 
 ---
 

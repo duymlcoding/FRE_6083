@@ -43,6 +43,10 @@ Before studying this chapter, you should be familiar with:
 ```
 
 
+```
+
+```
+
 ---
 
 ## Part 1: The Nature of Risk
@@ -388,7 +392,7 @@ $$ V_0 = \frac{E[CF]}{1 + r_{adj}} = \frac{3345.53}{1.0804} = 3096.56 $$
 
 ## Part 7: Practice Problems
 
-### Practice Problem 1: The Sharpe Ratio
+```{admonition} Practice Problem 1: The Sharpe Ratio
 :class: tip
 
 **Problem:** An investment requires \$1,000 capital. It has an expected payoff of \$1,100 and a standard deviation of \$50. The risk-free rate is 2%. What is the Sharpe Ratio?
@@ -412,7 +416,7 @@ $$ \text{Sharpe} = \frac{80}{50} = 1.6 $$
 
 **Interpretation:** You are earning \$1.60 of excess return for every \$1.00 of risk volatility.
 
-### Practice Problem 2: Leverage Effect
+```{admonition} Practice Problem 2: Leverage Effect
 :class: tip
 
 **Problem:** An asset returns 10% with volatility 20%. The risk-free rate is 2%. You lever the asset 2:1 (Borrowed \$1 for every \$1 equity). What are the new expected return and volatility?
@@ -443,7 +447,7 @@ $$ \text{Sharpe}_E = \frac{18-2}{40} = 0.4 $$
 
 The Sharpe Ratio is invariant.
 
-### Practice Problem 3: Implied Market Price of Risk
+```{admonition} Practice Problem 3: Implied Market Price of Risk
 :class: tip
 
 **Problem:** The market index has an expected return of 8% and volatility of 15%. The risk-free rate is 3%. A project has a covariance with the market of 0.0045 (in return terms). What is the required risk premium for this project?
@@ -463,6 +467,8 @@ Market Premium = $8\% - 3\% = 5\%$.
 Project Premium = $0.2 \times 5\% = 1\%$.
 
 **Answer:** The required risk premium is **1%**. (Total required return = 3% + 1% = 4%).
+
+```
 
 ---
 

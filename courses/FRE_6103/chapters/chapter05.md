@@ -43,6 +43,10 @@ Before studying this chapter, you should be familiar with:
 ```
 
 
+```
+
+```
+
 ---
 
 ## Part 1: Foundations of Random Number Generation
@@ -392,7 +396,7 @@ We are correlating the "percentile rankings" of the variables. If Bond A is in t
 
 ## Part 7: Worked Examples
 
-### Example 1: Integrating $\max(Z, c)$
+```{admonition} Example 1: Integrating $\max(Z, c)$
 :class: tip
 
 **Problem:** Estimate $E[\max(Z, 0.5)]$ where $Z \sim N(0,1)$. Compare with exact theory.
@@ -415,7 +419,7 @@ $E = 0.5(0.69146) + 0.352 = 0.6978$.
     * *Antithetic:* further refinement.
     
 
-### Example 2: Cholesky Decomposition
+```{admonition} Example 2: Cholesky Decomposition
 :class: tip
 
 **Problem:** Find the Cholesky matrix $\mathbf{R}$ for Covariance Matrix $\mathbf{A} = \begin{pmatrix} 100 & 80 \\ 80 & 144 \end{pmatrix}$.
@@ -437,7 +441,7 @@ $$r_{22} = \sqrt{a_{22} - r_{21}^2} = \sqrt{144 - 8^2} = \sqrt{144 - 64} = \sqrt
 $$\mathbf{R} = \begin{pmatrix} 10 & 0 \\ 8 & 8.94 \end{pmatrix}$$
 
 
-### Example 3: Inventory Optimization (Common Random Numbers)
+```{admonition} Example 3: Inventory Optimization (Common Random Numbers)
 :class: tip
 
 **Context:** Maximize profit where Demand $D \sim \text{Geometric}(\pi=0.1)$.
@@ -454,11 +458,13 @@ Profit = $5 \min(s, D) - 3 \max(s-D, 0) - 7 \max(D-s, 0)$.
 **Why Common Random Numbers?**
 If we used different random numbers for $s=10$ and $s=11$, the noise might mask the small difference in profitability. By using the same random inputs, we isolate the effect of changing $s$. This produces a smooth optimization curve rather than a jagged one. 
 
+```
+
 ---
 
 ## Part 8: Practice Problems
 
-### Practice Problem 1: Exponential Inverse
+```{admonition} Practice Problem 1: Exponential Inverse
 :class: tip
 
 **Problem:** Find the formula to generate random numbers for an Exponential distribution with mean 10.
@@ -471,7 +477,7 @@ $$x = -\frac{\ln(u)}{0.1} = -10 \ln(u)$$
 
 Generate $u \sim U[0,1]$, apply formula.
 
-### Practice Problem 2: Correlated Simulation
+```{admonition} Practice Problem 2: Correlated Simulation
 :class: tip
 
 **Problem:** You have two independent standard normals $z_1 = 0.5, z_3 = -1.2$. You want to create $z_2$ such that $\text{corr}(z_1, z_2) = 0.6$.
@@ -485,7 +491,7 @@ $$z_2 = 0.6(0.5) + 0.8(-1.2)$$
 
 $$z_2 = 0.3 - 0.96 = -0.66$$
 
-### Practice Problem 3: Confidence Interval
+```{admonition} Practice Problem 3: Confidence Interval
 :class: tip
 
 **Problem:** Simulation of 10,000 trials yields mean $\bar{x} = 100$ and sample std dev $s = 20$. Calculate the 95% confidence interval ($m=2$).
@@ -494,6 +500,8 @@ $$z_2 = 0.3 - 0.96 = -0.66$$
 Standard Error $SE = 20 / \sqrt{10000} = 20 / 100 = 0.2$.
 Interval = $100 \pm 2(0.2)$.
 Range: $[99.6, 100.4]$.
+
+```
 
 ---
 

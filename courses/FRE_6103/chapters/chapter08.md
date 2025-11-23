@@ -41,6 +41,10 @@ Before studying this chapter, you should be familiar with:
 - **Chapter 7:** The concept of "Risk Capital" and the single-factor risk model.
 ```
 
+```
+
+```
+
 ---
 
 ## Part 1: The Cash Flow Portfolio Model (CFPM)
@@ -434,7 +438,7 @@ This is a profound result. It states that the optimal mix of risky assets is pro
 
 ## Part 7: Worked Examples
 
-### Example 1: 2-Asset CFPM Equilibrium
+```{admonition} Example 1: 2-Asset CFPM Equilibrium
 :class: tip
 
 **Context:** A mini-market with 2 assets. We want to find the equilibrium prices.
@@ -464,9 +468,11 @@ $$\mathbf{V} = \frac{1}{1.05} \begin{pmatrix} 108.5 \\ 215.5 \end{pmatrix} = \be
 **Interpretation:**
 Asset 2 has higher expected cash flow (220 vs 110) but much higher risk (Variance 400 vs 100). The market penalizes Asset 2 more heavily (\$4.50 discount vs \$1.50), lowering its price relative to the risk-free valuation.
 
+```
+
 ---
 
-### Example 2: Calculating the Tangency Portfolio
+```{admonition} Example 2: Calculating the Tangency Portfolio
 :class: tip
 
 **Context:** You have 2 risky stocks and a risk-free rate of 2%. Find the optimal risky portfolio weights.
@@ -500,11 +506,13 @@ $w_2 = 0.0044 / 0.0103 = 42.7\%$.
 
 **Result:** The Tangency Portfolio is 57.3% Asset 1 and 42.7% Asset 2.
 
+```
+
 ---
 
 ## Part 8: Practice Problems
 
-### Practice Problem 1: The Market Price of Risk
+```{admonition} Practice Problem 1: The Market Price of Risk
 :class: tip
 
 **Problem:** The total market portfolio has an expected value of \$1,000,000 and a variance of 100,000,000. The current price of the market is \$900,000. The risk-free rate is 5%. Calculate the aggregate risk aversion parameter $A$.
@@ -533,8 +541,9 @@ $$A = \frac{55,000}{100,000,000} = 0.00055$$
 **Answer:** $A = 0.00055$. The market demands 0.055 cents of premium for every dollar of variance.
 
 </details>
+```
 
-### Practice Problem 2: Sub-Portfolio Beta
+```{admonition} Practice Problem 2: Sub-Portfolio Beta
 :class: tip
 
 **Problem:** Portfolio $X$ has a variance of 0.04. Portfolio $Y$ has a covariance with $X$ of 0.06. If Portfolio $X$ yields 10% and the risk-free rate is 4%, what return would CFPM predict for Portfolio $Y$ if it were priced solely relative to $X$?
@@ -559,6 +568,7 @@ $$E[r_Y] = 0.04 + 0.09 = 0.13$$
 **Answer:** 13%.
 
 </details>
+```
 
 ---
 

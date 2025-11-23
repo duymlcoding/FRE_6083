@@ -42,6 +42,10 @@ Before studying this chapter, you should be familiar with:
 ```
 
 
+```
+
+```
+
 ---
 
 ## Part 1: The Arithmetic Random Walk (ARW)
@@ -372,7 +376,7 @@ $\ln(S_{t+j}) \sim N(\ln(S_t) + j(\mu - 0.5\sigma^2), j\sigma^2)$.
 
 ## Part 4: Worked Examples
 
-### Example 1: Simulating an ARW
+```{admonition} Example 1: Simulating an ARW
 :class: tip
 
 **Problem:** Simulate 3 periods of a stock price using ARW.
@@ -390,7 +394,7 @@ $S_3 = S_2 + \mu + \sigma Z_3 = 16.5 + 0 + 5(0.8) = 16.5 + 4 = 20.5$.
 
 **Path:** 20 $\to$ 22.5 $\to$ 16.5 $\to$ 20.5.
 
-### Example 2: OU Expected Value
+```{admonition} Example 2: OU Expected Value
 :class: tip
 
 **Problem:** Corn price $S_0 = 5$. Long run mean $\mu = 4$. Mean reversion $\kappa = 0.20$. Volatility $\sigma = 0.75$. Calculate expected price at $t=5$.
@@ -409,7 +413,7 @@ $$ E[S_5] = 4 + 0.32768 = 4.33 $$
 **Interpretation:**
 The price started high (5) relative to the mean (4). Over 5 years, it is expected to drift down towards 4, reaching 4.33.
 
-### Example 3: GRW Convexity Adjustment
+```{admonition} Example 3: GRW Convexity Adjustment
 :class: tip
 
 **Problem:** A stock has an expected annual return of 10% ($\mu=0.10$) and volatility of 20% ($\sigma=0.20$). What is the mean of the *log-returns* ($\nu$)?
@@ -428,11 +432,13 @@ $$ \nu = 0.10 - 0.02 = 0.08 $$
 **Result:**
 Even though the arithmetic expected return is 10%, the most likely path (geometric drift) grows at 8%. This 2% drag is the "volatility tax."
 
+```
+
 ---
 
 ## Part 5: Practice Problems
 
-### Practice Problem 1: ARW Variance
+```{admonition} Practice Problem 1: ARW Variance
 :class: tip
 
 **Problem:** An ARW process has $\sigma = 2$. What is the standard deviation of the price at $t=16$?
@@ -446,8 +452,9 @@ Standard Deviation $= \sqrt{64} = 8$.
 Alternatively: $\text{StdDev} = \sigma \sqrt{t} = 2 \sqrt{16} = 2 \times 4 = 8$.
 
 </details>
+```
 
-### Practice Problem 2: OU Limit
+```{admonition} Practice Problem 2: OU Limit
 :class: tip
 
 **Problem:** For an OU process with $\sigma = 10$ and $\kappa = 0.5$, what is the maximum long-term variance?
@@ -468,8 +475,9 @@ Denominator $= 1 - (0.5)^2 = 1 - 0.25 = 0.75$.
 $\text{Var} = 100 / 0.75 = 133.33$.
 
 </details>
+```
 
-### Practice Problem 3: GRW Simulation
+```{admonition} Practice Problem 3: GRW Simulation
 :class: tip
 
 **Problem:** Simulate one step of a GRW. $S_0 = 100, \mu = 0.05, \sigma = 0.10, Z = -1$.
@@ -488,6 +496,7 @@ $$ S_1 = 100 \exp(-0.055) $$
 $$ S_1 = 100 (0.9465) = 94.65 $$
 
 </details>
+```
 
 ---
 

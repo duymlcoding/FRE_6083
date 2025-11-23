@@ -478,7 +478,7 @@ $$
 
 ## Part 7: Worked Examples
 
-### Example 1: Frequency Conversion
+```{admonition} Example 1: Frequency Conversion
 :class: tip
 
 **Context:** Converting a quarterly compounded rate to a monthly compounded rate.
@@ -511,10 +511,11 @@ $$
 $$
 
 **Result:** The monthly compounded rate is slightly lower (7.95%) because it compounds more frequently to achieve the same yield.
+```
 
 ---
 
-### Example 2: Continuous Compounding "Force of Interest"
+```{admonition} Example 2: Continuous Compounding "Force of Interest"
 :class: tip
 
 **Problem:** An investment pays 3% simple interest per half-year. What is the equivalent continuously compounded annual rate ($\delta$)?
@@ -542,12 +543,11 @@ $$
 $$
 \delta = 2 \ln(1.03) \approx 2(0.02956) = 5.91\%
 $$
-
-
+```
 
 ---
 
-### Example 3: Interest Rate Parity
+```{admonition} Example 3: Interest Rate Parity
 :class: tip
 
 **Problem:**
@@ -577,11 +577,12 @@ $$
 Invest \$1.30 USD $\to$ \$1.43.
 Invest €1.00 (converted) $\to$ €1.08.
 Convert €1.08 back at 1.324 $\to$ \$1.43.
-Arbitrage free. 
+Arbitrage free.
+```
 
 ---
 
-### Example 4: Defaultable Bond Price
+```{admonition} Example 4: Defaultable Bond Price
 :class: tip
 
 **Problem:**
@@ -622,13 +623,14 @@ $$
 \pi = \frac{2.15}{60} = 0.0358
 $$
 
-**Result:** The market is pricing in a **3.58% probability of default**. 
+**Result:** The market is pricing in a **3.58% probability of default**.
+```
 
 ---
 
 ## Part 8: Practice Problems
 
-### Practice Problem 1: After-Tax Yield
+```{admonition} Practice Problem 1: After-Tax Yield
 :class: tip
 
 **Problem:** A bond pays 5% coupons (Ordinary Income) and is priced at Par. The tax rate on Ordinary Income is 40%. The tax rate on Capital Gains is 20%. What is the after-tax yield?
@@ -650,8 +652,9 @@ r_{AT} = 5\% (1 - 0.40) = 3\%
 $$
 
 </details>
+```
 
-### Practice Problem 2: Bootstrapping
+```{admonition} Practice Problem 2: Bootstrapping
 :class: tip
 
 **Problem:**
@@ -691,8 +694,9 @@ r_{s2} = 3.015\%
 $$
 
 </details>
+```
 
-### Practice Problem 3: Continuous Inflation
+```{admonition} Practice Problem 3: Continuous Inflation
 :class: tip
 
 **Problem:** Nominal continuous rate $r = 8\%$. Inflation continuous rate $i = 3\%$. What is the exact Real continuous rate $\rho$?
@@ -719,6 +723,7 @@ $$
 (Note: This is exact, unlike the discrete approximation).
 
 </details>
+```
 
 ---
 

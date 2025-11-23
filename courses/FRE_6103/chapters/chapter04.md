@@ -44,6 +44,10 @@ Before studying this chapter, you should be familiar with:
 - **Calculus:** Basic limits and derivatives for sensitivity analysis.
 ```
 
+```
+
+```
+
 ---
 
 ## Part 1: US Government Debt ("Risk-Free")
@@ -434,7 +438,7 @@ Where:
 
 ## Part 6: Worked Examples
 
-### Example 1: T-Bill Valuation
+```{admonition} Example 1: T-Bill Valuation
 :class: tip
 
 **Problem:** A 146-day T-Bill has a quoted Ask Yield (Discount) of 0.985%. Face Value is \$10,000. Find the Price and the EAY.
@@ -462,7 +466,7 @@ $$ \text{EAY} \approx 1.01005 \implies 1.005\% $$
 
 
 
-### Example 2: Corporate Bond Valuation (Approximate)
+```{admonition} Example 2: Corporate Bond Valuation (Approximate)
 :class: tip
 
 **Problem:** A corporate bond yields 4.04%. A comparable Treasury yields 2.84%. The bond has an AA rating with an annual default probability of 0.02%. Assume Loss Given Default (LGD) is 100%. Calculate the implied Risk Premium.
@@ -493,7 +497,7 @@ $$ \kappa = 1.18\% $$
 
 
 
-### Example 3: Exact Default Valuation (The Geometric Model)
+```{admonition} Example 3: Exact Default Valuation (The Geometric Model)
 :class: tip
 
 **Problem:**
@@ -528,11 +532,13 @@ $E[CF_t] = (1-\lambda)CF_t + \lambda CF_t (1-\pi)^t$.
 
 
 
+```
+
 ---
 
 ## Part 7: Practice Problems
 
-### Practice Problem 1: Muni Tax Implication
+```{admonition} Practice Problem 1: Muni Tax Implication
 :class: tip
 
 **Problem:** A 20-year Treasury yields 2.91%. A 20-year Muni yields 2.02%. Assuming the Muni has an expected loss rate of 0.05% and no liquidity premium, what is the implied marginal tax rate?
@@ -562,8 +568,9 @@ $$ \tau = 1 - 0.677 = 0.323 $$
 
 
 </details>
+```
 
-### Practice Problem 2: T-Bill "d" vs "r"
+```{admonition} Practice Problem 2: T-Bill "d" vs "r"
 :class: tip
 
 **Problem:** A T-Bill has a discount yield $d=2.00\%$ and 90 days to maturity. Is the continuously compounded yield $r$ higher or lower than 2.00%? Calculate it.
@@ -590,8 +597,9 @@ $$ r = 0.0203 \implies 2.03\% $$
 **Result:** Higher, as expected.
 
 </details>
+```
 
-### Practice Problem 3: Decomposition
+```{admonition} Practice Problem 3: Decomposition
 :class: tip
 
 **Problem:** Value a 1-year corporate ZCB with Face \$100. Risk-free rate 5%. Default prob 2%. Recovery 40% ($\lambda=60\%$). No risk premium ($\theta=0$). Use the $A$ and $B$ decomposition method.
@@ -629,6 +637,7 @@ $PV = 98.8 / 1.05 = 94.095$.
 (Difference due to $r^*$ approximation $1+r+\pi \approx (1+r)(1+\pi)^{-1}$).
 
 </details>
+```
 
 ---
 

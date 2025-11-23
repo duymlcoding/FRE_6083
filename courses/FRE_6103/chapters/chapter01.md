@@ -299,8 +299,7 @@ $$
 
 ## Part 3: Worked Examples
 
-### Example 1: Applying the GVE to a Risk-Free Asset
-
+```{admonition} Example 1: Applying the GVE to a Risk-Free Asset
 :class: tip
 
 **Context:** We will use the General Valuation Equation to derive the standard Present Value formula for a risk-free bond.
@@ -364,11 +363,11 @@ $$
 
 **Physical Interpretation:**
 This confirms that the GVE is consistent with the standard Present Value formula. The value of a risk-free cash flow is simply the cash flow discounted by the risk-free rate.
+```
 
 ---
 
-### Example 2: The Walmart Investment (Return Calculation)
-
+```{admonition} Example 2: The Walmart Investment (Return Calculation)
 :class: tip
 
 **Context:** Analyzing the components of return for a standard equity investment.
@@ -438,11 +437,11 @@ $$
 
 **Key Insight:**
 For a standard "long" asset like this, both dollar and percentage returns are easily calculated and meaningful .
+```
 
 ---
 
-### Example 3: The Short Sale (Negative Investment)
-
+```{admonition} Example 3: The Short Sale (Negative Investment)
 :class: tip
 
 **Context:** Demonstrating why percentage returns fail for short sales and how to fix it using the "alternative" view.
@@ -489,11 +488,11 @@ This result is mathematically consistent but intuitively strange. You made a pro
 * Dollar Return = (-20%) $\times$ (-$50) = +$10.
 
 **Conclusion:** This confusing sign-flipping is why **Dollar Returns** are preferred in financial engineering. It is unambiguous to say "I made \$10."
+```
 
 ---
 
-### Example 4: Insurance Reserves (Backward vs. Forward)
-
+```{admonition} Example 4: Insurance Reserves (Backward vs. Forward)
 :class: tip
 
 **Context:** A simple 3-year term policy to demonstrate how reserves work.
@@ -520,6 +519,7 @@ An insurance company issues a policy.
 
 **Result:**
 Both methods yield a Reserve of **50**. This requires the company to hold 50 in assets to ensure they can pay the Year 3 deficit.
+```
 
 ---
 
@@ -527,7 +527,7 @@ Both methods yield a Reserve of **50**. This requires the company to hold 50 in 
 
 Test your understanding with these problems. Try them before looking at solutions!
 
-### Practice Problem 1: Applying the GVE
+```{admonition} Practice Problem 1: Applying the GVE
 :class: tip
 
 **Problem:**
@@ -579,8 +579,9 @@ $$
 
 **Answer:** The expected capital gain must be **\$6**.
 </details>
+```
 
-### Practice Problem 2: Dollar Returns on Forwards
+```{admonition} Practice Problem 2: Dollar Returns on Forwards
 :class: tip
 
 **Problem:**
@@ -611,8 +612,9 @@ $$
 
 Division by zero is undefined. This illustrates why we must use dollar returns for zero-cost derivatives.
 </details>
+```
 
-### Practice Problem 3: Private vs. Public Value
+```{admonition} Practice Problem 3: Private vs. Public Value
 :class: tip
 
 **Problem:**
@@ -625,6 +627,7 @@ A publicly traded bond is priced at \$950 (Public Valuation). You have a specifi
 **Analysis:** $980 > 950$.
 **Decision:** **Buy the bond.** You represent a "high value" user of this asset.
 </details>
+```
 
 ---
 
@@ -680,11 +683,12 @@ $$
 
 This equation enforces that the compensation for time and risk must equal the expected financial gain.
 
-### Study Tips
+```{admonition} Study Tips
 :class: tip
 
 1.  **Think in Dollars:** Whenever you see a derivative or a short position, immediately switch your mental model from "% return" to "$ profit/loss".
 2.  **Master the GVE:** Practice rearranging the GVE variables. Can you solve for $k$? Can you solve for $V_0$?
 3.  **Visualize Reserves:** When working with liabilities (insurance), draw a timeline. "Retrospective" looks left; "Prospective" looks right. They must meet in the middle.
 4.  **Remember the Goal:** We are not just calculating numbers; we are trying to determine the *fair market value* of assets by comparing them to what is already trading.
+```
 
