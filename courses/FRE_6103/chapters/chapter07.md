@@ -425,6 +425,8 @@ $$ \text{Sharpe} = \frac{80}{50} = 1.6 $$
 
 **Interpretation:** You are earning \$1.60 of excess return for every \$1.00 of risk volatility.
 
+```
+
 ```{admonition} Practice Problem 2: Leverage Effect
 :class: tip
 
@@ -456,6 +458,8 @@ $$ \text{Sharpe}_E = \frac{18-2}{40} = 0.4 $$
 
 The Sharpe Ratio is invariant.
 
+```
+
 ```{admonition} Practice Problem 3: Implied Market Price of Risk
 :class: tip
 
@@ -483,7 +487,7 @@ Project Premium = $0.2 \times 5\% = 1\%$.
 
 ## Part 8: Chapter Summary
 
-### Key Concepts Recap
+```{admonition} Key Concepts Recap
 :class: important
 
 **1. Risk is a Cost:**
@@ -513,4 +517,6 @@ This separates the market's price of risk from the asset's specific quantity of 
 | **Beta** | $\frac{\text{Cov}(r_i, r_m)}{\text{Var}(r_m)}$ |
 | **CAPM** | $E[r_i] = r + \beta (E[r_m] - r)$ |
 | **Single Factor Valuation** | $V_0 = \frac{E[CF] - \lambda_{market} \text{Cov}(CF, r_m)}{1+r}$ |
+
+```
 

@@ -85,7 +85,7 @@ $$
 CF_D = \max(CF_R - X, 0)
 $$
 
-    where $X$ is the strike price.
+where $X$ is the strike price.
 
 **The Valuation Goal:**
 Find the present value $V_D$ of the derivative given the current price $V_R$ and the risk-free rate $r$.
