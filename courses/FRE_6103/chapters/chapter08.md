@@ -41,10 +41,6 @@ Before studying this chapter, you should be familiar with:
 - **Chapter 7:** The concept of "Risk Capital" and the single-factor risk model.
 ```
 
-```
-
-```
-
 ---
 
 ## Part 1: The Cash Flow Portfolio Model (CFPM)
@@ -572,8 +568,8 @@ $$E[r_Y] = 0.04 + 0.09 = 0.13$$
 
 ## Part 9: Chapter Summary
 
-### Key Concepts Recap
-:class: important
+```{important}
+**Key Concepts Recap**
 
 **1. CFPM vs. CAPM:**
 * **CFPM:** Values assets based on *dollars*. Essential for derivatives, leverage, and non-standard assets.
@@ -592,6 +588,7 @@ The market portfolio is not arbitrary; it is the unique aggregate of all optimal
 **4. Efficiency:**
 * **Minimum Variance Portfolio:** The vertex of the parabola. Lowest possible risk.
 * **Tangency Portfolio:** The point where the Capital Market Line touches the efficient frontier. Highest possible Sharpe Ratio.
+```
 
 ### Formula Cheat Sheet
 

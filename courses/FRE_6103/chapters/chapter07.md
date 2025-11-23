@@ -42,11 +42,6 @@ Before studying this chapter, you should be familiar with:
 - **Calculus:** Basic derivatives for optimization.
 ```
 
-
-```
-
-```
-
 ---
 
 ## Part 1: The Nature of Risk

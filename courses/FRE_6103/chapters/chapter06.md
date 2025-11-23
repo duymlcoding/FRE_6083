@@ -41,11 +41,6 @@ Before studying this chapter, you should be familiar with:
 - **Geometric Series:** Summation formulas for $\sum r^k$.
 ```
 
-
-```
-
-```
-
 ---
 
 ## Part 1: The Arithmetic Random Walk (ARW)
@@ -394,6 +389,8 @@ $S_3 = S_2 + \mu + \sigma Z_3 = 16.5 + 0 + 5(0.8) = 16.5 + 4 = 20.5$.
 
 **Path:** 20 $\to$ 22.5 $\to$ 16.5 $\to$ 20.5.
 
+```
+
 ```{admonition} Example 2: OU Expected Value
 :class: tip
 
@@ -412,6 +409,8 @@ $$ E[S_5] = 4 + 0.32768 = 4.33 $$
 
 **Interpretation:**
 The price started high (5) relative to the mean (4). Over 5 years, it is expected to drift down towards 4, reaching 4.33.
+
+```
 
 ```{admonition} Example 3: GRW Convexity Adjustment
 :class: tip
@@ -502,8 +501,8 @@ $$ S_1 = 100 (0.9465) = 94.65 $$
 
 ## Part 6: Chapter Summary
 
-### Key Concepts Recap
-:class: important
+```{important}
+**Key Concepts Recap**
 
 **1. The Trio of Processes:**
 * **ARW:** Additive noise. Good for spreads/cash flows. Risk of negative prices.
@@ -516,6 +515,7 @@ $$ S_1 = 100 (0.9465) = 94.65 $$
 
 **3. The Convexity Adjustment:**
 When moving from Normal shocks to Lognormal prices, we must subtract $\frac{1}{2}\sigma^2$ from the drift. This ensures that $E[S_t]$ matches the arithmetic return $\mu$, counteracting the mathematical fact that $E[e^X] > e^{E[X]}$.
+```
 
 ### Formula Cheat Sheet
 

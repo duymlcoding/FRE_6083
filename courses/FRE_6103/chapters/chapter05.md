@@ -42,11 +42,6 @@ Before studying this chapter, you should be familiar with:
 - **Excel/Python:** Basic familiarity with `RAND()`, `NORMSINV()`, or `numpy.random`.
 ```
 
-
-```
-
-```
-
 ---
 
 ## Part 1: Foundations of Random Number Generation
@@ -429,7 +424,8 @@ $E = 0.5(0.69146) + 0.352 = 0.6978$.
     * *Standard Simulation:* might yield $0.6974 \pm 0.0250$.
     * *Moment Matching:* reduces error significantly.
     * *Antithetic:* further refinement.
-    
+
+```
 
 ```{admonition} Example 2: Cholesky Decomposition
 :class: tip
@@ -452,6 +448,7 @@ $$r_{22} = \sqrt{a_{22} - r_{21}^2} = \sqrt{144 - 8^2} = \sqrt{144 - 64} = \sqrt
 
 $$\mathbf{R} = \begin{pmatrix} 10 & 0 \\ 8 & 8.94 \end{pmatrix}$$
 
+```
 
 ```{admonition} Example 3: Inventory Optimization (Common Random Numbers)
 :class: tip
@@ -489,6 +486,8 @@ $$x = -\frac{\ln(u)}{0.1} = -10 \ln(u)$$
 
 Generate $u \sim U[0,1]$, apply formula.
 
+```
+
 ```{admonition} Practice Problem 2: Correlated Simulation
 :class: tip
 
@@ -502,6 +501,8 @@ $\sqrt{1 - 0.6^2} = \sqrt{0.64} = 0.8$.
 $$z_2 = 0.6(0.5) + 0.8(-1.2)$$
 
 $$z_2 = 0.3 - 0.96 = -0.66$$
+
+```
 
 ```{admonition} Practice Problem 3: Confidence Interval
 :class: tip
@@ -519,8 +520,8 @@ Range: $[99.6, 100.4]$.
 
 ## Part 9: Chapter Summary
 
-### Key Concepts Recap
-:class: important
+```{important}
+**Key Concepts Recap**
 
 **1. The Inverse Transform:**
 The universal key to simulation. By mapping uniform random numbers through the inverse CDF ($F^{-1}(u)$), we can replicate any statistical distribution.
@@ -536,6 +537,7 @@ Real risks (like defaults) are often not normal. Gaussian Copulas allow us to ma
 
 **5. Simulation as Optimization:**
 Beyond pricing, simulation helps make decisions (like inventory levels). Using **Common Random Numbers** ensures that comparisons between choices are fair and not driven by random noise.
+```
 
 ### Formula Cheat Sheet
 
