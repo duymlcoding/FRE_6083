@@ -190,10 +190,16 @@ $$
 Because simulation relies on random sampling, the answer is never exact. We must quantify the uncertainty.
 
 * **Sample Variance ($s^2$):**
-    $$s^2 = \frac{1}{N-1} \sum (x_i - \bar{x})^2$$
+
+$$
+s^2 = \frac{1}{N-1} \sum (x_i - \bar{x})^2
+$$
 
 * **Standard Error (SE):** The standard deviation of the *mean itself*.
-    $$SE = \frac{s}{\sqrt{N}}$$ 
+
+$$
+SE = \frac{s}{\sqrt{N}}
+$$ 
 
 **Confidence Intervals:**
 According to the Central Limit Theorem, the sample mean $\bar{x}$ is normally distributed for large $N$.
@@ -379,12 +385,18 @@ The Cholesky method only works for Normal distributions. What if we need to corr
 **Algorithm:**
 1.  **Correlation:** Generate correlated standard normals $z_1, z_2$ using Cholesky (correlation $\rho$).
 2.  **Uniform Mapping:** Convert $z$ values to uniform $u$ values using the Normal CDF.
-    $$u_1 = N(z_1), \quad u_2 = N(z_2)$$
 
-    Now $u_1, u_2$ are correlated uniform variables.
+$$
+u_1 = N(z_1), \quad u_2 = N(z_2)
+$$
+
+Now $u_1, u_2$ are correlated uniform variables.
 3.  **Target Mapping:** Convert $u$ values to the target distribution using the Inverse Transform.
     For Geometric (bond default):
-    $$x_1 = \text{Geometric}^{-1}(u_1), \quad x_2 = \text{Geometric}^{-1}(u_2)$$
+
+$$
+x_1 = \text{Geometric}^{-1}(u_1), \quad x_2 = \text{Geometric}^{-1}(u_2)
+$$
 
 
 

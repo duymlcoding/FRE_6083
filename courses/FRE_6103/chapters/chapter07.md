@@ -67,15 +67,24 @@ We need metrics to quantify uncertainty.
 
 **Symmetric Measures:**
 * **Variance / Standard Deviation ($\sigma$):** The most common measure. Treats upside and downside deviations equally.
-    $$ \sigma = \sqrt{E[(X - \mu)^2]} $$
+
+$$
+\sigma = \sqrt{E[(X - \mu)^2]}
+$$
 
 * **Mean Absolute Deviation (MAD):**
-    $$ MAD = E[|X - \mu|] $$
+
+$$
+MAD = E[|X - \mu|]
+$$
 
 **Downside Measures:**
 Investors typically fear loss, not volatility per se.
 * **Downside Deviation (Semi-deviation):**
-    $$ \sigma_{down} = \sqrt{E[\min(0, X-\mu)^2]} $$
+
+$$
+\sigma_{down} = \sqrt{E[\min(0, X-\mu)^2]}
+$$
 
 * **Value at Risk (VaR):** The maximum loss with a certain confidence level (e.g., 95%).
 * **Conditional Tail Expectation (CTE):** The expected loss *given* that the loss exceeds the VaR threshold (also called Expected Shortfall). 

@@ -62,38 +62,36 @@ We assume a market exists for one period.
 To handle $N$ assets simultaneously, we use linear algebra.
 
 * **Cash Flow Vector ($\mathbf{CF}$):** An $N \times 1$ random vector.
-    $$
 
-    \mathbf{CF} = \begin{pmatrix} CF_1 \\ CF_2 \\ \vdots \\ CF_N \end{pmatrix}
-    $$
+$$
+\mathbf{CF} = \begin{pmatrix} CF_1 \\ CF_2 \\ \vdots \\ CF_N \end{pmatrix}
+$$
 
 * **Expected Cash Flow Vector ($\mathbf{\mu}$):**
-    $$
 
-    \mathbf{\mu} = E[\mathbf{CF}] = \begin{pmatrix} E[CF_1] \\ E[CF_2] \\ \vdots \\ E[CF_N] \end{pmatrix}
-    $$
-
-    
+$$
+\mathbf{\mu} = E[\mathbf{CF}] = \begin{pmatrix} E[CF_1] \\ E[CF_2] \\ \vdots \\ E[CF_N] \end{pmatrix}
+$$
 
 * **Covariance Matrix ($\mathbf{\Sigma}$):** An $N \times N$ symmetric matrix.
-    $$
 
-    \mathbf{\Sigma} = E[(\mathbf{CF} - \mathbf{\mu})(\mathbf{CF} - \mathbf{\mu})^T]
-    $$
+$$
+\mathbf{\Sigma} = E[(\mathbf{CF} - \mathbf{\mu})(\mathbf{CF} - \mathbf{\mu})^T]
+$$
 
-    Where the element $\sigma_{ij} = \text{Cov}(CF_i, CF_j)$.
+Where the element $\sigma_{ij} = \text{Cov}(CF_i, CF_j)$.
 
 * **Unit Vector ($\mathbf{J}$):** An $N \times 1$ vector of ones. (Note: The text sometimes uses $\mathbf{1}$, but we will use $\mathbf{J}$ to avoid confusion with the scalar number 1) .
-    $$
 
-    \mathbf{J} = \begin{pmatrix} 1 \\ 1 \\ \vdots \\ 1 \end{pmatrix}
-    $$
+$$
+\mathbf{J} = \begin{pmatrix} 1 \\ 1 \\ \vdots \\ 1 \end{pmatrix}
+$$
 
 * **Price Vector ($\mathbf{V}$):** The unknown variables we wish to solve for.
-    $$
 
-    \mathbf{V} = \begin{pmatrix} V_1 \\ V_2 \\ \vdots \\ V_N \end{pmatrix}
-    $$
+$$
+\mathbf{V} = \begin{pmatrix} V_1 \\ V_2 \\ \vdots \\ V_N \end{pmatrix}
+$$
 
 * **Holdings Vector ($\mathbf{\nu}$):** The number of units of each asset held by an investor. $\nu$ is the Greek letter "nu".
 

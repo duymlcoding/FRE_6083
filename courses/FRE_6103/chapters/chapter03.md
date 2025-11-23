@@ -58,11 +58,11 @@ Real-world debt instruments rarely pay annually. Consumer loans pay monthly; cor
 * **Simple Annual Rate (SAR):** The quoted annual rate. It ignores compounding within the year. Also called the Annual Percentage Rate (APR).
 * **Periodic Rate:** The rate actually applied to the balance each period.
 
-    $$
-    \text{Periodic Rate} = \frac{\text{SAR}}{m}
-    $$
+$$
+\text{Periodic Rate} = \frac{\text{SAR}}{m}
+$$
 
-    where $m$ is the number of compounding periods per year.
+where $m$ is the number of compounding periods per year.
 * **Effective Annual Rate (EAR):** The rate you actually earn if you hold the asset for one year, accounting for interest-on-interest.
 
 **Fundamental Relationship:**
@@ -296,9 +296,9 @@ We often cannot observe spot rates directly for all maturities (only coupons). W
     * It pays $C+F$ at Year 2.
     * Solve for $r_{s2}$:
 
-        $$
-        P = \frac{C}{(1+r_{s1})} + \frac{C+F}{(1+r_{s2})^2}
-        $$
+$$
+P = \frac{C}{(1+r_{s1})} + \frac{C+F}{(1+r_{s2})^2}
+$$
 
 3.  **Recursion:** Use $r_{s1}, r_{s2}$ to find $r_{s3}$ from a 3-year bond, and so on.
 
@@ -348,15 +348,15 @@ IRP relates Spot Rates, Forward Rates, and Interest Rates. It prevents risk-free
 Two strategies must have the same return:
 1.  **Domestic:** Invest \$1 at domestic rate $r_{dom}$.
 
-    $$
-    \text{Value} = (1 + r_{dom})
-    $$
+$$
+\text{Value} = (1 + r_{dom})
+$$
 
 2.  **Foreign:** Convert \$1 to Foreign ($1/X$), invest at $r_{for}$, then convert back at locked Forward rate $F$.
 
-    $$
-    \text{Value} = \frac{1}{X} (1 + r_{for}) F
-    $$
+$$
+\text{Value} = \frac{1}{X} (1 + r_{for}) F
+$$
 
 **The Equation:**
 

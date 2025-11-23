@@ -210,18 +210,16 @@ $$
 2.  **Define Model Price:**
     The model price of Bond $i$ is the sum of its cash flows discounted by the spot rate function $y(t)$.
 
-    $$
-
-    P_i^{model} = \sum_{t} CF_{i, t} e^{-y(t) \cdot t}
-    $$
+$$
+P_i^{model} = \sum_{t} CF_{i, t} e^{-y(t) \cdot t}
+$$
 
 3.  **Optimization (Least Squares):**
     Find the parameters $\{a_1, a_2, \dots\}$ that minimize the sum of squared errors between model and market prices.
 
-    $$
-
-    \min_{\{a_k\}} \sum_{i} \left( P_i^{market} - P_i^{model} \right)^2
-    $$
+$$
+\min_{\{a_k\}} \sum_{i} \left( P_i^{market} - P_i^{model} \right)^2
+$$
 
 
 
@@ -237,10 +235,16 @@ $$
 
 TIPS are distinct from nominal bonds in two ways:
 1.  **Principal Adjustment:** The principal $F_t$ grows with the Consumer Price Index (CPI).
-    $$ F_t = F_0 \times \frac{CPI_t}{CPI_0} $$
+
+$$
+F_t = F_0 \times \frac{CPI_t}{CPI_0}
+$$
 
 2.  **Coupon Indexation:** The coupon rate $c$ is fixed, but it is applied to the *adjusted* principal.
-    $$ C_t = \frac{c}{2} \times F_t $$
+
+$$
+C_t = \frac{c}{2} \times F_t
+$$
 
 **Deflation Floor:** At maturity, the investor receives $\max(F_0, F_T)$. This is an embedded option (a put on inflation) protecting the investor from deflation.
 
@@ -408,25 +412,37 @@ $$ E[CF_i] = \underbrace{(1-\lambda)CF_i}_{\text{Guaranteed}} + \underbrace{\lam
 **Valuation Formula:**
 
 $$
-
 V_0 = (1-\lambda) \cdot A + \lambda \cdot B
-
 $$
 
 Where:
 1.  **$A$**: The value of the promised cash flows discounted at the **risk-adjusted rate** corresponding to the risk premium $\theta$ but *no* default loss.
-    $$ A = \text{Annuity}(C, n, y_A) + PV(F, n, y_A) $$
 
-    $$ y_A \approx r + \theta $$
+$$
+A = \text{Annuity}(C, n, y_A) + PV(F, n, y_A)
+$$
+
+$$
+y_A \approx r + \theta
+$$
 
 2.  **$B$**: The value of the promised cash flows discounted at a **higher rate** $r^*$ that accounts for the probability of survival.
-    $$ B = \text{Annuity}(C, n, r^*) + PV(F, n, r^*) $$
 
-    The discount factor for $B$ includes the survival probability $(1-\pi)$.
-    $$ \frac{1}{1+r^*} = \frac{1-\pi}{1+r+\theta} $$
+$$
+B = \text{Annuity}(C, n, r^*) + PV(F, n, r^*)
+$$
 
-    Solving for $r^*$:
-    $$ r^* \approx r + \theta + \pi $$
+The discount factor for $B$ includes the survival probability $(1-\pi)$.
+
+$$
+\frac{1}{1+r^*} = \frac{1-\pi}{1+r+\theta}
+$$
+
+Solving for $r^*$:
+
+$$
+r^* \approx r + \theta + \pi
+$$
 
 
 

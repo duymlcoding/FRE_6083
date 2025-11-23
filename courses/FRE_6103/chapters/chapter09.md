@@ -54,22 +54,36 @@ In this chapter, a **Financial Derivative** $D$ is defined abstractly as a contr
 * **$R$:** The Reference Portfolio (e.g., the S&P 500, a specific stock).
 * **$CF_R$:** The random end-of-period cash flow/value of $R$.
 * **$CF_D$:** The random end-of-period payoff of the derivative.
-    $$ CF_D = g(CF_R) $$
 
-    where $g(\cdot)$ is potentially nonlinear.
+$$
+CF_D = g(CF_R)
+$$
+
+where $g(\cdot)$ is potentially nonlinear.
 
 ### 2. Examples of Payoff Functions
 
 1.  **Forward Contract:** Linear payoff.
-    $$ CF_D = a(CF_R - F) $$
 
-    where $F$ is the forward price.
+$$
+CF_D = a(CF_R - F)
+$$
+
+where $F$ is the forward price.
+
 2.  **Power Derivative:** Nonlinear payoff.
-    $$ CF_D = a(CF_R)^b $$
 
-    While rare, these are easy to value if $CF_R$ is lognormal (since powers of lognormals are lognormal).
+$$
+CF_D = a(CF_R)^b
+$$
+
+While rare, these are easy to value if $CF_R$ is lognormal (since powers of lognormals are lognormal).
+
 3.  **European Call Option:** Piecewise linear (kinked) payoff.
-    $$ CF_D = \max(CF_R - X, 0) $$
+
+$$
+CF_D = \max(CF_R - X, 0)
+$$
 
     where $X$ is the strike price.
 
