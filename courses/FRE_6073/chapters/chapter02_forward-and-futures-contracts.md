@@ -64,7 +64,7 @@ The CME Group was formed when the Chicago Mercantile Exchange merged with the Ch
 **Typical Futures Contracts:**
 
 1. **Gold Futures**:
-   - Buy 100 oz. of gold at $1,800/oz. in December
+   - Buy 100 oz. of gold at \$1,800/oz. in December
    - Contract size: 100 troy ounces
    - Quoted in USD per troy ounce
 
@@ -74,7 +74,7 @@ The CME Group was formed when the Chicago Mercantile Exchange merged with the Ch
    - Quoted in USD per GBP
 
 3. **Oil Futures**:
-   - Sell 1,000 barrels of oil at $40/barrel in April
+   - Sell 1,000 barrels of oil at \$40/barrel in April
    - Contract size: 1,000 barrels
    - Quoted in USD per barrel
 ```
@@ -156,7 +156,7 @@ Where:
 :class: tip
 
 **Problem Statement:**
-A stock trades at $100 today. The risk-free rate is 5% per annum with continuous compounding. What is the forward price for a contract deliverable in 6 months?
+A stock trades at \$100 today. The risk-free rate is 5% per annum with continuous compounding. What is the forward price for a contract deliverable in 6 months?
 
 **Given:**
 - $S_0 = \$100$
@@ -184,9 +184,9 @@ $$F_0 = \$102.53$$
 
 **Step 3: Interpret the Result**
 
-The forward price of $102.53 reflects:
-1. The current spot price of $100
-2. Plus the cost of financing ($2.53) at 5% for 6 months
+The forward price of \$102.53 reflects:
+1. The current spot price of \$100
+2. Plus the cost of financing (\$2.53) at 5% for 6 months
 
 **Final Answer:** The 6-month forward price is \$102.53.
 
@@ -214,21 +214,21 @@ On May 21, 2020, the treasurer of a corporation enters into a long forward contr
 **Part 1: Corporation's Obligation**
 
 The corporation is **obligated** to:
-- Pay $1,223,000 (= £1,000,000 × 1.2230)
+- Pay \$1,223,000 (= £1,000,000 × 1.2230)
 - Receive £1,000,000
 - On November 21, 2020 (six months later)
 
 **Part 2: Possible Outcomes**
 
 **Scenario A: GBP Strengthens to 1.2500**
-- Spot value of £1M = $1,250,000
-- Contract price = $1,223,000
-- Profit = $1,250,000 - $1,223,000 = **+$27,000**
+- Spot value of £1M = \$1,250,000
+- Contract price = \$1,223,000
+- Profit = \$1,250,000 - \$1,223,000 = **+\$27,000**
 
 **Scenario B: GBP Weakens to 1.2000**
-- Spot value of £1M = $1,200,000
-- Contract price = $1,223,000
-- Loss = $1,200,000 - $1,223,000 = **-$23,000**
+- Spot value of £1M = \$1,200,000
+- Contract price = \$1,223,000
+- Loss = \$1,200,000 - \$1,223,000 = **-\$23,000**
 
 **Scenario C: GBP at 1.2230 (Forward Price)**
 - Spot value = Contract price
@@ -240,9 +240,9 @@ If the spot rate is 1.2500 at maturity:
 
 Profit = (Spot Rate - Forward Rate) × Amount
 Profit = (1.2500 - 1.2230) × £1,000,000
-Profit = 0.0270 × £1,000,000 = **$27,000**
+Profit = 0.0270 × £1,000,000 = **\$27,000**
 
-**Final Answer:** The corporation profits $27,000 when the pound strengthens to 1.2500.
+**Final Answer:** The corporation profits \$27,000 when the pound strengthens to 1.2500.
 
 **Physical Meaning**: The corporation locked in a favorable rate. When the actual rate is higher, they benefit by buying pounds cheaper than the market price.
 ```
@@ -313,9 +313,9 @@ A retail trader takes a long position in 2 December gold futures contracts on Ju
 
 **Contract Specifications:**
 - Contract size: 100 oz. per contract
-- Futures price: $1,750/oz.
-- Initial margin: $6,000 per contract
-- Maintenance margin: $4,500 per contract
+- Futures price: \$1,750/oz.
+- Initial margin: \$6,000 per contract
+- Maintenance margin: \$4,500 per contract
 - Total position: 2 contracts (200 oz.)
 
 **Question:** Track the margin account over several days given daily settlement prices.
@@ -326,50 +326,50 @@ A retail trader takes a long position in 2 December gold futures contracts on Ju
 **Step 1: Initial Setup**
 
 - Position: Long 2 contracts (200 oz.)
-- Initial margin required: 2 × $6,000 = **$12,000**
-- Maintenance margin: 2 × $4,500 = **$9,000**
+- Initial margin required: 2 × \$6,000 = **\$12,000**
+- Maintenance margin: 2 × \$4,500 = **\$9,000**
 
 **Step 2: Daily Settlement Tracking**
 
 | Day | Trade Price | Settle Price | Daily Gain | Cumul. Gain | Margin Balance | Margin Call |
 |-----|-------------|--------------|------------|-------------|----------------|-------------|
-| 0 | $1,750.00 | - | - | - | $12,000 | - |
-| 1 | - | $1,741.00 | -$1,800 | -$1,800 | $10,200 | - |
-| 2 | - | $1,738.30 | -$540 | -$2,340 | $9,660 | - |
-| 3 | - | $1,736.20 | -$420 | -$2,760 | $9,240 | - |
-| 4 | - | $1,729.90 | -$1,260 | -$4,020 | $7,980 | **$4,020** |
-| 5 | - | $1,730.80 | +$180 | -$3,840 | $12,180 | - |
+| 0 | \$1,750.00 | - | - | - | \$12,000 | - |
+| 1 | - | \$1,741.00 | -\$1,800 | -\$1,800 | \$10,200 | - |
+| 2 | - | \$1,738.30 | -\$540 | -\$2,340 | \$9,660 | - |
+| 3 | - | \$1,736.20 | -\$420 | -\$2,760 | \$9,240 | - |
+| 4 | - | \$1,729.90 | -\$1,260 | -\$4,020 | \$7,980 | **\$4,020** |
+| 5 | - | \$1,730.80 | +\$180 | -\$3,840 | \$12,180 | - |
 
 **Step 3: Detailed Calculations**
 
 **Day 1:**
-- Price change: $1,741.00 - $1,750.00 = -$9.00/oz.
-- Daily loss: -$9.00 × 200 oz. = -$1,800
-- New balance: $12,000 - $1,800 = $10,200 (above $9,000 maintenance)
+- Price change: \$1,741.00 - \$1,750.00 = -\$9.00/oz.
+- Daily loss: -\$9.00 × 200 oz. = -\$1,800
+- New balance: \$12,000 - \$1,800 = \$10,200 (above \$9,000 maintenance)
 
 **Day 2:**
-- Price change: $1,738.30 - $1,741.00 = -$2.70/oz.
-- Daily loss: -$2.70 × 200 oz. = -$540
-- New balance: $10,200 - $540 = $9,660
+- Price change: \$1,738.30 - \$1,741.00 = -\$2.70/oz.
+- Daily loss: -\$2.70 × 200 oz. = -\$540
+- New balance: \$10,200 - \$540 = \$9,660
 
 **Day 3:**
-- Price change: $1,736.20 - $1,738.30 = -$2.10/oz.
-- Daily loss: -$2.10 × 200 oz. = -$420
-- New balance: $9,660 - $420 = $9,240
+- Price change: \$1,736.20 - \$1,738.30 = -\$2.10/oz.
+- Daily loss: -\$2.10 × 200 oz. = -\$420
+- New balance: \$9,660 - \$420 = \$9,240
 
 **Day 4:**
-- Price change: $1,729.90 - $1,736.20 = -$6.30/oz.
-- Daily loss: -$6.30 × 200 oz. = -$1,260
-- New balance: $9,240 - $1,260 = $7,980 (below $9,000!)
-- **MARGIN CALL**: Must deposit $12,000 - $7,980 = **$4,020**
-- After deposit: Balance = $12,180
+- Price change: \$1,729.90 - \$1,736.20 = -\$6.30/oz.
+- Daily loss: -\$6.30 × 200 oz. = -\$1,260
+- New balance: \$9,240 - \$1,260 = \$7,980 (below \$9,000!)
+- **MARGIN CALL**: Must deposit \$12,000 - \$7,980 = **\$4,020**
+- After deposit: Balance = \$12,180
 
 **Day 5:**
-- Price change: $1,730.80 - $1,729.90 = $0.90/oz.
-- Daily gain: $0.90 × 200 oz. = +$180
-- New balance: $12,180 + $180 = $12,360
+- Price change: \$1,730.80 - \$1,729.90 = \$0.90/oz.
+- Daily gain: \$0.90 × 200 oz. = +\$180
+- New balance: \$12,180 + \$180 = \$12,360
 
-**Final Answer:** The trader received a margin call on Day 4 requiring a deposit of $4,020 to restore the account to the initial margin level of $12,000.
+**Final Answer:** The trader received a margin call on Day 4 requiring a deposit of \$4,020 to restore the account to the initial margin level of \$12,000.
 
 **Physical Meaning**: Daily settlement ensures that losses are paid immediately. The margin call on Day 4 occurred because accumulated losses pushed the balance below the maintenance level, requiring additional funds to protect against further losses.
 ```
@@ -586,14 +586,14 @@ Chapter 3 explores the **pricing and valuation** of forward and futures contract
 A trader takes a short position in 3 June crude oil futures contracts. Each contract is for 1,000 barrels.
 
 **Given:**
-- Entry price: $75.00/barrel
-- Initial margin: $5,000 per contract
-- Maintenance margin: $3,500 per contract
+- Entry price: \$75.00/barrel
+- Initial margin: \$5,000 per contract
+- Maintenance margin: \$3,500 per contract
 
 **Settlement prices:**
-- Day 1: $76.20
-- Day 2: $77.50
-- Day 3: $76.00
+- Day 1: \$76.20
+- Day 2: \$77.50
+- Day 3: \$76.00
 
 **Questions:**
 1. What is the initial margin deposit?
@@ -605,40 +605,40 @@ A trader takes a short position in 3 June crude oil futures contracts. Each cont
 
 **Part 1: Initial Margin Deposit**
 
-Initial margin = 3 contracts × $5,000 = **$15,000**
+Initial margin = 3 contracts × \$5,000 = **\$15,000**
 
 **Part 2: Daily Gains/Losses**
 
 **Day 1:**
-- Price change: $76.20 - $75.00 = +$1.20/barrel (unfavorable for short)
-- Daily loss: $1.20 × 1,000 barrels × 3 contracts = -$3,600
-- Balance: $15,000 - $3,600 = $11,400
+- Price change: \$76.20 - \$75.00 = +\$1.20/barrel (unfavorable for short)
+- Daily loss: \$1.20 × 1,000 barrels × 3 contracts = -\$3,600
+- Balance: \$15,000 - \$3,600 = \$11,400
 
 **Day 2:**
-- Price change: $77.50 - $76.20 = +$1.30/barrel
-- Daily loss: $1.30 × 3,000 barrels = -$3,900
-- Balance: $11,400 - $3,900 = $7,500
+- Price change: \$77.50 - \$76.20 = +\$1.30/barrel
+- Daily loss: \$1.30 × 3,000 barrels = -\$3,900
+- Balance: \$11,400 - \$3,900 = \$7,500
 
 **Day 3:**
-- Price change: $76.00 - $77.50 = -$1.50/barrel (favorable for short)
-- Daily gain: $1.50 × 3,000 barrels = +$4,500
-- Balance: $7,500 + $4,500 = $12,000
+- Price change: \$76.00 - \$77.50 = -\$1.50/barrel (favorable for short)
+- Daily gain: \$1.50 × 3,000 barrels = +\$4,500
+- Balance: \$7,500 + \$4,500 = \$12,000
 
 **Part 3: Margin Calls**
 
-Maintenance margin = 3 × $3,500 = $10,500
+Maintenance margin = 3 × \$3,500 = \$10,500
 
 **Check each day:**
-- Day 1: $11,400 > $10,500 No margin call
-- Day 2: $7,500 < $10,500 **MARGIN CALL!**
-- Required deposit: $15,000 - $7,500 = **$7,500**
-- After deposit: Balance = $15,000
-- Day 3: Starting with $15,000, gain $4,500 = $19,500
+- Day 1: \$11,400 > \$10,500 No margin call
+- Day 2: \$7,500 < \$10,500 **MARGIN CALL!**
+- Required deposit: \$15,000 - \$7,500 = **\$7,500**
+- After deposit: Balance = \$15,000
+- Day 3: Starting with \$15,000, gain \$4,500 = \$19,500
 
 **Final Answer:**
-- Initial deposit: $15,000
-- Margin call on Day 2 for $7,500
-- Final balance after Day 3: $19,500
+- Initial deposit: \$15,000
+- Margin call on Day 2 for \$7,500
+- Final balance after Day 3: \$19,500
 
 **Note**: Short positions lose when prices rise. The trader faced two consecutive days of rising prices before a favorable day.
 ```

@@ -571,7 +571,7 @@ A stock trades at \$75. A 3-month European call option has a strike of \$72. The
 1. Calculate the call option price
 2. Calculate the put option price
 3. What is the probability (in the risk-neutral world) that the call will be exercised?
-4. If the call trades at $6.50 in the market, what is the implied volatility?
+4. If the call trades at \$6.50 in the market, what is the implied volatility?
 ```
 
 ```{dropdown} Solution to Practice Problem 1
