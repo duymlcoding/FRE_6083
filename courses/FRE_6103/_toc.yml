@@ -1,0 +1,29 @@
+format: jb-book
+root: index
+title: Home
+
+parts:
+  - caption: Introduction
+    chapters:
+    - file: intro
+
+  - caption: Chapters
+    chapters:
+    - file: chapters/chapter01
+      title: "Chapter 1: Valuation Methods for Financial Engineers"
+    - file: chapters/chapter02
+      title: "Chapter 2: Annuities and Perpetuities"
+    - file: chapters/chapter03
+      title: "Chapter 3: Complications and Resolutions"
+    - file: chapters/chapter04
+      title: "Chapter 4: Bonds"
+    - file: chapters/chapter05
+      title: "Chapter 5: Simulation"
+    - file: chapters/chapter06
+      title: "Chapter 6: Stochastic Processes in Finance"
+    - file: chapters/chapter07
+      title: "Chapter 7: Risk, Capital and Valuation"
+    - file: chapters/chapter08
+      title: "Chapter 8: The Single Period CAPM and CFPM"
+    - file: chapters/chapter09
+      title: "Chapter 9: Derivative Pricing in the Static CAPM"
